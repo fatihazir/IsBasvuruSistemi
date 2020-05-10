@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VeriYapilari2
 {
-    class deneme
+    class IsDeneyimi : CalisaninEskiIsyeriBilgileri
     {
     }
 }
