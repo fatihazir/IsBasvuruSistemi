@@ -23,23 +23,22 @@ namespace VeriYapilari2
             
             birey.IsyeriAd = "amazon";
             birey.IsyeriAdres = "kenya";
-            birey.IsyeriCalismaYili = "4";
+            birey.IsyeriCalismaYili = 4;
             birey.IsyerindekiPozisyonu = "Cayci";
-            birey.KisininBolumeBaslangicYili = "2020";
-            birey.KisininBolumuBitirmeYili = "2028";
+            birey.KisininBolumeBaslangicYili = 40;
+            birey.KisininBolumuBitirmeYili = 2028;
             birey.KisininEgitimDurumu = "Universite";
-            birey.KisininNotOrtalamasi = "4.5";
+            birey.KisininNotOrtalamasi = 4.5;
             birey.KisininOkulAdi = "kenya caycilari dernegi";
             birey.KİsininOkulBolumu = "gastronomi";
 
             LinkedList lnkdlst = new LinkedList();
+            lnkdlst.InsertFirst(birey.KisininBolumeBaslangicYili.ToString());
             lnkdlst.InsertFirst(birey.IsyeriAd);
             lnkdlst.InsertFirst(birey.IsyeriAdres);
-            lnkdlst.InsertFirst(birey.IsyeriCalismaYili);
-            lnkdlst.InsertFirst(birey.IsyerindekiPozisyonu);
-            lnkdlst.InsertFirst(birey.KİsininOkulBolumu);
-            lnkdlst.InsertFirst(birey.KisininOkulAdi);
-            lnkdlst.InsertFirst(birey.KisininNotOrtalamasi);
+            lnkdlst.InsertFirst(birey.KisininNotOrtalamasi.ToString());
+            
+
             MessageBox.Show(lnkdlst.DisplayElements());
 
 
