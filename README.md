@@ -1,5 +1,5 @@
 # 2.Dönem Veri Yapıları Projesi
-2. dönem için yapılması gereken vrei yapıları projesinin GitHub deposudur.
+2. dönem için yapılması gereken veri yapıları projesinin GitHub deposudur.
 
 Proje Ortak Drive Linki: https://drive.google.com/drive/u/2/folders/1dc5llyX9pAMM2qO14SrjqEEMSzlJHUHO
 
