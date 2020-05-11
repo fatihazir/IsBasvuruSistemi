@@ -52,7 +52,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HashChain.cs" />
+    <Compile Include="HashChainEntry.cs" />
     <Compile Include="IsDeneyimi.cs" />
+    <Compile Include="IsIlani.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="LinkedListIcerikleri.cs" />
     <Compile Include="Node.cs" />
