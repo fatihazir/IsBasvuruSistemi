@@ -8,13 +8,10 @@ namespace VeriYapilari2
 {
     public class Sirket
     {
-        public int IlanNumarasi { get; set; }
+        public string SirketID { get; set; }
         public string SirketAd { get; set; }
         public string SirketAdres { get; set; }
-        public double SirketTelefon { get; set; }
+        public string SirketTelefon { get; set; }
         public string SirketEposta { get; set; }
-        public string SirketIsTanimi { get; set; }
-        public string SirketElemanArananPozisyon { get; set; }
-        public string ArananElemanOzellikleri { get; set; }
     }
 }
