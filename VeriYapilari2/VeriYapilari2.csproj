@@ -131,6 +131,7 @@
     </Compile>
     <Compile Include="HashChain.cs" />
     <Compile Include="HashChainEntry.cs" />
+    <Compile Include="Ilan.cs" />
     <Compile Include="IsDeneyimi.cs" />
     <Compile Include="IsIlani.cs" />
     <Compile Include="LinkedList.cs" />
