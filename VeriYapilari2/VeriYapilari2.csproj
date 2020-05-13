@@ -131,6 +131,9 @@
     </Compile>
     <Compile Include="HashChain.cs" />
     <Compile Include="HashChainEntry.cs" />
+    <Compile Include="Heap.cs" />
+    <Compile Include="HeapDugumu.cs" />
+    <Compile Include="HeapSort.cs" />
     <Compile Include="Ilan.cs" />
     <Compile Include="IsDeneyimi.cs" />
     <Compile Include="KisiBilgileri.cs" />
