@@ -2,7 +2,7 @@
 
 namespace VeriYapilari2
 {
-    public class Ilan
+    public class Ilan 
     {
         public int IlanNumarasi { get; set; }
         public string IsTanimi { get; set; }
