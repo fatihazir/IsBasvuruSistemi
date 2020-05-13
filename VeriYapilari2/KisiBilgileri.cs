@@ -56,7 +56,7 @@ namespace VeriYapilari2
                    "Kişinin Medeni Durumu: " + medeniDurum + Environment.NewLine +
                    "Kişinin Yabancı Dil veya Dilleri: " + yabanciDil + Environment.NewLine +
                    "Kişinin İlgi Alanları: " + ilgliAlanlari + Environment.NewLine + 
-                   "Kişinin İşe Uygunluk Durumu: " + iseUygunlukDurumu + Environment.NewLine;
+                   "Kişinin İşe Uygunluk Durumu: " + iseUygunlukDurumu ;
             return temp;
         }
     }
