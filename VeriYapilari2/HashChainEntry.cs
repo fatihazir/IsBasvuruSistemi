@@ -1,4 +1,5 @@
-﻿namespace VeriYapilari2
+﻿using System;
+namespace VeriYapilari2
 {
     public class HashChainEntry
     {
