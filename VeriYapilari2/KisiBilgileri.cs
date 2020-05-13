@@ -17,5 +17,42 @@ namespace VeriYapilari2
         public string ilgliAlanlari { get; set; }
         public int iseUygunlukDurumu { get; set; }
 
+        public KisiBilgileri(string ad,string soyad, string adres, double telefon, string email, string uyruk,
+                            int dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
+                            string ilgliAlanlari, int iseUygunlukDurumu){
+
+            this.ad = ad;
+            this.soyad = soyad;
+            this.adres = adres;
+            this.telefon = telefon;
+            this.email = email;
+            this.uyruk = uyruk;
+            this.dogumTarihi = dogumTarihi;
+            this.dogumYeri = dogumYeri;
+            this.medeniDurum = medeniDurum;
+            this.yabanciDil = yabanciDil;
+            this.ilgliAlanlari = ilgliAlanlari;
+            this.iseUygunlukDurumu = RandomIsUygunluk();
+
+        }
+        private int RandomIsUygunluk()
+        {
+            Random queueNumber = new Random();
+            int number = queueNumber.Next(0, 10);
+            return number;
+        }
+        public string KisiBilgileriYazdir()
+        {
+            string temp;
+            temp = "Kişinin Adı: " + ad + Environment.NewLine + "Kişinin Soyadı: " + soyad + Environment.NewLine
+                + "Kişinin Adresi: " + adres + Environment.NewLine + "Kişinin Telefonu: " + telefon + Environment.NewLine
+                + "Kişinin Email Adresi: " + email + Environment.NewLine + "Kişinin Uyruğu: " + uyruk + Environment.NewLine
+                + "Kişinin Doğum Tarihi: " + dogumTarihi + Environment.NewLine + "Kişinin Doğum Yeri: " + dogumYeri
+                + Environment.NewLine + "Kişinin Medeni Durumu: " + medeniDurum + Environment.NewLine +
+                "Kişinin Yabancı Dil veya Dilleri: " + yabanciDil + Environment.NewLine + "Kişinin İlgi Alanları: "
+                + ilgliAlanlari + Environment.NewLine + "Kişinin İşe Uygunluk Durumu: " + iseUygunlukDurumu + Environment.NewLine;
+            return temp;
+
+        }
     }
 }
