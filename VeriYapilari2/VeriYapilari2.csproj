@@ -134,6 +134,7 @@
     <Compile Include="Ilan.cs" />
     <Compile Include="IsDeneyimi.cs" />
     <Compile Include="IsIlani.cs" />
+    <Compile Include="KisiBilgileri.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="LinkedListIcerikleri.cs" />
     <Compile Include="Node.cs" />
