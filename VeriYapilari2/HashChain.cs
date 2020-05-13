@@ -62,7 +62,7 @@
             }
         }
 
-        public IsIlani GetIsIlani(int key)
+        public Ilan GetIsIlani(int key)
         {
             int hash = (key % TABLE_SIZE);
             if (table[hash] == null)
@@ -75,11 +75,11 @@
                 if (entry == null)
                     return null;
                 else
-                    return (IsIlani)entry.Deger;
+                    return (Ilan)entry.Deger;
             }
         }
 
-        public IsIlani DeleteIsIlani(int key)
+        public Ilan DeleteIsIlani(int key)
         {
             int hash = (key % TABLE_SIZE);
             if (table[hash] == null)
@@ -95,7 +95,7 @@
                 {
                     entry.Deger = null;
                     entry.Durum = "Silindi";
-                    return (IsIlani)entry.Deger;
+                    return (Ilan)entry.Deger;
                 }
             }
         }
