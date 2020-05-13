@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VeriYapilari2
+﻿namespace VeriYapilari2
 {
     public class HashChainEntry
     {
@@ -21,6 +15,7 @@ namespace VeriYapilari2
             get { return deger; }
             set { deger = value; }
         }
+
         public int Anahtar
         {
             get { return anahtar; }
@@ -33,13 +28,11 @@ namespace VeriYapilari2
             set { durum = value; }
         }
 
-
         public HashChainEntry Next
         {
             get { return next; }
             set { next = value; }
         }
-
 
         public HashChainEntry(int anahtar, object deger, string durum)
         {

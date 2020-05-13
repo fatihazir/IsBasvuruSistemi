@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VeriYapilari2
+﻿namespace VeriYapilari2
 {
     public class HashChain
     {
-        int TABLE_SIZE = 10;
+        private int TABLE_SIZE = 10;
 
-        HashChainEntry[] table;
-
+        private HashChainEntry[] table;
 
         public HashChain()
         {
@@ -21,6 +14,7 @@ namespace VeriYapilari2
                 table[i] = null;
             }
         }
+
         public bool AddIsIlani(int key, object value)
         {
             int hash = (key % TABLE_SIZE);
@@ -67,6 +61,7 @@ namespace VeriYapilari2
                 }
             }
         }
+
         public IsIlani GetIsIlani(int key)
         {
             int hash = (key % TABLE_SIZE);
@@ -102,7 +97,6 @@ namespace VeriYapilari2
                     entry.Durum = "Silindi";
                     return (IsIlani)entry.Deger;
                 }
-
             }
         }
     }
