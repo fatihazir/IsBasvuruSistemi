@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proje_Veri_Yapıları
+namespace VeriYapilari2
 {
     public class KisiBilgileri
     {
