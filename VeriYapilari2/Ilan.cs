@@ -16,7 +16,7 @@ namespace VeriYapilari2
             this.Pozisyon = pozisyon;
             this.IsTanimi = isTanimi;
             this.ArananElemanOzellikleri = arananElemanOzellikleri;
-            this.IlaninSirketi = sirket; // Composition. Her ilanin bir sirketi olmak zorunda yani ilan yaratılırken sirketi ile yaratılır.
+            this.IlaninSirketi = sirket; // Her ilanin bir sirketi ozelligi olmak zorunda.
             // Ama tersi dogru degildir. Her sirketin ilanı olmak zoruna degildir.
         }
 
