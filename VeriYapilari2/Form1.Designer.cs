@@ -1,6 +1,6 @@
 ﻿namespace VeriYapilari2
 {
-    partial class Form1
+    partial class FrmTest
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -34,10 +34,9 @@
             // 
             // LinkedListTest
             // 
-            this.LinkedListTest.Location = new System.Drawing.Point(101, 33);
-            this.LinkedListTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LinkedListTest.Location = new System.Drawing.Point(76, 27);
             this.LinkedListTest.Name = "LinkedListTest";
-            this.LinkedListTest.Size = new System.Drawing.Size(191, 28);
+            this.LinkedListTest.Size = new System.Drawing.Size(143, 23);
             this.LinkedListTest.TabIndex = 0;
             this.LinkedListTest.Text = "BagliListeTest";
             this.LinkedListTest.UseVisualStyleBackColor = true;
@@ -45,25 +44,23 @@
             // 
             // btnIlanSirketCompTest
             // 
-            this.btnIlanSirketCompTest.Location = new System.Drawing.Point(101, 99);
-            this.btnIlanSirketCompTest.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIlanSirketCompTest.Location = new System.Drawing.Point(76, 80);
             this.btnIlanSirketCompTest.Name = "btnIlanSirketCompTest";
-            this.btnIlanSirketCompTest.Size = new System.Drawing.Size(191, 28);
+            this.btnIlanSirketCompTest.Size = new System.Drawing.Size(143, 23);
             this.btnIlanSirketCompTest.TabIndex = 1;
             this.btnIlanSirketCompTest.Text = "Ilan sirket comp test";
             this.btnIlanSirketCompTest.UseVisualStyleBackColor = true;
             this.btnIlanSirketCompTest.Click += new System.EventHandler(this.btnIlanSirketCompTest_Click);
             // 
-            // Form1
+            // FrmTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnIlanSirketCompTest);
             this.Controls.Add(this.LinkedListTest);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FrmTest";
+            this.Text = "Test";
             this.ResumeLayout(false);
 
         }

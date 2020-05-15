@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace VeriYapilari2
 {
-    public partial class Form1 : Form
+    public partial class FrmTest : Form
     {
-        public Form1()
+        public FrmTest()
         {
             InitializeComponent();
         }
