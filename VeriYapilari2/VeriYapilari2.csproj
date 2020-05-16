@@ -135,6 +135,24 @@
     <Compile Include="HeapDugumu.cs" />
     <Compile Include="HeapSort.cs" />
     <Compile Include="Ilan.cs" />
+    <Compile Include="IsBasvurusuIcinBilgiGuncellemeFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinBilgiGuncellemeFormu.Designer.cs">
+      <DependentUpon>IsBasvurusuIcinBilgiGuncellemeFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.Designer.cs">
+      <DependentUpon>IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinKayitlanmaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinKayitlanmaFormu.Designer.cs">
+      <DependentUpon>IsBasvurusuIcinKayitlanmaFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="IsDeneyimi.cs" />
     <Compile Include="KisiBilgileri.cs" />
     <Compile Include="LinkedList.cs" />
@@ -145,6 +163,15 @@
     <Compile Include="Sirket.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsBasvurusuIcinBilgiGuncellemeFormu.resx">
+      <DependentUpon>IsBasvurusuIcinBilgiGuncellemeFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.resx">
+      <DependentUpon>IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsBasvurusuIcinKayitlanmaFormu.resx">
+      <DependentUpon>IsBasvurusuIcinKayitlanmaFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

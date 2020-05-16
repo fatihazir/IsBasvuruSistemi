@@ -36,27 +36,8 @@ namespace VeriYapilari2
 
         private void btnIlanSirketCompTest_Click(object sender, EventArgs e)
         {
-            Sirket sirket = new Sirket();
-            sirket.SirketAd = "fatihcomp";
-            sirket.SirketAdres = "nergiz";
-            sirket.SirketEposta = "fatihhazirceng";
-            sirket.SirketTelefon = 45154;
-
-            Ilan yeniIlan = new Ilan("Kundakci", "Kundaklayacak kisi", "10 yıl ve ustu kundakcilik tecrubesi", sirket);
-            MessageBox.Show(yeniIlan.IlanBilgileriYazdir());
-
-            HashChain hashChain = new HashChain();
-            bool temp;
-
-            temp = hashChain.AddIsIlani(yeniIlan.IlanNumarasi, yeniIlan);
-            if (temp)
-            {
-                MessageBox.Show("is ilanı eklendi");
-            }
-            else
-            {
-                MessageBox.Show("ilan eklenemedi");
-            }
+            
+           
         }
     }
 }

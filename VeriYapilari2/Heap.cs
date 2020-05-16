@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VeriYapilari2
 {
@@ -11,17 +7,19 @@ namespace VeriYapilari2
         private HeapDugumu[] heapArray;
         private int maxSize;
         private int currentSize;
+
         public Heap(int maxHeapSize)
         {
             maxSize = maxHeapSize;
             heapArray = new HeapDugumu[maxSize];
             currentSize = 0;
-
         }
+
         public bool IsEmpty()
         {
             return currentSize == 0;
         }
+
         public bool Insert(int value)
         {
             if (currentSize == maxSize)
@@ -31,6 +29,7 @@ namespace VeriYapilari2
             MoveToUp(currentSize++);
             return true;
         }
+
         public void MoveToUp(int index)
         {
             int parent = (index - 1) / 2;
@@ -43,6 +42,7 @@ namespace VeriYapilari2
             }
             heapArray[index] = bottom;
         }
+
         public HeapDugumu RemoveMax() // Remove maximum value HeapDugumu
         {
             HeapDugumu root = heapArray[0];
@@ -51,6 +51,7 @@ namespace VeriYapilari2
             heapArray[currentSize] = null;
             return root;
         }
+
         public void MoveToDown(int index)
         {
             int largerChild;
@@ -71,6 +72,7 @@ namespace VeriYapilari2
             }
             heapArray[index] = top;
         }
+
         public void DisplayHeap()
         {
             Console.WriteLine();
