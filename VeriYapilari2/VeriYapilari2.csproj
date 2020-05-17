@@ -147,6 +147,12 @@
     <Compile Include="IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.Designer.cs">
       <DependentUpon>IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.cs</DependentUpon>
     </Compile>
+    <Compile Include="IsBasvurusuIcinIlanaBasvurmaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinIlanaBasvurmaFormu.Designer.cs">
+      <DependentUpon>IsBasvurusuIcinIlanaBasvurmaFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="IsBasvurusuIcinKayitlanmaFormu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.resx">
       <DependentUpon>IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsBasvurusuIcinIlanaBasvurmaFormu.resx">
+      <DependentUpon>IsBasvurusuIcinIlanaBasvurmaFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IsBasvurusuIcinKayitlanmaFormu.resx">
       <DependentUpon>IsBasvurusuIcinKayitlanmaFormu.cs</DependentUpon>

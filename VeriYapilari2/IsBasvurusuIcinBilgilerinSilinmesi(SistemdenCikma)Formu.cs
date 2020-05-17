@@ -19,7 +19,12 @@ namespace VeriYapilari2
 
         private void IsBasvurusuIcinBilgilerinSilinmesi_SistemdenCikma_Formu_Load(object sender, EventArgs e)
         {
-            // Verilerin alınıp txtelere konulmasi.
+            // sessiondaki kisi bilgileri
+            txtKisiAd.Text;
+            txtKisiTelefon;
+            txtKisiSoyad;
+            txtKisiAd;
+            
         }
 
         private void btnKayitSil_Click(object sender, EventArgs e)
