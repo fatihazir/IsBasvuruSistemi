@@ -10,6 +10,10 @@ namespace VeriYapilari2
     {
         private İkiliAgacDugumu kok;
         private string dugumler;
+        public object sol { get; private set; }
+
+        public object sag { get; private set; }
+
         public İkiliAgac(İkiliAgacDugumu kok)
         {
             this.kok = kok;
@@ -19,7 +23,7 @@ namespace VeriYapilari2
         {
             return DugumSayisi(kok);
         }
-        public int DugumSayisi(İkiliAgacDugumu dugum)
+        private int DugumSayisi(İkiliAgacDugumu dugum)
         {
             int count = 0;
             if (dugum != null)
@@ -34,7 +38,13 @@ namespace VeriYapilari2
         {
             return YaprakSayisi(kok);
         }
-        public int YaprakSayisi(İkiliAgacDugumu dugum)
+
+        private int YaprakSayisi(İkiliAgacDugumu kok)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int YaprakSayisi(İkiliAgac dugum)
         {
             int count = 0;
             if (dugum != null)
@@ -46,6 +56,12 @@ namespace VeriYapilari2
             }
             return count;
         }
+
+        private int YaprakSayisi(object sol)
+        {
+            throw new NotImplementedException();
+        }
+
         public string DugumleriYazdir()
         {
             return dugumler;

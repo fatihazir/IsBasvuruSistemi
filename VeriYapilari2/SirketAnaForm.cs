@@ -129,5 +129,7 @@ namespace VeriYapilari2
         {
             //YABANCI DİLİ OLANLAR LİSTELENECEK VE LİSTVİEW İÇİNE YAZILACAK
         }
+
+       
     }
 }

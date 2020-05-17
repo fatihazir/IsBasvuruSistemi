@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VeriYapilari2
 {
-    class İkiliAgacDugumu
+  public  class İkiliAgacDugumu
     {
         public object veri;
         public İkiliAgacDugumu sol;
