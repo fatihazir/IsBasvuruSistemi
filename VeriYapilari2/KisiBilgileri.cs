@@ -33,6 +33,8 @@ namespace VeriYapilari2
             this.yabanciDil = yabanciDil;
             this.ilgliAlanlari = ilgliAlanlari;
             this.iseUygunlukDurumu = RandomIsUygunluk();
+
+           
         }
 
         private int RandomIsUygunluk()
@@ -64,5 +66,6 @@ namespace VeriYapilari2
         {
 
         }
+
     }
 }
