@@ -2,25 +2,25 @@
 
 namespace VeriYapilari2
 {
-    public class KisiBilgileri 
+    public class KisiBilgileri
     {
         public string ad { get; set; }
         public string soyad { get; set; }
         public string adres { get; set; }
-        public double telefon { get; set; }
+        public string telefon { get; set; }
         public string email { get; set; }
         public string uyruk { get; set; }
-        public int dogumTarihi { get; set; }
-        public string dogumYeri { get; set; } 
+        public string dogumTarihi { get; set; }
+        public string dogumYeri { get; set; }
         public string medeniDurum { get; set; }
         public string yabanciDil { get; set; }
         public string ilgliAlanlari { get; set; }
         public int iseUygunlukDurumu { get; set; }
 
-        public KisiBilgileri(string ad,string soyad, string adres, double telefon, string email, string uyruk,
-                            int dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
-                            string ilgliAlanlari, int iseUygunlukDurumu){
-
+        public KisiBilgileri(string ad, string soyad, string adres, string telefon, string email, string uyruk,
+                            string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
+                            string ilgliAlanlari)
+        {
             this.ad = ad;
             this.soyad = soyad;
             this.adres = adres;
@@ -33,33 +33,36 @@ namespace VeriYapilari2
             this.yabanciDil = yabanciDil;
             this.ilgliAlanlari = ilgliAlanlari;
             this.iseUygunlukDurumu = RandomIsUygunluk();
-
         }
-        public int RandomIsUygunluk()
+
+        private int RandomIsUygunluk()
         {
             Random queueNumber = new Random();
             int number = queueNumber.Next(0, 10);
             return number;
         }
+
         public string KisiBilgileriYazdir()
         {
             string temp;
-            temp = "Kişinin Adı: " + ad + Environment.NewLine + "Kişinin Soyadı: " + soyad + Environment.NewLine
-                + "Kişinin Adresi: " + adres + Environment.NewLine + "Kişinin Telefonu: " + telefon + Environment.NewLine
-                + "Kişinin Email Adresi: " + email + Environment.NewLine + "Kişinin Uyruğu: " + uyruk + Environment.NewLine
-                + "Kişinin Doğum Tarihi: " + dogumTarihi + Environment.NewLine + "Kişinin Doğum Yeri: " + dogumYeri
-                + Environment.NewLine + "Kişinin Medeni Durumu: " + medeniDurum + Environment.NewLine +
-                "Kişinin Yabancı Dil veya Dilleri: " + yabanciDil + Environment.NewLine + "Kişinin İlgi Alanları: "
-                + ilgliAlanlari + Environment.NewLine + "Kişinin İşe Uygunluk Durumu: " + iseUygunlukDurumu + Environment.NewLine;
+            temp = "Kişinin Adı: " + ad + Environment.NewLine +
+                   "Kişinin Soyadı: " + soyad + Environment.NewLine +
+                   "Kişinin Adresi: " + adres + Environment.NewLine +
+                   "Kişinin Telefonu: " + telefon + Environment.NewLine +
+                   "Kişinin Email Adresi: " + email + Environment.NewLine +
+                   "Kişinin Uyruğu: " + uyruk + Environment.NewLine +
+                   "Kişinin Doğum Tarihi: " + dogumTarihi + Environment.NewLine +
+                   "Kişinin Doğum Yeri: " + dogumYeri + Environment.NewLine +
+                   "Kişinin Medeni Durumu: " + medeniDurum + Environment.NewLine +
+                   "Kişinin Yabancı Dil veya Dilleri: " + yabanciDil + Environment.NewLine +
+                   "Kişinin İlgi Alanları: " + ilgliAlanlari + Environment.NewLine +
+                   "Kişinin İşe Uygunluk Durumu: " + iseUygunlukDurumu;
             return temp;
-
         }
-        static Tree<int> InitializeTree()
+
+        public KisiBilgileri()
         {
-        Tree<int> tree = new Tree<int>();
-            tree.Add();
-            return tree;
-        }
 
+        }
     }
 }

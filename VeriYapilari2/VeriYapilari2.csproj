@@ -131,19 +131,62 @@
     </Compile>
     <Compile Include="HashChain.cs" />
     <Compile Include="HashChainEntry.cs" />
+    <Compile Include="Heap.cs" />
+    <Compile Include="HeapDugumu.cs" />
+    <Compile Include="HeapSort.cs" />
     <Compile Include="Ilan.cs" />
+    <Compile Include="IsBasvurusuIcinBilgiGuncellemeFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinBilgiGuncellemeFormu.Designer.cs">
+      <DependentUpon>IsBasvurusuIcinBilgiGuncellemeFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.Designer.cs">
+      <DependentUpon>IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinIlanaBasvurmaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinIlanaBasvurmaFormu.Designer.cs">
+      <DependentUpon>IsBasvurusuIcinIlanaBasvurmaFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinKayitlanmaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsBasvurusuIcinKayitlanmaFormu.Designer.cs">
+      <DependentUpon>IsBasvurusuIcinKayitlanmaFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="IsDeneyimi.cs" />
     <Compile Include="KisiBilgileri.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="LinkedListIcerikleri.cs" />
     <Compile Include="Node.cs" />
-    <Compile Include="Node1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sirket.cs" />
-    <Compile Include="Tree.cs" />
+    <Compile Include="SirketAnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SirketAnaForm.Designer.cs">
+      <DependentUpon>SirketAnaForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsBasvurusuIcinBilgiGuncellemeFormu.resx">
+      <DependentUpon>IsBasvurusuIcinBilgiGuncellemeFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.resx">
+      <DependentUpon>IsBasvurusuIcinBilgilerinSilinmesi%28SistemdenCikma%29Formu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsBasvurusuIcinIlanaBasvurmaFormu.resx">
+      <DependentUpon>IsBasvurusuIcinIlanaBasvurmaFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsBasvurusuIcinKayitlanmaFormu.resx">
+      <DependentUpon>IsBasvurusuIcinKayitlanmaFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,6 +197,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SirketAnaForm.resx">
+      <DependentUpon>SirketAnaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
