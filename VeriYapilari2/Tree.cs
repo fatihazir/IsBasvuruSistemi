@@ -29,6 +29,7 @@ namespace VeriYapilari2
 
                 var current = this.Top;
                 var added = false;
+                
 
                 do
                 {
