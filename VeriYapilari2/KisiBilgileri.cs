@@ -35,7 +35,7 @@ namespace VeriYapilari2
             this.iseUygunlukDurumu = RandomIsUygunluk();
 
         }
-        private int RandomIsUygunluk()
+        public int RandomIsUygunluk()
         {
             Random queueNumber = new Random();
             int number = queueNumber.Next(0, 10);
@@ -54,5 +54,12 @@ namespace VeriYapilari2
             return temp;
 
         }
+        static Tree<int> InitializeTree()
+        {
+        Tree<int> tree = new Tree<int>();
+            tree.Add();
+            return tree;
+        }
+
     }
 }

@@ -137,9 +137,11 @@
     <Compile Include="LinkedList.cs" />
     <Compile Include="LinkedListIcerikleri.cs" />
     <Compile Include="Node.cs" />
+    <Compile Include="Node1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sirket.cs" />
+    <Compile Include="Tree.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
