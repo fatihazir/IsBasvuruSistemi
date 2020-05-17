@@ -35,11 +35,11 @@ namespace VeriYapilari2
                     break;
             }
 
-            kisi.BilgiGuncelle(txtKisiAd.Text, txtKisiSoyad.Text, txtKisiAdres.Text,
-                                                        txtKisiTelefon.Text, txtKisiEmail.Text,
-                                                        txtKisiUyruk.Text, txtKisiDogumTarihi.Text,
-                                                        txtKisiDogumYeri.Text, medeniDurum, txtKisiYabanciDil.Text,
-                                                        txtKisiIlgiAlanlari.Text);
+            //kisi.BilgiGuncelle(txtKisiAd.Text, txtKisiSoyad.Text, txtKisiAdres.Text,
+            //                                            txtKisiTelefon.Text, txtKisiEmail.Text,
+            //                                            txtKisiUyruk.Text, txtKisiDogumTarihi.Text,
+            //                                            txtKisiDogumYeri.Text, medeniDurum, txtKisiYabanciDil.Text,
+            //                                            txtKisiIlgiAlanlari.Text);
         }
 
         private void IsBasvurusuIcinBilgiGuncellemeFormu_Load(object sender, EventArgs e)
