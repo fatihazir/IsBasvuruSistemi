@@ -1,15 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace VeriYapilari2
 {
     public class Sirket
     {
-        public int SirketID { get; set; }
+        public int SirketID { get;private set; }
         public string SirketAd { get; set; }
         public string SirketAdres { get; set; }
         public string SirketFax { get; set; }
         public double SirketTelefon { get; set; }
         public string SirketEposta { get; set; }
+        public List<Ilan> Ilanlar = new List<Ilan>();
 
         public string SirketBilgileriYazdir()
         {
@@ -23,14 +25,25 @@ namespace VeriYapilari2
 
             return temp;
         }
-        public int BilgiGuncelle(string ad, string adres, string fax, double telefon, string eposta)
+        public bool BilgiGuncelle(string ad, string adres, string fax, double telefon, string eposta)
         {
             this.SirketAd = ad;
             this.SirketAdres = adres;
             this.SirketFax = fax;
             this.SirketEposta = eposta;
             this.SirketTelefon = telefon;
-            return 1;
+            return true;
+
+        }
+        public Sirket()
+        {
+            this.SirketID = RandomSirketId();
+        }
+        private int RandomSirketId()
+        {
+            Random queueNumber = new Random();
+            int number = queueNumber.Next(5000, 6000);
+            return number;
         }
 
         public int SirketSil(int sirketID)

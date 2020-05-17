@@ -20,10 +20,10 @@ namespace VeriYapilari2
         private void IsBasvurusuIcinBilgilerinSilinmesi_SistemdenCikma_Formu_Load(object sender, EventArgs e)
         {
             // sessiondaki kisi bilgileri
-            txtKisiAd.Text;
-            txtKisiTelefon;
-            txtKisiSoyad;
-            txtKisiAd;
+            //txtKisiAd.Text;
+            //txtKisiTelefon;
+            //txtKisiSoyad;
+            //txtKisiAd;
             
         }
 
