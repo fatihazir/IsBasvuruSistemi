@@ -10,5 +10,7 @@ namespace VeriYapilari2
     {
         public string Data;
         public Node Next;
+        
+
     }
 }

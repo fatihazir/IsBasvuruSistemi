@@ -173,6 +173,8 @@
     <Compile Include="SirketAnaForm.Designer.cs">
       <DependentUpon>SirketAnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="İkiliAgac.cs" />
+    <Compile Include="İkiliAgacDugumu.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
