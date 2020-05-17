@@ -49,10 +49,10 @@ namespace VeriYapilari2
             yeniSirketFax = sirketFaxTextBox.Text;
             yeniSirketTelefon = Convert.ToDouble(sirketTelTextBox.Text);
 
-            int guncellendimi = sirket.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
-            yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta);
+           
 
-            if (guncellendimi == 1)
+            if (sirket.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
+            yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta))
             {
                 MessageBox.Show("Aga kalk güncelledin");
             }

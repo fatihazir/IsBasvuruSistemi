@@ -23,14 +23,16 @@ namespace VeriYapilari2
 
             return temp;
         }
-        public int BilgiGuncelle(string ad, string adres, string fax, double telefon, string eposta)
+        public bool BilgiGuncelle(string ad, string adres, string fax, double telefon, string eposta)
         {
             this.SirketAd = ad;
             this.SirketAdres = adres;
             this.SirketFax = fax;
             this.SirketEposta = eposta;
             this.SirketTelefon = telefon;
-            return 1;
+            return true;
+
+            
         }
 
         public int SirketSil(int sirketID)

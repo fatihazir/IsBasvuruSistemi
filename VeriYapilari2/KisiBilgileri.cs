@@ -2,7 +2,7 @@
 
 namespace VeriYapilari2
 {
-    public class KisiBilgileri
+    public class KisiBilgileri : IsDeneyimi
     {
         public string ad { get; set; }
         public string soyad { get; set; }
@@ -33,8 +33,11 @@ namespace VeriYapilari2
             this.yabanciDil = yabanciDil;
             this.ilgliAlanlari = ilgliAlanlari;
             this.iseUygunlukDurumu = RandomIsUygunluk();
+        }
 
-           
+        public void KisiyeIsDeneyimiAta(string isyeriAdi)
+        {
+            this.IsyeriAd = isyeriAdi;
         }
 
         private int RandomIsUygunluk()
@@ -64,8 +67,6 @@ namespace VeriYapilari2
 
         public KisiBilgileri()
         {
-
         }
-
     }
 }
