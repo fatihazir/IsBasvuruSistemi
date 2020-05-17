@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Security;
 
 namespace VeriYapilari2
 {
@@ -7,19 +8,19 @@ namespace VeriYapilari2
         public int IlanNumarasi { get; set; }
         public string IsTanimi { get; set; }
         public string Pozisyon { get; set; }
+        public int IlaninIsyeriIdsi { get; set; }
         public string ArananElemanOzellikleri { get; set; }
 
-        public Ilan(string pozisyon, string isTanimi, string arananElemanOzellikleri, int sirketId, string sirketAd, string sirketAdres, double sirketTelefon, string sirketEposta)
+        public Ilan(Sirket sirket)
         {
             this.IlanNumarasi = RandomIlanNumarasi();
-            this.Pozisyon = pozisyon;
-            this.IsTanimi = isTanimi;
-            this.ArananElemanOzellikleri = arananElemanOzellikleri;
-            this.SirketID = sirketId;
-            this.SirketAd = sirketAd;
-            this.SirketAdres = sirketAdres;
-            this.SirketTelefon = sirketTelefon;
-            this.SirketEposta = sirketEposta;
+            this.IlaninIsyeriIdsi = sirket.SirketID;
+            this.SirketAd = sirket.SirketAd;
+            this.SirketAdres = sirket.SirketAdres;
+            this.SirketEposta = sirket.SirketEposta;
+            this.SirketFax = sirket.SirketFax;
+            this.SirketTelefon = sirket.SirketTelefon;
+            
         }
 
         private int RandomIlanNumarasi()

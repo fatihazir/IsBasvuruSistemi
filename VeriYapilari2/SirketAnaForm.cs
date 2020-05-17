@@ -26,7 +26,6 @@ namespace VeriYapilari2
             sirket.SirketAdres = "Hayat Adresi";
             sirket.SirketEposta = "hayat@hayat.com";
             sirket.SirketFax = "3131313131";
-            sirket.SirketID = 1;
             sirket.SirketTelefon = 52552525252;
             sirketAdTextBox.Text = sirket.SirketAd;
             sirketAdresRichTextBox.Text = sirket.SirketAdres;           
@@ -88,17 +87,7 @@ namespace VeriYapilari2
             pozisyon = yeniIlanPozisyonTextBox.Text;
             int sirketID = sirket.SirketID;
             //aga burayı kontrol et yanlış olabilir
-            Ilan yeniIlan = new Ilan
-            (
-                pozisyon,
-                ilanTanimi,
-                arananElamanOzellikleri,
-                sirketID,
-                sirket.SirketAd,
-                sirket.SirketAdres,
-                sirket.SirketTelefon,
-                sirket.SirketEposta
-            );
+            
             MessageBox.Show("Aga kalk yeni ilan ekledin");
         }
 
