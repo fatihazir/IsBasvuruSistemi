@@ -164,6 +164,12 @@
     <Compile Include="KisiBilgileri.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="LinkedListIcerikleri.cs" />
+    <Compile Include="LoginFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFormu.Designer.cs">
+      <DependentUpon>LoginFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IsBasvurusuIcinKayitlanmaFormu.resx">
       <DependentUpon>IsBasvurusuIcinKayitlanmaFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFormu.resx">
+      <DependentUpon>LoginFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -5,10 +5,20 @@ namespace VeriYapilari2
 {
     public class DatabaseIslemleri : Sirket
     {
-        public List<Sirket> DatabasedenSirketleriCek()
+        public List<KisiBilgileri> Kisiler = new List<KisiBilgileri>();
+
+        public List<Sirket> Sirketler = new List<Sirket>();
+
+        public DatabaseIslemleri()
         {
-            List<Sirket> Sirketler = new List<Sirket>();
+            DatabasedenIlkKisiCekimi();
+            DatabasedenIlkSirketCekimi();
+        }
+
+        public void DatabasedenIlkSirketCekimi()
+        {
             Sirket tempSirket = new Sirket();
+
             string[] satirlar = System.IO.File.ReadAllLines("./SirketDb.txt");
 
             for (int i = 0; i < satirlar.Length; i++)
@@ -21,17 +31,15 @@ namespace VeriYapilari2
                 tempSirket.SirketFax = TempSirketBilgisi[3];
                 tempSirket.SirketTelefon = TempSirketBilgisi[4];
                 tempSirket.SirketEposta = TempSirketBilgisi[5];
-
-                Sirketler.Add(tempSirket);
+                tempSirket.sifre = TempSirketBilgisi[6];
             }
-
-            return Sirketler;
+            Sirketler.Add(tempSirket);
         }
 
-        public List<KisiBilgileri> DatabasedenKisileriCek()
+        public void DatabasedenIlkKisiCekimi()
         {
-            List<KisiBilgileri> Kisiler = new List<KisiBilgileri>();
             KisiBilgileri tempKisi = new KisiBilgileri();
+
             string[] satirlar = System.IO.File.ReadAllLines("./KisiDb.txt");
 
             for (int i = 0; i < satirlar.Length; i++)
@@ -59,12 +67,64 @@ namespace VeriYapilari2
                 tempKisi.KisininBolumeBaslangicYili = Convert.ToInt32(TempKisiBilgisi[18]);
                 tempKisi.KisininBolumuBitirmeYili = Convert.ToInt32(TempKisiBilgisi[19]);
                 tempKisi.KisininNotOrtalamasi = TempKisiBilgisi[20];
-                tempKisi.kisiId = Convert.ToInt32(TempKisiBilgisi[21]);
+                tempKisi.tcKimlikNumarasi = Convert.ToInt32(TempKisiBilgisi[21]);
+                tempKisi.sifre = TempKisiBilgisi[22];
+            }
+            Kisiler.Add(tempKisi);
+        }
 
-                Kisiler.Add(tempKisi);
+        public KisiBilgileri KisiGetir(int tc)
+        {
+            foreach (KisiBilgileri kisi in Kisiler)
+            {
+                if (kisi.tcKimlikNumarasi == tc)
+                {
+                    return kisi;
+                }
             }
 
-            return Kisiler;
+            KisiBilgileri bos = new KisiBilgileri();
+            return bos;
+        }
+
+        public Sirket SirketGetir(string sirketAdi)
+        {
+            foreach (Sirket sirket in Sirketler)
+            {
+                if (sirket.SirketAd == sirketAdi)
+                {
+                    return sirket;
+                }
+            }
+
+            Sirket bos = new Sirket();
+            return bos;
+        }
+
+        public bool GirisYap(int tc, string sifre)
+        {
+            foreach (KisiBilgileri kisi in Kisiler)
+            {
+                if (kisi.tcKimlikNumarasi == tc && kisi.sifre == sifre)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool GirisYap(string sirketAdi)
+        {
+            foreach (Sirket sirket in Sirketler)
+            {
+                if (sirket.SirketAd == sirketAdi)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

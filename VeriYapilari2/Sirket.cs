@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Windows.Forms;
 
 namespace VeriYapilari2
 {
@@ -14,6 +12,7 @@ namespace VeriYapilari2
         public string SirketTelefon { get; set; }
         public string SirketEposta { get; set; }
         public List<Ilan> Ilanlar = new List<Ilan>();
+        public string sifre { get; set; }
 
         public string SirketBilgileriYazdir()
         {
@@ -55,9 +54,5 @@ namespace VeriYapilari2
             //BURADA MİNİK SİLME İŞLEMLERİ GERÇEKLEŞECEK
             return true;
         }
-
-        
-
-       
     }
 }

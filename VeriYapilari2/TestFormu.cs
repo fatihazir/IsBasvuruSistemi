@@ -40,16 +40,17 @@ namespace VeriYapilari2
 
         private void btnSirketCekmeTesti_Click(object sender, EventArgs e)
         {
-            List<Sirket> Sirketler = new List<Sirket>();
-            DatabaseIslemleri db = new DatabaseIslemleri();
-            Sirketler = db.DatabasedenSirketleriCek();
+            
         }
 
         private void btnKisiCekmeTesti_Click(object sender, EventArgs e)
         {
-            List<KisiBilgileri> Kisiler = new List<KisiBilgileri>();
-            DatabaseIslemleri db = new DatabaseIslemleri();
-            Kisiler = db.DatabasedenKisileriCek();
+            
+        }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

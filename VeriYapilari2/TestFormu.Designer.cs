@@ -46,7 +46,7 @@
             // 
             // btnSirketCekmeTesti
             // 
-            this.btnSirketCekmeTesti.Location = new System.Drawing.Point(115, 180);
+            this.btnSirketCekmeTesti.Location = new System.Drawing.Point(115, 158);
             this.btnSirketCekmeTesti.Margin = new System.Windows.Forms.Padding(2);
             this.btnSirketCekmeTesti.Name = "btnSirketCekmeTesti";
             this.btnSirketCekmeTesti.Size = new System.Drawing.Size(373, 41);
@@ -57,7 +57,7 @@
             // 
             // btnKisiCekmeTesti
             // 
-            this.btnKisiCekmeTesti.Location = new System.Drawing.Point(115, 252);
+            this.btnKisiCekmeTesti.Location = new System.Drawing.Point(115, 212);
             this.btnKisiCekmeTesti.Margin = new System.Windows.Forms.Padding(2);
             this.btnKisiCekmeTesti.Name = "btnKisiCekmeTesti";
             this.btnKisiCekmeTesti.Size = new System.Drawing.Size(373, 41);

@@ -4,7 +4,6 @@ namespace VeriYapilari2
 {
     public class KisiBilgileri : IsDeneyimi
     {
-        public int kisiId { get; set; }
         public string ad { get; set; }
         public string soyad { get; set; }
         public string adres { get; set; }
@@ -17,6 +16,8 @@ namespace VeriYapilari2
         public string yabanciDil { get; set; }
         public string ilgiAlanlari { get; set; }
         public int iseUygunlukDurumu { get; set; }
+        public int tcKimlikNumarasi { get; set; }
+        public string sifre { get; set; }
 
         //public KisiBilgileri(string ad, string soyad, string adres, string telefon, string email, string uyruk,
         //                    string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
@@ -36,17 +37,10 @@ namespace VeriYapilari2
         //    this.iseUygunlukDurumu = RandomIsUygunluk();
         //}
 
-
         private int RandomIsUygunluk()
         {
             Random queueNumber = new Random();
             int number = queueNumber.Next(0, 10);
-            return number;
-        }
-        private int RandomKisiId()
-        {
-            Random queueNumber = new Random();
-            int number = queueNumber.Next(0, 100);
             return number;
         }
 
@@ -55,6 +49,7 @@ namespace VeriYapilari2
             string temp;
             temp = "Kişinin Adı: " + ad + Environment.NewLine +
                    "Kişinin Soyadı: " + soyad + Environment.NewLine +
+                   "Tc kimlik numrasi: " + tcKimlikNumarasi + Environment.NewLine +
                    "Kişinin Adresi: " + adres + Environment.NewLine +
                    "Kişinin Telefonu: " + telefon + Environment.NewLine +
                    "Kişinin Email Adresi: " + email + Environment.NewLine +
@@ -71,7 +66,6 @@ namespace VeriYapilari2
         public KisiBilgileri()
         {
             this.iseUygunlukDurumu = RandomIsUygunluk();
-            this.kisiId = RandomKisiId();
         }
     }
 }
