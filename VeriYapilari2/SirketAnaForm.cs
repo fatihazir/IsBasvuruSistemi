@@ -26,7 +26,7 @@ namespace VeriYapilari2
             sirket.SirketAdres = "Hayat Adresi";
             sirket.SirketEposta = "hayat@hayat.com";
             sirket.SirketFax = "3131313131";
-            sirket.SirketTelefon = 52552525252;
+            sirket.SirketTelefon = "52552525252";
             sirketAdTextBox.Text = sirket.SirketAd;
             sirketAdresRichTextBox.Text = sirket.SirketAdres;           
             sirketEPostaTextBox.Text = sirket.SirketEposta;
@@ -41,12 +41,12 @@ namespace VeriYapilari2
 
 
             string yeniSirketAd, yeniSirketAdres, yeniSirketEPosta, yeniSirketFax;
-            double yeniSirketTelefon;
+            string yeniSirketTelefon;
             yeniSirketAd = sirketAdTextBox.Text;
             yeniSirketAdres = sirketAdresRichTextBox.Text;
             yeniSirketEPosta = sirketEPostaTextBox.Text;
             yeniSirketFax = sirketFaxTextBox.Text;
-            yeniSirketTelefon = Convert.ToDouble(sirketTelTextBox.Text);
+            yeniSirketTelefon = sirketTelTextBox.Text;
 
            
 
@@ -67,15 +67,15 @@ namespace VeriYapilari2
             // EMİN MİSİN SORUSU VE DOUBLE CHECK.
             // fatih senden çaldım bunu da nası kullanılıyor aq bu dialogbox ı
             int sirketID = sirket.SirketID;
-            int silindimi = sirket.SirketSil(sirketID);
-            if (silindimi == 1)
-            {
-                MessageBox.Show("Aga kalk sildin");
-            }
-            else
-            {
-                MessageBox.Show("Sana da yaranmıyo aq ne hatası çıktı yine git bul şunu");
-            }
+            //int silindimi = sirket.SirketSil(sirketID);
+            //if (silindimi == 1)
+            //{
+            //    MessageBox.Show("Aga kalk sildin");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sana da yaranmıyo aq ne hatası çıktı yine git bul şunu");
+            //}
         }
 
         private void sirketYeniIlanVerButon_Click(object sender, EventArgs e)

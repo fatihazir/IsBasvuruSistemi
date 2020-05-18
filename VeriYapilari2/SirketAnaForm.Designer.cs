@@ -474,7 +474,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "SirketAnaForm";
             this.Text = "SirketAnaForm";
-            this.Load += new System.EventHandler(this.SirketAnaForm_Load);
+         
             this.tabControl1.ResumeLayout(false);
             this.tabAnaSayfa.ResumeLayout(false);
             this.tabAnaSayfa.PerformLayout();
