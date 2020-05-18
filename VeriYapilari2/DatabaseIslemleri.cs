@@ -9,6 +9,9 @@ namespace VeriYapilari2
 
         public List<Sirket> Sirketler = new List<Sirket>();
 
+        private KisiBilgileri tempKisi = new KisiBilgileri();
+        private Sirket tempSirket = new Sirket();
+
         public DatabaseIslemleri()
         {
             DatabasedenIlkKisiCekimi();
@@ -73,32 +76,14 @@ namespace VeriYapilari2
             Kisiler.Add(tempKisi);
         }
 
-        public KisiBilgileri KisiGetir(int tc)
+        public KisiBilgileri KisiGetir()
         {
-            foreach (KisiBilgileri kisi in Kisiler)
-            {
-                if (kisi.tcKimlikNumarasi == tc)
-                {
-                    return kisi;
-                }
-            }
-
-            KisiBilgileri bos = new KisiBilgileri();
-            return bos;
+            return tempKisi;
         }
 
-        public Sirket SirketGetir(string sirketAdi)
+        public Sirket SirketGetir()
         {
-            foreach (Sirket sirket in Sirketler)
-            {
-                if (sirket.SirketAd == sirketAdi)
-                {
-                    return sirket;
-                }
-            }
-
-            Sirket bos = new Sirket();
-            return bos;
+            return tempSirket;
         }
 
         public bool GirisYap(int tc, string sifre)
@@ -107,6 +92,7 @@ namespace VeriYapilari2
             {
                 if (kisi.tcKimlikNumarasi == tc && kisi.sifre == sifre)
                 {
+                    tempKisi = kisi;
                     return true;
                 }
             }
@@ -114,12 +100,13 @@ namespace VeriYapilari2
             return false;
         }
 
-        public bool GirisYap(string sirketAdi)
+        public bool GirisYap(string sirketAdi, string sifre)
         {
             foreach (Sirket sirket in Sirketler)
             {
-                if (sirket.SirketAd == sirketAdi)
+                if (sirket.SirketAd == sirketAdi && sirket.sifre == sifre)
                 {
+                    tempSirket = sirket;
                     return true;
                 }
             }

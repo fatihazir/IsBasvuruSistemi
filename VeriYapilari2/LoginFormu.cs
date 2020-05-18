@@ -23,7 +23,7 @@ namespace VeriYapilari2
             if (girisDogrulama)
             {
                 KisiBilgileri deneme = new KisiBilgileri();
-                deneme = db.KisiGetir(tc);
+                deneme = db.KisiGetir();
             }
 
             girisDogrulama = false;
@@ -38,12 +38,12 @@ namespace VeriYapilari2
             string sirketAdi = txtSirketAdi.Text;
             string sifre = txtSirketSifre.Text;
             bool girisDogrulama;
-            girisDogrulama = db.GirisYap(sirketAdi);
+            girisDogrulama = db.GirisYap(sirketAdi, sifre);
 
             if (girisDogrulama)
             {
                 Sirket deneme = new Sirket();
-                deneme = db.SirketGetir(sirketAdi);
+                deneme = db.SirketGetir();
             }
 
             girisDogrulama = false;
