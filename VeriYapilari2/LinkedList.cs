@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VeriYapilari2
 {
@@ -95,7 +91,7 @@ namespace VeriYapilari2
             Node tempHead = new Node();
             tempHead.Data = value;
 
-            if(Head == null)
+            if (Head == null)
             {
                 Head = tempHead; //Head boşsa ilk degeri head olarak aliyoruz.
             }

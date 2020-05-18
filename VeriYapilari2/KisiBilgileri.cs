@@ -4,6 +4,7 @@ namespace VeriYapilari2
 {
     public class KisiBilgileri : IsDeneyimi
     {
+        public int kisiId { get; set; }
         public string ad { get; set; }
         public string soyad { get; set; }
         public string adres { get; set; }
@@ -14,36 +15,38 @@ namespace VeriYapilari2
         public string dogumYeri { get; set; }
         public string medeniDurum { get; set; }
         public string yabanciDil { get; set; }
-        public string ilgliAlanlari { get; set; }
+        public string ilgiAlanlari { get; set; }
         public int iseUygunlukDurumu { get; set; }
 
-        public KisiBilgileri(string ad, string soyad, string adres, string telefon, string email, string uyruk,
-                            string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
-                            string ilgliAlanlari)
-        {
-            this.ad = ad;
-            this.soyad = soyad;
-            this.adres = adres;
-            this.telefon = telefon;
-            this.email = email;
-            this.uyruk = uyruk;
-            this.dogumTarihi = dogumTarihi;
-            this.dogumYeri = dogumYeri;
-            this.medeniDurum = medeniDurum;
-            this.yabanciDil = yabanciDil;
-            this.ilgliAlanlari = ilgliAlanlari;
-            this.iseUygunlukDurumu = RandomIsUygunluk();
-        }
+        //public KisiBilgileri(string ad, string soyad, string adres, string telefon, string email, string uyruk,
+        //                    string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
+        //                    string ilgliAlanlari)
+        //{
+        //    this.ad = ad;
+        //    this.soyad = soyad;
+        //    this.adres = adres;
+        //    this.telefon = telefon;
+        //    this.email = email;
+        //    this.uyruk = uyruk;
+        //    this.dogumTarihi = dogumTarihi;
+        //    this.dogumYeri = dogumYeri;
+        //    this.medeniDurum = medeniDurum;
+        //    this.yabanciDil = yabanciDil;
+        //    this.ilgiAlanlari = ilgliAlanlari;
+        //    this.iseUygunlukDurumu = RandomIsUygunluk();
+        //}
 
-        public void KisiyeIsDeneyimiAta(string isyeriAdi)
-        {
-            this.IsyeriAd = isyeriAdi;
-        }
 
         private int RandomIsUygunluk()
         {
             Random queueNumber = new Random();
             int number = queueNumber.Next(0, 10);
+            return number;
+        }
+        private int RandomKisiId()
+        {
+            Random queueNumber = new Random();
+            int number = queueNumber.Next(0, 100);
             return number;
         }
 
@@ -60,13 +63,15 @@ namespace VeriYapilari2
                    "Kişinin Doğum Yeri: " + dogumYeri + Environment.NewLine +
                    "Kişinin Medeni Durumu: " + medeniDurum + Environment.NewLine +
                    "Kişinin Yabancı Dil veya Dilleri: " + yabanciDil + Environment.NewLine +
-                   "Kişinin İlgi Alanları: " + ilgliAlanlari + Environment.NewLine +
+                   "Kişinin İlgi Alanları: " + ilgiAlanlari + Environment.NewLine +
                    "Kişinin İşe Uygunluk Durumu: " + iseUygunlukDurumu;
             return temp;
         }
 
         public KisiBilgileri()
         {
+            this.iseUygunlukDurumu = RandomIsUygunluk();
+            this.kisiId = RandomKisiId();
         }
     }
 }

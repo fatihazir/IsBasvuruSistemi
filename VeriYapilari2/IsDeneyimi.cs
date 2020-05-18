@@ -17,7 +17,7 @@ namespace VeriYapilari2
         public string KİsininOkulBolumu { get; set; }
         public int KisininBolumeBaslangicYili { get; set; }
         public int KisininBolumuBitirmeYili { get; set; }
-        public double KisininNotOrtalamasi { get; set; }
+        public string KisininNotOrtalamasi { get; set; }
 
     }
 }

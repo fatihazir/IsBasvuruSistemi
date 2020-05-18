@@ -21,7 +21,7 @@ namespace VeriYapilari2
             birey.KisininBolumeBaslangicYili = 40;
             birey.KisininBolumuBitirmeYili = 2028;
             birey.KisininEgitimDurumu = "Universite";
-            birey.KisininNotOrtalamasi = 4.5;
+            birey.KisininNotOrtalamasi = "4";
             birey.KisininOkulAdi = "kenya caycilari dernegi";
             birey.KİsininOkulBolumu = "gastronomi";
 
@@ -36,8 +36,6 @@ namespace VeriYapilari2
 
         private void btnIlanSirketCompTest_Click(object sender, EventArgs e)
         {
-            
-           
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Windows.Forms;
 
 namespace VeriYapilari2
@@ -25,8 +24,6 @@ namespace VeriYapilari2
 
             sirket1.Ilanlar.Add(ilan1);
 
-
-
             Ilan ilan2 = new Ilan(sirket1);
             ilan2.IsTanimi = "hizmetkar";
             ilan2.ArananElemanOzellikleri = "nefes versin";
@@ -39,27 +36,20 @@ namespace VeriYapilari2
 
         private void btnTxtDb_Click(object sender, EventArgs e)
         {
-            // Sirket Ekleme
-            Sirket sirket = new Sirket();
-            sirket.SirketAd = "fatih company";
-            sirket.SirketAdres = "izmir";
-            sirket.SirketEposta = "gmaill";
-            sirket.SirketFax = "sdsdsd";
-            sirket.SirketTelefon = "4454";
-
-            sirket.DatabaseyeSirketEkle(sirket);
-
         }
 
         private void btnSirketCekmeTesti_Click(object sender, EventArgs e)
         {
             List<Sirket> Sirketler = new List<Sirket>();
-            Sirket sirket = new Sirket();
-            Sirketler = sirket.DatabasedenSirketCek();
-            sirket = Sirketler[0];
+            DatabaseIslemleri db = new DatabaseIslemleri();
+            Sirketler = db.DatabasedenSirketleriCek();
+        }
 
-
-
+        private void btnKisiCekmeTesti_Click(object sender, EventArgs e)
+        {
+            List<KisiBilgileri> Kisiler = new List<KisiBilgileri>();
+            DatabaseIslemleri db = new DatabaseIslemleri();
+            Kisiler = db.DatabasedenKisileriCek();
         }
     }
 }
