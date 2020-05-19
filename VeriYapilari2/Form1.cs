@@ -23,7 +23,7 @@ namespace VeriYapilari2
             birey.KisininEgitimDurumu = "Universite";
             birey.KisininNotOrtalamasi = "4";
             birey.KisininOkulAdi = "kenya caycilari dernegi";
-            birey.KİsininOkulBolumu = "gastronomi";
+            birey.KisininOkulBolumu = "gastronomi";
 
             LinkedList lnkdlst = new LinkedList();
             lnkdlst.InsertFirst(birey.KisininBolumeBaslangicYili.ToString());

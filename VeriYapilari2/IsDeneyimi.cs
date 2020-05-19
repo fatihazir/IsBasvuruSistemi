@@ -14,7 +14,7 @@ namespace VeriYapilari2
         public int IsyeriCalismaYili { get; set; }
         public string KisininEgitimDurumu { get; set; }
         public string KisininOkulAdi { get; set; }
-        public string KİsininOkulBolumu { get; set; }
+        public string KisininOkulBolumu { get; set; }
         public int KisininBolumeBaslangicYili { get; set; }
         public int KisininBolumuBitirmeYili { get; set; }
         public string KisininNotOrtalamasi { get; set; }

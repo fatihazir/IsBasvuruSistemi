@@ -14,24 +14,12 @@ namespace VeriYapilari2
     {
         // Şirket bilgilerinin çekilmesi. Ve sirket'e eşi.
 
-        private Sirket sirket = new Sirket();
+        private DatabaseIslemleri db = new DatabaseIslemleri();
+        private Sirket sirketFormIci = new Sirket();
         public SirketAnaForm()
         {
             InitializeComponent();
-
-            //BURADA GİRİŞ YAPAN ŞİRKETİN BİLGİLERİNİ ÇEKERİZ
-            //BURADA RASTGELE ŞİRKET BİLGİSİ EKLİOM KIZMAIN .d
-
-            sirket.SirketAd = "Hayat Şirketi";
-            sirket.SirketAdres = "Hayat Adresi";
-            sirket.SirketEposta = "hayat@hayat.com";
-            sirket.SirketFax = "3131313131";
-            sirket.SirketTelefon = "52552525252";
-            sirketAdTextBox.Text = sirket.SirketAd;
-            sirketAdresRichTextBox.Text = sirket.SirketAdres;           
-            sirketEPostaTextBox.Text = sirket.SirketEposta;
-            sirketFaxTextBox.Text = sirket.SirketFax;
-            sirketTelTextBox.Text = sirket.SirketTelefon.ToString();
+            
             
         }
 
@@ -50,7 +38,7 @@ namespace VeriYapilari2
 
            
 
-            if (sirket.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
+            if (sirketFormIci.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
             yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta))
             {
                 MessageBox.Show("Aga kalk güncelledin");
@@ -66,7 +54,7 @@ namespace VeriYapilari2
             DialogResult durum = new DialogResult();
             // EMİN MİSİN SORUSU VE DOUBLE CHECK.
             // fatih senden çaldım bunu da nası kullanılıyor aq bu dialogbox ı
-            int sirketID = sirket.SirketID;
+            int sirketID = sirketFormIci.SirketID;
             //int silindimi = sirket.SirketSil(sirketID);
             //if (silindimi == 1)
             //{
@@ -85,7 +73,7 @@ namespace VeriYapilari2
             ilanTanimi = yeniIlanIsTanimiRichTextBox.Text;
             arananElamanOzellikleri = yeniIlanArananElemanOzellikleriRichTextBox.Text;
             pozisyon = yeniIlanPozisyonTextBox.Text;
-            int sirketID = sirket.SirketID;
+            int sirketID = sirketFormIci.SirketID;
             //aga burayı kontrol et yanlış olabilir
             
             MessageBox.Show("Aga kalk yeni ilan ekledin");
@@ -119,6 +107,23 @@ namespace VeriYapilari2
             //YABANCI DİLİ OLANLAR LİSTELENECEK VE LİSTVİEW İÇİNE YAZILACAK
         }
 
-       
+        private void SirketAnaForm_Load(object sender, EventArgs e)
+        {
+            //BURADA GİRİŞ YAPAN ŞİRKETİN BİLGİLERİNİ ÇEKERİZ
+            //BURADA RASTGELE ŞİRKET BİLGİSİ EKLİOM KIZMAIN .d
+            foreach (Sirket sirket in db.Sirketler)
+            {
+                if (sirket.SirketAd == labelSirketIsmi.Text)
+                {
+                    sirketFormIci = sirket;
+                    break;
+                }
+            }
+            sirketAdTextBox.Text = sirketFormIci.SirketAd;
+            sirketAdresRichTextBox.Text = sirketFormIci.SirketAdres;
+            sirketEPostaTextBox.Text = sirketFormIci.SirketEposta;
+            sirketFaxTextBox.Text = sirketFormIci.SirketFax;
+            sirketTelTextBox.Text = sirketFormIci.SirketTelefon;
+        }
     }
 }

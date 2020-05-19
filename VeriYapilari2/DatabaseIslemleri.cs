@@ -66,7 +66,7 @@ namespace VeriYapilari2
                 tempKisi.IsyeriCalismaYili = Convert.ToInt32(TempKisiBilgisi[14]);
                 tempKisi.KisininEgitimDurumu = TempKisiBilgisi[15];
                 tempKisi.KisininOkulAdi = TempKisiBilgisi[16];
-                tempKisi.KİsininOkulBolumu = TempKisiBilgisi[17];
+                tempKisi.KisininOkulBolumu = TempKisiBilgisi[17];
                 tempKisi.KisininBolumeBaslangicYili = Convert.ToInt32(TempKisiBilgisi[18]);
                 tempKisi.KisininBolumuBitirmeYili = Convert.ToInt32(TempKisiBilgisi[19]);
                 tempKisi.KisininNotOrtalamasi = TempKisiBilgisi[20];

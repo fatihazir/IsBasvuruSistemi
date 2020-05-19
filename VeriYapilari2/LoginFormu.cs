@@ -24,13 +24,12 @@ namespace VeriYapilari2
             {
                 KisiBilgileri deneme = new KisiBilgileri();
                 deneme = db.KisiGetir();
+                // KULLANICILAR İÇİN OLAN FORM AÇILACAK DÜZENLEME GEREKLİ
             }
-
-            girisDogrulama = false;
-        }
-
-        private void LoginFormu_Load(object sender, EventArgs e)
-        {
+            else
+            {
+                MessageBox.Show("Hatalı bilgi girişi yaptınız!");
+            }
         }
 
         private void btnSirketGirisi_Click(object sender, EventArgs e)
@@ -44,9 +43,14 @@ namespace VeriYapilari2
             {
                 Sirket deneme = new Sirket();
                 deneme = db.SirketGetir();
+                SirketAnaForm sirketFormunuAc = new SirketAnaForm();
+                sirketFormunuAc.labelSirketIsmi.Text = deneme.SirketAd;
+                sirketFormunuAc.Show();
             }
-
-            girisDogrulama = false;
+            else
+            {
+                MessageBox.Show("Hatalı bilgi girişi yaptınız!");
+            }
         }
     }
 }

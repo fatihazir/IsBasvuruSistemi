@@ -42,23 +42,26 @@
             // 
             // txtTcNo
             // 
-            this.txtTcNo.Location = new System.Drawing.Point(135, 147);
+            this.txtTcNo.Location = new System.Drawing.Point(180, 181);
+            this.txtTcNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTcNo.Name = "txtTcNo";
-            this.txtTcNo.Size = new System.Drawing.Size(100, 20);
+            this.txtTcNo.Size = new System.Drawing.Size(132, 22);
             this.txtTcNo.TabIndex = 0;
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(135, 187);
+            this.txtSifre.Location = new System.Drawing.Point(180, 230);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(100, 20);
+            this.txtSifre.Size = new System.Drawing.Size(132, 22);
             this.txtSifre.TabIndex = 1;
             // 
             // btnGirisYap
             // 
-            this.btnGirisYap.Location = new System.Drawing.Point(135, 249);
+            this.btnGirisYap.Location = new System.Drawing.Point(180, 306);
+            this.btnGirisYap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(100, 45);
+            this.btnGirisYap.Size = new System.Drawing.Size(133, 55);
             this.btnGirisYap.TabIndex = 2;
             this.btnGirisYap.Text = "Kullaniciya Giris Yap";
             this.btnGirisYap.UseVisualStyleBackColor = true;
@@ -67,44 +70,49 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 187);
+            this.label2.Location = new System.Drawing.Point(131, 230);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(37, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Sifre";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 154);
+            this.label1.Location = new System.Drawing.Point(131, 190);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.Size = new System.Drawing.Size(24, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tc";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(465, 190);
+            this.label3.Location = new System.Drawing.Point(620, 234);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.Size = new System.Drawing.Size(37, 17);
             this.label3.TabIndex = 14;
             this.label3.Text = "Sifre";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(442, 150);
+            this.label4.Location = new System.Drawing.Point(589, 185);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(67, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Sirket adi";
             // 
             // btnSirketGirisi
             // 
-            this.btnSirketGirisi.Location = new System.Drawing.Point(515, 249);
+            this.btnSirketGirisi.Location = new System.Drawing.Point(687, 306);
+            this.btnSirketGirisi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSirketGirisi.Name = "btnSirketGirisi";
-            this.btnSirketGirisi.Size = new System.Drawing.Size(100, 45);
+            this.btnSirketGirisi.Size = new System.Drawing.Size(133, 55);
             this.btnSirketGirisi.TabIndex = 12;
             this.btnSirketGirisi.Text = "Sirkete Giris Yap";
             this.btnSirketGirisi.UseVisualStyleBackColor = true;
@@ -112,23 +120,25 @@
             // 
             // txtSirketSifre
             // 
-            this.txtSirketSifre.Location = new System.Drawing.Point(515, 187);
+            this.txtSirketSifre.Location = new System.Drawing.Point(687, 230);
+            this.txtSirketSifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSirketSifre.Name = "txtSirketSifre";
-            this.txtSirketSifre.Size = new System.Drawing.Size(100, 20);
+            this.txtSirketSifre.Size = new System.Drawing.Size(132, 22);
             this.txtSirketSifre.TabIndex = 11;
             // 
             // txtSirketAdi
             // 
-            this.txtSirketAdi.Location = new System.Drawing.Point(515, 147);
+            this.txtSirketAdi.Location = new System.Drawing.Point(687, 181);
+            this.txtSirketAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSirketAdi.Name = "txtSirketAdi";
-            this.txtSirketAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtSirketAdi.Size = new System.Drawing.Size(132, 22);
             this.txtSirketAdi.TabIndex = 10;
             // 
             // LoginFormu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSirketGirisi);
@@ -139,9 +149,9 @@
             this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtTcNo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginFormu";
             this.Text = "LoginFormu";
-            this.Load += new System.EventHandler(this.LoginFormu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
