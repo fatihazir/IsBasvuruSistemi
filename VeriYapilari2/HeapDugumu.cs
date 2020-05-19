@@ -8,10 +8,14 @@ namespace VeriYapilari2
 {
     public class HeapDugumu
     {
-        public int Deger { get; set; }
-        public HeapDugumu(int deger)
+        public int IlanNumarasi { get; set; }
+        public KisiBilgileri Kisi { get; set; }
+        public int IseUygunluk { get; set; }
+        public HeapDugumu(int deger,KisiBilgileri kisi, int iseUygunluk)
         {
-            this.Deger = deger;
+            this.IlanNumarasi = deger;
+            this.Kisi = kisi;
+            this.IseUygunluk = iseUygunluk;
         }
     }
 }

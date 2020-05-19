@@ -5,15 +5,15 @@ namespace VeriYapilari2
 {
     public class Sirket
     {
-        public int SirketID { get; set; }
+        public int SirketID { get;private set; }
         public string SirketAd { get; set; }
         public string SirketAdres { get; set; }
         public string SirketFax { get; set; }
         public string SirketTelefon { get; set; }
         public string SirketEposta { get; set; }
 
-        public HashChain Ilanlar = new HashChain();
-        public string sifre { get; set; }
+        private HashChain Ilanlar = new HashChain();
+        protected string sifre { get; set; }
 
         public string SirketBilgileriYazdir()
         {

@@ -8,6 +8,7 @@ namespace VeriYapilari2
 {
    public class İkiliAramaAgacDugumu
    {
+
         public KisiBilgileri Kisi;
         public object veri;
         public İkiliAramaAgacDugumu sol;

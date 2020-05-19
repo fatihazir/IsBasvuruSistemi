@@ -30,13 +30,13 @@ namespace VeriYapilari2
 
             string yeniSirketAd, yeniSirketAdres, yeniSirketEPosta, yeniSirketFax;
             string yeniSirketTelefon;
-            yeniSirketAd = sirketAdTextBox.Text;
+            yeniSirketAd = txtSirketAdi.Text;
             yeniSirketAdres = sirketAdresRichTextBox.Text;
             yeniSirketEPosta = sirketEPostaTextBox.Text;
             yeniSirketFax = sirketFaxTextBox.Text;
-            yeniSirketTelefon = sirketTelTextBox.Text;
+            yeniSirketTelefon = txtSirketTelefon.Text;
 
-           
+            
 
             if (sirketFormIci.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
             yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta))
@@ -119,11 +119,11 @@ namespace VeriYapilari2
                     break;
                 }
             }
-            sirketAdTextBox.Text = sirketFormIci.SirketAd;
+            txtSirketAdi.Text = sirketFormIci.SirketAd;
             sirketAdresRichTextBox.Text = sirketFormIci.SirketAdres;
             sirketEPostaTextBox.Text = sirketFormIci.SirketEposta;
             sirketFaxTextBox.Text = sirketFormIci.SirketFax;
-            sirketTelTextBox.Text = sirketFormIci.SirketTelefon;
+            txtSirketTelefon.Text = sirketFormIci.SirketTelefon;
         }
     }
 }
