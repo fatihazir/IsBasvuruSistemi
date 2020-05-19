@@ -58,9 +58,25 @@ namespace VeriYapilari2
         }
 
             İkiliAramaAgacı aramaAgaci = new İkiliAramaAgacı();
+        
+
+        private void BtnDugumAra_Click(object sender, EventArgs e)
+        {
+            if (aramaAgaci == null)
+            {
+                MessageBox.Show("Öncelikle ağacı oluşturmalısınız!");
+                return;
+            }
+
+            İkiliAramaAgacDugumu dugum = aramaAgaci.Ara(Convert.ToUInt32(txtAra.Text));
+            if (dugum != null)
+                MessageBox.Show(dugum.veri + " düğümü bulundu.");
+            else
+                MessageBox.Show(txtAra.Text + " düğümü bulunamadı....");
+        }
+
         private void BtnAraDugumEkle_Click(object sender, EventArgs e)
         {
-
             KisiBilgileri kisi1 = new KisiBilgileri();
             KisiBilgileri kisi2 = new KisiBilgileri();
             KisiBilgileri kisi3 = new KisiBilgileri();
@@ -82,26 +98,6 @@ namespace VeriYapilari2
             aramaAgaci.Ekle(tc4);
             aramaAgaci.Ekle(tc5);
             aramaAgaci.Ekle(tc6);
-           
-        }
-        private void BtnDugumAra_Click(object sender, EventArgs e)
-        {
-       
-            if (aramaAgaci == null)
-            {
-                MessageBox.Show("Öncelikle ağacı oluşturmalısınız!");
-                return;
-            }
-
-            İkiliAramaAgacDugumu dugum = aramaAgaci.Ara(Convert.ToUInt32(txtAra.Text));
-            if (dugum != null)
-                MessageBox.Show(dugum.veri + " düğümü bulundu.");
-            else
-                MessageBox.Show(txtAra.Text + " düğümü bulunamadı....");
-        }
-
-        private void TxtAra_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }
