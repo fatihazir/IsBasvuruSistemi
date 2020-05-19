@@ -30,11 +30,11 @@ namespace VeriYapilari2
 
             string yeniSirketAd, yeniSirketAdres, yeniSirketEPosta, yeniSirketFax;
             string yeniSirketTelefon;
-            yeniSirketAd = sirketAdTextBox.Text;
-            yeniSirketAdres = sirketAdresRichTextBox.Text;
-            yeniSirketEPosta = sirketEPostaTextBox.Text;
-            yeniSirketFax = sirketFaxTextBox.Text;
-            yeniSirketTelefon = sirketTelTextBox.Text;
+            yeniSirketAd = txtSirketAd.Text;
+            yeniSirketAdres = richTxtSirketAdres.Text;
+            yeniSirketEPosta = txtSirketEPosta.Text;
+            yeniSirketFax = txtSirketFaks.Text;
+            yeniSirketTelefon = txtSirketTelefon.Text;
 
            
 
@@ -70,9 +70,9 @@ namespace VeriYapilari2
         {
             //veriler çekilip yeni bir ilan oluşturlacak. veriler Hash table a atılacak
             string ilanTanimi, arananElamanOzellikleri, pozisyon;
-            ilanTanimi = yeniIlanIsTanimiRichTextBox.Text;
-            arananElamanOzellikleri = yeniIlanArananElemanOzellikleriRichTextBox.Text;
-            pozisyon = yeniIlanPozisyonTextBox.Text;
+            ilanTanimi = richTxtYeniIsIlani.Text;
+            arananElamanOzellikleri = richTxtYeniArananEleman.Text;
+            pozisyon = txtYeniIlanPozisyon.Text;
             int sirketID = sirketFormIci.SirketID;
             //aga burayı kontrol et yanlış olabilir
             
@@ -119,11 +119,16 @@ namespace VeriYapilari2
                     break;
                 }
             }
-            sirketAdTextBox.Text = sirketFormIci.SirketAd;
-            sirketAdresRichTextBox.Text = sirketFormIci.SirketAdres;
-            sirketEPostaTextBox.Text = sirketFormIci.SirketEposta;
-            sirketFaxTextBox.Text = sirketFormIci.SirketFax;
-            sirketTelTextBox.Text = sirketFormIci.SirketTelefon;
+            txtSirketAd.Text = sirketFormIci.SirketAd;
+            richTxtSirketAdres.Text = sirketFormIci.SirketAdres;
+            txtSirketEPosta.Text = sirketFormIci.SirketEposta;
+            txtSirketFaks.Text = sirketFormIci.SirketFax;
+            txtSirketTelefon.Text = sirketFormIci.SirketTelefon;
+        }
+
+        private void TxtSirketAd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

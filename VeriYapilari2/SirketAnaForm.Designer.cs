@@ -34,35 +34,35 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelSirketIsmi = new System.Windows.Forms.Label();
             this.tabSirketBilgileri = new System.Windows.Forms.TabPage();
-            this.sirketAdresRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.sirketEPostaTextBox = new System.Windows.Forms.TextBox();
-            this.sirketFaxTextBox = new System.Windows.Forms.TextBox();
-            this.sirketTelTextBox = new System.Windows.Forms.TextBox();
-            this.sirketAdTextBox = new System.Windows.Forms.TextBox();
+            this.richTxtSirketAdres = new System.Windows.Forms.RichTextBox();
+            this.txtSirketEPosta = new System.Windows.Forms.TextBox();
+            this.txtSirketFaks = new System.Windows.Forms.TextBox();
+            this.txtSirketTelefon = new System.Windows.Forms.TextBox();
+            this.txtSirketAd = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelSirketAdi = new System.Windows.Forms.Label();
-            this.sirketBilgiGuncelleButon = new System.Windows.Forms.Button();
+            this.btnSirketBilgiGuncelle = new System.Windows.Forms.Button();
             this.tabSirketSil = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
-            this.sirketSilButon = new System.Windows.Forms.Button();
+            this.btnSirketSil = new System.Windows.Forms.Button();
             this.tabYeniIlanVer = new System.Windows.Forms.TabPage();
-            this.yeniIlanPozisyonTextBox = new System.Windows.Forms.TextBox();
-            this.yeniIlanArananElemanOzellikleriRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.yeniIlanIsTanimiRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.txtYeniIlanPozisyon = new System.Windows.Forms.TextBox();
+            this.richTxtYeniArananEleman = new System.Windows.Forms.RichTextBox();
+            this.richTxtYeniIsIlani = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.sirketYeniIlanVerButon = new System.Windows.Forms.Button();
+            this.btnSirketYeniIlan = new System.Windows.Forms.Button();
             this.tabIlanlarim = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ilanListesiListView = new System.Windows.Forms.ListView();
-            this.ilanSilButon = new System.Windows.Forms.Button();
-            this.ilanIseAlButon = new System.Windows.Forms.Button();
-            this.enUygunKisiMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.btnYabanciDilOlanlariListele = new System.Windows.Forms.Button();
+            this.btnIkiYilUstListele = new System.Windows.Forms.Button();
+            this.lvIlanListesi = new System.Windows.Forms.ListView();
+            this.btnIlanSil = new System.Windows.Forms.Button();
+            this.btnIseAl = new System.Windows.Forms.Button();
+            this.maskedTxtEnUygunKisi = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -133,17 +133,17 @@
             // 
             // tabSirketBilgileri
             // 
-            this.tabSirketBilgileri.Controls.Add(this.sirketAdresRichTextBox);
-            this.tabSirketBilgileri.Controls.Add(this.sirketEPostaTextBox);
-            this.tabSirketBilgileri.Controls.Add(this.sirketFaxTextBox);
-            this.tabSirketBilgileri.Controls.Add(this.sirketTelTextBox);
-            this.tabSirketBilgileri.Controls.Add(this.sirketAdTextBox);
+            this.tabSirketBilgileri.Controls.Add(this.richTxtSirketAdres);
+            this.tabSirketBilgileri.Controls.Add(this.txtSirketEPosta);
+            this.tabSirketBilgileri.Controls.Add(this.txtSirketFaks);
+            this.tabSirketBilgileri.Controls.Add(this.txtSirketTelefon);
+            this.tabSirketBilgileri.Controls.Add(this.txtSirketAd);
             this.tabSirketBilgileri.Controls.Add(this.label6);
             this.tabSirketBilgileri.Controls.Add(this.label5);
             this.tabSirketBilgileri.Controls.Add(this.label4);
             this.tabSirketBilgileri.Controls.Add(this.label1);
             this.tabSirketBilgileri.Controls.Add(this.labelSirketAdi);
-            this.tabSirketBilgileri.Controls.Add(this.sirketBilgiGuncelleButon);
+            this.tabSirketBilgileri.Controls.Add(this.btnSirketBilgiGuncelle);
             this.tabSirketBilgileri.Location = new System.Drawing.Point(4, 25);
             this.tabSirketBilgileri.Name = "tabSirketBilgileri";
             this.tabSirketBilgileri.Padding = new System.Windows.Forms.Padding(3);
@@ -152,41 +152,42 @@
             this.tabSirketBilgileri.Text = "Şirket Bilgileri";
             this.tabSirketBilgileri.UseVisualStyleBackColor = true;
             // 
-            // sirketAdresRichTextBox
+            // richTxtSirketAdres
             // 
-            this.sirketAdresRichTextBox.Location = new System.Drawing.Point(402, 79);
-            this.sirketAdresRichTextBox.Name = "sirketAdresRichTextBox";
-            this.sirketAdresRichTextBox.Size = new System.Drawing.Size(172, 135);
-            this.sirketAdresRichTextBox.TabIndex = 10;
-            this.sirketAdresRichTextBox.Text = "";
+            this.richTxtSirketAdres.Location = new System.Drawing.Point(402, 79);
+            this.richTxtSirketAdres.Name = "richTxtSirketAdres";
+            this.richTxtSirketAdres.Size = new System.Drawing.Size(172, 135);
+            this.richTxtSirketAdres.TabIndex = 10;
+            this.richTxtSirketAdres.Text = "";
             // 
-            // sirketEPostaTextBox
+            // txtSirketEPosta
             // 
-            this.sirketEPostaTextBox.Location = new System.Drawing.Point(141, 192);
-            this.sirketEPostaTextBox.Name = "sirketEPostaTextBox";
-            this.sirketEPostaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.sirketEPostaTextBox.TabIndex = 9;
+            this.txtSirketEPosta.Location = new System.Drawing.Point(141, 192);
+            this.txtSirketEPosta.Name = "txtSirketEPosta";
+            this.txtSirketEPosta.Size = new System.Drawing.Size(100, 22);
+            this.txtSirketEPosta.TabIndex = 9;
             // 
-            // sirketFaxTextBox
+            // txtSirketFaks
             // 
-            this.sirketFaxTextBox.Location = new System.Drawing.Point(141, 156);
-            this.sirketFaxTextBox.Name = "sirketFaxTextBox";
-            this.sirketFaxTextBox.Size = new System.Drawing.Size(100, 22);
-            this.sirketFaxTextBox.TabIndex = 8;
+            this.txtSirketFaks.Location = new System.Drawing.Point(141, 156);
+            this.txtSirketFaks.Name = "txtSirketFaks";
+            this.txtSirketFaks.Size = new System.Drawing.Size(100, 22);
+            this.txtSirketFaks.TabIndex = 8;
             // 
-            // sirketTelTextBox
+            // txtSirketTelefon
             // 
-            this.sirketTelTextBox.Location = new System.Drawing.Point(141, 118);
-            this.sirketTelTextBox.Name = "sirketTelTextBox";
-            this.sirketTelTextBox.Size = new System.Drawing.Size(100, 22);
-            this.sirketTelTextBox.TabIndex = 7;
+            this.txtSirketTelefon.Location = new System.Drawing.Point(141, 118);
+            this.txtSirketTelefon.Name = "txtSirketTelefon";
+            this.txtSirketTelefon.Size = new System.Drawing.Size(100, 22);
+            this.txtSirketTelefon.TabIndex = 7;
             // 
-            // sirketAdTextBox
+            // txtSirketAd
             // 
-            this.sirketAdTextBox.Location = new System.Drawing.Point(141, 79);
-            this.sirketAdTextBox.Name = "sirketAdTextBox";
-            this.sirketAdTextBox.Size = new System.Drawing.Size(100, 22);
-            this.sirketAdTextBox.TabIndex = 6;
+            this.txtSirketAd.Location = new System.Drawing.Point(141, 79);
+            this.txtSirketAd.Name = "txtSirketAd";
+            this.txtSirketAd.Size = new System.Drawing.Size(100, 22);
+            this.txtSirketAd.TabIndex = 6;
+            this.txtSirketAd.TextChanged += new System.EventHandler(this.TxtSirketAd_TextChanged);
             // 
             // label6
             // 
@@ -233,21 +234,21 @@
             this.labelSirketAdi.TabIndex = 1;
             this.labelSirketAdi.Text = "Ad";
             // 
-            // sirketBilgiGuncelleButon
+            // btnSirketBilgiGuncelle
             // 
-            this.sirketBilgiGuncelleButon.Location = new System.Drawing.Point(266, 277);
-            this.sirketBilgiGuncelleButon.Name = "sirketBilgiGuncelleButon";
-            this.sirketBilgiGuncelleButon.Size = new System.Drawing.Size(152, 42);
-            this.sirketBilgiGuncelleButon.TabIndex = 0;
-            this.sirketBilgiGuncelleButon.Text = "Bilgileri Güncelle!";
-            this.sirketBilgiGuncelleButon.UseVisualStyleBackColor = true;
-            this.sirketBilgiGuncelleButon.UseWaitCursor = true;
-            this.sirketBilgiGuncelleButon.Click += new System.EventHandler(this.sirketBilgiGuncelleButon_Click);
+            this.btnSirketBilgiGuncelle.Location = new System.Drawing.Point(266, 277);
+            this.btnSirketBilgiGuncelle.Name = "btnSirketBilgiGuncelle";
+            this.btnSirketBilgiGuncelle.Size = new System.Drawing.Size(152, 42);
+            this.btnSirketBilgiGuncelle.TabIndex = 0;
+            this.btnSirketBilgiGuncelle.Text = "Bilgileri Güncelle!";
+            this.btnSirketBilgiGuncelle.UseVisualStyleBackColor = true;
+            this.btnSirketBilgiGuncelle.UseWaitCursor = true;
+            this.btnSirketBilgiGuncelle.Click += new System.EventHandler(this.sirketBilgiGuncelleButon_Click);
             // 
             // tabSirketSil
             // 
             this.tabSirketSil.Controls.Add(this.label7);
-            this.tabSirketSil.Controls.Add(this.sirketSilButon);
+            this.tabSirketSil.Controls.Add(this.btnSirketSil);
             this.tabSirketSil.Location = new System.Drawing.Point(4, 25);
             this.tabSirketSil.Name = "tabSirketSil";
             this.tabSirketSil.Padding = new System.Windows.Forms.Padding(3);
@@ -266,26 +267,26 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Eğer şirketi silerseniz sistemden çıkarılacaksınız!";
             // 
-            // sirketSilButon
+            // btnSirketSil
             // 
-            this.sirketSilButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sirketSilButon.Location = new System.Drawing.Point(199, 182);
-            this.sirketSilButon.Name = "sirketSilButon";
-            this.sirketSilButon.Size = new System.Drawing.Size(290, 78);
-            this.sirketSilButon.TabIndex = 0;
-            this.sirketSilButon.Text = "Şirketi Sil!";
-            this.sirketSilButon.UseVisualStyleBackColor = true;
-            this.sirketSilButon.Click += new System.EventHandler(this.sirketSilButon_Click);
+            this.btnSirketSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSirketSil.Location = new System.Drawing.Point(199, 182);
+            this.btnSirketSil.Name = "btnSirketSil";
+            this.btnSirketSil.Size = new System.Drawing.Size(290, 78);
+            this.btnSirketSil.TabIndex = 0;
+            this.btnSirketSil.Text = "Şirketi Sil!";
+            this.btnSirketSil.UseVisualStyleBackColor = true;
+            this.btnSirketSil.Click += new System.EventHandler(this.sirketSilButon_Click);
             // 
             // tabYeniIlanVer
             // 
-            this.tabYeniIlanVer.Controls.Add(this.yeniIlanPozisyonTextBox);
-            this.tabYeniIlanVer.Controls.Add(this.yeniIlanArananElemanOzellikleriRichTextBox);
-            this.tabYeniIlanVer.Controls.Add(this.yeniIlanIsTanimiRichTextBox);
+            this.tabYeniIlanVer.Controls.Add(this.txtYeniIlanPozisyon);
+            this.tabYeniIlanVer.Controls.Add(this.richTxtYeniArananEleman);
+            this.tabYeniIlanVer.Controls.Add(this.richTxtYeniIsIlani);
             this.tabYeniIlanVer.Controls.Add(this.label10);
             this.tabYeniIlanVer.Controls.Add(this.label9);
             this.tabYeniIlanVer.Controls.Add(this.label8);
-            this.tabYeniIlanVer.Controls.Add(this.sirketYeniIlanVerButon);
+            this.tabYeniIlanVer.Controls.Add(this.btnSirketYeniIlan);
             this.tabYeniIlanVer.Location = new System.Drawing.Point(4, 25);
             this.tabYeniIlanVer.Name = "tabYeniIlanVer";
             this.tabYeniIlanVer.Padding = new System.Windows.Forms.Padding(3);
@@ -294,28 +295,28 @@
             this.tabYeniIlanVer.Text = "Yeni İlan Ver!";
             this.tabYeniIlanVer.UseVisualStyleBackColor = true;
             // 
-            // yeniIlanPozisyonTextBox
+            // txtYeniIlanPozisyon
             // 
-            this.yeniIlanPozisyonTextBox.Location = new System.Drawing.Point(530, 157);
-            this.yeniIlanPozisyonTextBox.Name = "yeniIlanPozisyonTextBox";
-            this.yeniIlanPozisyonTextBox.Size = new System.Drawing.Size(100, 22);
-            this.yeniIlanPozisyonTextBox.TabIndex = 6;
+            this.txtYeniIlanPozisyon.Location = new System.Drawing.Point(530, 157);
+            this.txtYeniIlanPozisyon.Name = "txtYeniIlanPozisyon";
+            this.txtYeniIlanPozisyon.Size = new System.Drawing.Size(100, 22);
+            this.txtYeniIlanPozisyon.TabIndex = 6;
             // 
-            // yeniIlanArananElemanOzellikleriRichTextBox
+            // richTxtYeniArananEleman
             // 
-            this.yeniIlanArananElemanOzellikleriRichTextBox.Location = new System.Drawing.Point(259, 80);
-            this.yeniIlanArananElemanOzellikleriRichTextBox.Name = "yeniIlanArananElemanOzellikleriRichTextBox";
-            this.yeniIlanArananElemanOzellikleriRichTextBox.Size = new System.Drawing.Size(214, 152);
-            this.yeniIlanArananElemanOzellikleriRichTextBox.TabIndex = 5;
-            this.yeniIlanArananElemanOzellikleriRichTextBox.Text = "";
+            this.richTxtYeniArananEleman.Location = new System.Drawing.Point(259, 80);
+            this.richTxtYeniArananEleman.Name = "richTxtYeniArananEleman";
+            this.richTxtYeniArananEleman.Size = new System.Drawing.Size(214, 152);
+            this.richTxtYeniArananEleman.TabIndex = 5;
+            this.richTxtYeniArananEleman.Text = "";
             // 
-            // yeniIlanIsTanimiRichTextBox
+            // richTxtYeniIsIlani
             // 
-            this.yeniIlanIsTanimiRichTextBox.Location = new System.Drawing.Point(16, 80);
-            this.yeniIlanIsTanimiRichTextBox.Name = "yeniIlanIsTanimiRichTextBox";
-            this.yeniIlanIsTanimiRichTextBox.Size = new System.Drawing.Size(214, 152);
-            this.yeniIlanIsTanimiRichTextBox.TabIndex = 4;
-            this.yeniIlanIsTanimiRichTextBox.Text = "";
+            this.richTxtYeniIsIlani.Location = new System.Drawing.Point(16, 80);
+            this.richTxtYeniIsIlani.Name = "richTxtYeniIsIlani";
+            this.richTxtYeniIsIlani.Size = new System.Drawing.Size(214, 152);
+            this.richTxtYeniIsIlani.TabIndex = 4;
+            this.richTxtYeniIsIlani.Text = "";
             // 
             // label10
             // 
@@ -344,24 +345,24 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "İşin Tanımı";
             // 
-            // sirketYeniIlanVerButon
+            // btnSirketYeniIlan
             // 
-            this.sirketYeniIlanVerButon.Location = new System.Drawing.Point(273, 277);
-            this.sirketYeniIlanVerButon.Name = "sirketYeniIlanVerButon";
-            this.sirketYeniIlanVerButon.Size = new System.Drawing.Size(137, 35);
-            this.sirketYeniIlanVerButon.TabIndex = 0;
-            this.sirketYeniIlanVerButon.Text = "Yeni İlan Ver!";
-            this.sirketYeniIlanVerButon.UseVisualStyleBackColor = true;
-            this.sirketYeniIlanVerButon.Click += new System.EventHandler(this.sirketYeniIlanVerButon_Click);
+            this.btnSirketYeniIlan.Location = new System.Drawing.Point(273, 277);
+            this.btnSirketYeniIlan.Name = "btnSirketYeniIlan";
+            this.btnSirketYeniIlan.Size = new System.Drawing.Size(137, 35);
+            this.btnSirketYeniIlan.TabIndex = 0;
+            this.btnSirketYeniIlan.Text = "Yeni İlan Ver!";
+            this.btnSirketYeniIlan.UseVisualStyleBackColor = true;
+            this.btnSirketYeniIlan.Click += new System.EventHandler(this.sirketYeniIlanVerButon_Click);
             // 
             // tabIlanlarim
             // 
-            this.tabIlanlarim.Controls.Add(this.button2);
-            this.tabIlanlarim.Controls.Add(this.button1);
-            this.tabIlanlarim.Controls.Add(this.ilanListesiListView);
-            this.tabIlanlarim.Controls.Add(this.ilanSilButon);
-            this.tabIlanlarim.Controls.Add(this.ilanIseAlButon);
-            this.tabIlanlarim.Controls.Add(this.enUygunKisiMaskedTextBox);
+            this.tabIlanlarim.Controls.Add(this.btnYabanciDilOlanlariListele);
+            this.tabIlanlarim.Controls.Add(this.btnIkiYilUstListele);
+            this.tabIlanlarim.Controls.Add(this.lvIlanListesi);
+            this.tabIlanlarim.Controls.Add(this.btnIlanSil);
+            this.tabIlanlarim.Controls.Add(this.btnIseAl);
+            this.tabIlanlarim.Controls.Add(this.maskedTxtEnUygunKisi);
             this.tabIlanlarim.Controls.Add(this.label14);
             this.tabIlanlarim.Controls.Add(this.label13);
             this.tabIlanlarim.Controls.Add(this.label12);
@@ -374,61 +375,61 @@
             this.tabIlanlarim.Text = "İlanlarım";
             this.tabIlanlarim.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnYabanciDilOlanlariListele
             // 
-            this.button2.Location = new System.Drawing.Point(288, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 61);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Yabancı Dili Olanları Listele!";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnYabanciDilOlanlariListele.Location = new System.Drawing.Point(288, 191);
+            this.btnYabanciDilOlanlariListele.Name = "btnYabanciDilOlanlariListele";
+            this.btnYabanciDilOlanlariListele.Size = new System.Drawing.Size(153, 61);
+            this.btnYabanciDilOlanlariListele.TabIndex = 9;
+            this.btnYabanciDilOlanlariListele.Text = "Yabancı Dili Olanları Listele!";
+            this.btnYabanciDilOlanlariListele.UseVisualStyleBackColor = true;
+            this.btnYabanciDilOlanlariListele.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnIkiYilUstListele
             // 
-            this.button1.Location = new System.Drawing.Point(288, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 61);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "En Az 2 Yıl İş Deneyimine Sahip Olanları Listele!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnIkiYilUstListele.Location = new System.Drawing.Point(288, 113);
+            this.btnIkiYilUstListele.Name = "btnIkiYilUstListele";
+            this.btnIkiYilUstListele.Size = new System.Drawing.Size(153, 61);
+            this.btnIkiYilUstListele.TabIndex = 8;
+            this.btnIkiYilUstListele.Text = "En Az 2 Yıl İş Deneyimine Sahip Olanları Listele!";
+            this.btnIkiYilUstListele.UseVisualStyleBackColor = true;
+            this.btnIkiYilUstListele.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ilanListesiListView
+            // lvIlanListesi
             // 
-            this.ilanListesiListView.HideSelection = false;
-            this.ilanListesiListView.Location = new System.Drawing.Point(6, 113);
-            this.ilanListesiListView.Name = "ilanListesiListView";
-            this.ilanListesiListView.Size = new System.Drawing.Size(276, 194);
-            this.ilanListesiListView.TabIndex = 7;
-            this.ilanListesiListView.UseCompatibleStateImageBehavior = false;
+            this.lvIlanListesi.HideSelection = false;
+            this.lvIlanListesi.Location = new System.Drawing.Point(6, 113);
+            this.lvIlanListesi.Name = "lvIlanListesi";
+            this.lvIlanListesi.Size = new System.Drawing.Size(276, 194);
+            this.lvIlanListesi.TabIndex = 7;
+            this.lvIlanListesi.UseCompatibleStateImageBehavior = false;
             // 
-            // ilanSilButon
+            // btnIlanSil
             // 
-            this.ilanSilButon.Location = new System.Drawing.Point(533, 300);
-            this.ilanSilButon.Name = "ilanSilButon";
-            this.ilanSilButon.Size = new System.Drawing.Size(173, 38);
-            this.ilanSilButon.TabIndex = 6;
-            this.ilanSilButon.Text = "Tıklanılan İlanı Sil!";
-            this.ilanSilButon.UseVisualStyleBackColor = true;
-            this.ilanSilButon.Click += new System.EventHandler(this.ilanSilButon_Click);
+            this.btnIlanSil.Location = new System.Drawing.Point(533, 300);
+            this.btnIlanSil.Name = "btnIlanSil";
+            this.btnIlanSil.Size = new System.Drawing.Size(173, 38);
+            this.btnIlanSil.TabIndex = 6;
+            this.btnIlanSil.Text = "Tıklanılan İlanı Sil!";
+            this.btnIlanSil.UseVisualStyleBackColor = true;
+            this.btnIlanSil.Click += new System.EventHandler(this.ilanSilButon_Click);
             // 
-            // ilanIseAlButon
+            // btnIseAl
             // 
-            this.ilanIseAlButon.Location = new System.Drawing.Point(494, 113);
-            this.ilanIseAlButon.Name = "ilanIseAlButon";
-            this.ilanIseAlButon.Size = new System.Drawing.Size(174, 45);
-            this.ilanIseAlButon.TabIndex = 5;
-            this.ilanIseAlButon.Text = "İşe Al!";
-            this.ilanIseAlButon.UseVisualStyleBackColor = true;
-            this.ilanIseAlButon.Click += new System.EventHandler(this.ilanIseAlButon_Click);
+            this.btnIseAl.Location = new System.Drawing.Point(494, 113);
+            this.btnIseAl.Name = "btnIseAl";
+            this.btnIseAl.Size = new System.Drawing.Size(174, 45);
+            this.btnIseAl.TabIndex = 5;
+            this.btnIseAl.Text = "İşe Al!";
+            this.btnIseAl.UseVisualStyleBackColor = true;
+            this.btnIseAl.Click += new System.EventHandler(this.ilanIseAlButon_Click);
             // 
-            // enUygunKisiMaskedTextBox
+            // maskedTxtEnUygunKisi
             // 
-            this.enUygunKisiMaskedTextBox.Location = new System.Drawing.Point(533, 74);
-            this.enUygunKisiMaskedTextBox.Name = "enUygunKisiMaskedTextBox";
-            this.enUygunKisiMaskedTextBox.Size = new System.Drawing.Size(100, 22);
-            this.enUygunKisiMaskedTextBox.TabIndex = 4;
+            this.maskedTxtEnUygunKisi.Location = new System.Drawing.Point(533, 74);
+            this.maskedTxtEnUygunKisi.Name = "maskedTxtEnUygunKisi";
+            this.maskedTxtEnUygunKisi.Size = new System.Drawing.Size(100, 22);
+            this.maskedTxtEnUygunKisi.TabIndex = 4;
             // 
             // label14
             // 
@@ -500,36 +501,36 @@
         private System.Windows.Forms.TabPage tabIlanlarim;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button sirketBilgiGuncelleButon;
+        private System.Windows.Forms.Button btnSirketBilgiGuncelle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelSirketAdi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button sirketSilButon;
-        private System.Windows.Forms.Button sirketYeniIlanVerButon;
+        private System.Windows.Forms.Button btnSirketSil;
+        private System.Windows.Forms.Button btnSirketYeniIlan;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox yeniIlanPozisyonTextBox;
-        private System.Windows.Forms.RichTextBox yeniIlanArananElemanOzellikleriRichTextBox;
-        private System.Windows.Forms.RichTextBox yeniIlanIsTanimiRichTextBox;
+        private System.Windows.Forms.TextBox txtYeniIlanPozisyon;
+        private System.Windows.Forms.RichTextBox richTxtYeniArananEleman;
+        private System.Windows.Forms.RichTextBox richTxtYeniIsIlani;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ListView ilanListesiListView;
-        private System.Windows.Forms.Button ilanSilButon;
-        private System.Windows.Forms.Button ilanIseAlButon;
-        private System.Windows.Forms.MaskedTextBox enUygunKisiMaskedTextBox;
+        private System.Windows.Forms.ListView lvIlanListesi;
+        private System.Windows.Forms.Button btnIlanSil;
+        private System.Windows.Forms.Button btnIseAl;
+        private System.Windows.Forms.MaskedTextBox maskedTxtEnUygunKisi;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.RichTextBox sirketAdresRichTextBox;
-        public System.Windows.Forms.TextBox sirketEPostaTextBox;
-        public System.Windows.Forms.TextBox sirketFaxTextBox;
-        public System.Windows.Forms.TextBox sirketTelTextBox;
-        public System.Windows.Forms.TextBox sirketAdTextBox;
+        private System.Windows.Forms.Button btnYabanciDilOlanlariListele;
+        private System.Windows.Forms.Button btnIkiYilUstListele;
+        public System.Windows.Forms.RichTextBox richTxtSirketAdres;
+        public System.Windows.Forms.TextBox txtSirketEPosta;
+        public System.Windows.Forms.TextBox txtSirketFaks;
+        public System.Windows.Forms.TextBox txtSirketTelefon;
+        public System.Windows.Forms.TextBox txtSirketAd;
         public System.Windows.Forms.Label labelSirketIsmi;
     }
 }
