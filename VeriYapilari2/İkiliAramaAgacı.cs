@@ -8,8 +8,10 @@ namespace VeriYapilari2
 {
    public class İkiliAramaAgacı
     {
-        private İkiliAramaAgacDugumu kok;
+         private İkiliAramaAgacDugumu kok;
         private string dugumler;
+
+        
 
         
         public İkiliAramaAgacı()
@@ -89,7 +91,7 @@ namespace VeriYapilari2
             PostOrderInt(dugum.sag);
             Ziyaret(dugum);
         }
-        public void Ekle(ulong deger, KisiBilgileri kisi)
+        public void Ekle(ulong deger)
         {
             //Yeni eklenecek düğümün parent'ı
             İkiliAramaAgacDugumu tempParent = new İkiliAramaAgacDugumu();
@@ -107,7 +109,7 @@ namespace VeriYapilari2
                 else
                     tempSearch = tempSearch.sag;
             }
-            İkiliAramaAgacDugumu eklenecek = new İkiliAramaAgacDugumu(deger, kisi);
+            İkiliAramaAgacDugumu eklenecek = new İkiliAramaAgacDugumu(deger);
             //Ağaç boş, köke ekle
             if (kok == null)
                 kok = eklenecek;
@@ -116,6 +118,12 @@ namespace VeriYapilari2
             else
                 tempParent.sag = eklenecek;
         }
+
+        internal void Ekle(ulong tc1, KisiBilgileri kisi1)
+        {
+            throw new NotImplementedException();
+        }
+
         public İkiliAramaAgacDugumu Ara(ulong anahtar)
         {
             return AraInt(kok, anahtar);

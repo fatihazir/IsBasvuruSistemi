@@ -157,5 +157,7 @@ namespace VeriYapilari2
             heap.Insert(ilkIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
 
         }
+
+        
     }
 }

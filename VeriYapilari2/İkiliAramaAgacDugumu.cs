@@ -13,8 +13,15 @@ namespace VeriYapilari2
         public object veri;
         public İkiliAramaAgacDugumu sol;
         public İkiliAramaAgacDugumu sag;
+        private ulong deger;
+
         public İkiliAramaAgacDugumu()
         {
+        }
+
+        public İkiliAramaAgacDugumu(ulong deger)
+        {
+            this.deger = deger;
         }
 
         public İkiliAramaAgacDugumu(object veri, KisiBilgileri kisi)
