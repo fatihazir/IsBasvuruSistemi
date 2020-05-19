@@ -22,14 +22,16 @@ namespace VeriYapilari2
             ilan1.ArananElemanOzellikleri = "nefes alsın";
             ilan1.Pozisyon = "kucak";
             db.Sirketler.Add(sirket1);
-            sirket1.Ilanlar.Add(ilan1);
 
             Ilan ilan2 = new Ilan(sirket1);
             ilan2.IsTanimi = "hizmetkar";
             ilan2.ArananElemanOzellikleri = "nefes versin";
             ilan2.Pozisyon = "baş";
 
-            sirket1.Ilanlar.Add(ilan2);
+            HashChain hashTable = new HashChain();
+            hashTable.AddIsIlani(ilan1.IlanNumarasi, ilan1);
+            hashTable.AddIsIlani(ilan2.IlanNumarasi, ilan2);
+
 
 
 
