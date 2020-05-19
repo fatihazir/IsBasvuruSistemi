@@ -73,7 +73,7 @@ namespace VeriYapilari2
             txtKisiDogumYeri.Text = kisi.dogumYeri;
             txtKisiTelefon.Text = kisi.telefon;
             txtKisiUyruk.Text = kisi.uyruk;
-            txtKisiIlgiAlanlari.Text = kisi.ilgliAlanlari;
+            txtKisiIlgiAlanlari.Text = kisi.ilgiAlanlari;
             cmbKisiMedeniDurum.SelectedIndex = medeniDurum;
         }
     }

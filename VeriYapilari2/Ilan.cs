@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Security;
+using System.Threading;
 
 namespace VeriYapilari2
 {
@@ -25,6 +26,7 @@ namespace VeriYapilari2
 
         private int RandomIlanNumarasi()
         {
+            Thread.Sleep(20);
             Random queueNumber = new Random();
             int number = queueNumber.Next(1000, 2000);
             return number;

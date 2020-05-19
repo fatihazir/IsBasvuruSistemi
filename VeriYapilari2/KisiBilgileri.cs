@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace VeriYapilari2
 {
-    public class KisiBilgileri : IsDeneyimi
+    public class KisiBilgileri
     {
         public string ad { get; set; }
         public string soyad { get; set; }
@@ -14,31 +15,30 @@ namespace VeriYapilari2
         public string dogumYeri { get; set; }
         public string medeniDurum { get; set; }
         public string yabanciDil { get; set; }
-        public string ilgliAlanlari { get; set; }
+        public string ilgiAlanlari { get; set; }
         public int iseUygunlukDurumu { get; set; }
+        public ulong tcKimlikNumarasi { get; set; }
+        public string sifre { get; set; }
 
-        public KisiBilgileri(string ad, string soyad, string adres, string telefon, string email, string uyruk,
-                            string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
-                            string ilgliAlanlari)
-        {
-            this.ad = ad;
-            this.soyad = soyad;
-            this.adres = adres;
-            this.telefon = telefon;
-            this.email = email;
-            this.uyruk = uyruk;
-            this.dogumTarihi = dogumTarihi;
-            this.dogumYeri = dogumYeri;
-            this.medeniDurum = medeniDurum;
-            this.yabanciDil = yabanciDil;
-            this.ilgliAlanlari = ilgliAlanlari;
-            this.iseUygunlukDurumu = RandomIsUygunluk();
-        }
+        public LinkedList IsDeneyimleri = new LinkedList();
 
-        public void KisiyeIsDeneyimiAta(string isyeriAdi)
-        {
-            this.IsyeriAd = isyeriAdi;
-        }
+        //public KisiBilgileri(string ad, string soyad, string adres, string telefon, string email, string uyruk,
+        //                    string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
+        //                    string ilgliAlanlari)
+        //{
+        //    this.ad = ad;
+        //    this.soyad = soyad;
+        //    this.adres = adres;
+        //    this.telefon = telefon;
+        //    this.email = email;
+        //    this.uyruk = uyruk;
+        //    this.dogumTarihi = dogumTarihi;
+        //    this.dogumYeri = dogumYeri;
+        //    this.medeniDurum = medeniDurum;
+        //    this.yabanciDil = yabanciDil;
+        //    this.ilgiAlanlari = ilgliAlanlari;
+        //    this.iseUygunlukDurumu = RandomIsUygunluk();
+        //}
 
         private int RandomIsUygunluk()
         {
@@ -52,6 +52,7 @@ namespace VeriYapilari2
             string temp;
             temp = "Kişinin Adı: " + ad + Environment.NewLine +
                    "Kişinin Soyadı: " + soyad + Environment.NewLine +
+                   "Tc kimlik numrasi: " + tcKimlikNumarasi + Environment.NewLine +
                    "Kişinin Adresi: " + adres + Environment.NewLine +
                    "Kişinin Telefonu: " + telefon + Environment.NewLine +
                    "Kişinin Email Adresi: " + email + Environment.NewLine +
@@ -60,13 +61,14 @@ namespace VeriYapilari2
                    "Kişinin Doğum Yeri: " + dogumYeri + Environment.NewLine +
                    "Kişinin Medeni Durumu: " + medeniDurum + Environment.NewLine +
                    "Kişinin Yabancı Dil veya Dilleri: " + yabanciDil + Environment.NewLine +
-                   "Kişinin İlgi Alanları: " + ilgliAlanlari + Environment.NewLine +
+                   "Kişinin İlgi Alanları: " + ilgiAlanlari + Environment.NewLine +
                    "Kişinin İşe Uygunluk Durumu: " + iseUygunlukDurumu;
             return temp;
         }
 
         public KisiBilgileri()
         {
+            this.iseUygunlukDurumu = RandomIsUygunluk();
         }
     }
 }

@@ -123,12 +123,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DatabaseIslemleri.cs" />
     <Compile Include="HashChain.cs" />
     <Compile Include="HashChainEntry.cs" />
     <Compile Include="Heap.cs" />
@@ -163,6 +158,12 @@
     <Compile Include="KisiBilgileri.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="LinkedListIcerikleri.cs" />
+    <Compile Include="LoginFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFormu.Designer.cs">
+      <DependentUpon>LoginFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,11 +180,8 @@
     <Compile Include="TestFormu.Designer.cs">
       <DependentUpon>TestFormu.cs</DependentUpon>
     </Compile>
-    <Compile Include="İkiliAgac.cs" />
-    <Compile Include="İkiliAgacDugumu.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="İkiliAramaAgacDugumu.cs" />
+    <Compile Include="İkiliAramaAgacı.cs" />
     <EmbeddedResource Include="IsBasvurusuIcinBilgiGuncellemeFormu.resx">
       <DependentUpon>IsBasvurusuIcinBilgiGuncellemeFormu.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IsBasvurusuIcinKayitlanmaFormu.resx">
       <DependentUpon>IsBasvurusuIcinKayitlanmaFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFormu.resx">
+      <DependentUpon>LoginFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

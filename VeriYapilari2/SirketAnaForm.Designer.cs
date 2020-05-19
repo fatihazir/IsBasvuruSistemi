@@ -125,7 +125,7 @@
             // 
             this.labelSirketIsmi.AutoSize = true;
             this.labelSirketIsmi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelSirketIsmi.Location = new System.Drawing.Point(174, 70);
+            this.labelSirketIsmi.Location = new System.Drawing.Point(177, 74);
             this.labelSirketIsmi.Name = "labelSirketIsmi";
             this.labelSirketIsmi.Size = new System.Drawing.Size(364, 31);
             this.labelSirketIsmi.TabIndex = 3;
@@ -500,15 +500,9 @@
         private System.Windows.Forms.TabPage tabIlanlarim;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelSirketIsmi;
         private System.Windows.Forms.Button sirketBilgiGuncelleButon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelSirketAdi;
-        private System.Windows.Forms.RichTextBox sirketAdresRichTextBox;
-        private System.Windows.Forms.TextBox sirketEPostaTextBox;
-        private System.Windows.Forms.TextBox sirketFaxTextBox;
-        private System.Windows.Forms.TextBox sirketTelTextBox;
-        private System.Windows.Forms.TextBox sirketAdTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -531,5 +525,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.RichTextBox sirketAdresRichTextBox;
+        public System.Windows.Forms.TextBox sirketEPostaTextBox;
+        public System.Windows.Forms.TextBox sirketFaxTextBox;
+        public System.Windows.Forms.TextBox sirketTelTextBox;
+        public System.Windows.Forms.TextBox sirketAdTextBox;
+        public System.Windows.Forms.Label labelSirketIsmi;
     }
 }

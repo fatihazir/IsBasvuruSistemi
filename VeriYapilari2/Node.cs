@@ -8,9 +8,7 @@ namespace VeriYapilari2
 {
     public class Node
     {
-        public string Data;
+        public IsDeneyimi Data;
         public Node Next;
-        
-
     }
 }

@@ -30,7 +30,7 @@ namespace VeriYapilari2
             else
             {
                 HashChainEntry entry = table[hash];
-                if (entry.Durum == "Silindi")
+                if (entry.Durum == "İlana Erişilemiyor")
                 {
                     entry.Deger = value;
                     entry.Anahtar = key;
