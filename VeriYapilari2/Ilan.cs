@@ -6,10 +6,10 @@ namespace VeriYapilari2
 {
     public class Ilan : Sirket
     {
-        public int IlanNumarasi { get; set; }
+        public int IlanNumarasi { get;private set; }
         public string IsTanimi { get; set; }
         public string Pozisyon { get; set; }
-        public int IlaninIsyeriIdsi { get; set; }
+        private int IlaninIsyeriIdsi { get; set; }
         public string ArananElemanOzellikleri { get; set; }
 
         public Ilan(Sirket sirket)

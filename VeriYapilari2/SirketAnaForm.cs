@@ -30,13 +30,13 @@ namespace VeriYapilari2
 
             string yeniSirketAd, yeniSirketAdres, yeniSirketEPosta, yeniSirketFax;
             string yeniSirketTelefon;
-            yeniSirketAd = txtSirketAd.Text;
-            yeniSirketAdres = richTxtSirketAdres.Text;
-            yeniSirketEPosta = txtSirketEPosta.Text;
-            yeniSirketFax = txtSirketFaks.Text;
-            yeniSirketTelefon = txtSirketTelefon.Text;
+            yeniSirketAd = sirketAdTextBox.Text;
+            yeniSirketAdres = sirketAdresRichTextBox.Text;
+            yeniSirketEPosta = sirketEPostaTextBox.Text;
+            yeniSirketFax = sirketFaxTextBox.Text;
+            yeniSirketTelefon = sirketTelTextBox.Text;
 
-           
+            
 
             if (sirketFormIci.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
             yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta))
@@ -119,16 +119,11 @@ namespace VeriYapilari2
                     break;
                 }
             }
-            txtSirketAd.Text = sirketFormIci.SirketAd;
-            richTxtSirketAdres.Text = sirketFormIci.SirketAdres;
-            txtSirketEPosta.Text = sirketFormIci.SirketEposta;
-            txtSirketFaks.Text = sirketFormIci.SirketFax;
-            txtSirketTelefon.Text = sirketFormIci.SirketTelefon;
-        }
-
-        private void TxtSirketAd_TextChanged(object sender, EventArgs e)
-        {
-
+            sirketAdTextBox.Text = sirketFormIci.SirketAd;
+            sirketAdresRichTextBox.Text = sirketFormIci.SirketAdres;
+            sirketEPostaTextBox.Text = sirketFormIci.SirketEposta;
+            sirketFaxTextBox.Text = sirketFormIci.SirketFax;
+            sirketTelTextBox.Text = sirketFormIci.SirketTelefon;
         }
     }
 }

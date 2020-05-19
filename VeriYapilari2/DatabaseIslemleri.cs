@@ -14,42 +14,42 @@ namespace VeriYapilari2
 
         public DatabaseIslemleri()
         {
-            DatabasedenIlkKisiCekimi();
-            DatabasedenIlkSirketCekimi();
+            //DatabasedenIlkKisiCekimi();
+            //DatabasedenIlkSirketCekimi();
         }
 
-        public void DatabasedenIlkSirketCekimi()
-        {
-            Sirket tempSirket = new Sirket();
+        //public void DatabasedenIlkSirketCekimi()
+        //{
+        //    Sirket tempSirket = new Sirket();
 
-            string[] satirlar = System.IO.File.ReadAllLines("./SirketDb.txt");
+        //    string[] satirlar = System.IO.File.ReadAllLines("./SirketDb.txt");
 
-            for (int i = 0; i < satirlar.Length; i++)
-            {
-                string[] TempSirketBilgisi = satirlar[i].Split(',');
+        //    for (int i = 0; i < satirlar.Length; i++)
+        //    {
+        //        string[] TempSirketBilgisi = satirlar[i].Split(',');
 
-                tempSirket.SirketID = Convert.ToInt32(TempSirketBilgisi[0]);
-                tempSirket.SirketAd = TempSirketBilgisi[1];
-                tempSirket.SirketAdres = TempSirketBilgisi[2];
-                tempSirket.SirketFax = TempSirketBilgisi[3];
-                tempSirket.SirketTelefon = TempSirketBilgisi[4];
-                tempSirket.SirketEposta = TempSirketBilgisi[5];
-                tempSirket.sifre = TempSirketBilgisi[6];
-            }
-            Ilan tempSirketIlanlari = new Ilan(tempSirket);
-            for (int i = 0; i < satirlar.Length; i++)
-            {
-                string[] TempSirketIlanlari = satirlar[i].Split(',');
+        //        tempSirket.SirketID = Convert.ToInt32(TempSirketBilgisi[0]);
+        //        tempSirket.SirketAd = TempSirketBilgisi[1];
+        //        tempSirket.SirketAdres = TempSirketBilgisi[2];
+        //        tempSirket.SirketFax = TempSirketBilgisi[3];
+        //        tempSirket.SirketTelefon = TempSirketBilgisi[4];
+        //        tempSirket.SirketEposta = TempSirketBilgisi[5];
+        //        tempSirket.sifre = TempSirketBilgisi[6];
+        //    }
+        //    Ilan tempSirketIlanlari = new Ilan(tempSirket);
+        //    for (int i = 0; i < satirlar.Length; i++)
+        //    {
+        //        string[] TempSirketIlanlari = satirlar[i].Split(',');
 
-                tempSirketIlanlari.IsTanimi = TempSirketIlanlari[7];
-                tempSirketIlanlari.Pozisyon = TempSirketIlanlari[8];
-                tempSirketIlanlari.IlaninIsyeriIdsi = Convert.ToInt32(TempSirketIlanlari[0]);
-                tempSirketIlanlari.ArananElemanOzellikleri = TempSirketIlanlari[9];
-            }
-            tempSirket.Ilanlar.AddIsIlani(tempSirketIlanlari.IlanNumarasi,tempSirketIlanlari);
+        //        tempSirketIlanlari.IsTanimi = TempSirketIlanlari[7];
+        //        tempSirketIlanlari.Pozisyon = TempSirketIlanlari[8];
+        //        tempSirketIlanlari.IlaninIsyeriIdsi = Convert.ToInt32(TempSirketIlanlari[0]);
+        //        tempSirketIlanlari.ArananElemanOzellikleri = TempSirketIlanlari[9];
+        //    }
+        //    tempSirket.Ilanlar.AddIsIlani(tempSirketIlanlari.IlanNumarasi,tempSirketIlanlari);
             
-            Sirketler.Add(tempSirket);
-        }
+        //    Sirketler.Add(tempSirket);
+        //}
 
         public void DatabasedenIlkKisiCekimi()
         {
@@ -115,18 +115,18 @@ namespace VeriYapilari2
             return false;
         }
 
-        public bool GirisYap(string sirketAdi, string sifre)
-        {
-            foreach (Sirket sirket in Sirketler)
-            {
-                if (sirket.SirketAd == sirketAdi && sirket.sifre == sifre)
-                {
-                    tempSirket = sirket;
-                    return true;
-                }
-            }
+        //public bool GirisYap(string sirketAdi, string sifre)
+        //{
+        //    foreach (Sirket sirket in Sirketler)
+        //    {
+        //        if (sirket.SirketAd == sirketAdi && sirket.sifre == sifre)
+        //        {
+        //            tempSirket = sirket;
+        //            return true;
+        //        }
+        //    }
 
-            return false;
-        }
+        //    return false;
+        //}
     }
 }
