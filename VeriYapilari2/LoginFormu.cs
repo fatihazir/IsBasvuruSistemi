@@ -14,7 +14,7 @@ namespace VeriYapilari2
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            int tc = Convert.ToInt32(txtTcNo.Text);
+            ulong tc = Convert.ToUInt32(txtTcNo.Text);
             string sifre = txtSifre.Text;
             bool girisDogrulama;
 

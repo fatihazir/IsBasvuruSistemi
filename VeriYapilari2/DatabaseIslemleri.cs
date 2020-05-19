@@ -73,7 +73,7 @@ namespace VeriYapilari2
                 tempIsDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(TempKisiBilgisi[19]);
                 tempIsDeneyimi.KisininNotOrtalamasi = TempKisiBilgisi[20];
                 tempKisi.IsDeneyimleri.InsertLast(tempIsDeneyimi);
-                tempKisi.tcKimlikNumarasi = Convert.ToInt32(TempKisiBilgisi[21]);
+                tempKisi.tcKimlikNumarasi = Convert.ToUInt32(TempKisiBilgisi[21]);
                 tempKisi.sifre = TempKisiBilgisi[22];
             }
             Kisiler.Add(tempKisi);
@@ -89,7 +89,7 @@ namespace VeriYapilari2
             return tempSirket;
         }
 
-        public bool GirisYap(int tc, string sifre)
+        public bool GirisYap(ulong tc, string sifre)
         {
             foreach (KisiBilgileri kisi in Kisiler)
             {

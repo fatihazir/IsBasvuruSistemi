@@ -21,7 +21,7 @@ namespace VeriYapilari2
             ilan1.IsTanimi = "kolee";
             ilan1.ArananElemanOzellikleri = "nefes alsın";
             ilan1.Pozisyon = "kucak";
-
+            db.Sirketler.Add(sirket1);
             sirket1.Ilanlar.Add(ilan1);
 
             Ilan ilan2 = new Ilan(sirket1);
@@ -31,10 +31,7 @@ namespace VeriYapilari2
 
             sirket1.Ilanlar.Add(ilan2);
 
-            KisiBilgileri kisi = new KisiBilgileri();
-            kisi.ad = "hayat";
-            kisi.email = "hayatkisi@gmail.com";
-            db.Kisiler.Add(kisi);
+
 
             MessageBox.Show(ilan2.IlanBilgileriYazdir());
         }
