@@ -86,10 +86,10 @@ namespace VeriYapilari2
             return retNode;
         }
 
-        public override void InsertFirst(string value)
+        public override void InsertFirst(IsDeneyimi isDeneyimi)
         {
             Node tempHead = new Node();
-            tempHead.Data = value;
+            tempHead.Data = isDeneyimi;
 
             if (Head == null)
             {
@@ -105,18 +105,18 @@ namespace VeriYapilari2
             Size++;
         }
 
-        public override void InsertLast(string value)
+        public override void InsertLast(IsDeneyimi isDeneyimi)
         {
             Node oldLast = Head; //Bir önceki head ile calismak icin onu oldLast degerine atadik.
 
             if (Head == null)
             {
-                InsertFirst(value);  //Head boşsa ilk degeri atamak icin dogru fonksiyonu cagiriyoruz.
+                InsertFirst(isDeneyimi);  //Head boşsa ilk degeri atamak icin dogru fonksiyonu cagiriyoruz.
             }
             else
             {
                 Node newLast = new Node();
-                newLast.Data = value;
+                newLast.Data = isDeneyimi;
 
                 while (oldLast.Next != null) // listede soldan baslayip saga dogru gidiyoruz. Taaaaa ki sonuncuyu bulana kadar. Onun nexti bos olacak zaten. Orada duruyor ve
                 {

@@ -43,6 +43,7 @@ namespace VeriYapilari2
         {
             KisiBilgileri tempKisi = new KisiBilgileri();
             IsDeneyimi tempIsDeneyimi = new IsDeneyimi();
+            LinkedList tempIsDeneyimiLinkedList = new LinkedList();
 
             string[] satirlar = System.IO.File.ReadAllLines("./KisiDb.txt");
 
@@ -71,7 +72,7 @@ namespace VeriYapilari2
                 tempIsDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(TempKisiBilgisi[18]);
                 tempIsDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(TempKisiBilgisi[19]);
                 tempIsDeneyimi.KisininNotOrtalamasi = TempKisiBilgisi[20];
-                tempKisi.IsDeneyimleri.Add(tempIsDeneyimi);
+                tempKisi.IsDeneyimleri.InsertLast(tempIsDeneyimi);
                 tempKisi.tcKimlikNumarasi = Convert.ToInt32(TempKisiBilgisi[21]);
                 tempKisi.sifre = TempKisiBilgisi[22];
             }

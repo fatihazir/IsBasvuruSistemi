@@ -25,13 +25,13 @@ namespace VeriYapilari2
             birey.KisininOkulAdi = "kenya caycilari dernegi";
             birey.KisininOkulBolumu = "gastronomi";
 
-            LinkedList lnkdlst = new LinkedList();
-            lnkdlst.InsertFirst(birey.KisininBolumeBaslangicYili.ToString());
-            lnkdlst.InsertFirst(birey.IsyeriAd);
-            lnkdlst.InsertFirst(birey.IsyeriAdres);
-            lnkdlst.InsertFirst(birey.KisininNotOrtalamasi.ToString());
+            //LinkedList lnkdlst = new LinkedList();
+            //lnkdlst.InsertFirst(birey.KisininBolumeBaslangicYili.ToString());
+            //lnkdlst.InsertFirst(birey.IsyeriAd);
+            //lnkdlst.InsertFirst(birey.IsyeriAdres);
+            //lnkdlst.InsertFirst(birey.KisininNotOrtalamasi.ToString());
 
-            MessageBox.Show(lnkdlst.DisplayElements());
+            //MessageBox.Show(lnkdlst.DisplayElements());
         }
 
         private void btnIlanSirketCompTest_Click(object sender, EventArgs e)
