@@ -49,7 +49,6 @@ namespace VeriYapilari2
             for (int i = 0; i < satirlar.Length; i++)
             {
                 string[] TempKisiBilgisi = satirlar[i].Split(';');
-                string[] TempIsDeneyimiBilgisi = satirlar[i].Split(';');
 
                 tempKisi.ad = TempKisiBilgisi[0];
                 tempKisi.soyad = TempKisiBilgisi[1];
@@ -62,16 +61,16 @@ namespace VeriYapilari2
                 tempKisi.medeniDurum = TempKisiBilgisi[8];
                 tempKisi.yabanciDil = TempKisiBilgisi[9];
                 tempKisi.ilgiAlanlari = TempKisiBilgisi[10];
-                tempIsDeneyimi.IsyeriAd = TempIsDeneyimiBilgisi[11];
-                tempIsDeneyimi.IsyeriAdres = TempIsDeneyimiBilgisi[12];
-                tempIsDeneyimi.IsyerindekiPozisyonu = TempIsDeneyimiBilgisi[13];
-                tempIsDeneyimi.IsyeriCalismaYili = Convert.ToInt32(TempIsDeneyimiBilgisi[14]);
-                tempIsDeneyimi.KisininEgitimDurumu = TempIsDeneyimiBilgisi[15];
-                tempIsDeneyimi.KisininOkulAdi = TempIsDeneyimiBilgisi[16];
-                tempIsDeneyimi.KisininOkulBolumu = TempIsDeneyimiBilgisi[17];
-                tempIsDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(TempIsDeneyimiBilgisi[18]);
-                tempIsDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(TempIsDeneyimiBilgisi[19]);
-                tempIsDeneyimi.KisininNotOrtalamasi = TempIsDeneyimiBilgisi[20];
+                tempIsDeneyimi.IsyeriAd = TempKisiBilgisi[11];
+                tempIsDeneyimi.IsyeriAdres = TempKisiBilgisi[12];
+                tempIsDeneyimi.IsyerindekiPozisyonu = TempKisiBilgisi[13];
+                tempIsDeneyimi.IsyeriCalismaYili = Convert.ToInt32(TempKisiBilgisi[14]);
+                tempIsDeneyimi.KisininEgitimDurumu = TempKisiBilgisi[15];
+                tempIsDeneyimi.KisininOkulAdi = TempKisiBilgisi[16];
+                tempIsDeneyimi.KisininOkulBolumu = TempKisiBilgisi[17];
+                tempIsDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(TempKisiBilgisi[18]);
+                tempIsDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(TempKisiBilgisi[19]);
+                tempIsDeneyimi.KisininNotOrtalamasi = TempKisiBilgisi[20];
                 tempKisi.IsDeneyimleri.Add(tempIsDeneyimi);
                 tempKisi.tcKimlikNumarasi = Convert.ToInt32(TempKisiBilgisi[21]);
                 tempKisi.sifre = TempKisiBilgisi[22];
