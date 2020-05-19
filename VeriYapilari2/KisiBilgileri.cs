@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace VeriYapilari2
 {
@@ -42,6 +43,7 @@ namespace VeriYapilari2
 
         private int RandomIsUygunluk()
         {
+            Thread.Sleep(20);
             Random queueNumber = new Random();
             int number = queueNumber.Next(0, 10);
             return number;

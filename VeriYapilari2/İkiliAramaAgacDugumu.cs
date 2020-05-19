@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace VeriYapilari2
 {
    public class İkiliAramaAgacDugumu
-    {
+   {
+        public KisiBilgileri Kisi;
         public object veri;
         public İkiliAramaAgacDugumu sol;
         public İkiliAramaAgacDugumu sag;
@@ -15,8 +16,9 @@ namespace VeriYapilari2
         {
         }
 
-        public İkiliAramaAgacDugumu(object veri)
+        public İkiliAramaAgacDugumu(object veri, KisiBilgileri kisi)
         {
+            this.Kisi = kisi;
             this.veri = veri;
             sol = null;
             sag = null;

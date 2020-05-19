@@ -31,6 +31,7 @@
             this.btnSirketIlanTest = new System.Windows.Forms.Button();
             this.btnSirketCekmeTesti = new System.Windows.Forms.Button();
             this.btnKisiCekmeTesti = new System.Windows.Forms.Button();
+            this.BtnAraDugumEkle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSirketIlanTest
@@ -66,11 +67,23 @@
             this.btnKisiCekmeTesti.UseVisualStyleBackColor = true;
             this.btnKisiCekmeTesti.Click += new System.EventHandler(this.btnKisiCekmeTesti_Click);
             // 
+            // BtnAraDugumEkle
+            // 
+            this.BtnAraDugumEkle.Location = new System.Drawing.Point(115, 282);
+            this.BtnAraDugumEkle.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAraDugumEkle.Name = "BtnAraDugumEkle";
+            this.BtnAraDugumEkle.Size = new System.Drawing.Size(373, 41);
+            this.BtnAraDugumEkle.TabIndex = 4;
+            this.BtnAraDugumEkle.Text = "Txt db kisi cekme tesi";
+            this.BtnAraDugumEkle.UseVisualStyleBackColor = true;
+            this.BtnAraDugumEkle.Click += new System.EventHandler(this.BtnAraDugumEkle_Click_);
+            // 
             // TestFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.BtnAraDugumEkle);
             this.Controls.Add(this.btnKisiCekmeTesti);
             this.Controls.Add(this.btnSirketCekmeTesti);
             this.Controls.Add(this.btnSirketIlanTest);
@@ -86,5 +99,6 @@
         private System.Windows.Forms.Button btnSirketIlanTest;
         private System.Windows.Forms.Button btnSirketCekmeTesti;
         private System.Windows.Forms.Button btnKisiCekmeTesti;
+        private System.Windows.Forms.Button BtnAraDugumEkle;
     }
 }
