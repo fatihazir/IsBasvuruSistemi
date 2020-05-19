@@ -59,40 +59,46 @@ namespace VeriYapilari2
 
             İkiliAramaAgacı aramaAgaci = new İkiliAramaAgacı();
         
+
         private void BtnDugumAra_Click(object sender, EventArgs e)
         {
-       
             if (aramaAgaci == null)
             {
                 MessageBox.Show("Öncelikle ağacı oluşturmalısınız!");
                 return;
             }
 
-            //İkiliAramaAgacDugumu dugum = aramaAgaci.Ara(Convert.ToUInt32(txtAra.Text));
-            //if (dugum != null)
-            //    MessageBox.Show(dugum.veri + " düğümü bulundu.");
-            //else
-            //    MessageBox.Show(txtAra.Text + " düğümü bulunamadı....");
+            İkiliAramaAgacDugumu dugum = aramaAgaci.Ara(Convert.ToUInt32(txtAra.Text));
+            if (dugum != null)
+                MessageBox.Show(dugum.veri + " düğümü bulundu.");
+            else
+                MessageBox.Show(txtAra.Text + " düğümü bulunamadı....");
         }
 
-        private void BtnAraDugumEkle_Click_(object sender, EventArgs e)
+        private void BtnAraDugumEkle_Click(object sender, EventArgs e)
         {
+            KisiBilgileri kisi1 = new KisiBilgileri();
+            KisiBilgileri kisi2 = new KisiBilgileri();
+            KisiBilgileri kisi3 = new KisiBilgileri();
             KisiBilgileri kisi4 = new KisiBilgileri();
             KisiBilgileri kisi5 = new KisiBilgileri();
             KisiBilgileri kisi6 = new KisiBilgileri();
 
+            ulong tc1, tc2, tc3, tc4, tc5, tc6;
+            tc1 = kisi1.tcKimlikNumarasi = 121;
+            tc2 = kisi2.tcKimlikNumarasi = 122;
+            tc3 = kisi3.tcKimlikNumarasi = 80;
+            tc4 = kisi4.tcKimlikNumarasi = 124;
+            tc5 = kisi5.tcKimlikNumarasi = 125;
+            tc6 = kisi6.tcKimlikNumarasi = 126;
 
+            aramaAgaci.Ekle(tc1);
+            aramaAgaci.Ekle(tc2);
+            aramaAgaci.Ekle(tc3);
+            aramaAgaci.Ekle(tc4);
+            aramaAgaci.Ekle(tc5);
+            aramaAgaci.Ekle(tc6);
 
-            kisi4.tcKimlikNumarasi = 124;
-            kisi4.ad = "fatih";
-            kisi5.tcKimlikNumarasi = 125;
-            kisi5.ad = "burak";
-            kisi6.tcKimlikNumarasi = 126;
-            kisi6.ad = "emre";
-
-            aramaAgaci.Ekle(kisi4.tcKimlikNumarasi, kisi4);
-            aramaAgaci.Ekle(kisi5.tcKimlikNumarasi, kisi5);
-            aramaAgaci.Ekle(kisi6.tcKimlikNumarasi, kisi6);
         }
     }
 }
