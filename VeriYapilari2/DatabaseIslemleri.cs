@@ -42,12 +42,14 @@ namespace VeriYapilari2
         public void DatabasedenIlkKisiCekimi()
         {
             KisiBilgileri tempKisi = new KisiBilgileri();
+            IsDeneyimi tempIsDeneyimi = new IsDeneyimi();
 
             string[] satirlar = System.IO.File.ReadAllLines("./KisiDb.txt");
 
             for (int i = 0; i < satirlar.Length; i++)
             {
                 string[] TempKisiBilgisi = satirlar[i].Split(';');
+                string[] TempIsDeneyimiBilgisi = satirlar[i].Split(';');
 
                 tempKisi.ad = TempKisiBilgisi[0];
                 tempKisi.soyad = TempKisiBilgisi[1];
@@ -60,16 +62,17 @@ namespace VeriYapilari2
                 tempKisi.medeniDurum = TempKisiBilgisi[8];
                 tempKisi.yabanciDil = TempKisiBilgisi[9];
                 tempKisi.ilgiAlanlari = TempKisiBilgisi[10];
-                tempKisi.IsyeriAd = TempKisiBilgisi[11];
-                tempKisi.IsyeriAdres = TempKisiBilgisi[12];
-                tempKisi.IsyerindekiPozisyonu = TempKisiBilgisi[13];
-                tempKisi.IsyeriCalismaYili = Convert.ToInt32(TempKisiBilgisi[14]);
-                tempKisi.KisininEgitimDurumu = TempKisiBilgisi[15];
-                tempKisi.KisininOkulAdi = TempKisiBilgisi[16];
-                tempKisi.KisininOkulBolumu = TempKisiBilgisi[17];
-                tempKisi.KisininBolumeBaslangicYili = Convert.ToInt32(TempKisiBilgisi[18]);
-                tempKisi.KisininBolumuBitirmeYili = Convert.ToInt32(TempKisiBilgisi[19]);
-                tempKisi.KisininNotOrtalamasi = TempKisiBilgisi[20];
+                tempIsDeneyimi.IsyeriAd = TempIsDeneyimiBilgisi[11];
+                tempIsDeneyimi.IsyeriAdres = TempIsDeneyimiBilgisi[12];
+                tempIsDeneyimi.IsyerindekiPozisyonu = TempIsDeneyimiBilgisi[13];
+                tempIsDeneyimi.IsyeriCalismaYili = Convert.ToInt32(TempIsDeneyimiBilgisi[14]);
+                tempIsDeneyimi.KisininEgitimDurumu = TempIsDeneyimiBilgisi[15];
+                tempIsDeneyimi.KisininOkulAdi = TempIsDeneyimiBilgisi[16];
+                tempIsDeneyimi.KisininOkulBolumu = TempIsDeneyimiBilgisi[17];
+                tempIsDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(TempIsDeneyimiBilgisi[18]);
+                tempIsDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(TempIsDeneyimiBilgisi[19]);
+                tempIsDeneyimi.KisininNotOrtalamasi = TempIsDeneyimiBilgisi[20];
+                tempKisi.IsDeneyimleri.Add(tempIsDeneyimi);
                 tempKisi.tcKimlikNumarasi = Convert.ToInt32(TempKisiBilgisi[21]);
                 tempKisi.sifre = TempKisiBilgisi[22];
             }

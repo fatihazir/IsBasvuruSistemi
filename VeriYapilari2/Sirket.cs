@@ -11,6 +11,7 @@ namespace VeriYapilari2
         public string SirketFax { get; set; }
         public string SirketTelefon { get; set; }
         public string SirketEposta { get; set; }
+
         public List<Ilan> Ilanlar = new List<Ilan>();
         public string sifre { get; set; }
 

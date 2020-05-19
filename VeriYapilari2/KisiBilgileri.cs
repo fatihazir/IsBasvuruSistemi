@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace VeriYapilari2
 {
-    public class KisiBilgileri : IsDeneyimi
+    public class KisiBilgileri
     {
         public string ad { get; set; }
         public string soyad { get; set; }
@@ -18,6 +19,8 @@ namespace VeriYapilari2
         public int iseUygunlukDurumu { get; set; }
         public int tcKimlikNumarasi { get; set; }
         public string sifre { get; set; }
+
+        public List<IsDeneyimi> IsDeneyimleri = new List<IsDeneyimi>();
 
         //public KisiBilgileri(string ad, string soyad, string adres, string telefon, string email, string uyruk,
         //                    string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,

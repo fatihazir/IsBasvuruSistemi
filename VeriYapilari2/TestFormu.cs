@@ -10,7 +10,7 @@ namespace VeriYapilari2
         {
             InitializeComponent();
         }
-
+        private DatabaseIslemleri db = new DatabaseIslemleri();
         private void btnSirketIlanTest_Click(object sender, EventArgs e)
         {
             Sirket sirket1 = new Sirket();
@@ -30,6 +30,11 @@ namespace VeriYapilari2
             ilan2.Pozisyon = "baş";
 
             sirket1.Ilanlar.Add(ilan2);
+
+            KisiBilgileri kisi = new KisiBilgileri();
+            kisi.ad = "hayat";
+            kisi.email = "hayatkisi@gmail.com";
+            db.Kisiler.Add(kisi);
 
             MessageBox.Show(ilan2.IlanBilgileriYazdir());
         }
