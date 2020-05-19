@@ -36,6 +36,18 @@ namespace VeriYapilari2
                 tempSirket.SirketEposta = TempSirketBilgisi[5];
                 tempSirket.sifre = TempSirketBilgisi[6];
             }
+            Ilan tempSirketIlanlari = new Ilan(tempSirket);
+            for (int i = 0; i < satirlar.Length; i++)
+            {
+                string[] TempSirketIlanlari = satirlar[i].Split(',');
+
+                tempSirketIlanlari.IsTanimi = TempSirketIlanlari[7];
+                tempSirketIlanlari.Pozisyon = TempSirketIlanlari[8];
+                tempSirketIlanlari.IlaninIsyeriIdsi = Convert.ToInt32(TempSirketIlanlari[0]);
+                tempSirketIlanlari.ArananElemanOzellikleri = TempSirketIlanlari[9];
+            }
+            tempSirket.Ilanlar.AddIsIlani(tempSirketIlanlari.IlanNumarasi,tempSirketIlanlari);
+            
             Sirketler.Add(tempSirket);
         }
 
