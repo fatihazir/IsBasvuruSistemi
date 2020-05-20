@@ -24,16 +24,12 @@ namespace VeriYapilari2
             //BURADA DEĞİŞİKLİK OLACAK LOGİN FORMDA ARTIK ŞİRKET ADI DEĞİL E POSTA İLE GİRİŞ YAPILIYOR
             string sirketAdi = txtSirketAdi.Text;
             string sifre = txtSirketSifre.Text;
-            bool girisDogrulama;
-            girisDogrulama = db.SirketGirisYap(sirketAdi, sifre);
+            
 
-            if (girisDogrulama)
+            if (db.SirketGirisYap(sirketAdi, sifre))
             {
-                Sirket deneme = new Sirket();
-                deneme = db.DatabasedenIlkSirketCekimi();
-                SirketAnaForm sirketFormunuAc = new SirketAnaForm();
-                sirketFormunuAc.labelSirketIsmi.Text = deneme.SirketAd;
-                sirketFormunuAc.Show();
+                MessageBox.Show("aaa");
+
             }
             else
             {
