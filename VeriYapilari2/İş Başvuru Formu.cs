@@ -34,22 +34,42 @@ namespace VeriYapilari2
             _ikiliAramaAgaci.Ekle(_kisiBilgileri.tcKimlikNumarasi, _kisiBilgileri);
 
             string uyluk = _kisiBilgileri.uyruk;
-            int cmbSelectedIndex;
+            int cmbUyrukSelectedIndex = 0;
             if (uyluk == "TR")
             {
-                cmbSelectedIndex = 0;
+                cmbUyrukSelectedIndex = 0;
             }
             else if (uyluk == "KKTC")
             {
-                cmbSelectedIndex = 1;
+                cmbUyrukSelectedIndex = 1;
             }
             else if (uyluk == "Avrupa")
             {
-                cmbSelectedIndex = 2;
+                cmbUyrukSelectedIndex = 2;
             }
             else if (uyluk == "ABD")
             {
-                
+                cmbUyrukSelectedIndex = 3;
+            }
+            else if (uyluk == "İngiltere")
+            {
+                cmbUyrukSelectedIndex = 4;
+            }
+            else if(uyluk == "Diger")
+            {
+                cmbUyrukSelectedIndex = 5;
+            }
+
+            string medeniDurum = _kisiBilgileri.medeniDurum;
+            int cmbMedeniSelectedIndex = 0;
+
+            if (medeniDurum == "Bekar")
+            {
+                cmbMedeniSelectedIndex = 0;
+            }
+            else if (medeniDurum == "Evli")
+            {
+                cmbMedeniSelectedIndex = 1;
             }
 
             txtAd.Text = _kisiBilgileri.ad;
@@ -57,7 +77,12 @@ namespace VeriYapilari2
             txtAdres.Text = _kisiBilgileri.adres;
             txtTelefon.Text = _kisiBilgileri.telefon;
             txtEMail.Text = _kisiBilgileri.email;
-            cmbUyruk.SelectedIndex = cmbSelectedIndex;
+            cmbUyruk.SelectedIndex = cmbUyrukSelectedIndex;
+            txtDogumTarih.Text = _kisiBilgileri.dogumTarihi;
+            txtDogumYeri.Text = _kisiBilgileri.dogumYeri;
+            cmbMedeniDurum.SelectedIndex = cmbMedeniSelectedIndex;
+            txtTCKimlik.Text = Convert.ToString(_kisiBilgileri.tcKimlikNumarasi);
+            txtIlgiAlan.Text = _kisiBilgileri.ilgiAlanlari;
 
         }
         

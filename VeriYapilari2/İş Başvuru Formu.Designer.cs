@@ -294,7 +294,7 @@
             "TC",
             "KKTC",
             "Avrupa",
-            "Amerika Birleşik Devletleri",
+            "ABD",
             "İngiltere",
             "Diğer"});
             this.cmbUyruk.Location = new System.Drawing.Point(259, 105);
@@ -325,8 +325,7 @@
             this.cmbMedeniDurum.FormattingEnabled = true;
             this.cmbMedeniDurum.Items.AddRange(new object[] {
             "Bekar",
-            "Evli",
-            "Boşanmış"});
+            "Evli"});
             this.cmbMedeniDurum.Location = new System.Drawing.Point(259, 144);
             this.cmbMedeniDurum.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMedeniDurum.Name = "cmbMedeniDurum";
