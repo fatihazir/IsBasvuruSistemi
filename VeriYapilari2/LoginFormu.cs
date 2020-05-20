@@ -28,8 +28,10 @@ namespace VeriYapilari2
 
             if (db.SirketGirisYap(sirketAdi, sifre))
             {
+                Sirket ilkSirket = new Sirket();
+                ilkSirket = db.DatabasedenIlkSirketCekimi();
                 SirketAnaForm sirketFormunuAc = new SirketAnaForm();
-                //sirketFormunuAc.labelSirketIsmi.Text = deneme.SirketAd;
+                sirketFormunuAc.labelSirketIsmi.Text = ilkSirket.SirketAd;
                 sirketFormunuAc.Show();
 
             }
