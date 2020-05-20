@@ -137,6 +137,7 @@ namespace VeriYapilari2
 
         private void brnKisiBilgiSil_Click(object sender, EventArgs e)
         {
+            _ikiliAramaAgaci.Sil(_kisiBilgileri.tcKimlikNumarasi);
         }
     }
 }

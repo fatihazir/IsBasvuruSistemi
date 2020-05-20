@@ -11,35 +11,13 @@ namespace VeriYapilari2
         {
         }
 
-        public void ElemanlarıGetir()
-        {
-        }
 
         public İkiliAramaAgacı(İkiliAramaAgacDugumu kok)
         {
             this.kok = kok;
         }
 
-        public int DugumSayisi()
-        {
-            return DugumSayisi(kok);
-        }
-
-        public int DugumSayisi(İkiliAramaAgacDugumu dugum)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int YaprakSayisi()
-        {
-            return YaprakSayisi(kok);
-        }
-
-        public int YaprakSayisi(İkiliAramaAgacDugumu dugum)
-        {
-            throw new NotImplementedException();
-        }
-
+      
         public string DugumleriYazdir()
         {
             return dugumler;
@@ -168,6 +146,123 @@ namespace VeriYapilari2
         public void KisiGuncelle(ulong tc, KisiBilgileri kisi)
         {
             Ara(tc).Kisi = kisi;
+        }
+        private bool parentBuyukMu = false;
+        private İkiliAramaAgacDugumu araParent = new İkiliAramaAgacDugumu();
+        public bool Sil(ulong tc)
+        {
+            İkiliAramaAgacDugumu current = kok;
+            İkiliAramaAgacDugumu parent = kok;
+            bool issol = true;
+            //DÜĞÜMÜ BUL
+            while ((ulong)current.Tc != tc)
+            {
+                parent = current;
+                if (tc < (ulong)current.Tc)
+                {
+                    issol = true;
+                    current = current.sol;
+                }
+                else
+                {
+                    issol = false;
+                    current = current.sag;
+                }
+                if (current == null)
+                    return false;
+            }
+            //DURUM 1: YAPRAK DÜĞÜM
+            if (current.sol == null && current.sag == null)
+            {
+                if (issol)
+                {
+                    parent.sol = null;
+                    parent.Kisi = null;
+                    parent.Tc = 0;
+
+                }
+                else
+                {
+                    parent.sag = null;
+                    parent.Kisi = null;
+                    parent.Tc = 0;
+                }
+            }
+            //DURUM 2: TEK ÇOCUKLU DÜĞÜM
+            else if (current.sag == null)
+            {
+                if ((ulong)parent.Tc > tc)
+                {
+                    parent.sol = current.sol;
+                    parent.Kisi = null;
+                    parent.Tc = 0;
+                }
+                else
+                {
+                    parent.sag = current.sol;
+                    parent.Kisi = null;
+                    parent.Tc = 0;
+                }
+            }
+            else if (current.sol == null)
+            {
+                if ((ulong)parent.Tc < tc)
+                {
+                    parent.sag = current.sag;
+                    parent.Kisi = null;
+                    parent.Tc = 0;
+                }
+                else
+                {
+                    parent.sol = current.sag;
+                    parent.Kisi = null;
+                    parent.Tc = 0;
+                }
+            }
+            //DURUM 3: İKİ ÇOCUKLU DÜĞÜM
+            else
+            {
+                İkiliAramaAgacDugumu successor = Successor(current);
+
+                current.Tc = successor.Tc;
+                successor = null;
+
+                if (parentBuyukMu)
+                {
+                    araParent.sol = successor.sag;
+                }
+            }
+            return true;
+            parentBuyukMu = false;
+        }
+
+        private İkiliAramaAgacDugumu Successor(İkiliAramaAgacDugumu silDugum)
+        {
+            return MinDeger(silDugum.sag);
+        }
+
+        public İkiliAramaAgacDugumu MinDeger(İkiliAramaAgacDugumu temp) 
+        {
+            if (temp.sol == null)
+            {
+                return temp;
+            }
+            while (temp.sol != null)
+            {
+                var tempParent = temp.sol;
+                if ((ulong)temp.Tc > (ulong)tempParent.Tc)
+                {
+                    parentBuyukMu = true;
+                    araParent = temp;
+                }
+                else
+                {
+                    parentBuyukMu = false;
+                }
+
+                temp = temp.sol;
+            }
+            return temp;
         }
     }
 }
