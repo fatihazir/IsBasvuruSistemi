@@ -5,7 +5,7 @@ namespace VeriYapilari2
 {
     public class Sirket
     {
-        public int SirketID { get;private set; }
+        public int SirketID { get; set; }
         public string SirketAd { get; set; }
         public string SirketAdres { get; set; }
         public string SirketFax { get; set; }
@@ -13,7 +13,7 @@ namespace VeriYapilari2
         public string SirketEposta { get; set; }
 
         private HashChain Ilanlar = new HashChain();
-        protected string sifre { get; set; }
+        public string sifre { get; set; }
 
         public string SirketBilgileriYazdir()
         {
@@ -55,5 +55,7 @@ namespace VeriYapilari2
             //BURADA MİNİK SİLME İŞLEMLERİ GERÇEKLEŞECEK
             return true;
         }
+
+
     }
 }

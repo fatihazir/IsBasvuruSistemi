@@ -10,7 +10,7 @@ namespace VeriYapilari2
    {
 
         public KisiBilgileri Kisi;
-        public object veri;
+        public ulong Tc;
         public İkiliAramaAgacDugumu sol;
         public İkiliAramaAgacDugumu sag;
         private ulong deger;
@@ -21,10 +21,10 @@ namespace VeriYapilari2
 
         
 
-        public İkiliAramaAgacDugumu(object veri, KisiBilgileri kisi)
+        public İkiliAramaAgacDugumu(ulong tc, KisiBilgileri kisi)
         {
             this.Kisi = kisi;
-            this.veri = veri;
+            this.Tc = tc;
             sol = null;
             sag = null;
         }

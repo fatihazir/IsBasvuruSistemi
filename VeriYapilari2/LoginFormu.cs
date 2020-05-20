@@ -18,18 +18,7 @@ namespace VeriYapilari2
             string sifre = txtSifre.Text;
             bool girisDogrulama;
 
-            girisDogrulama = db.GirisYap(tc, sifre);
-
-            if (girisDogrulama)
-            {
-                KisiBilgileri deneme = new KisiBilgileri();
-                deneme = db.KisiGetir();
-                // KULLANICILAR İÇİN OLAN FORM AÇILACAK DÜZENLEME GEREKLİ
-            }
-            else
-            {
-                MessageBox.Show("Hatalı bilgi girişi yaptınız!");
-            }
+         
         }
 
         private void btnSirketGirisi_Click(object sender, EventArgs e)

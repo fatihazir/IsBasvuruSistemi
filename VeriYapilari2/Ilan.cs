@@ -9,7 +9,7 @@ namespace VeriYapilari2
         public int IlanNumarasi { get;private set; }
         public string IsTanimi { get; set; }
         public string Pozisyon { get; set; }
-        private int IlaninIsyeriIdsi { get; set; }
+      
         public string ArananElemanOzellikleri { get; set; }
 
 

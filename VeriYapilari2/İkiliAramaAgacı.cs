@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,7 @@ namespace VeriYapilari2
          private İkiliAramaAgacDugumu kok;
         private string dugumler;
 
-        
-
+       
         
         public İkiliAramaAgacı()
         {
@@ -76,7 +76,7 @@ namespace VeriYapilari2
         }
         private void Ziyaret(İkiliAramaAgacDugumu dugum)
         {
-            dugumler += dugum.veri + " ";
+            //dugumler += dugum.veri + " ";
         }
         public void PostOrder()
         {
@@ -102,9 +102,9 @@ namespace VeriYapilari2
             {
                 tempParent = tempSearch;
                 //Deger zaten var, çık.
-                if (deger == (ulong)tempSearch.veri)
+                if (deger == (ulong)tempSearch.Tc)
                     return;
-                else if (deger < (ulong)tempSearch.veri)
+                else if (deger < (ulong)tempSearch.Tc)
                     tempSearch = tempSearch.sol;
                 else
                     tempSearch = tempSearch.sag;
@@ -113,7 +113,7 @@ namespace VeriYapilari2
             //Ağaç boş, köke ekle
             if (kok == null)
                 kok = eklenecek;
-            else if (deger < (ulong)tempParent.veri)
+            else if (deger < (ulong)tempParent.Tc)
                 tempParent.sol = eklenecek;
             else
                 tempParent.sag = eklenecek;
@@ -121,26 +121,51 @@ namespace VeriYapilari2
 
         
 
-        public İkiliAramaAgacDugumu Ara(ulong anahtar)
+        public İkiliAramaAgacDugumu Ara(ulong tc)
         {
-            return AraInt(kok, anahtar);
+            return AraInt(kok, tc);
         }
         private İkiliAramaAgacDugumu AraInt(İkiliAramaAgacDugumu dugum, 
-                                            ulong anahtar)
+                                            ulong tc)
         {
             if (dugum == null)
                 return null;
-            else if ((ulong)dugum.veri == anahtar)
+            else if ((ulong)dugum.Tc== tc)
                 return dugum;
-            else if ((ulong)dugum.veri > anahtar)
-                return (AraInt(dugum.sol, anahtar));
+            else if ((ulong)dugum.Tc > tc)
+                return (AraInt(dugum.sol, tc));
             else
-                return (AraInt(dugum.sag, anahtar));
+                return (AraInt(dugum.sag, tc));
+        }
+
+        public İkiliAramaAgacDugumu KisiBilgileriniBul (ulong tc)
+        {
+            İkiliAramaAgacDugumu  tempDugum = new İkiliAramaAgacDugumu();
+            tempDugum = Ara(tc);
+
+            return tempDugum;
+        }
+
+        public KisiBilgileri BireyselGirisYap(ulong tc, string sifre)
+        {
+            İkiliAramaAgacDugumu tempDugum = new İkiliAramaAgacDugumu();
+            tempDugum = KisiBilgileriniBul(tc);
+
+            if (tempDugum.Kisi.sifre == sifre)
+            {
+                return tempDugum.Kisi;
+            }
+            else
+            {
+                KisiBilgileri bos = new KisiBilgileri();
+                return bos;
+            }
+
         }
 
 
-        
 
-        
+
+
     }
 }

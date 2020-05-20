@@ -61,17 +61,6 @@ namespace VeriYapilari2
 
         private void BtnDugumAra_Click(object sender, EventArgs e)
         {
-            if (aramaAgaci == null)
-            {
-                MessageBox.Show("Öncelikle ağacı oluşturmalısınız!");
-                return;
-            }
-
-            İkiliAramaAgacDugumu dugum = aramaAgaci.Ara(Convert.ToUInt32(txtAra.Text));
-            if (dugum != null)
-                MessageBox.Show(dugum.veri + " düğümü bulundu.");
-            else
-                MessageBox.Show(txtAra.Text + " düğümü bulunamadı....");
         }
 
         private void BtnAraDugumEkle_Click(object sender, EventArgs e)

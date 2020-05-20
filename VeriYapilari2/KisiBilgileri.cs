@@ -23,23 +23,23 @@ namespace VeriYapilari2
 
         public LinkedList IsDeneyimleri = new LinkedList();
 
-        //public KisiBilgileri(string ad, string soyad, string adres, string telefon, string email, string uyruk,
-        //                    string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
-        //                    string ilgliAlanlari)
-        //{
-        //    this.ad = ad;
-        //    this.soyad = soyad;
-        //    this.adres = adres;
-        //    this.telefon = telefon;
-        //    this.email = email;
-        //    this.uyruk = uyruk;
-        //    this.dogumTarihi = dogumTarihi;
-        //    this.dogumYeri = dogumYeri;
-        //    this.medeniDurum = medeniDurum;
-        //    this.yabanciDil = yabanciDil;
-        //    this.ilgiAlanlari = ilgliAlanlari;
-        //    this.iseUygunlukDurumu = RandomIsUygunluk();
-        //}
+        public KisiBilgileri BilgiGuncelle(string ad, string soyad, string adres, string telefon, string email, string uyruk,
+                            string dogumTarihi, string dogumYeri, string medeniDurum, string yabanciDil,
+                            string ilgliAlanlari)
+        {
+            this.ad = ad;
+            this.soyad = soyad;
+            this.adres = adres;
+            this.telefon = telefon;
+            this.email = email;
+            this.uyruk = uyruk;
+            this.dogumTarihi = dogumTarihi;
+            this.dogumYeri = dogumYeri;
+            this.medeniDurum = medeniDurum;
+            this.yabanciDil = yabanciDil;
+            this.ilgiAlanlari = ilgliAlanlari;
+            
+        }
 
         private int RandomIsUygunluk()
         {
