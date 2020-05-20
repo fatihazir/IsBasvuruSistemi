@@ -36,6 +36,7 @@ namespace VeriYapilari2
             else
             {
                 MessageBox.Show("Hatalı bilgi girişi yaptınız!");
+
             }
         }
     }
