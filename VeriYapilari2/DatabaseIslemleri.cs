@@ -30,7 +30,7 @@ namespace VeriYapilari2
                 tempSirket.SirketFax = TempSirketBilgisi[3];
                 tempSirket.SirketTelefon = TempSirketBilgisi[4];
                 tempSirket.SirketEposta = TempSirketBilgisi[5];
-
+                tempSirket.sifre = TempSirketBilgisi[6];
 
                 Sirketler.Add(tempSirket);
                 return tempSirket;
@@ -104,16 +104,12 @@ namespace VeriYapilari2
             return tempKisi; // donulen degeri ikili arama ağacına ekleyeceğiz.
         }
 
-
-        
-
         public bool SirketGirisYap(string sirketAdi, string sifre)
         {
             foreach (Sirket sirket in Sirketler)
             {
-                if (sirket.SirketAd == sirketAdi && sirket.sifre == sifre)
+                if (sirket.SirketEposta == sirketAdi && sirket.sifre == sifre)
                 {
-                    
                     return true;
                 }
             }
