@@ -564,6 +564,7 @@
             this.btnIlaniDuzenle.TabIndex = 19;
             this.btnIlaniDuzenle.Text = "Tıklanan İlanı Düzenle!";
             this.btnIlaniDuzenle.UseVisualStyleBackColor = true;
+            this.btnIlaniDuzenle.Click += new System.EventHandler(this.btnIlaniDuzenle_Click);
             // 
             // txtPozisyonIlanDuzenle
             // 
