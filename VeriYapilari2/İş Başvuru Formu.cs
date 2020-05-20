@@ -57,7 +57,7 @@ namespace VeriYapilari2
             txtAdres.Text = _kisiBilgileri.adres;
             txtTelefon.Text = _kisiBilgileri.telefon;
             txtEMail.Text = _kisiBilgileri.email;
-            cmbUyruk.SelectedIndex = cmbSelectedIndex;
+            //cmbUyruk.SelectedIndex = cmbSelectedIndex;
 
         }
         

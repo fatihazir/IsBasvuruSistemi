@@ -13,7 +13,7 @@ namespace VeriYapilari2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestFormu());
+            Application.Run(new LoginFormu());
         }
     }
 }

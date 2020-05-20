@@ -17,29 +17,28 @@ namespace VeriYapilari2
             ulong tc = Convert.ToUInt32(txtTcNo.Text);
             string sifre = txtSifre.Text;
             bool girisDogrulama;
-
-         
         }
 
         private void btnSirketGirisi_Click(object sender, EventArgs e)
         {
-            //string sirketAdi = txtSirketAdi.Text;
-            //string sifre = txtSirketSifre.Text;
-            //bool girisDogrulama;
-            //girisDogrulama = db.GirisYap(sirketAdi, sifre);
+            //BURADA DEĞİŞİKLİK OLACAK LOGİN FORMDA ARTIK ŞİRKET ADI DEĞİL E POSTA İLE GİRİŞ YAPILIYOR
+            string sirketAdi = txtSirketAdi.Text;
+            string sifre = txtSirketSifre.Text;
+            bool girisDogrulama;
+            girisDogrulama = db.SirketGirisYap(sirketAdi, sifre);
 
-            //if (girisDogrulama)
-            //{
-            //    Sirket deneme = new Sirket();
-            //    deneme = db.SirketGetir();
-            //    SirketAnaForm sirketFormunuAc = new SirketAnaForm();
-            //    sirketFormunuAc.labelSirketIsmi.Text = deneme.SirketAd;
-            //    sirketFormunuAc.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Hatalı bilgi girişi yaptınız!");
-            //}
+            if (girisDogrulama)
+            {
+                Sirket deneme = new Sirket();
+                deneme = db.DatabasedenIlkSirketCekimi();
+                SirketAnaForm sirketFormunuAc = new SirketAnaForm();
+                sirketFormunuAc.labelSirketIsmi.Text = deneme.SirketAd;
+                sirketFormunuAc.Show();
+            }
+            else
+            {
+                MessageBox.Show("Hatalı bilgi girişi yaptınız!");
+            }
         }
     }
 }
