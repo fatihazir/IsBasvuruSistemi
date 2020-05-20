@@ -28,7 +28,9 @@ namespace VeriYapilari2
 
             if (db.SirketGirisYap(sirketAdi, sifre))
             {
-                MessageBox.Show("aaa");
+                SirketAnaForm sirketFormunuAc = new SirketAnaForm();
+                //sirketFormunuAc.labelSirketIsmi.Text = deneme.SirketAd;
+                sirketFormunuAc.Show();
 
             }
             else

@@ -33,32 +33,26 @@ namespace VeriYapilari2
                 tempSirket.sifre = TempSirketBilgisi[6];
 
                 Sirketler.Add(tempSirket);
-                return tempSirket;
 
             }
 
-            return tempSirket; //BU CALISIRSA BOS DONECEKTİR.
-        }
-
-        public Ilan DatabasedenIlkIlanCekimi()
-        {
             Ilan tempSirketIlani = new Ilan();
 
-            string[] satirlar = System.IO.File.ReadAllLines("./IlanDb.txt");
+            string[] satirlarIlanIcın = System.IO.File.ReadAllLines("./IlanDb.txt");
 
-            for (int i = 0; i < satirlar.Length; i++)
+            for (int i = 0; i < satirlarIlanIcın.Length; i++)
             {
-                string[] TempSirketIlanlari = satirlar[i].Split(',');
+                string[] TempSirketIlanlari = satirlarIlanIcın[i].Split(',');
 
                 tempSirketIlani.IsTanimi = TempSirketIlanlari[0];
                 tempSirketIlani.Pozisyon = TempSirketIlanlari[1];
                 tempSirketIlani.ArananElemanOzellikleri = TempSirketIlanlari[2];
 
-                return tempSirketIlani;
-            }
-
-            return tempSirketIlani; // BU CALISIRSA BOS DONECEKTİR.
+                tempSirket.Ilanlar.AddIsIlani(tempSirketIlani.IlanNumarasi, tempSirketIlani, tempSirket);
+            };
+            return tempSirket;
         }
+
 
         public KisiBilgileri DatabasedenIlkKisiCekimi()
         {
