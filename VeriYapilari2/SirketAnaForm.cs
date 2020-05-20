@@ -65,10 +65,20 @@ namespace VeriYapilari2
             ilanTanimi = richTxtYeniIsIlani.Text;
             arananElamanOzellikleri = richTxtYeniArananEleman.Text;
             pozisyon = txtYeniIlanPozisyon.Text;
-            int sirketID = sirketFormIci.SirketID;
             //aga burayı kontrol et yanlış olabilir
+            Ilan yeniIlan = new Ilan();
+            yeniIlan.IsTanimi = ilanTanimi;
+            yeniIlan.Pozisyon = pozisyon;
+            yeniIlan.ArananElemanOzellikleri = arananElamanOzellikleri;
+            if (sirketFormIci.Ilanlar.AddIsIlani(yeniIlan.IlanNumarasi, yeniIlan, sirketFormIci))
+            {
+                MessageBox.Show("Başarıyla yeni bir ilan eklendi!");
+            }
+            else
+            {
+                MessageBox.Show("İlan eklenirken bir sorun ortaya çıktı!");
+            }
             
-            MessageBox.Show("Aga kalk yeni ilan ekledin");
         }
 
         private void ilanIseAlButon_Click(object sender, EventArgs e)
