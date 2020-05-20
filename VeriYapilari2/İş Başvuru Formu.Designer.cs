@@ -449,7 +449,7 @@
             this.dgvIlanlar.AllowUserToAddRows = false;
             this.dgvIlanlar.AllowUserToDeleteRows = false;
             this.dgvIlanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIlanlar.Location = new System.Drawing.Point(257, 69);
+            this.dgvIlanlar.Location = new System.Drawing.Point(198, 68);
             this.dgvIlanlar.Name = "dgvIlanlar";
             this.dgvIlanlar.ReadOnly = true;
             this.dgvIlanlar.RowTemplate.Height = 24;
