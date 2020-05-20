@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Infrastructure;
 using System.Windows.Forms;
 
 namespace VeriYapilari2
@@ -11,7 +9,9 @@ namespace VeriYapilari2
         {
             InitializeComponent();
         }
+
         private DatabaseIslemleri db = new DatabaseIslemleri();
+
         private void btnSirketIlanTest_Click(object sender, EventArgs e)
         {
             Sirket sirket1 = new Sirket();
@@ -29,11 +29,6 @@ namespace VeriYapilari2
             ilan2.ArananElemanOzellikleri = "nefes versin";
             ilan2.Pozisyon = "baş";
 
-           
-
-
-
-
             MessageBox.Show(ilan2.IlanBilgileriYazdir());
         }
 
@@ -43,21 +38,17 @@ namespace VeriYapilari2
 
         private void btnSirketCekmeTesti_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void btnKisiCekmeTesti_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-
         }
 
-            İkiliAramaAgacı aramaAgaci = new İkiliAramaAgacı();
-        
+        private İkiliAramaAgacı aramaAgaci = new İkiliAramaAgacı();
 
         private void BtnDugumAra_Click(object sender, EventArgs e)
         {
@@ -82,8 +73,6 @@ namespace VeriYapilari2
 
             aramaAgaci.Ekle(tc1, kisi1);
             aramaAgaci.Ekle(tc2, kisi2);
-            
-
         }
 
         private void btnFatihTest_Click(object sender, EventArgs e)
@@ -125,8 +114,6 @@ namespace VeriYapilari2
             Atolye15.SirketEposta = "info.atolye";
             Atolye15.SirketFax = "456789";
             Atolye15.SirketTelefon = "5557468255";
-            
-
 
             Ilan ilkIlan = new Ilan();
             ilkIlan.ArananElemanOzellikleri = "adam ol";
@@ -145,9 +132,6 @@ namespace VeriYapilari2
             Heap heap = new Heap(10); // Heap başarili.
             heap.Insert(ilkIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
             heap.Insert(ikincIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
-
         }
-
-        
     }
 }

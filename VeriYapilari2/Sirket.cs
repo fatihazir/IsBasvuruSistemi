@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace VeriYapilari2
 {
@@ -54,7 +53,5 @@ namespace VeriYapilari2
         {
             return true;
         }
-
-
     }
 }

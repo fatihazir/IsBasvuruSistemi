@@ -24,7 +24,6 @@ namespace VeriYapilari2
             //BURADA DEĞİŞİKLİK OLACAK LOGİN FORMDA ARTIK ŞİRKET ADI DEĞİL E POSTA İLE GİRİŞ YAPILIYOR
             string sirketAdi = txtSirketAdi.Text;
             string sifre = txtSirketSifre.Text;
-            
 
             if (db.SirketGirisYap(sirketAdi, sifre))
             {
@@ -33,7 +32,6 @@ namespace VeriYapilari2
                 SirketAnaForm sirketFormunuAc = new SirketAnaForm();
                 sirketFormunuAc.labelSirketIsmi.Text = ilkSirket.SirketAd;
                 sirketFormunuAc.Show();
-
             }
             else
             {

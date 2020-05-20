@@ -5,9 +5,7 @@ namespace VeriYapilari2
 {
     public class DatabaseIslemleri : Sirket
     {
-
         public List<Sirket> Sirketler = new List<Sirket>();
-
 
         public DatabaseIslemleri()
         {
@@ -33,7 +31,6 @@ namespace VeriYapilari2
                 tempSirket.sifre = TempSirketBilgisi[6];
 
                 Sirketler.Add(tempSirket);
-
             }
 
             Ilan tempSirketIlani = new Ilan();
@@ -70,7 +67,6 @@ namespace VeriYapilari2
         {
             KisiBilgileri tempKisi = new KisiBilgileri();
             IsDeneyimi tempIsDeneyimi = new IsDeneyimi();
-           
 
             string[] satirlar = System.IO.File.ReadAllLines("./KisiDb.txt");
 
@@ -104,7 +100,6 @@ namespace VeriYapilari2
                 tempKisi.IsDeneyimleri.InsertLast(tempIsDeneyimi);
                 tempKisi.tcKimlikNumarasi = Convert.ToUInt32(TempKisiBilgisi[21]);
                 tempKisi.sifre = TempKisiBilgisi[22];
-
             }
 
             return tempKisi; // donulen degeri ikili arama ağacına ekleyeceğiz.
