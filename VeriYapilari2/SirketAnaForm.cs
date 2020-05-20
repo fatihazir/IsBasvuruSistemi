@@ -156,15 +156,15 @@ namespace VeriYapilari2
 
         private void btnIlanIncele_Click(object sender, EventArgs e)
         {
-            ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
-            if (theClickedtwo == null)
+            ListViewItem theClickedItem = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
+            if (theClickedItem == null)
             {
                 MessageBox.Show("Lütfen bir ilana tıklayınız!");
             }
             else
             {
                 int ilanID;
-                ilanID = Convert.ToInt32(theClickedtwo.Text);
+                ilanID = Convert.ToInt32(theClickedItem.Text);
                 Ilan ilan = new Ilan();
                 ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
                 richTextBoxIsTanimiIlanDuzenle.Text = ilan.IsTanimi;
@@ -188,6 +188,31 @@ namespace VeriYapilari2
             ilan.Pozisyon = pozisyon;
             MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
             ilanListele();
+        }
+
+        private void listViewIlanlarIsAlmaBolmesi_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListViewItem theClickedItem = listViewIlanlarIsAlmaBolmesi.FocusedItem;
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                listViewEnUygunKisi.Items.Clear();
+                int ilanID;
+                ilanID = Convert.ToInt32(theClickedItem.Text);
+                Ilan ilan = new Ilan();
+                ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
+                // başvuranlar heap ağacından çekilecek
+
+                //sonra aşağıda item olarak eklenecek
+                ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
+                item.SubItems.Add(ilan.IsTanimi);
+                listViewEnUygunKisi.Items.Add(item);
+                
+                
+            }
         }
     }
 }

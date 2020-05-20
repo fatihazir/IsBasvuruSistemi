@@ -38,7 +38,6 @@
             this.btnEnAzIkıYılListele = new System.Windows.Forms.Button();
             this.btnTiklananIlanSil = new System.Windows.Forms.Button();
             this.btnIseAl = new System.Windows.Forms.Button();
-            this.maskedTxtEnUygunKisi = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -86,6 +85,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label17 = new System.Windows.Forms.Label();
+            this.listViewEnUygunKisi = new System.Windows.Forms.ListView();
             this.tabIlanlarim.SuspendLayout();
             this.tabYeniIlanVer.SuspendLayout();
             this.tabSirketSil.SuspendLayout();
@@ -97,12 +97,12 @@
             // 
             // tabIlanlarim
             // 
+            this.tabIlanlarim.Controls.Add(this.listViewEnUygunKisi);
             this.tabIlanlarim.Controls.Add(this.listViewIlanlarIsAlmaBolmesi);
             this.tabIlanlarim.Controls.Add(this.btnYabanciDilOlanListele);
             this.tabIlanlarim.Controls.Add(this.btnEnAzIkıYılListele);
             this.tabIlanlarim.Controls.Add(this.btnTiklananIlanSil);
             this.tabIlanlarim.Controls.Add(this.btnIseAl);
-            this.tabIlanlarim.Controls.Add(this.maskedTxtEnUygunKisi);
             this.tabIlanlarim.Controls.Add(this.label14);
             this.tabIlanlarim.Controls.Add(this.label13);
             this.tabIlanlarim.Controls.Add(this.label12);
@@ -131,6 +131,7 @@
             this.listViewIlanlarIsAlmaBolmesi.TabIndex = 12;
             this.listViewIlanlarIsAlmaBolmesi.UseCompatibleStateImageBehavior = false;
             this.listViewIlanlarIsAlmaBolmesi.View = System.Windows.Forms.View.Details;
+            this.listViewIlanlarIsAlmaBolmesi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewIlanlarIsAlmaBolmesi_MouseClick);
             // 
             // columnHeader5
             // 
@@ -187,7 +188,7 @@
             // 
             // btnIseAl
             // 
-            this.btnIseAl.Location = new System.Drawing.Point(471, 114);
+            this.btnIseAl.Location = new System.Drawing.Point(474, 184);
             this.btnIseAl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIseAl.Name = "btnIseAl";
             this.btnIseAl.Size = new System.Drawing.Size(173, 46);
@@ -195,14 +196,6 @@
             this.btnIseAl.Text = "İşe Al!";
             this.btnIseAl.UseVisualStyleBackColor = true;
             this.btnIseAl.Click += new System.EventHandler(this.ilanIseAlButon_Click);
-            // 
-            // maskedTxtEnUygunKisi
-            // 
-            this.maskedTxtEnUygunKisi.Location = new System.Drawing.Point(511, 75);
-            this.maskedTxtEnUygunKisi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTxtEnUygunKisi.Name = "maskedTxtEnUygunKisi";
-            this.maskedTxtEnUygunKisi.Size = new System.Drawing.Size(100, 22);
-            this.maskedTxtEnUygunKisi.TabIndex = 4;
             // 
             // label14
             // 
@@ -674,6 +667,15 @@
             this.label17.TabIndex = 8;
             this.label17.Text = "İlanlarınız";
             // 
+            // listViewEnUygunKisi
+            // 
+            this.listViewEnUygunKisi.HideSelection = false;
+            this.listViewEnUygunKisi.Location = new System.Drawing.Point(458, 75);
+            this.listViewEnUygunKisi.Name = "listViewEnUygunKisi";
+            this.listViewEnUygunKisi.Size = new System.Drawing.Size(208, 61);
+            this.listViewEnUygunKisi.TabIndex = 13;
+            this.listViewEnUygunKisi.UseCompatibleStateImageBehavior = false;
+            // 
             // SirketAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -708,7 +710,6 @@
         private System.Windows.Forms.Button btnEnAzIkıYılListele;
         private System.Windows.Forms.Button btnTiklananIlanSil;
         private System.Windows.Forms.Button btnIseAl;
-        private System.Windows.Forms.MaskedTextBox maskedTxtEnUygunKisi;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -761,5 +762,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ListView listViewEnUygunKisi;
     }
 }
