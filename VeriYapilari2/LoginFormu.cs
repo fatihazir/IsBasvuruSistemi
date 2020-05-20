@@ -21,7 +21,7 @@ namespace VeriYapilari2
 
         private void btnSirketGirisi_Click(object sender, EventArgs e)
         {
-            string sirketEposta = txtSirketAdi.Text;
+            string sirketEposta = txtSirketPosta.Text;
             string sifre = txtSirketSifre.Text;
             Sirket dbSirket = new Sirket();
             dbSirket = db.SirketGirisYap(sirketEposta, sifre);

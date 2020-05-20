@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnSirketGirisi = new System.Windows.Forms.Button();
             this.txtSirketSifre = new System.Windows.Forms.TextBox();
-            this.txtSirketAdi = new System.Windows.Forms.TextBox();
+            this.txtSirketPosta = new System.Windows.Forms.TextBox();
             this.tabIsBasvuruKayit = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -193,13 +193,13 @@
             this.txtSirketSifre.Size = new System.Drawing.Size(132, 22);
             this.txtSirketSifre.TabIndex = 11;
             // 
-            // txtSirketAdi
+            // txtSirketPosta
             // 
-            this.txtSirketAdi.Location = new System.Drawing.Point(125, 51);
-            this.txtSirketAdi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSirketAdi.Name = "txtSirketAdi";
-            this.txtSirketAdi.Size = new System.Drawing.Size(132, 22);
-            this.txtSirketAdi.TabIndex = 10;
+            this.txtSirketPosta.Location = new System.Drawing.Point(125, 51);
+            this.txtSirketPosta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSirketPosta.Name = "txtSirketPosta";
+            this.txtSirketPosta.Size = new System.Drawing.Size(132, 22);
+            this.txtSirketPosta.TabIndex = 10;
             // 
             // tabIsBasvuruKayit
             // 
@@ -665,7 +665,7 @@
             this.groupBox4.Controls.Add(this.btnSirketGirisi);
             this.groupBox4.Controls.Add(this.txtSirketSifre);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.txtSirketAdi);
+            this.groupBox4.Controls.Add(this.txtSirketPosta);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Location = new System.Drawing.Point(243, 64);
             this.groupBox4.Name = "groupBox4";
@@ -857,7 +857,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSirketGirisi;
         private System.Windows.Forms.TextBox txtSirketSifre;
-        private System.Windows.Forms.TextBox txtSirketAdi;
+        private System.Windows.Forms.TextBox txtSirketPosta;
         private System.Windows.Forms.TabControl tabIsBasvuruKayit;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
