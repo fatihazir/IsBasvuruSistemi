@@ -19,10 +19,7 @@ namespace VeriYapilari2
         {
         }
 
-        public İkiliAramaAgacDugumu(ulong deger)
-        {
-            this.deger = deger;
-        }
+        
 
         public İkiliAramaAgacDugumu(object veri, KisiBilgileri kisi)
         {

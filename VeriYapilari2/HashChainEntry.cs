@@ -10,6 +10,8 @@ namespace VeriYapilari2
         private object deger;
 
         private HashChainEntry next;
+        
+        private Sirket sirket;
 
         public object Deger
         {
@@ -35,12 +37,13 @@ namespace VeriYapilari2
             set { next = value; }
         }
 
-        public HashChainEntry(int anahtar, object deger, string durum)
+        public HashChainEntry(int anahtar, object deger, string durum, Sirket sirket)
         {
             this.anahtar = anahtar;
             this.durum = durum;
             this.deger = deger;
             this.next = null;
+            this.sirket = sirket;
         }
     }
 }

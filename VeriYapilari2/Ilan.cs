@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace VeriYapilari2
 {
-    public class Ilan : Sirket
+    public class Ilan 
     {
         public int IlanNumarasi { get;private set; }
         public string IsTanimi { get; set; }
@@ -12,18 +12,11 @@ namespace VeriYapilari2
         private int IlaninIsyeriIdsi { get; set; }
         public string ArananElemanOzellikleri { get; set; }
 
-        public Ilan(Sirket sirket)
+
+        public Ilan()
         {
             this.IlanNumarasi = RandomIlanNumarasi();
-            this.IlaninIsyeriIdsi = sirket.SirketID;
-            this.SirketAd = sirket.SirketAd;
-            this.SirketAdres = sirket.SirketAdres;
-            this.SirketEposta = sirket.SirketEposta;
-            this.SirketFax = sirket.SirketFax;
-            this.SirketTelefon = sirket.SirketTelefon;
-            
         }
-
         private int RandomIlanNumarasi()
         {
             Thread.Sleep(20);
@@ -37,12 +30,8 @@ namespace VeriYapilari2
             string temp;
             temp = "Ilan numarasi :  " + IlanNumarasi + Environment.NewLine +
                    "Is tanimi : " + IsTanimi + Environment.NewLine +
-                   "Aranan eleman ozellikleri : " + ArananElemanOzellikleri + Environment.NewLine +
-                   "Sirket ıd : " + SirketID + Environment.NewLine +
-                   "Sirket ad : " + SirketAd + Environment.NewLine +
-                   "Sirket adres : " + SirketAdres + Environment.NewLine +
-                   "Sirket telefon : " + SirketTelefon + Environment.NewLine +
-                   "Sirket eposta : " + SirketEposta;
+                   "Aranan eleman ozellikleri : " + ArananElemanOzellikleri;
+                   
 
             return temp;
         }

@@ -16,14 +16,14 @@ namespace VeriYapilari2
             }
         }
 
-        public bool AddIsIlani(int key, object value)
+        public bool AddIsIlani(int key, object value, Sirket sirket)
         {
             int hash = (key % TABLE_SIZE);
             string durum = "Aktif";
             bool basarilimi = false;
             if (table[hash] == null)
             {
-                table[hash] = new HashChainEntry(key, value, durum);
+                table[hash] = new HashChainEntry(key, value, durum, sirket);
                 basarilimi = true;
                 return basarilimi;
             }
@@ -56,7 +56,7 @@ namespace VeriYapilari2
                 }
                 else
                 {
-                    entry.Next = new HashChainEntry(key, value, durum);
+                    entry.Next = new HashChainEntry(key, value, durum, sirket);
                     basarilimi = true;
                     return basarilimi;
                 }

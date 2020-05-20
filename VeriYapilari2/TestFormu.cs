@@ -18,13 +18,13 @@ namespace VeriYapilari2
             sirket1.SirketAd = "Fatih company";
             sirket1.SirketAdres = "izmir";
 
-            Ilan ilan1 = new Ilan(sirket1);
+            Ilan ilan1 = new Ilan();
             ilan1.IsTanimi = "kolee";
             ilan1.ArananElemanOzellikleri = "nefes alsın";
             ilan1.Pozisyon = "kucak";
             db.Sirketler.Add(sirket1);
 
-            Ilan ilan2 = new Ilan(sirket1);
+            Ilan ilan2 = new Ilan();
             ilan2.IsTanimi = "hizmetkar";
             ilan2.ArananElemanOzellikleri = "nefes versin";
             ilan2.Pozisyon = "baş";
@@ -139,22 +139,23 @@ namespace VeriYapilari2
             
 
 
-            Ilan ilkIlan = new Ilan(Atolye15);
+            Ilan ilkIlan = new Ilan();
             ilkIlan.ArananElemanOzellikleri = "adam ol";
             ilkIlan.IsTanimi = "gelistirici";
             ilkIlan.Pozisyon = "gelistriric";
 
-            Ilan ikincIlan = new Ilan(Atolye15);
+            Ilan ikincIlan = new Ilan();
             ikincIlan.ArananElemanOzellikleri = "temizlikci";
             ikincIlan.IsTanimi = "temizlikci";
             ikincIlan.Pozisyon = "temilikci";
 
             HashChain hash = new HashChain();
-            hash.AddIsIlani(ilkIlan.IlanNumarasi, ilkIlan);
-            hash.AddIsIlani(ikincIlan.IlanNumarasi, ikincIlan);
+            hash.AddIsIlani(ilkIlan.IlanNumarasi, ilkIlan, Atolye15);
+            hash.AddIsIlani(ikincIlan.IlanNumarasi, ikincIlan, Atolye15);
 
             Heap heap = new Heap(10); // Heap başarili.
             heap.Insert(ilkIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
+            heap.Insert(ikincIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
 
         }
 
