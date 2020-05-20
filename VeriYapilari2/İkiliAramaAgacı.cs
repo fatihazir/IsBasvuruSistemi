@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace VeriYapilari2
+﻿namespace VeriYapilari2
 {
     public class İkiliAramaAgacı
     {
@@ -11,13 +9,11 @@ namespace VeriYapilari2
         {
         }
 
-
         public İkiliAramaAgacı(İkiliAramaAgacDugumu kok)
         {
             this.kok = kok;
         }
 
-      
         public string DugumleriYazdir()
         {
             return dugumler;
@@ -55,7 +51,7 @@ namespace VeriYapilari2
 
         private void Ziyaret(İkiliAramaAgacDugumu dugum)
         {
-            //dugumler += dugum.veri + " ";
+            dugumler += dugum.Tc + " ";
         }
 
         public void PostOrder()
@@ -147,8 +143,10 @@ namespace VeriYapilari2
         {
             Ara(tc).Kisi = kisi;
         }
+
         private bool parentBuyukMu = false;
         private İkiliAramaAgacDugumu araParent = new İkiliAramaAgacDugumu();
+
         public bool Sil(ulong tc)
         {
             İkiliAramaAgacDugumu current = kok;
@@ -179,7 +177,6 @@ namespace VeriYapilari2
                     parent.sol = null;
                     parent.Kisi = null;
                     parent.Tc = 0;
-
                 }
                 else
                 {
@@ -241,7 +238,7 @@ namespace VeriYapilari2
             return MinDeger(silDugum.sag);
         }
 
-        public İkiliAramaAgacDugumu MinDeger(İkiliAramaAgacDugumu temp) 
+        public İkiliAramaAgacDugumu MinDeger(İkiliAramaAgacDugumu temp)
         {
             if (temp.sol == null)
             {

@@ -139,5 +139,10 @@ namespace VeriYapilari2
         {
             _ikiliAramaAgaci.Sil(_kisiBilgileri.tcKimlikNumarasi);
         }
+
+        private void dgvIlanlar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

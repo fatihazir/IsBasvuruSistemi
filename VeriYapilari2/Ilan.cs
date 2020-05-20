@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Net.Security;
 using System.Threading;
 
 namespace VeriYapilari2
 {
-    public class Ilan 
+    public class Ilan
     {
-        public int IlanNumarasi { get;private set; }
+        public int IlanNumarasi { get; private set; }
         public string IsTanimi { get; set; }
         public string Pozisyon { get; set; }
-      
-        public string ArananElemanOzellikleri { get; set; }
 
+        public string ArananElemanOzellikleri { get; set; }
 
         public Ilan()
         {
             this.IlanNumarasi = RandomIlanNumarasi();
         }
+
         private int RandomIlanNumarasi()
         {
             Thread.Sleep(20);
@@ -31,7 +30,6 @@ namespace VeriYapilari2
             temp = "Ilan numarasi :  " + IlanNumarasi + Environment.NewLine +
                    "Is tanimi : " + IsTanimi + Environment.NewLine +
                    "Aranan eleman ozellikleri : " + ArananElemanOzellikleri;
-                   
 
             return temp;
         }
