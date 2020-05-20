@@ -172,5 +172,22 @@ namespace VeriYapilari2
                 txtPozisyonIlanDuzenle.Text = ilan.Pozisyon;
             }
         }
+
+        private void btnIlaniDuzenle_Click(object sender, EventArgs e)
+        {
+            string isTanimi = richTextBoxIsTanimiIlanDuzenle.Text;
+            string arananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
+            string pozisyon = txtPozisyonIlanDuzenle.Text;
+            ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
+            int ilanID;
+            ilanID = Convert.ToInt32(theClickedtwo.Text);
+            Ilan ilan = new Ilan();
+            ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
+            ilan.IsTanimi = isTanimi;
+            ilan.ArananElemanOzellikleri = arananElemanOzellikleri;
+            ilan.Pozisyon = pozisyon;
+            MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
+            ilanListele();
+        }
     }
 }
