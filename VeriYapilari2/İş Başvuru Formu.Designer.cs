@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvIlanlar = new System.Windows.Forms.DataGridView();
             this.btnIsYeriAdinaSiralama = new System.Windows.Forms.Button();
             this.cmbIsYeriAdSiralama = new System.Windows.Forms.ComboBox();
             this.btnPozisyonaGoreSirala = new System.Windows.Forms.Button();
@@ -63,12 +64,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtDogumTarih = new System.Windows.Forms.TextBox();
             this.tabIsBasvuruKayit = new System.Windows.Forms.TabControl();
-            this.dgvIlanlar = new System.Windows.Forms.DataGridView();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIlanlar)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabIsBasvuruKayit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIlanlar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage3
@@ -87,6 +87,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "İlanlar";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // dgvIlanlar
+            // 
+            this.dgvIlanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIlanlar.Location = new System.Drawing.Point(92, 26);
+            this.dgvIlanlar.Name = "dgvIlanlar";
+            this.dgvIlanlar.RowTemplate.Height = 24;
+            this.dgvIlanlar.Size = new System.Drawing.Size(603, 296);
+            this.dgvIlanlar.TabIndex = 19;
             // 
             // btnIsYeriAdinaSiralama
             // 
@@ -444,19 +454,6 @@
             this.tabIsBasvuruKayit.Size = new System.Drawing.Size(803, 437);
             this.tabIsBasvuruKayit.TabIndex = 0;
             // 
-            // dgvIlanlar
-            // 
-            this.dgvIlanlar.AllowUserToAddRows = false;
-            this.dgvIlanlar.AllowUserToDeleteRows = false;
-            this.dgvIlanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIlanlar.Location = new System.Drawing.Point(198, 68);
-            this.dgvIlanlar.Name = "dgvIlanlar";
-            this.dgvIlanlar.ReadOnly = true;
-            this.dgvIlanlar.RowTemplate.Height = 24;
-            this.dgvIlanlar.Size = new System.Drawing.Size(365, 195);
-            this.dgvIlanlar.TabIndex = 7;
-            this.dgvIlanlar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIlanlar_CellContentClick);
-            // 
             // KullaniciFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -468,11 +465,11 @@
             this.Text = "Kullanici Formu";
             this.Load += new System.EventHandler(this.İş_Başvuru_Formu_Load);
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIlanlar)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabIsBasvuruKayit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIlanlar)).EndInit();
             this.ResumeLayout(false);
 
         }

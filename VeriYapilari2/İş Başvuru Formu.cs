@@ -13,7 +13,8 @@ namespace VeriYapilari2
         private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
         private DatabaseIslemleri _databaseIslemleri = new DatabaseIslemleri();
         private KisiBilgileri _kisiBilgileri = new KisiBilgileri();
-        private HashChain _hashChain = new HashChain();
+       
+        Sirket _sirket = new Sirket();
 
         private void TabPage1_Click(object sender, EventArgs e)
         {
@@ -77,7 +78,7 @@ namespace VeriYapilari2
             txtIlgiAlan.Text = _kisiBilgileri.ilgiAlanlari;
             txtYabanciDil.Text = _kisiBilgileri.yabanciDil;
 
-            dgvIlanlar.DataSource = _hashChain.GetIsIlaniForEditingAndListing();
+            dgvIlanlar.DataSource = _sirket.Ilanlar.GetIsIlaniForEditingAndListing();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -144,6 +145,11 @@ namespace VeriYapilari2
         }
 
         private void dgvIlanlar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
