@@ -79,7 +79,7 @@
             }
         }
 
-        public Ilan GetIsIlaniForEditing(int index)
+        public Ilan GetIsIlaniForEditingAndListing(int index)
         {
             if (table[index] == null)
                 return null;

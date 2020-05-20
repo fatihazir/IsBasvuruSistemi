@@ -24,7 +24,7 @@ namespace VeriYapilari2
             Ilan ilan = new Ilan();
             for (int i = 0; i < 10; i++)
             {
-                ilan = sirketFormIci.Ilanlar.GetIsIlaniForEditing(i);
+                ilan = sirketFormIci.Ilanlar.GetIsIlaniForEditingAndListing(i);
                 if (ilan == null)
                 {
                     continue;
