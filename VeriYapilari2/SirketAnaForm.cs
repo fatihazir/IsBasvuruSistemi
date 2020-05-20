@@ -32,10 +32,10 @@ namespace VeriYapilari2
                 ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
                 ListViewItem item2 = new ListViewItem(ilan.IlanNumarasi.ToString());
                 item.SubItems.Add(ilan.IsTanimi);
-                item.SubItems.Add(ilan.ArananElemanOzellikleri);  //www.yazilimkodlama.com
+                item.SubItems.Add(ilan.ArananElemanOzellikleri);
                 item.SubItems.Add(ilan.Pozisyon);
                 item2.SubItems.Add(ilan.IsTanimi);
-                item2.SubItems.Add(ilan.ArananElemanOzellikleri);  //www.yazilimkodlama.com
+                item2.SubItems.Add(ilan.ArananElemanOzellikleri);
                 item2.SubItems.Add(ilan.Pozisyon);
                 listViewIlanlarDuzenlemeBolmesi.Items.Add(item);
                 listViewIlanlarIsAlmaBolmesi.Items.Add(item2);
