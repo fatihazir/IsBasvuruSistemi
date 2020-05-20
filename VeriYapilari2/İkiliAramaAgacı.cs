@@ -119,8 +119,7 @@ namespace VeriYapilari2
                 tempParent.sag = eklenecek;
         }
 
-        
-
+    
         public İkiliAramaAgacDugumu Ara(ulong tc)
         {
             return AraInt(kok, tc);
@@ -163,6 +162,10 @@ namespace VeriYapilari2
 
         }
 
+        public void KisiGuncelle(ulong tc, KisiBilgileri kisi)
+        {
+            Ara(tc).Kisi = kisi;
+        }
 
 
 

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VeriYapilari2
@@ -16,15 +9,13 @@ namespace VeriYapilari2
         {
             InitializeComponent();
         }
-        İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
-        DatabaseIslemleri _databaseIslemleri = new DatabaseIslemleri();
-        KisiBilgileri _kisiBilgileri = new KisiBilgileri();
 
-        
+        private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
+        private DatabaseIslemleri _databaseIslemleri = new DatabaseIslemleri();
+        private KisiBilgileri _kisiBilgileri = new KisiBilgileri();
 
         private void TabPage1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void İş_Başvuru_Formu_Load(object sender, EventArgs e)
@@ -55,7 +46,7 @@ namespace VeriYapilari2
             {
                 cmbUyrukSelectedIndex = 4;
             }
-            else if(uyluk == "Diger")
+            else
             {
                 cmbUyrukSelectedIndex = 5;
             }
@@ -83,19 +74,69 @@ namespace VeriYapilari2
             cmbMedeniDurum.SelectedIndex = cmbMedeniSelectedIndex;
             txtTCKimlik.Text = Convert.ToString(_kisiBilgileri.tcKimlikNumarasi);
             txtIlgiAlan.Text = _kisiBilgileri.ilgiAlanlari;
-
+            txtYabanciDil.Text = _kisiBilgileri.yabanciDil;
         }
-        
+
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-           
-            
+            string medeniDurum = "";
+            switch (cmbUyruk.SelectedIndex)
+            {
+                case 0:
+                    medeniDurum = "Bekar";
+                    break;
 
+                case 1:
+                    medeniDurum = "Evli";
+                    break;
+
+                default:
+                    break;
+            }
+
+            string uyruk = "";
+            if (cmbUyruk.SelectedIndex == 0)
+            {
+                uyruk = "TR";
+            }
+            else if (cmbUyruk.SelectedIndex == 1)
+            {
+                uyruk = "KKTC";
+            }
+            else if (cmbUyruk.SelectedIndex == 2)
+            {
+                uyruk = "Avrupa";
+            }
+            else if (cmbUyruk.SelectedIndex == 3)
+            {
+                uyruk = "ABD";
+            }
+            else if (cmbUyruk.SelectedIndex == 4)
+            {
+                uyruk = "İngiltere";
+            }
+            else
+            {
+                uyruk = "Diger";
+            }
+
+            _kisiBilgileri.ad = txtAd.Text;
+            _kisiBilgileri.soyad = txtSoyad.Text;
+            _kisiBilgileri.adres = txtAdres.Text;
+            _kisiBilgileri.telefon = txtTelefon.Text;
+            _kisiBilgileri.email = txtEMail.Text;
+            _kisiBilgileri.medeniDurum = medeniDurum;
+            _kisiBilgileri.dogumTarihi = txtDogumTarih.Text;
+            _kisiBilgileri.dogumYeri = txtDogumYeri.Text;
+            _kisiBilgileri.ilgiAlanlari = txtIlgiAlan.Text;
+            _kisiBilgileri.yabanciDil = txtYabanciDil.Text;
+            _kisiBilgileri.uyruk = uyruk;
+
+            _ikiliAramaAgaci.KisiGuncelle(_kisiBilgileri.tcKimlikNumarasi, _kisiBilgileri);
         }
 
         private void brnKisiBilgiSil_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
