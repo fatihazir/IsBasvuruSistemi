@@ -9,7 +9,17 @@ namespace VeriYapilari2
 
         public DatabaseIslemleri()
         {
-            DatabasedenIlkSirketCekimi();
+            foreach (Sirket sirket in Sirketler)
+            {
+                if (sirket.silindiMi == "pasif" && Sirketler.Count == 0)
+                {
+                    //do nothing
+                }
+                else
+                {
+                    DatabasedenIlkSirketCekimi();
+                }
+            }
         }
 
         public Sirket DatabasedenIlkSirketCekimi()
@@ -29,6 +39,7 @@ namespace VeriYapilari2
                 tempSirket.SirketTelefon = TempSirketBilgisi[4];
                 tempSirket.SirketEposta = TempSirketBilgisi[5];
                 tempSirket.sifre = TempSirketBilgisi[6];
+                tempSirket.silindiMi = TempSirketBilgisi[7];
 
                 Sirketler.Add(tempSirket);
             }
@@ -105,17 +116,17 @@ namespace VeriYapilari2
             return tempKisi; // donulen degeri ikili arama ağacına ekleyeceğiz.
         }
 
-        public bool SirketGirisYap(string sirketAdi, string sifre)
+        public Sirket SirketGirisYap(string sirketEposta, string sifre)
         {
             foreach (Sirket sirket in Sirketler)
             {
-                if (sirket.SirketEposta == sirketAdi && sirket.sifre == sifre)
+                if (sirket.SirketEposta == sirketEposta && sirket.sifre == sifre)
                 {
-                    return true;
+                    return sirket;
                 }
             }
-
-            return false;
+            Sirket bosSirket = new Sirket();
+            return bosSirket;
         }
     }
 }

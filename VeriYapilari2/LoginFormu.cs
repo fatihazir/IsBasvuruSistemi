@@ -21,22 +21,20 @@ namespace VeriYapilari2
 
         private void btnSirketGirisi_Click(object sender, EventArgs e)
         {
-            //BURADA DEĞİŞİKLİK OLACAK LOGİN FORMDA ARTIK ŞİRKET ADI DEĞİL E POSTA İLE GİRİŞ YAPILIYOR
-            string sirketAdi = txtSirketAdi.Text;
+            string sirketEposta = txtSirketAdi.Text;
             string sifre = txtSirketSifre.Text;
+            Sirket dbSirket = new Sirket();
+            dbSirket = db.SirketGirisYap(sirketEposta, sifre);
 
-            if (db.SirketGirisYap(sirketAdi, sifre))
+            if (dbSirket.SirketAd != null)
             {
-                Sirket ilkSirket = new Sirket();
-                ilkSirket = db.DatabasedenIlkSirketCekimi();
                 SirketAnaForm sirketFormunuAc = new SirketAnaForm();
-                sirketFormunuAc.labelSirketIsmi.Text = ilkSirket.SirketAd;
+                sirketFormunuAc.labelSirketIsmi.Text = dbSirket.SirketAd;
                 sirketFormunuAc.Show();
             }
             else
             {
                 MessageBox.Show("Hatalı bilgi girişi yaptınız!");
-
             }
         }
     }

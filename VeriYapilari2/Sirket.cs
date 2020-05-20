@@ -10,6 +10,7 @@ namespace VeriYapilari2
         public string SirketFax { get; set; }
         public string SirketTelefon { get; set; }
         public string SirketEposta { get; set; }
+        public string silindiMi { get; set; }
 
         public HashChain Ilanlar = new HashChain();
         public string sifre { get; set; }
@@ -49,9 +50,5 @@ namespace VeriYapilari2
             return number;
         }
 
-        public bool SirketSil(int sirketID)
-        {
-            return true;
-        }
     }
 }

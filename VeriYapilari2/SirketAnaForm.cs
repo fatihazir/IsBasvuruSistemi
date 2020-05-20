@@ -47,13 +47,14 @@ namespace VeriYapilari2
         private void sirketSilButon_Click(object sender, EventArgs e)
         {
             int sirketID = sirketFormIci.SirketID;
-            if (sirketFormIci.SirketSil(sirketID))
+            if (db.DatabasedenSirketSilme(sirketID))
             {
-                MessageBox.Show("Aga kalk sildin");
+                MessageBox.Show("Şirket başarıyla silindi, giriş ekranına yönlendiriliyorsunuz.");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Sana da yaranmıyo aq ne hatası çıktı yine git bul şunu");
+                MessageBox.Show("Şirket silinirken hata oluştu!");
             }
         }
 
