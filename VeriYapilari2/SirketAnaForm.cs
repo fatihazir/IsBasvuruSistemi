@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VeriYapilari2
@@ -10,9 +17,36 @@ namespace VeriYapilari2
         private DatabaseIslemleri db = new DatabaseIslemleri();
         private Sirket sirketFormIci = new Sirket();
 
+        public void ilanListele()
+        {
+            listViewIlanlarDuzenlemeBolmesi.Items.Clear();
+            listViewIlanlarIsAlmaBolmesi.Items.Clear();
+            Ilan ilan = new Ilan();
+            for (int i = 0; i < 10; i++)
+            {
+                ilan = sirketFormIci.Ilanlar.GetIsIlaniForEditingAndListing(i);
+                if (ilan == null)
+                {
+                    continue;
+                }
+                ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
+                ListViewItem item2 = new ListViewItem(ilan.IlanNumarasi.ToString());
+                item.SubItems.Add(ilan.IsTanimi);
+                item.SubItems.Add(ilan.ArananElemanOzellikleri);  //www.yazilimkodlama.com
+                item.SubItems.Add(ilan.Pozisyon);
+                item2.SubItems.Add(ilan.IsTanimi);
+                item2.SubItems.Add(ilan.ArananElemanOzellikleri);  //www.yazilimkodlama.com
+                item2.SubItems.Add(ilan.Pozisyon);
+                listViewIlanlarDuzenlemeBolmesi.Items.Add(item);
+                listViewIlanlarIsAlmaBolmesi.Items.Add(item2);
+            }
+        }
+
         public SirketAnaForm()
         {
             InitializeComponent();
+            
+            
         }
 
         private void sirketBilgiGuncelleButon_Click(object sender, EventArgs e)
@@ -65,11 +99,13 @@ namespace VeriYapilari2
             if (sirketFormIci.Ilanlar.AddIsIlani(yeniIlan.IlanNumarasi, yeniIlan, sirketFormIci))
             {
                 MessageBox.Show("Başarıyla yeni bir ilan eklendi!");
+                ilanListele();
             }
             else
             {
                 MessageBox.Show("İlan eklenirken bir sorun ortaya çıktı!");
             }
+            
         }
 
         private void ilanIseAlButon_Click(object sender, EventArgs e)
@@ -102,8 +138,6 @@ namespace VeriYapilari2
 
         private void SirketAnaForm_Load(object sender, EventArgs e)
         {
-            //BURADA GİRİŞ YAPAN ŞİRKETİN BİLGİLERİNİ ÇEKERİZ
-            //BURADA RASTGELE ŞİRKET BİLGİSİ EKLİOM KIZMAIN .d
             foreach (Sirket sirket in db.Sirketler)
             {
                 if (sirket.SirketAd == labelSirketIsmi.Text)
@@ -117,29 +151,7 @@ namespace VeriYapilari2
             txtSirketEPosta.Text = sirketFormIci.SirketEposta;
             txtSirketFax.Text = sirketFormIci.SirketFax;
             txtSirketTelefon.Text = sirketFormIci.SirketTelefon;
-
-            listViewIlanlarDuzenlemeBolmesi.Items.Clear();
-            listViewIlanlarIsAlmaBolmesi.Items.Clear();
-            Ilan ilan = new Ilan();
-
-            for (int i = 0; i < 10; i++)
-            {
-                ilan = sirketFormIci.Ilanlar.GetIsIlaniForEditing(i);
-                if (ilan == null)
-                {
-                    continue;
-                }
-                ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
-                ListViewItem item2 = new ListViewItem(ilan.IlanNumarasi.ToString());
-                item.SubItems.Add(ilan.IsTanimi);
-                item.SubItems.Add(ilan.ArananElemanOzellikleri);  //www.yazilimkodlama.com
-                item.SubItems.Add(ilan.Pozisyon);
-                item2.SubItems.Add(ilan.IsTanimi);
-                item2.SubItems.Add(ilan.ArananElemanOzellikleri);  //www.yazilimkodlama.com
-                item2.SubItems.Add(ilan.Pozisyon);
-                listViewIlanlarDuzenlemeBolmesi.Items.Add(item);
-                listViewIlanlarIsAlmaBolmesi.Items.Add(item2);
-            }
+            ilanListele();
         }
     }
 }
