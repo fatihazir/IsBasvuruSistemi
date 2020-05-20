@@ -9,7 +9,7 @@ namespace VeriYapilari2
 
         public DatabaseIslemleri()
         {
-            DatabasedenIlkSirketCekimi();
+            
         }
 
         public Sirket DatabasedenIlkSirketCekimi()

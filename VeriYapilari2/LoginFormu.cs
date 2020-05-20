@@ -37,5 +37,20 @@ namespace VeriYapilari2
                 MessageBox.Show("Hatalı bilgi girişi yaptınız!");
             }
         }
+
+        private void btnSirketBilgiKaydet_Click(object sender, EventArgs e)
+        {
+            Sirket apple = new Sirket();
+            apple.SirketEposta = "deneme";
+            apple.sifre = "123";
+            apple.SirketAd = "ad";
+            db.Sirketler.Add(apple);
+        }
+
+        private void LoginFormu_Load(object sender, EventArgs e)
+        {
+            Sirket ilkSirket = db.DatabasedenIlkSirketCekimi();
+
+        }
     }
 }
