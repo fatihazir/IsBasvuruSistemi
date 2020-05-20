@@ -9,17 +9,7 @@ namespace VeriYapilari2
 
         public DatabaseIslemleri()
         {
-            foreach (Sirket sirket in Sirketler)
-            {
-                if (sirket.silindiMi == "pasif" && Sirketler.Count == 0)
-                {
-                    //do nothing
-                }
-                else
-                {
-                    DatabasedenIlkSirketCekimi();
-                }
-            }
+            DatabasedenIlkSirketCekimi();
         }
 
         public Sirket DatabasedenIlkSirketCekimi()
@@ -39,7 +29,6 @@ namespace VeriYapilari2
                 tempSirket.SirketTelefon = TempSirketBilgisi[4];
                 tempSirket.SirketEposta = TempSirketBilgisi[5];
                 tempSirket.sifre = TempSirketBilgisi[6];
-                tempSirket.silindiMi = TempSirketBilgisi[7];
 
                 Sirketler.Add(tempSirket);
             }
