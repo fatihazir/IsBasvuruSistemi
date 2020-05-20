@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VeriYapilari2
@@ -16,11 +9,10 @@ namespace VeriYapilari2
 
         private DatabaseIslemleri db = new DatabaseIslemleri();
         private Sirket sirketFormIci = new Sirket();
+
         public SirketAnaForm()
         {
             InitializeComponent();
-            
-            
         }
 
         private void sirketBilgiGuncelleButon_Click(object sender, EventArgs e)
@@ -78,7 +70,6 @@ namespace VeriYapilari2
             {
                 MessageBox.Show("İlan eklenirken bir sorun ortaya çıktı!");
             }
-            
         }
 
         private void ilanIseAlButon_Click(object sender, EventArgs e)
@@ -149,7 +140,6 @@ namespace VeriYapilari2
                 listViewIlanlarDuzenlemeBolmesi.Items.Add(item);
                 listViewIlanlarIsAlmaBolmesi.Items.Add(item2);
             }
-
         }
     }
 }

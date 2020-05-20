@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace VeriYapilari2
+﻿namespace VeriYapilari2
 {
     public class Heap
     {

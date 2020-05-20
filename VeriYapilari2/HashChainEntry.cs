@@ -1,5 +1,4 @@
-﻿using System;
-namespace VeriYapilari2
+﻿namespace VeriYapilari2
 {
     public class HashChainEntry
     {
@@ -10,7 +9,7 @@ namespace VeriYapilari2
         private object deger;
 
         private HashChainEntry next;
-        
+
         private Sirket sirket;
 
         public object Deger

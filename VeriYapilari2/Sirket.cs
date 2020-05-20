@@ -48,6 +48,5 @@ namespace VeriYapilari2
             int number = queueNumber.Next(5000, 6000);
             return number;
         }
-
     }
 }

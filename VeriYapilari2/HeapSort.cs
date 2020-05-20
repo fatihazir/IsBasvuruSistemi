@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VeriYapilari2
+﻿namespace VeriYapilari2
 {
     public class HeapSort
     {
         private int[] dizi;
+
         public HeapSort(int[] dizi)
         {
             this.dizi = dizi;
@@ -17,8 +12,8 @@ namespace VeriYapilari2
         //public int[] Sort()
         //{
         //    Heap newArray = new Heap(dizi.Length); // Heap sınıfından kalıtarak yeni bir dizi oluşturuyorum.
-        //    HeapDugumu insertedNode; // HeapDugumu sınıfından diziye basılacak değer amacıyla bir değişken oluşturdum. 
-        //    HeapDugumu removedNode; // HeapDugumu sınıfından diziden silinecek root değer amacıyla bir değişken oluşturdum. 
+        //    HeapDugumu insertedNode; // HeapDugumu sınıfından diziye basılacak değer amacıyla bir değişken oluşturdum.
+        //    HeapDugumu removedNode; // HeapDugumu sınıfından diziden silinecek root değer amacıyla bir değişken oluşturdum.
         //    int[] sonDizi = new int[dizi.Length]; // int cinsinden bir dizi daha oluşturdum. Bunun sebebi dönecek değerleri tutmaktı.
         //    for (int i = 0; i < dizi.Length; i++) // tüm dizi elemanlarını ağaca EKLEMEK için geziyorum
         //    {
@@ -32,6 +27,5 @@ namespace VeriYapilari2
         //    }
         //    return sonDizi; // Elimde olan sonucu döndürmek geriye kalıyor.
         //}
-
     }
 }
