@@ -28,7 +28,11 @@ namespace VeriYapilari2
 
             if (db.SirketGirisYap(sirketAdi, sifre))
             {
-                MessageBox.Show("aaa");
+                Sirket ilkSirket = new Sirket();
+                ilkSirket = db.DatabasedenIlkSirketCekimi();
+                SirketAnaForm sirketFormunuAc = new SirketAnaForm();
+                sirketFormunuAc.labelSirketIsmi.Text = ilkSirket.SirketAd;
+                sirketFormunuAc.Show();
 
             }
             else

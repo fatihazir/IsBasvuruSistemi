@@ -12,7 +12,7 @@ namespace VeriYapilari2
         public string SirketTelefon { get; set; }
         public string SirketEposta { get; set; }
 
-        private HashChain Ilanlar = new HashChain();
+        public HashChain Ilanlar = new HashChain();
         public string sifre { get; set; }
 
         public string SirketBilgileriYazdir()
