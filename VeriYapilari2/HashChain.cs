@@ -79,6 +79,17 @@
             }
         }
 
+        public Ilan GetIsIlaniForEditing(int index)
+        {
+            if (table[index] == null)
+                return null;
+            else
+            {
+                HashChainEntry entry = table[index];
+                return (Ilan)entry.Deger;
+            }
+        }
+
         public Ilan DeleteIsIlani(int key)
         {
             int hash = (key % TABLE_SIZE);

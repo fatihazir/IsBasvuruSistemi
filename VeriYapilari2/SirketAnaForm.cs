@@ -126,6 +126,30 @@ namespace VeriYapilari2
             txtSirketEPosta.Text = sirketFormIci.SirketEposta;
             txtSirketFax.Text = sirketFormIci.SirketFax;
             txtSirketTelefon.Text = sirketFormIci.SirketTelefon;
+
+            listViewIlanlarDuzenlemeBolmesi.Items.Clear();
+            listViewIlanlarIsAlmaBolmesi.Items.Clear();
+            Ilan ilan = new Ilan();
+
+            for (int i = 0; i < 10; i++)
+            {
+                ilan = sirketFormIci.Ilanlar.GetIsIlaniForEditing(i);
+                if (ilan == null)
+                {
+                    continue;
+                }
+                ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
+                ListViewItem item2 = new ListViewItem(ilan.IlanNumarasi.ToString());
+                item.SubItems.Add(ilan.IsTanimi);
+                item.SubItems.Add(ilan.ArananElemanOzellikleri);  //www.yazilimkodlama.com
+                item.SubItems.Add(ilan.Pozisyon);
+                item2.SubItems.Add(ilan.IsTanimi);
+                item2.SubItems.Add(ilan.ArananElemanOzellikleri);  //www.yazilimkodlama.com
+                item2.SubItems.Add(ilan.Pozisyon);
+                listViewIlanlarDuzenlemeBolmesi.Items.Add(item);
+                listViewIlanlarIsAlmaBolmesi.Items.Add(item2);
+            }
+
         }
     }
 }

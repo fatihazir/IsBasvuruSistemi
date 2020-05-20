@@ -36,7 +36,6 @@
             this.maskedTxtEnUygunKisi = new System.Windows.Forms.MaskedTextBox();
             this.btnIseAl = new System.Windows.Forms.Button();
             this.btnTiklananIlanSil = new System.Windows.Forms.Button();
-            this.ilanListesiListView = new System.Windows.Forms.ListView();
             this.btnEnAzIkıYılListele = new System.Windows.Forms.Button();
             this.btnYabanciDilOlanListele = new System.Windows.Forms.Button();
             this.tabYeniIlanVer = new System.Windows.Forms.TabPage();
@@ -68,7 +67,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabAnaSayfa = new System.Windows.Forms.TabPage();
             this.tabIlanDuzenle = new System.Windows.Forms.TabPage();
-            this.listViewIlanlar = new System.Windows.Forms.ListView();
+            this.listViewIlanlarDuzenlemeBolmesi = new System.Windows.Forms.ListView();
             this.label17 = new System.Windows.Forms.Label();
             this.btnIlanIncele = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -78,6 +77,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.btnIlaniDuzenle = new System.Windows.Forms.Button();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewIlanlarIsAlmaBolmesi = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabIlanlarim.SuspendLayout();
             this.tabYeniIlanVer.SuspendLayout();
             this.tabSirketSil.SuspendLayout();
@@ -89,9 +97,9 @@
             // 
             // tabIlanlarim
             // 
+            this.tabIlanlarim.Controls.Add(this.listViewIlanlarIsAlmaBolmesi);
             this.tabIlanlarim.Controls.Add(this.btnYabanciDilOlanListele);
             this.tabIlanlarim.Controls.Add(this.btnEnAzIkıYılListele);
-            this.tabIlanlarim.Controls.Add(this.ilanListesiListView);
             this.tabIlanlarim.Controls.Add(this.btnTiklananIlanSil);
             this.tabIlanlarim.Controls.Add(this.btnIseAl);
             this.tabIlanlarim.Controls.Add(this.maskedTxtEnUygunKisi);
@@ -174,19 +182,9 @@
             this.btnTiklananIlanSil.UseVisualStyleBackColor = true;
             this.btnTiklananIlanSil.Click += new System.EventHandler(this.ilanSilButon_Click);
             // 
-            // ilanListesiListView
-            // 
-            this.ilanListesiListView.HideSelection = false;
-            this.ilanListesiListView.Location = new System.Drawing.Point(49, 73);
-            this.ilanListesiListView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ilanListesiListView.Name = "ilanListesiListView";
-            this.ilanListesiListView.Size = new System.Drawing.Size(276, 194);
-            this.ilanListesiListView.TabIndex = 7;
-            this.ilanListesiListView.UseCompatibleStateImageBehavior = false;
-            // 
             // btnEnAzIkıYılListele
             // 
-            this.btnEnAzIkıYılListele.Location = new System.Drawing.Point(29, 278);
+            this.btnEnAzIkıYılListele.Location = new System.Drawing.Point(53, 273);
             this.btnEnAzIkıYılListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnAzIkıYılListele.Name = "btnEnAzIkıYılListele";
             this.btnEnAzIkıYılListele.Size = new System.Drawing.Size(153, 62);
@@ -197,7 +195,7 @@
             // 
             // btnYabanciDilOlanListele
             // 
-            this.btnYabanciDilOlanListele.Location = new System.Drawing.Point(188, 278);
+            this.btnYabanciDilOlanListele.Location = new System.Drawing.Point(212, 273);
             this.btnYabanciDilOlanListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnYabanciDilOlanListele.Name = "btnYabanciDilOlanListele";
             this.btnYabanciDilOlanListele.Size = new System.Drawing.Size(153, 60);
@@ -512,7 +510,7 @@
             this.tabIlanDuzenle.Controls.Add(this.label16);
             this.tabIlanDuzenle.Controls.Add(this.label18);
             this.tabIlanDuzenle.Controls.Add(this.btnIlanIncele);
-            this.tabIlanDuzenle.Controls.Add(this.listViewIlanlar);
+            this.tabIlanDuzenle.Controls.Add(this.listViewIlanlarDuzenlemeBolmesi);
             this.tabIlanDuzenle.Controls.Add(this.label17);
             this.tabIlanDuzenle.Location = new System.Drawing.Point(4, 25);
             this.tabIlanDuzenle.Name = "tabIlanDuzenle";
@@ -522,15 +520,21 @@
             this.tabIlanDuzenle.Text = "İlan Düzenle!";
             this.tabIlanDuzenle.UseVisualStyleBackColor = true;
             // 
-            // listViewIlanlar
+            // listViewIlanlarDuzenlemeBolmesi
             // 
-            this.listViewIlanlar.HideSelection = false;
-            this.listViewIlanlar.Location = new System.Drawing.Point(20, 65);
-            this.listViewIlanlar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listViewIlanlar.Name = "listViewIlanlar";
-            this.listViewIlanlar.Size = new System.Drawing.Size(276, 194);
-            this.listViewIlanlar.TabIndex = 11;
-            this.listViewIlanlar.UseCompatibleStateImageBehavior = false;
+            this.listViewIlanlarDuzenlemeBolmesi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listViewIlanlarDuzenlemeBolmesi.HideSelection = false;
+            this.listViewIlanlarDuzenlemeBolmesi.Location = new System.Drawing.Point(20, 65);
+            this.listViewIlanlarDuzenlemeBolmesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewIlanlarDuzenlemeBolmesi.Name = "listViewIlanlarDuzenlemeBolmesi";
+            this.listViewIlanlarDuzenlemeBolmesi.Size = new System.Drawing.Size(371, 194);
+            this.listViewIlanlarDuzenlemeBolmesi.TabIndex = 11;
+            this.listViewIlanlarDuzenlemeBolmesi.UseCompatibleStateImageBehavior = false;
+            this.listViewIlanlarDuzenlemeBolmesi.View = System.Windows.Forms.View.Details;
             // 
             // label17
             // 
@@ -612,6 +616,62 @@
             this.btnIlaniDuzenle.Text = "Tıklanan İlanı Düzenle!";
             this.btnIlaniDuzenle.UseVisualStyleBackColor = true;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 30;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "İlan Tanımı";
+            this.columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Aranan Eleman Özellikleri";
+            this.columnHeader3.Width = 174;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Pozisyon";
+            this.columnHeader4.Width = 75;
+            // 
+            // listViewIlanlarIsAlmaBolmesi
+            // 
+            this.listViewIlanlarIsAlmaBolmesi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listViewIlanlarIsAlmaBolmesi.HideSelection = false;
+            this.listViewIlanlarIsAlmaBolmesi.Location = new System.Drawing.Point(16, 75);
+            this.listViewIlanlarIsAlmaBolmesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewIlanlarIsAlmaBolmesi.Name = "listViewIlanlarIsAlmaBolmesi";
+            this.listViewIlanlarIsAlmaBolmesi.Size = new System.Drawing.Size(371, 194);
+            this.listViewIlanlarIsAlmaBolmesi.TabIndex = 12;
+            this.listViewIlanlarIsAlmaBolmesi.UseCompatibleStateImageBehavior = false;
+            this.listViewIlanlarIsAlmaBolmesi.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "ID";
+            this.columnHeader5.Width = 30;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "İlan Tanımı";
+            this.columnHeader6.Width = 90;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Aranan Eleman Özellikleri";
+            this.columnHeader7.Width = 174;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Pozisyon";
+            this.columnHeader8.Width = 75;
+            // 
             // SirketAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -644,7 +704,6 @@
         private System.Windows.Forms.TabPage tabIlanlarim;
         private System.Windows.Forms.Button btnYabanciDilOlanListele;
         private System.Windows.Forms.Button btnEnAzIkıYılListele;
-        private System.Windows.Forms.ListView ilanListesiListView;
         private System.Windows.Forms.Button btnTiklananIlanSil;
         private System.Windows.Forms.Button btnIseAl;
         private System.Windows.Forms.MaskedTextBox maskedTxtEnUygunKisi;
@@ -689,7 +748,16 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnIlanIncele;
-        private System.Windows.Forms.ListView listViewIlanlar;
+        private System.Windows.Forms.ListView listViewIlanlarDuzenlemeBolmesi;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ListView listViewIlanlarIsAlmaBolmesi;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
