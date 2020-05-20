@@ -52,7 +52,6 @@ namespace VeriYapilari2
 
         public bool SirketSil(int sirketID)
         {
-            //BURADA MİNİK SİLME İŞLEMLERİ GERÇEKLEŞECEK
             return true;
         }
 

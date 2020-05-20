@@ -53,6 +53,18 @@ namespace VeriYapilari2
             return tempSirket;
         }
 
+        public bool DatabasedenSirketSilme(int sirketID)
+        {
+            foreach (Sirket sirket in Sirketler)
+            {
+                if (sirket.SirketID == sirketID)
+                {
+                    Sirketler.Remove(sirket);
+                    return true;
+                }
+            }
+            return false;
+        }
 
         public KisiBilgileri DatabasedenIlkKisiCekimi()
         {

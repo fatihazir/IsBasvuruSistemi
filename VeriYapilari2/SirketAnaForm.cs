@@ -25,9 +25,6 @@ namespace VeriYapilari2
 
         private void sirketBilgiGuncelleButon_Click(object sender, EventArgs e)
         {
-            //burada şirket bilgileri güncellenecek
-
-
             string yeniSirketAd, yeniSirketAdres, yeniSirketEPosta, yeniSirketFax;
             string yeniSirketTelefon;
             yeniSirketAd = txtSirketAdi.Text;
@@ -36,34 +33,28 @@ namespace VeriYapilari2
             yeniSirketFax = txtSirketFax.Text;
             yeniSirketTelefon = txtSirketTelefon.Text;
 
-            
-
             if (sirketFormIci.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
             yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta))
             {
-                MessageBox.Show("Aga kalk güncelledin");
+                MessageBox.Show("Şirket bilgileri güncellendi!");
             }
             else
             {
-                MessageBox.Show("Sana da yaranmıyo aq ne hatası çıktı yine git bul şunu");
+                MessageBox.Show("Şirket bilgisi güncellenirken hata oluştu!");
             }
         }
 
         private void sirketSilButon_Click(object sender, EventArgs e)
         {
-            DialogResult durum = new DialogResult();
-            // EMİN MİSİN SORUSU VE DOUBLE CHECK.
-            // fatih senden çaldım bunu da nası kullanılıyor aq bu dialogbox ı
             int sirketID = sirketFormIci.SirketID;
-            //int silindimi = sirket.SirketSil(sirketID);
-            //if (silindimi == 1)
-            //{
-            //    MessageBox.Show("Aga kalk sildin");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Sana da yaranmıyo aq ne hatası çıktı yine git bul şunu");
-            //}
+            if (sirketFormIci.SirketSil(sirketID))
+            {
+                MessageBox.Show("Aga kalk sildin");
+            }
+            else
+            {
+                MessageBox.Show("Sana da yaranmıyo aq ne hatası çıktı yine git bul şunu");
+            }
         }
 
         private void sirketYeniIlanVerButon_Click(object sender, EventArgs e)
