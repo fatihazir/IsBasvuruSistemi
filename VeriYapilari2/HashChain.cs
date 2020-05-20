@@ -93,22 +93,19 @@ namespace VeriYapilari2
                 return (Ilan)entry.Deger;
             }
         }
-        //public List<Ilan> GetIsIlaniForEditingAndListing()
-        //{
-        //    if (table == null)
-        //        return null;
-        //    else
-        //    {
+        public List<Ilan> GetIsIlaniForEditingAndListing()
+        {
+            List<Ilan> Ilanlar = new List<Ilan>();
+            Ilan temp = new Ilan();
 
-        //        for (int i = 0; i < table.Length; i++)
-        //        {
-        //            object temp = table[i].Deger;
-        //            Ilanlar.Add((Ilan)temp);
-        //        }
+            for (int i = 0; i < table.Length; i++)
+            {
+                temp = GetIsIlaniForEditingAndListing(i);
+                Ilanlar.Add(temp);
+            }
 
-        //        return Ilanlar;
-        //    }
-        //}
+            return Ilanlar;
+        }
 
         public Ilan DeleteIsIlani(int key)
         {
