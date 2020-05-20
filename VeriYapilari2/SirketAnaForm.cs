@@ -153,5 +153,24 @@ namespace VeriYapilari2
             txtSirketTelefon.Text = sirketFormIci.SirketTelefon;
             ilanListele();
         }
+
+        private void btnIlanIncele_Click(object sender, EventArgs e)
+        {
+            ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
+            if (theClickedtwo == null)
+            {
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                int ilanID;
+                ilanID = Convert.ToInt32(theClickedtwo.Text);
+                Ilan ilan = new Ilan();
+                ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
+                richTextBoxIsTanimiIlanDuzenle.Text = ilan.IsTanimi;
+                richTextBoxArananElemanOzellikleriIlanDuzenle.Text = ilan.ArananElemanOzellikleri;
+                txtPozisyonIlanDuzenle.Text = ilan.Pozisyon;
+            }
+        }
     }
 }
