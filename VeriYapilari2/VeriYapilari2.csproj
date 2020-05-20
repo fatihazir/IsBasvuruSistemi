@@ -182,11 +182,11 @@
     </Compile>
     <Compile Include="İkiliAramaAgacDugumu.cs" />
     <Compile Include="İkiliAramaAgacı.cs" />
-    <Compile Include="İş Başvuru Formu.cs">
+    <Compile Include="KullanıcıFormu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="İş Başvuru Formu.Designer.cs">
-      <DependentUpon>İş Başvuru Formu.cs</DependentUpon>
+    <Compile Include="KullanıcıFormu.Designer.cs">
+      <DependentUpon>KullanıcıFormu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="IsBasvurusuIcinBilgiGuncellemeFormu.resx">
       <DependentUpon>IsBasvurusuIcinBilgiGuncellemeFormu.cs</DependentUpon>
@@ -218,8 +218,8 @@
     <EmbeddedResource Include="TestFormu.resx">
       <DependentUpon>TestFormu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="İş Başvuru Formu.resx">
-      <DependentUpon>İş Başvuru Formu.cs</DependentUpon>
+    <EmbeddedResource Include="KullanıcıFormu.resx">
+      <DependentUpon>KullanıcıFormu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
