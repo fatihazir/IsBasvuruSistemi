@@ -1,10 +1,14 @@
-﻿namespace VeriYapilari2
+﻿using System.Collections.Generic;
+
+namespace VeriYapilari2
 {
     public class HashChain
     {
         private int TABLE_SIZE = 10;
 
         private HashChainEntry[] table;
+
+        private List<Ilan> Ilanlar = new List<Ilan>();
 
         public HashChain()
         {
@@ -89,6 +93,22 @@
                 return (Ilan)entry.Deger;
             }
         }
+        //public List<Ilan> GetIsIlaniForEditingAndListing()
+        //{
+        //    if (table == null)
+        //        return null;
+        //    else
+        //    {
+
+        //        for (int i = 0; i < table.Length; i++)
+        //        {
+        //            object temp = table[i].Deger;
+        //            Ilanlar.Add((Ilan)temp);
+        //        }
+
+        //        return Ilanlar;
+        //    }
+        //}
 
         public Ilan DeleteIsIlani(int key)
         {
@@ -110,5 +130,8 @@
                 }
             }
         }
+        
+
+        
     }
 }

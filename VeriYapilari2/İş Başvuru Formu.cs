@@ -13,6 +13,7 @@ namespace VeriYapilari2
         private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
         private DatabaseIslemleri _databaseIslemleri = new DatabaseIslemleri();
         private KisiBilgileri _kisiBilgileri = new KisiBilgileri();
+        private HashChain _hashChain = new HashChain();
 
         private void TabPage1_Click(object sender, EventArgs e)
         {
@@ -75,6 +76,8 @@ namespace VeriYapilari2
             txtTCKimlik.Text = Convert.ToString(_kisiBilgileri.tcKimlikNumarasi);
             txtIlgiAlan.Text = _kisiBilgileri.ilgiAlanlari;
             txtYabanciDil.Text = _kisiBilgileri.yabanciDil;
+
+            dgvIlanlar.DataSource = _hashChain.GetIsIlaniForEditingAndListing();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
