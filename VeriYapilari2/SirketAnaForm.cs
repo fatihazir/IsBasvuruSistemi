@@ -13,6 +13,8 @@ namespace VeriYapilari2
         public void ilanListele()
         {
             listViewIlanlarDuzenlemeBolmesi.Items.Clear();
+            listViewBasvuranlariListeleBasvuranlarKismi.Items.Clear();
+            listViewBasvuranlariListeleKismi.Items.Clear();
             listViewIlanlarIsAlmaBolmesi.Items.Clear();
             Ilan ilan = new Ilan();
             for (int i = 0; i < 10; i++)
@@ -24,14 +26,20 @@ namespace VeriYapilari2
                 }
                 ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
                 ListViewItem item2 = new ListViewItem(ilan.IlanNumarasi.ToString());
+                ListViewItem item3 = new ListViewItem(ilan.IlanNumarasi.ToString());
                 item.SubItems.Add(ilan.IsTanimi);
                 item.SubItems.Add(ilan.ArananElemanOzellikleri);
                 item.SubItems.Add(ilan.Pozisyon);
                 item2.SubItems.Add(ilan.IsTanimi);
                 item2.SubItems.Add(ilan.ArananElemanOzellikleri);
                 item2.SubItems.Add(ilan.Pozisyon);
+                item3.SubItems.Add(ilan.IsTanimi);
+                item3.SubItems.Add(ilan.ArananElemanOzellikleri);
+                item3.SubItems.Add(ilan.Pozisyon);
                 listViewIlanlarDuzenlemeBolmesi.Items.Add(item);
                 listViewIlanlarIsAlmaBolmesi.Items.Add(item2);
+                listViewBasvuranlariListeleKismi.Items.Add(item3);
+                
             }
         }
 
@@ -207,12 +215,64 @@ namespace VeriYapilari2
                 Ilan ilan = new Ilan();
                 ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
                 // başvuranlar heap ağacından çekilecek
-
+                // buraya eklicem bakam şimdi durun az
                 //sonra aşağıda item olarak eklenecek
                 ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
                 item.SubItems.Add(ilan.IsTanimi);
                 listViewEnUygunKisi.Items.Add(item);
             }
+        }
+
+        private void btnIlanBasvuranlariGetir_Click(object sender, EventArgs e)
+        {
+            ListViewItem theClickedItem = listViewBasvuranlariListeleKismi.FocusedItem;
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                listViewBasvuranlariListeleBasvuranlarKismi.Items.Clear();
+                int ilanID;
+                ilanID = Convert.ToInt32(theClickedItem.Text);
+                Ilan ilan = new Ilan();
+                ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
+                int sayacBasvuranlarIcinEgerNullsa = 0;
+                foreach (HeapDugumu heap in ilan.heap.heapArray)
+                {
+                    if (heap != null)
+                    {
+                        ListViewItem item = new ListViewItem(heap.Kisi.tcKimlikNumarasi.ToString());
+                        item.SubItems.Add(heap.Kisi.ad);
+                        item.SubItems.Add(heap.Kisi.soyad);
+                        item.SubItems.Add(heap.Kisi.adres);
+                        item.SubItems.Add(heap.Kisi.telefon);
+                        item.SubItems.Add(heap.Kisi.email);
+                        item.SubItems.Add(heap.Kisi.uyruk);
+                        item.SubItems.Add(heap.Kisi.dogumTarihi);
+                        item.SubItems.Add(heap.Kisi.dogumYeri);
+                        item.SubItems.Add(heap.Kisi.medeniDurum);
+                        item.SubItems.Add(heap.Kisi.yabanciDil);
+                        item.SubItems.Add(heap.Kisi.ilgiAlanlari);
+                        item.SubItems.Add(heap.Kisi.iseUygunlukDurumu.ToString());
+                        listViewBasvuranlariListeleBasvuranlarKismi.Items.Add(item);
+                    }
+                    else
+                    {
+                        sayacBasvuranlarIcinEgerNullsa++;
+                    }
+                }
+                if (sayacBasvuranlarIcinEgerNullsa == ilan.heap.maxSize)
+                {
+                    MessageBox.Show("Hiçkimse bu ilana başvurmamış!");
+                }
+            }
+        }
+
+        private void btnIlanGuncelleBasvuruKismi_Click(object sender, EventArgs e)
+        {
+            ilanListele();
+            MessageBox.Show("Başarıyla ilanlar güncellendi!");
         }
     }
 }

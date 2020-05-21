@@ -72,6 +72,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelSirketIsmi = new System.Windows.Forms.Label();
             this.tabIlanDuzenle = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
             this.btnIlaniDuzenle = new System.Windows.Forms.Button();
             this.txtPozisyonIlanDuzenle = new System.Windows.Forms.TextBox();
             this.richTextBoxArananElemanOzellikleriIlanDuzenle = new System.Windows.Forms.RichTextBox();
@@ -86,13 +87,30 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lvIlanlar = new System.Windows.Forms.ListView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lvIlanBilgiler = new System.Windows.Forms.ListView();
-            this.btnIlanBilgiGetir = new System.Windows.Forms.Button();
+            this.btnIlanBasvuranlariGetir = new System.Windows.Forms.Button();
+            this.listViewBasvuranlariListeleKismi = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label20 = new System.Windows.Forms.Label();
+            this.listViewBasvuranlariListeleBasvuranlarKismi = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label21 = new System.Windows.Forms.Label();
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnIlanGuncelleBasvuruKismi = new System.Windows.Forms.Button();
             this.tabIlanlarim.SuspendLayout();
             this.tabYeniIlanVer.SuspendLayout();
             this.tabSirketSil.SuspendLayout();
@@ -101,8 +119,6 @@
             this.tabAnaSayfa.SuspendLayout();
             this.tabIlanDuzenle.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabIlanlarim
@@ -570,6 +586,15 @@
             this.tabIlanDuzenle.Text = "İlan Düzenle!";
             this.tabIlanDuzenle.UseVisualStyleBackColor = true;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(17, 37);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(158, 17);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Lütfen ID kısmını seçiniz";
+            // 
             // btnIlaniDuzenle
             // 
             this.btnIlaniDuzenle.Location = new System.Drawing.Point(457, 293);
@@ -688,20 +713,14 @@
             this.label17.TabIndex = 8;
             this.label17.Text = "İlanlarınız";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(17, 37);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(158, 17);
-            this.label19.TabIndex = 20;
-            this.label19.Text = "Lütfen ID kısmını seçiniz";
-            // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnIlanBilgiGetir);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.btnIlanGuncelleBasvuruKismi);
+            this.tabPage1.Controls.Add(this.label21);
+            this.tabPage1.Controls.Add(this.listViewBasvuranlariListeleBasvuranlarKismi);
+            this.tabPage1.Controls.Add(this.label20);
+            this.tabPage1.Controls.Add(this.listViewBasvuranlariListeleKismi);
+            this.tabPage1.Controls.Add(this.btnIlanBasvuranlariGetir);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -710,52 +729,163 @@
             this.tabPage1.Text = "İlana Başvuranları Listele";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lvIlanlar
+            // btnIlanBasvuranlariGetir
             // 
-            this.lvIlanlar.HideSelection = false;
-            this.lvIlanlar.Location = new System.Drawing.Point(6, 21);
-            this.lvIlanlar.Name = "lvIlanlar";
-            this.lvIlanlar.Size = new System.Drawing.Size(696, 124);
-            this.lvIlanlar.TabIndex = 0;
-            this.lvIlanlar.UseCompatibleStateImageBehavior = false;
+            this.btnIlanBasvuranlariGetir.Location = new System.Drawing.Point(64, 163);
+            this.btnIlanBasvuranlariGetir.Name = "btnIlanBasvuranlariGetir";
+            this.btnIlanBasvuranlariGetir.Size = new System.Drawing.Size(253, 26);
+            this.btnIlanBasvuranlariGetir.TabIndex = 3;
+            this.btnIlanBasvuranlariGetir.Text = "Tıklanan İlana Ait Başvuruları Gör";
+            this.btnIlanBasvuranlariGetir.UseVisualStyleBackColor = true;
+            this.btnIlanBasvuranlariGetir.Click += new System.EventHandler(this.btnIlanBasvuranlariGetir_Click);
             // 
-            // groupBox1
+            // listViewBasvuranlariListeleKismi
             // 
-            this.groupBox1.Controls.Add(this.lvIlanlar);
-            this.groupBox1.Location = new System.Drawing.Point(3, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(708, 151);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "İlanlar";
+            this.listViewBasvuranlariListeleKismi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12});
+            this.listViewBasvuranlariListeleKismi.HideSelection = false;
+            this.listViewBasvuranlariListeleKismi.Location = new System.Drawing.Point(9, 39);
+            this.listViewBasvuranlariListeleKismi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewBasvuranlariListeleKismi.Name = "listViewBasvuranlariListeleKismi";
+            this.listViewBasvuranlariListeleKismi.Size = new System.Drawing.Size(696, 110);
+            this.listViewBasvuranlariListeleKismi.TabIndex = 12;
+            this.listViewBasvuranlariListeleKismi.UseCompatibleStateImageBehavior = false;
+            this.listViewBasvuranlariListeleKismi.View = System.Windows.Forms.View.Details;
             // 
-            // groupBox2
+            // columnHeader9
             // 
-            this.groupBox2.Controls.Add(this.lvIlanBilgiler);
-            this.groupBox2.Location = new System.Drawing.Point(9, 157);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(702, 153);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Bilgiler";
+            this.columnHeader9.Text = "ID";
+            this.columnHeader9.Width = 30;
             // 
-            // lvIlanBilgiler
+            // columnHeader10
             // 
-            this.lvIlanBilgiler.HideSelection = false;
-            this.lvIlanBilgiler.Location = new System.Drawing.Point(6, 21);
-            this.lvIlanBilgiler.Name = "lvIlanBilgiler";
-            this.lvIlanBilgiler.Size = new System.Drawing.Size(690, 126);
-            this.lvIlanBilgiler.TabIndex = 0;
-            this.lvIlanBilgiler.UseCompatibleStateImageBehavior = false;
+            this.columnHeader10.Text = "İlan Tanımı";
+            this.columnHeader10.Width = 90;
             // 
-            // btnIlanBilgiGetir
+            // columnHeader11
             // 
-            this.btnIlanBilgiGetir.Location = new System.Drawing.Point(452, 315);
-            this.btnIlanBilgiGetir.Name = "btnIlanBilgiGetir";
-            this.btnIlanBilgiGetir.Size = new System.Drawing.Size(253, 26);
-            this.btnIlanBilgiGetir.TabIndex = 3;
-            this.btnIlanBilgiGetir.Text = "Tıklanan İlana Ait Başvuruları Gör";
-            this.btnIlanBilgiGetir.UseVisualStyleBackColor = true;
+            this.columnHeader11.Text = "Aranan Eleman Özellikleri";
+            this.columnHeader11.Width = 174;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Pozisyon";
+            this.columnHeader12.Width = 75;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(314, 13);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(67, 17);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "İlanlarınız";
+            // 
+            // listViewBasvuranlariListeleBasvuranlarKismi
+            // 
+            this.listViewBasvuranlariListeleBasvuranlarKismi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25});
+            this.listViewBasvuranlariListeleBasvuranlarKismi.HideSelection = false;
+            this.listViewBasvuranlariListeleBasvuranlarKismi.Location = new System.Drawing.Point(9, 227);
+            this.listViewBasvuranlariListeleBasvuranlarKismi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewBasvuranlariListeleBasvuranlarKismi.Name = "listViewBasvuranlariListeleBasvuranlarKismi";
+            this.listViewBasvuranlariListeleBasvuranlarKismi.Size = new System.Drawing.Size(696, 108);
+            this.listViewBasvuranlariListeleBasvuranlarKismi.TabIndex = 14;
+            this.listViewBasvuranlariListeleBasvuranlarKismi.UseCompatibleStateImageBehavior = false;
+            this.listViewBasvuranlariListeleBasvuranlarKismi.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "ID";
+            this.columnHeader13.Width = 30;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Ad";
+            this.columnHeader14.Width = 50;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Soyad";
+            this.columnHeader15.Width = 70;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Adres";
+            this.columnHeader16.Width = 55;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(294, 199);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(110, 17);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Başvuran Kişiler";
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Telefon";
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "E-Mail";
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Uyruk";
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Doğum Tarihi";
+            this.columnHeader20.Width = 96;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Doğum Yeri";
+            this.columnHeader21.Width = 84;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "Medeni Durum";
+            this.columnHeader22.Width = 104;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Yabancı Dil";
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "İlgi Alanları";
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "İşe Uygunluk Durumu";
+            // 
+            // btnIlanGuncelleBasvuruKismi
+            // 
+            this.btnIlanGuncelleBasvuruKismi.Location = new System.Drawing.Point(449, 163);
+            this.btnIlanGuncelleBasvuruKismi.Name = "btnIlanGuncelleBasvuruKismi";
+            this.btnIlanGuncelleBasvuruKismi.Size = new System.Drawing.Size(142, 26);
+            this.btnIlanGuncelleBasvuruKismi.TabIndex = 16;
+            this.btnIlanGuncelleBasvuruKismi.Text = "İlanları Güncelle!";
+            this.btnIlanGuncelleBasvuruKismi.UseVisualStyleBackColor = true;
+            this.btnIlanGuncelleBasvuruKismi.Click += new System.EventHandler(this.btnIlanGuncelleBasvuruKismi_Click);
             // 
             // SirketAnaForm
             // 
@@ -781,8 +911,7 @@
             this.tabIlanDuzenle.ResumeLayout(false);
             this.tabIlanDuzenle.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -849,10 +978,28 @@
         private System.Windows.Forms.ListView listViewEnUygunKisi;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btnIlanBilgiGetir;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView lvIlanBilgiler;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView lvIlanlar;
+        private System.Windows.Forms.Button btnIlanBasvuranlariGetir;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ListView listViewBasvuranlariListeleBasvuranlarKismi;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ListView listViewBasvuranlariListeleKismi;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
+        private System.Windows.Forms.Button btnIlanGuncelleBasvuruKismi;
     }
 }
