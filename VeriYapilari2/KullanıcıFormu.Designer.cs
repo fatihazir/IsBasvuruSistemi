@@ -138,7 +138,6 @@
             this.listViewKullaniciIlanlarBolmesi.TabIndex = 20;
             this.listViewKullaniciIlanlarBolmesi.UseCompatibleStateImageBehavior = false;
             this.listViewKullaniciIlanlarBolmesi.View = System.Windows.Forms.View.Details;
-            this.listViewKullaniciIlanlarBolmesi.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewKullaniciIlanlarBolmesi_ColumnClick);
             // 
             // columnHeader1
             // 
@@ -235,7 +234,7 @@
             this.lbl.AutoSize = true;
             this.lbl.Location = new System.Drawing.Point(4, 186);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(79, 17);
+            this.lbl.Size = new System.Drawing.Size(77, 16);
             this.lbl.TabIndex = 52;
             this.lbl.Text = "Yabancı Dil";
             // 
@@ -271,7 +270,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(500, 23);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 17);
+            this.label11.Size = new System.Drawing.Size(73, 16);
             this.label11.TabIndex = 47;
             this.label11.Text = "İlgi Alanları";
             // 
@@ -325,7 +324,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(293, 132);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 17);
+            this.label13.Size = new System.Drawing.Size(43, 16);
             this.label13.TabIndex = 43;
             this.label13.Text = "Uyruk";
             // 
@@ -343,7 +342,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(4, 20);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(25, 17);
+            this.label14.Size = new System.Drawing.Size(25, 16);
             this.label14.TabIndex = 37;
             this.label14.Text = "Ad";
             // 
@@ -352,7 +351,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(231, 180);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(108, 17);
+            this.label15.Size = new System.Drawing.Size(102, 16);
             this.label15.TabIndex = 46;
             this.label15.Text = "Medeni Durumu";
             // 
@@ -361,7 +360,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(4, 52);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 17);
+            this.label16.Size = new System.Drawing.Size(48, 16);
             this.label16.TabIndex = 38;
             this.label16.Text = "Soyad";
             // 
@@ -370,7 +369,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(3, 82);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(66, 17);
+            this.label17.Size = new System.Drawing.Size(64, 16);
             this.label17.TabIndex = 39;
             this.label17.Text = "TC Kimlik";
             // 
@@ -379,7 +378,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(4, 153);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 17);
+            this.label18.Size = new System.Drawing.Size(79, 16);
             this.label18.TabIndex = 45;
             this.label18.Text = "Doğum Yeri";
             // 
@@ -396,7 +395,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(3, 114);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(93, 17);
+            this.label19.Size = new System.Drawing.Size(89, 16);
             this.label19.TabIndex = 44;
             this.label19.Text = "Doğum Tarihi";
             // 
@@ -429,7 +428,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(292, 92);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(47, 17);
+            this.label20.Size = new System.Drawing.Size(46, 16);
             this.label20.TabIndex = 42;
             this.label20.Text = "E-Mail";
             // 
@@ -438,7 +437,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(292, 20);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 17);
+            this.label21.Size = new System.Drawing.Size(44, 16);
             this.label21.TabIndex = 40;
             this.label21.Text = "Adres";
             // 
@@ -447,7 +446,7 @@
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(283, 54);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 17);
+            this.label22.Size = new System.Drawing.Size(54, 16);
             this.label22.TabIndex = 41;
             this.label22.Text = "Telefon";
             // 
@@ -533,7 +532,7 @@
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(5, 28);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(106, 17);
+            this.label27.Size = new System.Drawing.Size(99, 16);
             this.label27.TabIndex = 10;
             this.label27.Text = "Kişinin Okul Adı";
             // 
@@ -542,7 +541,7 @@
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(371, 121);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(13, 17);
+            this.label30.Size = new System.Drawing.Size(12, 16);
             this.label30.TabIndex = 20;
             this.label30.Text = "-";
             // 
@@ -583,7 +582,7 @@
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(261, 89);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(183, 17);
+            this.label29.Size = new System.Drawing.Size(176, 16);
             this.label29.TabIndex = 14;
             this.label29.Text = "Bölüm Başlangıç ve Bitiş Yılı";
             // 
@@ -592,7 +591,7 @@
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(261, 25);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(135, 17);
+            this.label31.Size = new System.Drawing.Size(127, 16);
             this.label31.TabIndex = 18;
             this.label31.Text = "Okul Not Ortalaması";
             // 
@@ -601,7 +600,7 @@
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(5, 121);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(100, 17);
+            this.label28.Size = new System.Drawing.Size(94, 16);
             this.label28.TabIndex = 12;
             this.label28.Text = "Kişinin Bölümü";
             // 
@@ -618,7 +617,7 @@
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(5, 76);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(100, 17);
+            this.label26.Size = new System.Drawing.Size(94, 16);
             this.label26.TabIndex = 8;
             this.label26.Text = "Eğitim Durumu";
             // 
@@ -654,7 +653,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(5, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "İş Yeri Adı";
             // 
@@ -671,7 +670,7 @@
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(5, 78);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(91, 17);
+            this.label23.Size = new System.Drawing.Size(87, 16);
             this.label23.TabIndex = 2;
             this.label23.Text = "İş Yeri Adresi";
             // 
@@ -688,7 +687,7 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(5, 126);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(142, 17);
+            this.label24.Size = new System.Drawing.Size(136, 16);
             this.label24.TabIndex = 4;
             this.label24.Text = "İş Yerindeki Pozisyon";
             // 
@@ -705,7 +704,7 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(5, 178);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(122, 17);
+            this.label25.Size = new System.Drawing.Size(118, 16);
             this.label25.TabIndex = 6;
             this.label25.Text = "İş Yeri Çalışma Yılı";
             // 
