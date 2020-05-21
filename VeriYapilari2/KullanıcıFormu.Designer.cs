@@ -64,6 +64,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtDogumTarih = new System.Windows.Forms.TextBox();
             this.tabIsBasvuruKayit = new System.Windows.Forms.TabControl();
+            this.listViewKullaniciIlanlarBolmesi = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIlanlar)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -73,6 +78,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.listViewKullaniciIlanlarBolmesi);
             this.tabPage3.Controls.Add(this.dgvIlanlar);
             this.tabPage3.Controls.Add(this.btnIsYeriAdinaSiralama);
             this.tabPage3.Controls.Add(this.cmbIsYeriAdSiralama);
@@ -92,11 +98,11 @@
             // dgvIlanlar
             // 
             this.dgvIlanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIlanlar.Location = new System.Drawing.Point(92, 26);
+            this.dgvIlanlar.Location = new System.Drawing.Point(21, 19);
             this.dgvIlanlar.Name = "dgvIlanlar";
             this.dgvIlanlar.RowHeadersWidth = 51;
             this.dgvIlanlar.RowTemplate.Height = 24;
-            this.dgvIlanlar.Size = new System.Drawing.Size(603, 296);
+            this.dgvIlanlar.Size = new System.Drawing.Size(216, 118);
             this.dgvIlanlar.TabIndex = 19;
             // 
             // btnIsYeriAdinaSiralama
@@ -455,6 +461,42 @@
             this.tabIsBasvuruKayit.Size = new System.Drawing.Size(803, 437);
             this.tabIsBasvuruKayit.TabIndex = 0;
             // 
+            // listViewKullaniciIlanlarBolmesi
+            // 
+            this.listViewKullaniciIlanlarBolmesi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listViewKullaniciIlanlarBolmesi.HideSelection = false;
+            this.listViewKullaniciIlanlarBolmesi.Location = new System.Drawing.Point(356, 42);
+            this.listViewKullaniciIlanlarBolmesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewKullaniciIlanlarBolmesi.Name = "listViewKullaniciIlanlarBolmesi";
+            this.listViewKullaniciIlanlarBolmesi.Size = new System.Drawing.Size(384, 226);
+            this.listViewKullaniciIlanlarBolmesi.TabIndex = 20;
+            this.listViewKullaniciIlanlarBolmesi.UseCompatibleStateImageBehavior = false;
+            this.listViewKullaniciIlanlarBolmesi.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 30;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "İlan Tanımı";
+            this.columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Aranan Eleman Özellikleri";
+            this.columnHeader3.Width = 174;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Pozisyon";
+            this.columnHeader4.Width = 75;
+            // 
             // KullaniciFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -513,5 +555,10 @@
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox txtYabanciDil;
         private System.Windows.Forms.DataGridView dgvIlanlar;
+        private System.Windows.Forms.ListView listViewKullaniciIlanlarBolmesi;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

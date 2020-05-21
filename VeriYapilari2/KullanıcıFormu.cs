@@ -7,6 +7,27 @@ namespace VeriYapilari2
     {
         public DatabaseIslemleri db { get; set; }
         public KisiBilgileri formIciKisi { get; set; }
+        public void ilanListele()
+        {
+            listViewKullaniciIlanlarBolmesi.Items.Clear();
+            Ilan ilan = new Ilan();
+            foreach (Sirket sirket in db.Sirketler)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    ilan = sirket.Ilanlar.GetIsIlaniForEditingAndListing(i);
+                    if (ilan == null)
+                    {
+                        continue;
+                    }
+                    ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
+                    item.SubItems.Add(ilan.IsTanimi);
+                    item.SubItems.Add(ilan.ArananElemanOzellikleri);
+                    item.SubItems.Add(ilan.Pozisyon);
+                    listViewKullaniciIlanlarBolmesi.Items.Add(item);
+                }
+            }
+        }
         public KullaniciFormu()
         {
             InitializeComponent();
@@ -74,8 +95,7 @@ namespace VeriYapilari2
             txtTCKimlik.Text = Convert.ToString(formIciKisi.tcKimlikNumarasi);
             txtIlgiAlan.Text = formIciKisi.ilgiAlanlari;
             txtYabanciDil.Text = formIciKisi.yabanciDil;
-
-            dgvIlanlar.DataSource = _sirket.Ilanlar.GetIsIlaniForEditingAndListing();
+            ilanListele();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
