@@ -6,13 +6,17 @@ namespace VeriYapilari2
     public partial class LoginFormu : Form
     {
         private DatabaseIslemleri db = new DatabaseIslemleri();
+
         private SirketAnaForm sirketFormu = new SirketAnaForm();
+        KullaniciFormu kullaniciFormu = new KullaniciFormu();
+
         private İkiliAramaAgacı _IkılıAramaAgaci = new İkiliAramaAgacı();
 
         public LoginFormu()
         {
             InitializeComponent();
         }
+
 
         private void btnSirketGirisi_Click(object sender, EventArgs e)
         {
@@ -38,15 +42,37 @@ namespace VeriYapilari2
 
         private void btnSirketBilgiKaydet_Click(object sender, EventArgs e)
         {
-            Sirket yeniSirket = new Sirket();
-            yeniSirket.SirketEposta = txtSirketEPosta.Text;
-            yeniSirket.SirketAd = txtSirketAd.Text;
-            yeniSirket.SirketAdres = txtSirketAdres.Text;
-            yeniSirket.SirketFax = txtSirketFax.Text;
-            yeniSirket.SirketTelefon = txtSirketTelNo.Text;
-            yeniSirket.sifre = txtSirketSifreKayit.Text;
-            db.Sirketler.Add(yeniSirket);
-            MessageBox.Show("Başarıyla yeni şirket eklendi!");
+            bool kontrol = false;
+            if (maskedSirketSifre.Text == maskedSirketSifreDogrula.Text)
+            {
+                kontrol = true;
+                
+            }
+
+            if (maskedSirketSifre.Text != maskedSirketSifreDogrula.Text)
+            {
+                MessageBox.Show("Sifreler aynı değil. Lütfen dogru yazdıgınızdan emin olun.");
+            }
+
+            if (kontrol)
+            {
+                Sirket yeniSirket = new Sirket();
+                yeniSirket.SirketEposta = txtSirketEPosta.Text;
+                yeniSirket.SirketAd = txtSirketAd.Text;
+                yeniSirket.SirketAdres = txtSirketAdres.Text;
+                yeniSirket.SirketFax = txtSirketFax.Text;
+                yeniSirket.SirketTelefon = txtSirketTelNo.Text;
+                yeniSirket.sifre = txtSirketSifreKayit.Text;
+                db.Sirketler.Add(yeniSirket);
+                MessageBox.Show("Yeni şirket başarıyla eklendi!");
+                kontrol = false;
+                MessageBox.Show("Lütfen giriş yap sekmesinden giriş yapınız.");
+            }
+            else
+            {
+                MessageBox.Show("Sirket eklenirken hata oldu. Lütfen verilerinizi gözden geçirip tekrar deneyin.");
+            }
+           
         }
 
         private void btnGirisYapKullanici_Click(object sender, EventArgs e)
@@ -63,9 +89,10 @@ namespace VeriYapilari2
 
             if (kisi.ad != null)
             {
-                KullaniciFormu kullaniciFormu = new KullaniciFormu();
+               
                 kullaniciFormu.formIciKisi = kisi;
                 kullaniciFormu.db = db;
+                kullaniciFormu._ikiliAramaAgaci = _IkılıAramaAgaci;
                 kullaniciFormu.Show();
             }
             else
@@ -116,24 +143,51 @@ namespace VeriYapilari2
             {
                 uyruk = "Diger";
             }
-            KisiBilgileri kisi = new KisiBilgileri();
-            kisi.ad = txtKayitAd.Text;
-            kisi.soyad = txtKayitSoyad.Text;
-            kisi.tcKimlikNumarasi = Convert.ToUInt32(txtTcNo.Text);
-            kisi.dogumTarihi = txtKayitDogumTarih.Text;
-            kisi.dogumYeri = txtKayitDogumYer.Text;
-            kisi.telefon = txtKayitTelNo.Text;
-            kisi.email = txtKayitEMail.Text;
-            kisi.uyruk = uyruk;
-            kisi.medeniDurum = medeniDurum;
-            kisi.ilgiAlanlari = txtKayitIlgiAlan.Text;
-            kisi.adres = txtKayitAdres.Text;
-            kisi.yabanciDil = txtYabanciDil.Text;
 
-            _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
+            bool kontrol = false;
+            if (maskedBireyselSifre.Text == maskedBireyselSifreDogrula.Text)
+            {
+                kontrol = true;
+            }
+            if(maskedBireyselSifre.Text != maskedBireyselSifreDogrula.Text)
+            {
+                MessageBox.Show("Sifreler aynı değil. Lütfen dogru yazdıgınızdan emin olun.");
+            }
+
+            if (kontrol)
+            {
+                KisiBilgileri kisi = new KisiBilgileri();
+                kisi.ad = txtKayitAd.Text;
+                kisi.soyad = txtKayitSoyad.Text;
+                kisi.tcKimlikNumarasi = Convert.ToUInt32(txtKayitTCKimlik.Text);
+                kisi.dogumTarihi = txtKayitDogumTarih.Text;
+                kisi.dogumYeri = txtKayitDogumYer.Text;
+                kisi.telefon = txtKayitTelNo.Text;
+                kisi.email = txtKayitEMail.Text;
+                kisi.uyruk = uyruk;
+                kisi.medeniDurum = medeniDurum;
+                kisi.ilgiAlanlari = txtKayitIlgiAlan.Text;
+                kisi.adres = txtKayitAdres.Text;
+                kisi.yabanciDil = txtYabanciDil.Text;
+                kisi.sifre = maskedBireyselSifreDogrula.Text;
+
+                _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
+
+                MessageBox.Show("Kayıt başarılı. Bilgileriniz: " +Environment.NewLine+ kisi.KisiBilgileriYazdir());
+                kontrol = false;
+                MessageBox.Show("Lütfen giriş yap sekmesinden giriş yapınız.");
+                
+            }
+            else
+            {
+                MessageBox.Show("Kayıt olurken hata meydana geldi. Lütfen verilerinizi dogru girdiğinize emin olun.");
+            }
         }
 
-        
+        private void LoginFormu_Load(object sender, EventArgs e)
+        {
+            txtYabanciDil.Text = "Dil1,Dil2,Dil3";
+        }
 
         
     }

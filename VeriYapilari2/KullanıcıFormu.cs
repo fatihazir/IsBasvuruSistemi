@@ -9,7 +9,7 @@ namespace VeriYapilari2
 
         public KisiBilgileri formIciKisi { get; set; }
 
-        private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
+        public İkiliAramaAgacı _ikiliAramaAgaci { get; set; }
         private IsDeneyimi _isDeneyimi = new IsDeneyimi();
 
         //private Ilan _ilan = new Ilan();
