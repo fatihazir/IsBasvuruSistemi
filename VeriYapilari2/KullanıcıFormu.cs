@@ -7,6 +7,9 @@ namespace VeriYapilari2
     {
         public DatabaseIslemleri db { get; set; }
         public KisiBilgileri formIciKisi { get; set; }
+        private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
+        private IsDeneyimi _isDeneyimi = new IsDeneyimi();
+        private KisiBilgileri _kisiBilgileri = new KisiBilgileri();
         public void ilanListele()
         {
             listViewKullaniciIlanlarBolmesi.Items.Clear();
@@ -32,8 +35,6 @@ namespace VeriYapilari2
         {
             InitializeComponent();
         }
-
-        private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
 
         private void TabPage1_Click(object sender, EventArgs e)
         {
@@ -180,6 +181,25 @@ namespace VeriYapilari2
                 HeapDugumu heapDugumu = new HeapDugumu(ilanID, formIciKisi, formIciKisi.iseUygunlukDurumu);
                 MessageBox.Show("Başarıyla işe başvurdunuz!");
             }
+        }
+
+        private void btnIsDeneyimiKaydet_Click(object sender, EventArgs e)
+        {
+            _isDeneyimi.IsyeriAd = txtIsyeriAd.Text;
+            _isDeneyimi.IsyeriAdres = txtIsyeriAdres.Text;
+            _isDeneyimi.IsyerindekiPozisyonu = txtIsyeriPozisyon.Text;
+            _isDeneyimi.IsyeriCalismaYili = Convert.ToInt32(txtIsyeriCalismaYili.Text);
+            _isDeneyimi.KisininEgitimDurumu = txtEgitimDurumu.Text;
+            _isDeneyimi.KisininOkulAdi = txtOkulAdi.Text;
+            _isDeneyimi.KisininOkulBolumu = txtKisininBolumu.Text;
+            _isDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(txtBolumBaslangicYili.Text);
+            _isDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtBolumBitisYili.Text);
+            _isDeneyimi.KisininNotOrtalamasi = txtNotOrtalamasi.Text;
+
+            _kisiBilgileri.IsDeneyimleri.InsertLast(_isDeneyimi);
+            _ikiliAramaAgaci.KisiGuncelle(_kisiBilgileri.tcKimlikNumarasi, _kisiBilgileri);
+            
+            //Halihazırda kayıtlı olan is deneyimlerini görüntüleyebileceği ve güncelleyenileceği bir sayfa.
         }
     }
 }
