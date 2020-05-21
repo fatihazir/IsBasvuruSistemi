@@ -12,6 +12,19 @@ namespace VeriYapilari2
         public İkiliAramaAgacı _ikiliAramaAgaci { get; set; }
         private IsDeneyimi _isDeneyimi = new IsDeneyimi();
 
+        public void isDeneyimiListele()
+        {
+            listViewIsDeneyimleriGoruntule.Items.Clear();
+
+            //İş deneyimine eriş
+
+            //listviewa ekle
+            //ListViewItem temp = new ListViewItem(ilan.IlanNumarasi.ToString());
+            //temp.SubItems.Add(ilan.IsTanimi); // şirket ad
+            //temp.SubItems.Add(ilan.ArananElemanOzellikleri); // şirket in sonraki sütundaki değeri
+            //temp.SubItems.Add(ilan.Pozisyon);// şirket in sonraki sütundaki değeri
+            //listViewIsDeneyimleriGoruntule.Items.Add(temp);
+        }
         public void ilanListele()
         {
             listViewKullaniciIlanlarBolmesi.Items.Clear();
@@ -247,6 +260,14 @@ namespace VeriYapilari2
             _isDeneyimi.KisininNotOrtalamasi = txtNotOrtalamasi.Text;
 
             _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, _isDeneyimi);
+        }
+
+        private void btnIsDeneyimGoruntule_Click(object sender, EventArgs e)
+        {
+            ListViewItem theClickedItem = listViewIsDeneyimleriGoruntule.FocusedItem;
+            //iş deneyimleri içinde gez ve idsi eşit olanı bir nesneye at.
+            //nesne.calismaYili
+            MessageBox.Show(theClickedItem.Text);
         }
     }
 }

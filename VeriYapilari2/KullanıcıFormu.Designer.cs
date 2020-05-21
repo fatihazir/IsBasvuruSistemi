@@ -91,7 +91,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.tabIsDeneyimiGuncelle = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lvIsDeneyimGoruntule = new System.Windows.Forms.ListView();
             this.btnIsDeneyimGoruntule = new System.Windows.Forms.Button();
             this.btnIsDeneyimSil = new System.Windows.Forms.Button();
             this.btnIsDeneyimGuncelle = new System.Windows.Forms.Button();
@@ -117,6 +116,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtGIsDeneyimCalismaYil = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.listViewIsDeneyimleriGoruntule = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabIlanlar.SuspendLayout();
             this.tabBilgileriGuncelle.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -759,7 +763,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lvIsDeneyimGoruntule);
+            this.groupBox4.Controls.Add(this.listViewIsDeneyimleriGoruntule);
             this.groupBox4.Location = new System.Drawing.Point(293, 14);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(496, 227);
@@ -767,25 +771,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "İş Deneyimleri Görüntüle";
             // 
-            // lvIsDeneyimGoruntule
-            // 
-            this.lvIsDeneyimGoruntule.BackColor = System.Drawing.Color.Silver;
-            this.lvIsDeneyimGoruntule.HideSelection = false;
-            this.lvIsDeneyimGoruntule.Location = new System.Drawing.Point(6, 21);
-            this.lvIsDeneyimGoruntule.Name = "lvIsDeneyimGoruntule";
-            this.lvIsDeneyimGoruntule.Size = new System.Drawing.Size(484, 200);
-            this.lvIsDeneyimGoruntule.TabIndex = 39;
-            this.lvIsDeneyimGoruntule.UseCompatibleStateImageBehavior = false;
-            // 
             // btnIsDeneyimGoruntule
             // 
-            this.btnIsDeneyimGoruntule.Location = new System.Drawing.Point(659, 246);
+            this.btnIsDeneyimGoruntule.Location = new System.Drawing.Point(653, 246);
             this.btnIsDeneyimGoruntule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIsDeneyimGoruntule.Name = "btnIsDeneyimGoruntule";
             this.btnIsDeneyimGoruntule.Size = new System.Drawing.Size(130, 62);
             this.btnIsDeneyimGoruntule.TabIndex = 38;
             this.btnIsDeneyimGoruntule.Text = "İş Deneyimi Görüntüle";
             this.btnIsDeneyimGoruntule.UseVisualStyleBackColor = true;
+            this.btnIsDeneyimGoruntule.Click += new System.EventHandler(this.btnIsDeneyimGoruntule_Click);
             // 
             // btnIsDeneyimSil
             // 
@@ -1019,6 +1014,36 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "İş Yeri Çalışma Yılı";
             // 
+            // listViewIsDeneyimleriGoruntule
+            // 
+            this.listViewIsDeneyimleriGoruntule.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listViewIsDeneyimleriGoruntule.HideSelection = false;
+            this.listViewIsDeneyimleriGoruntule.Location = new System.Drawing.Point(6, 21);
+            this.listViewIsDeneyimleriGoruntule.Name = "listViewIsDeneyimleriGoruntule";
+            this.listViewIsDeneyimleriGoruntule.Size = new System.Drawing.Size(484, 200);
+            this.listViewIsDeneyimleriGoruntule.TabIndex = 0;
+            this.listViewIsDeneyimleriGoruntule.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "ID";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Şirket Ad";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Şirket Adres";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Şirket Pozisyonu";
+            // 
             // KullaniciFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1114,7 +1139,6 @@
         private System.Windows.Forms.Button btnIlanGuncelle;
         private System.Windows.Forms.TabPage tabIsDeneyimiGuncelle;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListView lvIsDeneyimGoruntule;
         private System.Windows.Forms.Button btnIsDeneyimGoruntule;
         private System.Windows.Forms.Button btnIsDeneyimSil;
         private System.Windows.Forms.Button btnIsDeneyimGuncelle;
@@ -1140,5 +1164,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtGIsDeneyimCalismaYil;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ListView listViewIsDeneyimleriGoruntule;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
