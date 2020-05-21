@@ -216,11 +216,8 @@ namespace VeriYapilari2
                         {
                             break;
                         }
-                        //_ilan.heap.Insert(ilanID, _kisiBilgileri, _kisiBilgileri.iseUygunlukDurumu);
                         ilan.heap.Insert(ilan.IlanNumarasi, formIciKisi, formIciKisi.iseUygunlukDurumu);
                     }
-
-                    //MessageBox.Show("İlan ID" + _ilanID.ToString() + " Burada bu numarayı işleyip başvurmamız lazım.");
                 }
             }
 
