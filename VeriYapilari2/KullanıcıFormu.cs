@@ -27,33 +27,38 @@ namespace VeriYapilari2
                         continue;
                     }
 
-                    int sayac = 0;
+                    int sayacNull = 0;
+                    int sayacBaskaKisi = 0;
                    
                         foreach (var item in ilan.heap.heapArray)
                         {
                             if (item == null)
                             {
+                                sayacNull++;
                                 continue;
+                            }
+                            else if (item.Kisi.tcKimlikNumarasi == formIciKisi.tcKimlikNumarasi)
+                            {
+                                break;
                             }
                             else if (item.Kisi.tcKimlikNumarasi != formIciKisi.tcKimlikNumarasi)
                             {
-                                
-                                ListViewItem temp = new ListViewItem(ilan.IlanNumarasi.ToString());
-                                temp.SubItems.Add(ilan.IsTanimi);
-                                temp.SubItems.Add(ilan.ArananElemanOzellikleri);
-                                temp.SubItems.Add(ilan.Pozisyon);
-                                listViewKullaniciIlanlarBolmesi.Items.Add(temp);
-
+                                sayacBaskaKisi++;
                             }
-
-                            else if ()
-                            {
-                                
-                            }
-
-                            sayac++;
-                        } 
-                    
+                        }
+                    if (sayacBaskaKisi + sayacNull == ilan.heap.maxSize)
+                    {
+                        ListViewItem temp = new ListViewItem(ilan.IlanNumarasi.ToString());
+                        temp.SubItems.Add(ilan.IsTanimi);
+                        temp.SubItems.Add(ilan.ArananElemanOzellikleri);
+                        temp.SubItems.Add(ilan.Pozisyon);
+                        listViewKullaniciIlanlarBolmesi.Items.Add(temp);
+                        break;
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
             }
         }
