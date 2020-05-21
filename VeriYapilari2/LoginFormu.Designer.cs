@@ -42,11 +42,7 @@
             this.tabBireyselKayit = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnYabanciDilKaydet = new System.Windows.Forms.Button();
-            this.cmbKayitAlmanca = new System.Windows.Forms.ComboBox();
-            this.cmbKayitIspanyolca = new System.Windows.Forms.ComboBox();
-            this.cmbKayitFransizca = new System.Windows.Forms.ComboBox();
             this.txtDigerDil = new System.Windows.Forms.TextBox();
-            this.cmbKayitIngilizce = new System.Windows.Forms.ComboBox();
             this.chDigerDil = new System.Windows.Forms.CheckBox();
             this.chIspanyolca = new System.Windows.Forms.CheckBox();
             this.chFransizca = new System.Windows.Forms.CheckBox();
@@ -231,11 +227,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnYabanciDilKaydet);
-            this.groupBox2.Controls.Add(this.cmbKayitAlmanca);
-            this.groupBox2.Controls.Add(this.cmbKayitIspanyolca);
-            this.groupBox2.Controls.Add(this.cmbKayitFransizca);
             this.groupBox2.Controls.Add(this.txtDigerDil);
-            this.groupBox2.Controls.Add(this.cmbKayitIngilizce);
             this.groupBox2.Controls.Add(this.chDigerDil);
             this.groupBox2.Controls.Add(this.chIspanyolca);
             this.groupBox2.Controls.Add(this.chFransizca);
@@ -259,48 +251,6 @@
             this.btnYabanciDilKaydet.Text = "Bilgileri Kaydet";
             this.btnYabanciDilKaydet.UseVisualStyleBackColor = true;
             // 
-            // cmbKayitAlmanca
-            // 
-            this.cmbKayitAlmanca.FormattingEnabled = true;
-            this.cmbKayitAlmanca.Items.AddRange(new object[] {
-            "Başlangıç",
-            "Orta",
-            "İleri",
-            "Anadil"});
-            this.cmbKayitAlmanca.Location = new System.Drawing.Point(344, 21);
-            this.cmbKayitAlmanca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbKayitAlmanca.Name = "cmbKayitAlmanca";
-            this.cmbKayitAlmanca.Size = new System.Drawing.Size(100, 24);
-            this.cmbKayitAlmanca.TabIndex = 34;
-            // 
-            // cmbKayitIspanyolca
-            // 
-            this.cmbKayitIspanyolca.FormattingEnabled = true;
-            this.cmbKayitIspanyolca.Items.AddRange(new object[] {
-            "Başlangıç",
-            "Orta",
-            "İleri",
-            "Anadil"});
-            this.cmbKayitIspanyolca.Location = new System.Drawing.Point(344, 71);
-            this.cmbKayitIspanyolca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbKayitIspanyolca.Name = "cmbKayitIspanyolca";
-            this.cmbKayitIspanyolca.Size = new System.Drawing.Size(100, 24);
-            this.cmbKayitIspanyolca.TabIndex = 33;
-            // 
-            // cmbKayitFransizca
-            // 
-            this.cmbKayitFransizca.FormattingEnabled = true;
-            this.cmbKayitFransizca.Items.AddRange(new object[] {
-            "Başlangıç",
-            "Orta",
-            "İleri",
-            "Anadil"});
-            this.cmbKayitFransizca.Location = new System.Drawing.Point(100, 65);
-            this.cmbKayitFransizca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbKayitFransizca.Name = "cmbKayitFransizca";
-            this.cmbKayitFransizca.Size = new System.Drawing.Size(100, 24);
-            this.cmbKayitFransizca.TabIndex = 32;
-            // 
             // txtDigerDil
             // 
             this.txtDigerDil.Location = new System.Drawing.Point(481, 48);
@@ -309,20 +259,6 @@
             this.txtDigerDil.Name = "txtDigerDil";
             this.txtDigerDil.Size = new System.Drawing.Size(289, 47);
             this.txtDigerDil.TabIndex = 31;
-            // 
-            // cmbKayitIngilizce
-            // 
-            this.cmbKayitIngilizce.FormattingEnabled = true;
-            this.cmbKayitIngilizce.Items.AddRange(new object[] {
-            "Başlangıç",
-            "Orta",
-            "İleri",
-            "Anadil"});
-            this.cmbKayitIngilizce.Location = new System.Drawing.Point(100, 18);
-            this.cmbKayitIngilizce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbKayitIngilizce.Name = "cmbKayitIngilizce";
-            this.cmbKayitIngilizce.Size = new System.Drawing.Size(100, 24);
-            this.cmbKayitIngilizce.TabIndex = 27;
             // 
             // chDigerDil
             // 
@@ -864,11 +800,7 @@
         private System.Windows.Forms.TabControl tabIsBasvuruKayit;
         private System.Windows.Forms.TabPage tabBireyselKayit;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cmbKayitAlmanca;
-        private System.Windows.Forms.ComboBox cmbKayitIspanyolca;
-        private System.Windows.Forms.ComboBox cmbKayitFransizca;
         private System.Windows.Forms.TextBox txtDigerDil;
-        private System.Windows.Forms.ComboBox cmbKayitIngilizce;
         private System.Windows.Forms.CheckBox chDigerDil;
         private System.Windows.Forms.CheckBox chIspanyolca;
         private System.Windows.Forms.CheckBox chFransizca;

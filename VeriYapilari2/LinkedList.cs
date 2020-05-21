@@ -64,7 +64,7 @@ namespace VeriYapilari2
             return temp;
         }
 
-        public override Node GetElement(int position)
+        public override Node GetElement(int isDeneyimId)
         {
             //Geri dönülecek eleman
             Node retNode = null;
@@ -74,7 +74,7 @@ namespace VeriYapilari2
 
             while (tempNode != null)
             {
-                if (count == position)
+                if (count == isDeneyimId)
                 {
                     retNode = tempNode;
                     break;
