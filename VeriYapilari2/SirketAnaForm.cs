@@ -172,16 +172,6 @@ namespace VeriYapilari2
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //EN AZ 2 YIL İŞ DENEYİMİNE SAHİP OLAN İLANLAR LİSTELENECEK VE LİSTVİEW İÇİNE YAZILACAK
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //YABANCI DİLİ OLANLAR LİSTELENECEK VE LİSTVİEW İÇİNE YAZILACAK
-        }
-
         private void SirketAnaForm_Load(object sender, EventArgs e)
         {
             foreach (Sirket sirket in db.Sirketler)
@@ -388,6 +378,11 @@ namespace VeriYapilari2
             {
                 listViewBasvuranlariListeleBasvuranlarKismi.Sorting = SortOrder.Descending;
             }
+        }
+
+        private void btnEnAzIkıYılListele_Click(object sender, EventArgs e)
+        {
+            //EN AZ 2 YIL İŞ DENEYİMİNE SAHİP OLAN İLANLAR LİSTELENECEK VE LİSTVİEW İÇİNE YAZILACAK
         }
     }
 }

@@ -804,6 +804,7 @@
             this.btnEnAzIkıYılListele.TabIndex = 17;
             this.btnEnAzIkıYılListele.Text = "En Az 2 Yıl İş Deneyimine Sahip Olanları Listele!";
             this.btnEnAzIkıYılListele.UseVisualStyleBackColor = true;
+            this.btnEnAzIkıYılListele.Click += new System.EventHandler(this.btnEnAzIkıYılListele_Click);
             // 
             // btnIlanGuncelleBasvuruKismi
             // 

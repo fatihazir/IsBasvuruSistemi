@@ -11,8 +11,7 @@ namespace VeriYapilari2
 
         public İkiliAramaAgacı _ikiliAramaAgaci { get; set; }
         private IsDeneyimi _isDeneyimi = new IsDeneyimi();
-
-        //private Ilan _ilan = new Ilan();
+        public SortOrder Sorting { get; set; }
         public void ilanListele()
         {
             listViewKullaniciIlanlarBolmesi.Items.Clear();
@@ -53,7 +52,6 @@ namespace VeriYapilari2
                         temp.SubItems.Add(ilan.ArananElemanOzellikleri);
                         temp.SubItems.Add(ilan.Pozisyon);
                         listViewKullaniciIlanlarBolmesi.Items.Add(temp);
-                        break;
                     }
                     else
                     {
@@ -64,198 +62,205 @@ namespace VeriYapilari2
         }
 
         public KullaniciFormu()
+        {
+            InitializeComponent();
+        }
+        private void İş_Başvuru_Formu_Load(object sender, EventArgs e)
+        {
+            string uyluk = formIciKisi.uyruk;
+            int cmbUyrukSelectedIndex = 0;
+            if (uyluk == "TR")
             {
-                InitializeComponent();
+                cmbUyrukSelectedIndex = 0;
+            }
+            else if (uyluk == "KKTC")
+            {
+                cmbUyrukSelectedIndex = 1;
+            }
+            else if (uyluk == "Avrupa")
+            {
+                cmbUyrukSelectedIndex = 2;
+            }
+            else if (uyluk == "ABD")
+            {
+                cmbUyrukSelectedIndex = 3;
+            }
+            else if (uyluk == "İngiltere")
+            {
+                cmbUyrukSelectedIndex = 4;
+            }
+            else
+            {
+                cmbUyrukSelectedIndex = 5;
             }
 
-            private void TabPage1_Click(object sender, EventArgs e)
+            string medeniDurum = formIciKisi.medeniDurum;
+            int cmbMedeniSelectedIndex = 0;
+
+            if (medeniDurum == "Bekar")
             {
+                cmbMedeniSelectedIndex = 0;
+            }
+            else if (medeniDurum == "Evli")
+            {
+                cmbMedeniSelectedIndex = 1;
             }
 
-            private void İş_Başvuru_Formu_Load(object sender, EventArgs e)
+            txtAd.Text = formIciKisi.ad;
+            txtSoyad.Text = formIciKisi.soyad;
+            txtAdres.Text = formIciKisi.adres;
+            txtTelefon.Text = formIciKisi.telefon;
+            txtEMail.Text = formIciKisi.email;
+            cmbUyruk.SelectedIndex = cmbUyrukSelectedIndex;
+            txtDogumTarih.Text = formIciKisi.dogumTarihi;
+            txtDogumYeri.Text = formIciKisi.dogumYeri;
+            cmbMedeniDurum.SelectedIndex = cmbMedeniSelectedIndex;
+            txtTCKimlik.Text = Convert.ToString(formIciKisi.tcKimlikNumarasi);
+            txtIlgiAlan.Text = formIciKisi.ilgiAlanlari;
+            txtYabanciDil.Text = formIciKisi.yabanciDil;
+            ilanListele();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            string medeniDurum = "";
+            switch (cmbMedeniDurum.SelectedIndex)
             {
-                string uyluk = formIciKisi.uyruk;
-                int cmbUyrukSelectedIndex = 0;
-                if (uyluk == "TR")
-                {
-                    cmbUyrukSelectedIndex = 0;
-                }
-                else if (uyluk == "KKTC")
-                {
-                    cmbUyrukSelectedIndex = 1;
-                }
-                else if (uyluk == "Avrupa")
-                {
-                    cmbUyrukSelectedIndex = 2;
-                }
-                else if (uyluk == "ABD")
-                {
-                    cmbUyrukSelectedIndex = 3;
-                }
-                else if (uyluk == "İngiltere")
-                {
-                    cmbUyrukSelectedIndex = 4;
-                }
-                else
-                {
-                    cmbUyrukSelectedIndex = 5;
-                }
+                case 0:
+                    medeniDurum = "Bekar";
+                    break;
 
-                string medeniDurum = formIciKisi.medeniDurum;
-                int cmbMedeniSelectedIndex = 0;
+                case 1:
+                    medeniDurum = "Evli";
+                    break;
 
-                if (medeniDurum == "Bekar")
-                {
-                    cmbMedeniSelectedIndex = 0;
-                }
-                else if (medeniDurum == "Evli")
-                {
-                    cmbMedeniSelectedIndex = 1;
-                }
-
-                txtAd.Text = formIciKisi.ad;
-                txtSoyad.Text = formIciKisi.soyad;
-                txtAdres.Text = formIciKisi.adres;
-                txtTelefon.Text = formIciKisi.telefon;
-                txtEMail.Text = formIciKisi.email;
-                cmbUyruk.SelectedIndex = cmbUyrukSelectedIndex;
-                txtDogumTarih.Text = formIciKisi.dogumTarihi;
-                txtDogumYeri.Text = formIciKisi.dogumYeri;
-                cmbMedeniDurum.SelectedIndex = cmbMedeniSelectedIndex;
-                txtTCKimlik.Text = Convert.ToString(formIciKisi.tcKimlikNumarasi);
-                txtIlgiAlan.Text = formIciKisi.ilgiAlanlari;
-                txtYabanciDil.Text = formIciKisi.yabanciDil;
-                ilanListele();
+                default:
+                    break;
             }
 
-            private void btnGuncelle_Click(object sender, EventArgs e)
+            string uyruk = "";
+            if (cmbUyruk.SelectedIndex == 0)
             {
-                string medeniDurum = "";
-                switch (cmbMedeniDurum.SelectedIndex)
-                {
-                    case 0:
-                        medeniDurum = "Bekar";
-                        break;
+                uyruk = "TR";
+            }
+            else if (cmbUyruk.SelectedIndex == 1)
+            {
+                uyruk = "KKTC";
+            }
+            else if (cmbUyruk.SelectedIndex == 2)
+            {
+                uyruk = "Avrupa";
+            }
+            else if (cmbUyruk.SelectedIndex == 3)
+            {
+                uyruk = "ABD";
+            }
+            else if (cmbUyruk.SelectedIndex == 4)
+            {
+                uyruk = "İngiltere";
+            }
+            else
+            {
+                uyruk = "Diger";
+            }
 
-                    case 1:
-                        medeniDurum = "Evli";
-                        break;
+            try
+            {
+            formIciKisi.ad = txtAd.Text;
+            formIciKisi.soyad = txtSoyad.Text;
+            formIciKisi.adres = txtAdres.Text;
+            formIciKisi.telefon = txtTelefon.Text;
+            formIciKisi.email = txtEMail.Text;
+            formIciKisi.medeniDurum = medeniDurum;
+            formIciKisi.dogumTarihi = txtDogumTarih.Text;
+            formIciKisi.dogumYeri = txtDogumYeri.Text;
+            formIciKisi.ilgiAlanlari = txtIlgiAlan.Text;
+            formIciKisi.yabanciDil = txtYabanciDil.Text;
+            formIciKisi.uyruk = uyruk;
 
-                    default:
-                        break;
-                }
+            _ikiliAramaAgaci.KisiGuncelle(formIciKisi.tcKimlikNumarasi, formIciKisi);
 
-                string uyruk = "";
-                if (cmbUyruk.SelectedIndex == 0)
-                {
-                    uyruk = "TR";
-                }
-                else if (cmbUyruk.SelectedIndex == 1)
-                {
-                    uyruk = "KKTC";
-                }
-                else if (cmbUyruk.SelectedIndex == 2)
-                {
-                    uyruk = "Avrupa";
-                }
-                else if (cmbUyruk.SelectedIndex == 3)
-                {
-                    uyruk = "ABD";
-                }
-                else if (cmbUyruk.SelectedIndex == 4)
-                {
-                    uyruk = "İngiltere";
-                }
-                else
-                {
-                    uyruk = "Diger";
-                }
+            MessageBox.Show("Verileriniz güncellendi.");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Hata olustu : "+ "exception");
 
-                try
-                {
-                formIciKisi.ad = txtAd.Text;
-                formIciKisi.soyad = txtSoyad.Text;
-                formIciKisi.adres = txtAdres.Text;
-                formIciKisi.telefon = txtTelefon.Text;
-                formIciKisi.email = txtEMail.Text;
-                formIciKisi.medeniDurum = medeniDurum;
-                formIciKisi.dogumTarihi = txtDogumTarih.Text;
-                formIciKisi.dogumYeri = txtDogumYeri.Text;
-                formIciKisi.ilgiAlanlari = txtIlgiAlan.Text;
-                formIciKisi.yabanciDil = txtYabanciDil.Text;
-                formIciKisi.uyruk = uyruk;
-
-                _ikiliAramaAgaci.KisiGuncelle(formIciKisi.tcKimlikNumarasi, formIciKisi);
-
-                MessageBox.Show("Verileriniz güncellendi.");
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show("Hata olustu : "+ "exception");
-
-                }
+            }
 
                 
-            }
+        }
 
-            private void brnKisiBilgiSil_Click(object sender, EventArgs e)
-            {
-                _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
-            }
+        private void brnKisiBilgiSil_Click(object sender, EventArgs e)
+        {
+            _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
+        }
 
-            private void btnIlanGuncelle_Click(object sender, EventArgs e)
-            {
-                ilanListele();
-                MessageBox.Show("İlanlar Listesi Guncellendi.");
-            }
+        private void btnIlanGuncelle_Click(object sender, EventArgs e)
+        {
+            ilanListele();
+            MessageBox.Show("İlanlar Listesi Guncellendi.");
+        }
 
-            private void btnIlanBasvur_Click(object sender, EventArgs e)
+        private void btnIlanBasvur_Click(object sender, EventArgs e)
+        {
+            ListViewItem theClickedItem = listViewKullaniciIlanlarBolmesi.FocusedItem;
+            if (theClickedItem == null)
             {
-                ListViewItem theClickedItem = listViewKullaniciIlanlarBolmesi.FocusedItem;
-                if (theClickedItem == null)
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                Ilan ilan = new Ilan();
+            int ilanID;
+                ilanID = Convert.ToInt32(theClickedItem.Text);
+                foreach (Sirket sirket in db.Sirketler)
                 {
-                    MessageBox.Show("Lütfen bir ilana tıklayınız!");
-                }
-                else
-                {
-                    Ilan ilan = new Ilan();
-                int ilanID;
-                    ilanID = Convert.ToInt32(theClickedItem.Text);
-                    foreach (Sirket sirket in db.Sirketler)
-                    {
                         
-                        ilan = sirket.Ilanlar.GetIsIlani(ilanID);
-                        if (ilan.IsTanimi == null)
-                        {
-                            break;
-                        }
-                        ilan.heap.Insert(ilan.IlanNumarasi, formIciKisi, formIciKisi.iseUygunlukDurumu);
+                    ilan = sirket.Ilanlar.GetIsIlani(ilanID);
+                    if (ilan.IsTanimi == null)
+                    {
+                        break;
                     }
-
-                    ilanListele();
-                    MessageBox.Show("Islem başarılı. Başvurdunuguz ilanın bilgileri : " + Environment.NewLine +
-                                    ilan.IlanBilgileriYazdir());
+                    ilan.heap.Insert(ilan.IlanNumarasi, formIciKisi, formIciKisi.iseUygunlukDurumu);
                 }
+
+                ilanListele();
+                MessageBox.Show("Islem başarılı. Başvurdunuguz ilanın bilgileri : " + Environment.NewLine +
+                                ilan.IlanBilgileriYazdir());
             }
+        }
 
-            private void btnIsDeneyimiKaydet_Click(object sender, EventArgs e)
-            {
-                _isDeneyimi.IsyeriAd = txtIsyeriAd.Text;
-                _isDeneyimi.IsyeriAdres = txtIsyeriAdres.Text;
-                _isDeneyimi.IsyerindekiPozisyonu = txtIsyeriPozisyon.Text;
-                _isDeneyimi.IsyeriCalismaYili = Convert.ToInt32(txtIsyeriCalismaYili.Text);
-                _isDeneyimi.KisininEgitimDurumu = txtEgitimDurumu.Text;
-                _isDeneyimi.KisininOkulAdi = txtOkulAdi.Text;
-                _isDeneyimi.KisininOkulBolumu = txtKisininBolumu.Text;
-                _isDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(txtBolumBaslangicYili.Text);
-                _isDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtBolumBitisYili.Text);
-                _isDeneyimi.KisininNotOrtalamasi = txtNotOrtalamasi.Text;
+        private void btnIsDeneyimiKaydet_Click(object sender, EventArgs e)
+        {
+            _isDeneyimi.IsyeriAd = txtIsyeriAd.Text;
+            _isDeneyimi.IsyeriAdres = txtIsyeriAdres.Text;
+            _isDeneyimi.IsyerindekiPozisyonu = txtIsyeriPozisyon.Text;
+            _isDeneyimi.IsyeriCalismaYili = Convert.ToInt32(txtIsyeriCalismaYili.Text);
+            _isDeneyimi.KisininEgitimDurumu = txtEgitimDurumu.Text;
+            _isDeneyimi.KisininOkulAdi = txtOkulAdi.Text;
+            _isDeneyimi.KisininOkulBolumu = txtKisininBolumu.Text;
+            _isDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(txtBolumBaslangicYili.Text);
+            _isDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtBolumBitisYili.Text);
+            _isDeneyimi.KisininNotOrtalamasi = txtNotOrtalamasi.Text;
 
-                _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, _isDeneyimi);
+            _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, _isDeneyimi);
 
                 
 
 
+        }
+
+        private void listViewKullaniciIlanlarBolmesi_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (listViewKullaniciIlanlarBolmesi.Sorting == SortOrder.Ascending)
+            {
+                listViewKullaniciIlanlarBolmesi.Sorting = SortOrder.Descending;
+            }
+            else
+            {
+                listViewKullaniciIlanlarBolmesi.Sorting = SortOrder.Ascending;
             }
         }
     }
+}
