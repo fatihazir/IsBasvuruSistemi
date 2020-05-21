@@ -8,10 +8,6 @@ namespace VeriYapilari2
 
         private HashChainEntry[] table;
 
-        //private List<Ilan> Ilanlar = new List<Ilan>(); 
-        //AGA BURASINA GEREK YOK EMRECANI ARASIN BUNA İHTİYACI 
-        //OLAN NEDEN İHTİYACIMIZIN OLMADIĞINI ANLATAYIM
-
         public HashChain()
         {
             table = new HashChainEntry[TABLE_SIZE];
@@ -95,19 +91,6 @@ namespace VeriYapilari2
                 return (Ilan)entry.Deger;
             }
         }
-        public List<Ilan> GetIsIlaniForEditingAndListing()
-        {
-            List<Ilan> Ilanlar = new List<Ilan>();
-            Ilan temp = new Ilan();
-
-            for (int i = 0; i < table.Length; i++)
-            {
-                temp = GetIsIlaniForEditingAndListing(i);
-                Ilanlar.Add(temp);
-            }
-
-            return Ilanlar;
-        }
 
         public Ilan DeleteIsIlani(int key)
         {
@@ -128,9 +111,6 @@ namespace VeriYapilari2
                     return (Ilan)entry.Deger;
                 }
             }
-        }
-        
-
-        
+        }   
     }
 }

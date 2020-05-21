@@ -177,8 +177,7 @@ namespace VeriYapilari2
                 int ilanID;
                 ilanID = Convert.ToInt32(theClickedItem.Text);
                 Ilan ilan = new Ilan();
-                HeapDugumu heapDugumu = new HeapDugumu(ilanID, formIciKisi, formIciKisi.iseUygunlukDurumu);
-                MessageBox.Show("Başarıyla işe başvurdunuz!");
+                MessageBox.Show("İlan ID" + ilanID.ToString() + " Burada bu numarayı işleyip başvurmamız lazım.");
             }
         }
     }

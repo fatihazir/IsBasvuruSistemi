@@ -682,7 +682,7 @@
             // 
             // btnIlanGuncelle
             // 
-            this.btnIlanGuncelle.Location = new System.Drawing.Point(84, 64);
+            this.btnIlanGuncelle.Location = new System.Drawing.Point(89, 109);
             this.btnIlanGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIlanGuncelle.Name = "btnIlanGuncelle";
             this.btnIlanGuncelle.Size = new System.Drawing.Size(104, 48);

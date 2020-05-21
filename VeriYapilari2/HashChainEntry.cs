@@ -38,6 +38,12 @@
             set { next = value; }
         }
 
+        public Heap iseBasvuranlar
+        {
+            get { return ilanaBasvuranlar; }
+            set { ilanaBasvuranlar = value; }
+        }
+
         public HashChainEntry(int anahtar, object deger, string durum, Sirket sirket)
         {
             this.anahtar = anahtar;
