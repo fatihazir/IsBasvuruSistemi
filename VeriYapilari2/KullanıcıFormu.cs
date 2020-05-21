@@ -34,8 +34,6 @@ namespace VeriYapilari2
         }
 
         private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
-       
-        Sirket _sirket = new Sirket();
 
         private void TabPage1_Click(object sender, EventArgs e)
         {
@@ -161,12 +159,13 @@ namespace VeriYapilari2
             _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
         }
 
-        private void dgvIlanlar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnIlanGuncelle_Click(object sender, EventArgs e)
         {
-
+            ilanListele();
+            MessageBox.Show("İlanlar başarıyla güncellendi!");
         }
 
-        private void tabPage3_Click(object sender, EventArgs e)
+        private void btnIlanBasvur_Click(object sender, EventArgs e)
         {
 
         }
