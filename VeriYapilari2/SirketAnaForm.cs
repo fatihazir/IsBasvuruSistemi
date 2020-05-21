@@ -114,6 +114,22 @@ namespace VeriYapilari2
             //tıklanan ilan bilgisi çekilir
             //silinecek ilanın bilgileri "Silindi" olarak güncellenir (bu gerekli mi emin değilim)
             //ilgili ilan silinir
+            ListViewItem theClickedItem = listViewIlanlarIsAlmaBolmesi.FocusedItem;
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                int ilanNumarasi;
+                ilanNumarasi = Convert.ToInt32(theClickedItem.Text);
+                Ilan ilan = new Ilan();
+                ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanNumarasi);
+                sirketFormIci.Ilanlar.DeleteIsIlani(ilan.IlanNumarasi);
+                MessageBox.Show("Başarıyla ilan silindi!");
+                ilanListele();
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
