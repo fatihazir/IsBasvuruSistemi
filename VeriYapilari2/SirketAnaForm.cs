@@ -377,5 +377,17 @@ namespace VeriYapilari2
                 listViewBasvuranlariListeleKismi.Sorting = SortOrder.Descending;
             }
         }
+
+        private void listViewBasvuranlariListeleBasvuranlarKismi_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (listViewBasvuranlariListeleBasvuranlarKismi.Sorting == SortOrder.Descending)
+            {
+                listViewBasvuranlariListeleBasvuranlarKismi.Sorting = SortOrder.Ascending;
+            }
+            else
+            {
+                listViewBasvuranlariListeleBasvuranlarKismi.Sorting = SortOrder.Descending;
+            }
+        }
     }
 }

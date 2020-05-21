@@ -99,7 +99,6 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label17 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnYabanciDilOlanListele = new System.Windows.Forms.Button();
             this.btnEnAzIkıYılListele = new System.Windows.Forms.Button();
             this.btnIlanGuncelleBasvuruKismi = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
@@ -781,7 +780,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnYabanciDilOlanListele);
             this.tabPage1.Controls.Add(this.btnEnAzIkıYılListele);
             this.tabPage1.Controls.Add(this.btnIlanGuncelleBasvuruKismi);
             this.tabPage1.Controls.Add(this.label21);
@@ -796,16 +794,6 @@
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "İlana Başvuranları Listele";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btnYabanciDilOlanListele
-            // 
-            this.btnYabanciDilOlanListele.Location = new System.Drawing.Point(138, 194);
-            this.btnYabanciDilOlanListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnYabanciDilOlanListele.Name = "btnYabanciDilOlanListele";
-            this.btnYabanciDilOlanListele.Size = new System.Drawing.Size(196, 27);
-            this.btnYabanciDilOlanListele.TabIndex = 18;
-            this.btnYabanciDilOlanListele.Text = "Yabancı Dili Olanları Listele!";
-            this.btnYabanciDilOlanListele.UseVisualStyleBackColor = true;
             // 
             // btnEnAzIkıYılListele
             // 
@@ -860,6 +848,7 @@
             this.listViewBasvuranlariListeleBasvuranlarKismi.TabIndex = 14;
             this.listViewBasvuranlariListeleBasvuranlarKismi.UseCompatibleStateImageBehavior = false;
             this.listViewBasvuranlariListeleBasvuranlarKismi.View = System.Windows.Forms.View.Details;
+            this.listViewBasvuranlariListeleBasvuranlarKismi.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewBasvuranlariListeleBasvuranlarKismi_ColumnClick);
             // 
             // columnHeader13
             // 
@@ -1102,6 +1091,5 @@
         private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ColumnHeader columnHeader38;
         private System.Windows.Forms.Button btnEnAzIkıYılListele;
-        private System.Windows.Forms.Button btnYabanciDilOlanListele;
     }
 }
