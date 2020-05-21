@@ -180,14 +180,8 @@ namespace VeriYapilari2
             ilan.ArananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
             ilan.Pozisyon= txtPozisyonIlanDuzenle.Text;
             ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
-            
             int ilanID = Convert.ToInt32(theClickedtwo.Text);
-
             sirketFormIci.Ilanlar.IsIlaniGuncelle(ilanID,ilan);
-           
-
-
-
             MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
             ilanListele();
         }

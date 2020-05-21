@@ -173,12 +173,23 @@ namespace VeriYapilari2
             if (theClickedItem == null)
             {
                 MessageBox.Show("Lütfen bir ilana tıklayınız!");
+                
             }
             else
             {
                 int ilanID;
                 ilanID = Convert.ToInt32(theClickedItem.Text);
-                Ilan ilan = new Ilan();
+                foreach (Sirket sirket in db.Sirketler)
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        Ilan ilan = new Ilan();
+                        ilan = sirket.Ilanlar.GetIsIlani(ilanID);
+                    }
+                }
+
+
+
                 MessageBox.Show("İlan ID" + ilanID.ToString() + " Burada bu numarayı işleyip başvurmamız lazım.");
             }
         }
