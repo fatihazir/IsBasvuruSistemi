@@ -47,7 +47,6 @@ namespace VeriYapilari2
                 tempSirketIlani.ArananElemanOzellikleri = TempSirketIlanlari[2];
 
                 tempSirket.Ilanlar.AddIsIlani(tempSirketIlani.IlanNumarasi, tempSirketIlani, tempSirket);
-                Heap heapAgaci = new Heap(10);
             };
             return tempSirket;
         }
