@@ -12,8 +12,6 @@
 
         private Sirket sirket;
 
-        private Heap ilanaBasvuranlar = new Heap(10);
-
         public object Deger
         {
             get { return deger; }
@@ -36,12 +34,6 @@
         {
             get { return next; }
             set { next = value; }
-        }
-
-        public Heap iseBasvuranlar
-        {
-            get { return ilanaBasvuranlar; }
-            set { ilanaBasvuranlar = value; }
         }
 
         public HashChainEntry(int anahtar, object deger, string durum, Sirket sirket)

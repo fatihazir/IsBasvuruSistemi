@@ -2,8 +2,8 @@
 {
     public class Heap
     {
-        private HeapDugumu[] heapArray;
-        private int maxSize;
+        public HeapDugumu[] heapArray;
+        public int maxSize;
         private int currentSize;
 
         public Heap(int maxHeapSize)

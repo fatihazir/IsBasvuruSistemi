@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VeriYapilari2
@@ -45,8 +38,6 @@ namespace VeriYapilari2
         public SirketAnaForm()
         {
             InitializeComponent();
-            
-            
         }
 
         private void sirketBilgiGuncelleButon_Click(object sender, EventArgs e)
@@ -105,7 +96,6 @@ namespace VeriYapilari2
             {
                 MessageBox.Show("İlan eklenirken bir sorun ortaya çıktı!");
             }
-            
         }
 
         private void ilanIseAlButon_Click(object sender, EventArgs e)
@@ -178,10 +168,10 @@ namespace VeriYapilari2
             Ilan ilan = new Ilan();
             ilan.IsTanimi = richTextBoxIsTanimiIlanDuzenle.Text;
             ilan.ArananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
-            ilan.Pozisyon= txtPozisyonIlanDuzenle.Text;
+            ilan.Pozisyon = txtPozisyonIlanDuzenle.Text;
             ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
             int ilanID = Convert.ToInt32(theClickedtwo.Text);
-            sirketFormIci.Ilanlar.IsIlaniGuncelle(ilanID,ilan);
+            sirketFormIci.Ilanlar.IsIlaniGuncelle(ilanID, ilan);
             MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
             ilanListele();
         }
@@ -206,8 +196,6 @@ namespace VeriYapilari2
                 ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
                 item.SubItems.Add(ilan.IsTanimi);
                 listViewEnUygunKisi.Items.Add(item);
-                
-                
             }
         }
     }

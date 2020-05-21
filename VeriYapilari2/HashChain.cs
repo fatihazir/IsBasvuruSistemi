@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace VeriYapilari2
+﻿namespace VeriYapilari2
 {
     public class HashChain
     {
@@ -81,13 +79,13 @@ namespace VeriYapilari2
             }
         }
 
-        public void IsIlaniGuncelle(int ilanNumarasi,Ilan ilan)
+        public void IsIlaniGuncelle(int ilanNumarasi, Ilan ilan)
         {
             GetIsIlani(ilanNumarasi).ArananElemanOzellikleri = ilan.ArananElemanOzellikleri;
             GetIsIlani(ilanNumarasi).IsTanimi = ilan.IsTanimi;
             GetIsIlani(ilanNumarasi).Pozisyon = ilan.Pozisyon;
-
         }
+
         public Ilan GetIsIlaniForEditingAndListing(int index)
         {
             if (table[index] == null)
@@ -118,6 +116,6 @@ namespace VeriYapilari2
                     return (Ilan)entry.Deger;
                 }
             }
-        }   
+        }
     }
 }

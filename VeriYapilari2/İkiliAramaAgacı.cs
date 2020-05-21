@@ -143,7 +143,8 @@
         {
             Ara(tc).Kisi = kisi;
         }
-        public void KisiIsDeneyimiEkle(ulong tc,IsDeneyimi isDeneyimi)
+
+        public void KisiIsDeneyimiEkle(ulong tc, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.InsertLast(isDeneyimi);
         }
@@ -266,12 +267,12 @@
             return temp;
         }
 
-        public void IsDeneyimiEkle(ulong tc,IsDeneyimi isDeneyimi)
+        public void IsDeneyimiEkle(ulong tc, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.InsertLast(isDeneyimi);
         }
 
-        public void IsDeneyimiGuncelle(ulong tc,int isDeneyimiId, IsDeneyimi isDeneyimi)
+        public void IsDeneyimiGuncelle(ulong tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.GetElement(isDeneyimiId).Data = isDeneyimi;
         }

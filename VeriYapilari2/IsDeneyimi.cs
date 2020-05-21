@@ -21,6 +21,7 @@ namespace VeriYapilari2
         {
             this.IsDeneyimId = RandomDeneyimId();
         }
+
         private int RandomDeneyimId()
         {
             Thread.Sleep(20);

@@ -34,7 +34,6 @@ namespace VeriYapilari2
             }
 
             Ilan tempSirketIlani = new Ilan();
-            
 
             string[] satirlarIlanIcın = System.IO.File.ReadAllLines("./IlanDb.txt");
 

@@ -6,8 +6,9 @@ namespace VeriYapilari2
     public partial class LoginFormu : Form
     {
         private DatabaseIslemleri db = new DatabaseIslemleri();
-        SirketAnaForm sirketFormu = new SirketAnaForm();
-        İkiliAramaAgacı _IkılıAramaAgaci = new İkiliAramaAgacı();
+        private SirketAnaForm sirketFormu = new SirketAnaForm();
+        private İkiliAramaAgacı _IkılıAramaAgaci = new İkiliAramaAgacı();
+
         public LoginFormu()
         {
             InitializeComponent();
@@ -24,7 +25,6 @@ namespace VeriYapilari2
 
             if (dbSirket.SirketAd != null)
             {
-                
                 sirketFormu.labelSirketIsmi.Text = dbSirket.SirketAd;
                 sirketFormu.db = db;
                 sirketFormu.sirketFormIci = dbSirket;
@@ -59,10 +59,8 @@ namespace VeriYapilari2
             ulong tc = Convert.ToUInt32(txtTcNo.Text);
             string sifre = txtSifre.Text;
 
-            
-
             kisi = _IkılıAramaAgaci.BireyselGirisYap(tc, sifre);
-            
+
             if (kisi.ad != null)
             {
                 KullaniciFormu kullaniciFormu = new KullaniciFormu();
@@ -78,17 +76,14 @@ namespace VeriYapilari2
 
         private void btnBireyselKaydet_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnYabanciDilKaydet_Click(object sender, EventArgs e)
         {
-
         }
 
         private void LoginFormu_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
