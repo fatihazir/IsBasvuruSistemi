@@ -182,7 +182,7 @@ namespace VeriYapilari2
                 formIciKisi.dogumTarihi = txtDogumTarih.Text;
                 formIciKisi.dogumYeri = txtDogumYeri.Text;
                 formIciKisi.ilgiAlanlari = txtIlgiAlan.Text;
-                formIciKisi.yabanciDil = txtYabanciDil.Text;
+                formIciKisi.yabanciDil = txtYabanciDil.Text.ToUpper();
                 formIciKisi.uyruk = uyruk;
 
                 _ikiliAramaAgaci.KisiGuncelle(formIciKisi.tcKimlikNumarasi, formIciKisi);

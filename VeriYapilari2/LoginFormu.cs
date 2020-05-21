@@ -168,7 +168,7 @@ namespace VeriYapilari2
                 kisi.medeniDurum = medeniDurum;
                 kisi.ilgiAlanlari = txtKayitIlgiAlan.Text;
                 kisi.adres = txtKayitAdres.Text;
-                kisi.yabanciDil = txtYabanciDil.Text;
+                kisi.yabanciDil = txtYabanciDil.Text.ToUpper();
                 kisi.sifre = maskedBireyselSifreDogrula.Text;
 
                 _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
