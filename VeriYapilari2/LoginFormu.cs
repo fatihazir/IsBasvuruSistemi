@@ -6,7 +6,7 @@ namespace VeriYapilari2
     public partial class LoginFormu : Form
     {
         private DatabaseIslemleri db = new DatabaseIslemleri();
-
+        SirketAnaForm sirketFormu = new SirketAnaForm();
         public LoginFormu()
         {
             InitializeComponent();
@@ -23,11 +23,11 @@ namespace VeriYapilari2
 
             if (dbSirket.SirketAd != null)
             {
-                SirketAnaForm sirketFormunuAc = new SirketAnaForm();
-                sirketFormunuAc.labelSirketIsmi.Text = dbSirket.SirketAd;
-                sirketFormunuAc.db = db;
-                sirketFormunuAc.sirketFormIci = dbSirket;
-                sirketFormunuAc.Show();
+                
+                sirketFormu.labelSirketIsmi.Text = dbSirket.SirketAd;
+                sirketFormu.db = db;
+                sirketFormu.sirketFormIci = dbSirket;
+                sirketFormu.Show();
             }
             else
             {
@@ -42,6 +42,7 @@ namespace VeriYapilari2
             apple.sifre = "123";
             apple.SirketAd = "ad";
             db.Sirketler.Add(apple);
+            sirketFormu.db = db;
         }
 
         private void LoginFormu_Load(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace VeriYapilari2
             
 
         }
+
 
         private void btnGirisYapKullanici_Click(object sender, EventArgs e)
         {
@@ -72,6 +74,11 @@ namespace VeriYapilari2
             {
                 MessageBox.Show("Hatalı bilgi girişi yaptınız.");
             }
+        }
+
+        private void btnBireyselKaydet_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
