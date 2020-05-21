@@ -12,7 +12,6 @@ namespace VeriYapilari2
         public İkiliAramaAgacı _ikiliAramaAgaci { get; set; }
         private IsDeneyimi _isDeneyimi = new IsDeneyimi();
 
-        //private Ilan _ilan = new Ilan();
         public void ilanListele()
         {
             listViewKullaniciIlanlarBolmesi.Items.Clear();
@@ -66,10 +65,6 @@ namespace VeriYapilari2
         public KullaniciFormu()
         {
             InitializeComponent();
-        }
-
-        private void TabPage1_Click(object sender, EventArgs e)
-        {
         }
 
         private void İş_Başvuru_Formu_Load(object sender, EventArgs e)

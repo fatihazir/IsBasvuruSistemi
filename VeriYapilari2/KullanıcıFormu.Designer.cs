@@ -90,6 +90,10 @@
             this.txtIsyeriCalismaYili = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.tabIsDeneyimiGuncelle = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lvIsDeneyimGoruntule = new System.Windows.Forms.ListView();
+            this.btnIsDeneyimGoruntule = new System.Windows.Forms.Button();
+            this.btnIsDeneyimSil = new System.Windows.Forms.Button();
             this.btnIsDeneyimGuncelle = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtGIsDeneyimKisiBolum = new System.Windows.Forms.TextBox();
@@ -113,10 +117,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtGIsDeneyimCalismaYil = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnIsDeneyimSil = new System.Windows.Forms.Button();
-            this.btnIsDeneyimGoruntule = new System.Windows.Forms.Button();
-            this.lvIsDeneyimGoruntule = new System.Windows.Forms.ListView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tabIlanlar.SuspendLayout();
             this.tabBilgileriGuncelle.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -125,9 +125,9 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabIsDeneyimiGuncelle.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabIlanlar
@@ -497,7 +497,7 @@
             this.tabIsBasvuruKayit.Controls.Add(this.tabIlanlar);
             this.tabIsBasvuruKayit.Controls.Add(this.tabIsDeneyimi);
             this.tabIsBasvuruKayit.Controls.Add(this.tabIsDeneyimiGuncelle);
-            this.tabIsBasvuruKayit.Location = new System.Drawing.Point(41, 39);
+            this.tabIsBasvuruKayit.Location = new System.Drawing.Point(49, 40);
             this.tabIsBasvuruKayit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabIsBasvuruKayit.Name = "tabIsBasvuruKayit";
             this.tabIsBasvuruKayit.SelectedIndex = 0;
@@ -757,6 +757,46 @@
             this.tabIsDeneyimiGuncelle.Text = "İş Deneyimi Güncelle";
             this.tabIsDeneyimiGuncelle.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lvIsDeneyimGoruntule);
+            this.groupBox4.Location = new System.Drawing.Point(293, 14);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(496, 227);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "İş Deneyimleri Görüntüle";
+            // 
+            // lvIsDeneyimGoruntule
+            // 
+            this.lvIsDeneyimGoruntule.BackColor = System.Drawing.Color.Silver;
+            this.lvIsDeneyimGoruntule.HideSelection = false;
+            this.lvIsDeneyimGoruntule.Location = new System.Drawing.Point(6, 21);
+            this.lvIsDeneyimGoruntule.Name = "lvIsDeneyimGoruntule";
+            this.lvIsDeneyimGoruntule.Size = new System.Drawing.Size(484, 200);
+            this.lvIsDeneyimGoruntule.TabIndex = 39;
+            this.lvIsDeneyimGoruntule.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnIsDeneyimGoruntule
+            // 
+            this.btnIsDeneyimGoruntule.Location = new System.Drawing.Point(659, 246);
+            this.btnIsDeneyimGoruntule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIsDeneyimGoruntule.Name = "btnIsDeneyimGoruntule";
+            this.btnIsDeneyimGoruntule.Size = new System.Drawing.Size(130, 62);
+            this.btnIsDeneyimGoruntule.TabIndex = 38;
+            this.btnIsDeneyimGoruntule.Text = "İş Deneyimi Görüntüle";
+            this.btnIsDeneyimGoruntule.UseVisualStyleBackColor = true;
+            // 
+            // btnIsDeneyimSil
+            // 
+            this.btnIsDeneyimSil.Location = new System.Drawing.Point(508, 246);
+            this.btnIsDeneyimSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIsDeneyimSil.Name = "btnIsDeneyimSil";
+            this.btnIsDeneyimSil.Size = new System.Drawing.Size(130, 62);
+            this.btnIsDeneyimSil.TabIndex = 37;
+            this.btnIsDeneyimSil.Text = "İş Deneyimi Sil";
+            this.btnIsDeneyimSil.UseVisualStyleBackColor = true;
+            // 
             // btnIsDeneyimGuncelle
             // 
             this.btnIsDeneyimGuncelle.Location = new System.Drawing.Point(508, 355);
@@ -979,46 +1019,6 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "İş Yeri Çalışma Yılı";
             // 
-            // btnIsDeneyimSil
-            // 
-            this.btnIsDeneyimSil.Location = new System.Drawing.Point(508, 246);
-            this.btnIsDeneyimSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIsDeneyimSil.Name = "btnIsDeneyimSil";
-            this.btnIsDeneyimSil.Size = new System.Drawing.Size(130, 62);
-            this.btnIsDeneyimSil.TabIndex = 37;
-            this.btnIsDeneyimSil.Text = "İş Deneyimi Sil";
-            this.btnIsDeneyimSil.UseVisualStyleBackColor = true;
-            // 
-            // btnIsDeneyimGoruntule
-            // 
-            this.btnIsDeneyimGoruntule.Location = new System.Drawing.Point(659, 246);
-            this.btnIsDeneyimGoruntule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIsDeneyimGoruntule.Name = "btnIsDeneyimGoruntule";
-            this.btnIsDeneyimGoruntule.Size = new System.Drawing.Size(130, 62);
-            this.btnIsDeneyimGoruntule.TabIndex = 38;
-            this.btnIsDeneyimGoruntule.Text = "İş Deneyimi Görüntüle";
-            this.btnIsDeneyimGoruntule.UseVisualStyleBackColor = true;
-            // 
-            // lvIsDeneyimGoruntule
-            // 
-            this.lvIsDeneyimGoruntule.BackColor = System.Drawing.Color.Silver;
-            this.lvIsDeneyimGoruntule.HideSelection = false;
-            this.lvIsDeneyimGoruntule.Location = new System.Drawing.Point(6, 21);
-            this.lvIsDeneyimGoruntule.Name = "lvIsDeneyimGoruntule";
-            this.lvIsDeneyimGoruntule.Size = new System.Drawing.Size(484, 200);
-            this.lvIsDeneyimGoruntule.TabIndex = 39;
-            this.lvIsDeneyimGoruntule.UseCompatibleStateImageBehavior = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.lvIsDeneyimGoruntule);
-            this.groupBox4.Location = new System.Drawing.Point(293, 14);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(496, 227);
-            this.groupBox4.TabIndex = 40;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "İş Deneyimleri Görüntüle";
-            // 
             // KullaniciFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1040,11 +1040,11 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabIsDeneyimiGuncelle.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

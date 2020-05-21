@@ -377,6 +377,56 @@ namespace VeriYapilari2
         private void btnEnAzIkıYılListele_Click(object sender, EventArgs e)
         {
             //EN AZ 2 YIL İŞ DENEYİMİNE SAHİP OLAN İLANLAR LİSTELENECEK VE LİSTVİEW İÇİNE YAZILACAK
+
+            //listViewBasvuranlariListeleBasvuranlarKismi <<<->>>> ilgili liste
+            ListViewItem theClickedItem = listViewBasvuranlariListeleKismi.FocusedItem;
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                listViewBasvuranlariListeleBasvuranlarKismi.Items.Clear();
+                int ilanID;
+                ilanID = Convert.ToInt32(theClickedItem.Text);
+                Ilan ilan = new Ilan();
+                ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
+                int sayacBasvuranlarIcinEgerNullsa = 0;
+                foreach (HeapDugumu heap in ilan.heap.heapArray)
+                {
+                    if (heap != null)
+                    {
+                        for (int i = 0; i < heap.Kisi.IsDeneyimleri.Size; i++)
+                        {
+                            if (heap.Kisi.IsDeneyimleri.GetElement(i).Data.IsyeriCalismaYili >= 2)
+                            {
+                                ListViewItem item = new ListViewItem(heap.Kisi.tcKimlikNumarasi.ToString());
+                                item.SubItems.Add(heap.Kisi.ad);
+                                item.SubItems.Add(heap.Kisi.soyad);
+                                item.SubItems.Add(heap.Kisi.adres);
+                                item.SubItems.Add(heap.Kisi.telefon);
+                                item.SubItems.Add(heap.Kisi.email);
+                                item.SubItems.Add(heap.Kisi.uyruk);
+                                item.SubItems.Add(heap.Kisi.dogumTarihi);
+                                item.SubItems.Add(heap.Kisi.dogumYeri);
+                                item.SubItems.Add(heap.Kisi.medeniDurum);
+                                item.SubItems.Add(heap.Kisi.yabanciDil);
+                                item.SubItems.Add(heap.Kisi.ilgiAlanlari);
+                                item.SubItems.Add(heap.Kisi.iseUygunlukDurumu.ToString());
+                                listViewBasvuranlariListeleBasvuranlarKismi.Items.Add(item);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        sayacBasvuranlarIcinEgerNullsa++;
+                    }
+                }
+                if (sayacBasvuranlarIcinEgerNullsa == ilan.heap.maxSize)
+                {
+                    MessageBox.Show("Hiçkimse bu ilana başvurmamış!");
+                }
+            }
         }
     }
 }
