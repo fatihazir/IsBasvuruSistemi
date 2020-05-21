@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace VeriYapilari2
 {
-    public class DatabaseIslemleri : Sirket
+    public class DatabaseIslemleri
     {
         public List<Sirket> Sirketler = new List<Sirket>();
 

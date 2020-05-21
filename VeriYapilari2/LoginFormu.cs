@@ -67,6 +67,7 @@ namespace VeriYapilari2
             {
                 KullaniciFormu kullaniciFormu = new KullaniciFormu();
                 kullaniciFormu.formIciKisi = kisi;
+                kullaniciFormu.db = db;
                 kullaniciFormu.Show();
             }
             else
