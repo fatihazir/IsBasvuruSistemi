@@ -272,6 +272,11 @@
             Ara(tc).Kisi.IsDeneyimleri.InsertLast(isDeneyimi);
         }
 
+        public void IsDeneyiminiGuncelle(ulong tc,int isDeneyimiId ,IsDeneyimi isDeneyimi)
+        {
+            Ara(tc).Kisi.IsDeneyimleri.GetElement(isDeneyimiId).Data = isDeneyimi;
+        }
+
         public void IsDeneyimiGuncelle(ulong tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.GetElement(isDeneyimiId).Data = isDeneyimi;

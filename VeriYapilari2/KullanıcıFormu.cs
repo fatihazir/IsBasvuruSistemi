@@ -131,7 +131,7 @@ namespace VeriYapilari2
             private void btnGuncelle_Click(object sender, EventArgs e)
             {
                 string medeniDurum = "";
-                switch (cmbUyruk.SelectedIndex)
+                switch (cmbMedeniDurum.SelectedIndex)
                 {
                     case 0:
                         medeniDurum = "Bekar";
@@ -171,6 +171,8 @@ namespace VeriYapilari2
                     uyruk = "Diger";
                 }
 
+                try
+                {
                 formIciKisi.ad = txtAd.Text;
                 formIciKisi.soyad = txtSoyad.Text;
                 formIciKisi.adres = txtAdres.Text;
@@ -184,6 +186,16 @@ namespace VeriYapilari2
                 formIciKisi.uyruk = uyruk;
 
                 _ikiliAramaAgaci.KisiGuncelle(formIciKisi.tcKimlikNumarasi, formIciKisi);
+
+                MessageBox.Show("Verileriniz güncellendi.");
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("Hata olustu : "+ "exception");
+
+                }
+
+                
             }
 
             private void brnKisiBilgiSil_Click(object sender, EventArgs e)
@@ -194,7 +206,7 @@ namespace VeriYapilari2
             private void btnIlanGuncelle_Click(object sender, EventArgs e)
             {
                 ilanListele();
-                MessageBox.Show("İlanlar başarıyla güncellendi!");
+                MessageBox.Show("İlanlar Listesi Guncellendi.");
             }
 
             private void btnIlanBasvur_Click(object sender, EventArgs e)
@@ -206,11 +218,12 @@ namespace VeriYapilari2
                 }
                 else
                 {
-                    int ilanID;
+                    Ilan ilan = new Ilan();
+                int ilanID;
                     ilanID = Convert.ToInt32(theClickedItem.Text);
                     foreach (Sirket sirket in db.Sirketler)
                     {
-                        Ilan ilan = new Ilan();
+                        
                         ilan = sirket.Ilanlar.GetIsIlani(ilanID);
                         if (ilan.IsTanimi == null)
                         {
@@ -218,6 +231,10 @@ namespace VeriYapilari2
                         }
                         ilan.heap.Insert(ilan.IlanNumarasi, formIciKisi, formIciKisi.iseUygunlukDurumu);
                     }
+
+                    ilanListele();
+                    MessageBox.Show("Islem başarılı. Başvurdunuguz ilanın bilgileri : " + Environment.NewLine +
+                                    ilan.IlanBilgileriYazdir());
                 }
             }
 
@@ -237,6 +254,10 @@ namespace VeriYapilari2
                 _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, _isDeneyimi);
 
                 //Halihazırda kayıtlı olan is deneyimlerini görüntüleyebileceği ve güncelleyenileceği bir sayfa.
+                //arama ağacı üzerinde isdeneyimi güncelleme var. İs deneyimlerini listview ile görüntüleyip üstüne tıklayınca verilerin
+                // txt boxlara gelmesi lazım. Şirketin ilan düzenlemesi gibi.
+
+
             }
         }
     }
