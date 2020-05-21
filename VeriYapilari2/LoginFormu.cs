@@ -32,6 +32,7 @@ namespace VeriYapilari2
                 sirketFormu.labelSirketIsmi.Text = dbSirket.SirketAd;
                 sirketFormu.db = db;
                 sirketFormu.sirketFormIci = dbSirket;
+                sirketFormu.ikiliAramaAgacı = _IkılıAramaAgaci;
                 sirketFormu.Show();
             }
             else

@@ -10,6 +10,7 @@ namespace VeriYapilari2
         public DatabaseIslemleri db { get; set; }
         public Sirket sirketFormIci { get; set; }
         public SortOrder Sorting { get; set; }
+        public İkiliAramaAgacı ikiliAramaAgacı { get; set; }
         public void ilanListele()
         {
             listViewIlanlarDuzenlemeBolmesi.Items.Clear();
@@ -108,9 +109,6 @@ namespace VeriYapilari2
 
         private void ilanIseAlButon_Click(object sender, EventArgs e)
         {
-            //en uygun kişi masked text boxundan kişi, ilan ve şirket bilgileri çekilir,
-            //ilan şirketten silinir
-            //kişi iş deneyimi güncellenir
             int kisiID;
             int sirketID;
             ulong musteriTCNo;
@@ -124,11 +122,7 @@ namespace VeriYapilari2
             {
                 musteriTCNo = Convert.ToUInt32(theClickedItem.Text);
                 Ilan ilan = new Ilan();
-                sirketFormIci.Ilanlar.GetIsIlani(tiklanilanIlanID);
-                İkiliAramaAgacı kisi = new İkiliAramaAgacı();
-                İkiliAramaAgacDugumu kisiDugum = new İkiliAramaAgacDugumu();
-                kisiDugum = kisi.KisiBilgileriniBul(musteriTCNo);
-                // burası güncellenecek kişiyi çekemiyom
+                ilan = sirketFormIci.Ilanlar.GetIsIlani(tiklanilanIlanID);
                 IsDeneyimi yeniIsDeneyimi = new IsDeneyimi();
                 yeniIsDeneyimi.IsyeriAd = sirketFormIci.SirketAd;
                 yeniIsDeneyimi.IsyeriAdres = sirketFormIci.SirketAdres;
@@ -141,10 +135,10 @@ namespace VeriYapilari2
                 yeniIsDeneyimi.KisininOkulAdi = "Bakırçay Üniversitesi";
                 yeniIsDeneyimi.KisininOkulBolumu = "Bilgisayar Mühendisliği";
 
-                ilan = sirketFormIci.Ilanlar.GetIsIlani(tiklanilanIlanID);
                 sirketFormIci.Ilanlar.DeleteIsIlani(ilan.IlanNumarasi);
-                kisiDugum.Kisi.IsDeneyimleri.InsertLast(yeniIsDeneyimi);
+                ikiliAramaAgacı.KisiBilgileriniBul(musteriTCNo).Kisi.IsDeneyimleri.InsertLast(yeniIsDeneyimi);
                 listViewEnUygunKisi.Items.Clear();
+                ilanListele();
                 MessageBox.Show("Çalışan başarıyla işe alındı!");
             }
         }
