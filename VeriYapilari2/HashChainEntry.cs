@@ -12,6 +12,8 @@
 
         private Sirket sirket;
 
+        private Heap ilanaBasvuranlar = new Heap(10);
+
         public object Deger
         {
             get { return deger; }

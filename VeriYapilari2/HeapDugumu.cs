@@ -6,9 +6,9 @@
         public KisiBilgileri Kisi { get; set; }
         public int IseUygunluk { get; set; }
 
-        public HeapDugumu(int deger, KisiBilgileri kisi, int iseUygunluk)
+        public HeapDugumu(int ilanNo, KisiBilgileri kisi, int iseUygunluk)
         {
-            this.IlanNumarasi = deger;
+            this.IlanNumarasi = ilanNo;
             this.Kisi = kisi;
             this.IseUygunluk = iseUygunluk;
         }

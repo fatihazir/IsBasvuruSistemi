@@ -7,6 +7,7 @@ namespace VeriYapilari2
     {
         public DatabaseIslemleri db { get; set; }
         public KisiBilgileri formIciKisi { get; set; }
+        private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
         public void ilanListele()
         {
             listViewKullaniciIlanlarBolmesi.Items.Clear();
@@ -28,17 +29,10 @@ namespace VeriYapilari2
                 }
             }
         }
+
         public KullaniciFormu()
         {
             InitializeComponent();
-        }
-
-        private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
-       
-        Sirket _sirket = new Sirket();
-
-        private void TabPage1_Click(object sender, EventArgs e)
-        {
         }
 
         private void İş_Başvuru_Formu_Load(object sender, EventArgs e)
@@ -161,14 +155,27 @@ namespace VeriYapilari2
             _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
         }
 
-        private void dgvIlanlar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnIlanBasvur_Click(object sender, EventArgs e)
         {
-
+            ListViewItem theClickedItem = listViewKullaniciIlanlarBolmesi.FocusedItem;
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                int ilanID;
+                ilanID = Convert.ToInt32(theClickedItem.Text);
+                Ilan ilan = new Ilan();
+                HeapDugumu heapDugumu = new HeapDugumu(ilanID, formIciKisi, formIciKisi.iseUygunlukDurumu);
+                MessageBox.Show("Başarıyla işe başvurdunuz!");
+            }
         }
 
-        private void tabPage3_Click(object sender, EventArgs e)
+        private void btnIlanGuncelle_Click(object sender, EventArgs e)
         {
-
+            ilanListele();
+            MessageBox.Show("Başarıyla ilanlar güncellendi!");
         }
     }
 }
