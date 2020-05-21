@@ -88,7 +88,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtDIsyeriCalismaYili = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.btnIlanGuncelle = new System.Windows.Forms.Button();
             this.tabIlanlar.SuspendLayout();
             this.tabBilgileriGuncelle.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,7 +99,6 @@
             // 
             // tabIlanlar
             // 
-            this.tabIlanlar.Controls.Add(this.btnIlanGuncelle);
             this.tabIlanlar.Controls.Add(this.listViewKullaniciIlanlarBolmesi);
             this.tabIlanlar.Controls.Add(this.btnIlanBasvur);
             this.tabIlanlar.Location = new System.Drawing.Point(4, 25);
@@ -680,17 +678,6 @@
             this.label25.TabIndex = 6;
             this.label25.Text = "İş Yeri Çalışma Yılı";
             // 
-            // btnIlanGuncelle
-            // 
-            this.btnIlanGuncelle.Location = new System.Drawing.Point(89, 109);
-            this.btnIlanGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIlanGuncelle.Name = "btnIlanGuncelle";
-            this.btnIlanGuncelle.Size = new System.Drawing.Size(104, 48);
-            this.btnIlanGuncelle.TabIndex = 21;
-            this.btnIlanGuncelle.Text = "İlanları Güncelle!";
-            this.btnIlanGuncelle.UseVisualStyleBackColor = true;
-            this.btnIlanGuncelle.Click += new System.EventHandler(this.btnIlanGuncelle_Click);
-            // 
             // KullaniciFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -777,6 +764,5 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtDIsyeriCalismaYili;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button btnIlanGuncelle;
     }
 }
