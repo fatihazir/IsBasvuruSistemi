@@ -81,6 +81,13 @@ namespace VeriYapilari2
             }
         }
 
+        public void IsIlaniGuncelle(int ilanNumarasi,Ilan ilan)
+        {
+            GetIsIlani(ilanNumarasi).ArananElemanOzellikleri = ilan.ArananElemanOzellikleri;
+            GetIsIlani(ilanNumarasi).IsTanimi = ilan.IsTanimi;
+            GetIsIlani(ilanNumarasi).Pozisyon = ilan.Pozisyon;
+
+        }
         public Ilan GetIsIlaniForEditingAndListing(int index)
         {
             if (table[index] == null)

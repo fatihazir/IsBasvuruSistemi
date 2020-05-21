@@ -163,10 +163,10 @@ namespace VeriYapilari2
             }
             else
             {
-                int ilanID;
-                ilanID = Convert.ToInt32(theClickedItem.Text);
+                int ilanNumarasi;
+                ilanNumarasi = Convert.ToInt32(theClickedItem.Text);
                 Ilan ilan = new Ilan();
-                ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
+                ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanNumarasi);
                 richTextBoxIsTanimiIlanDuzenle.Text = ilan.IsTanimi;
                 richTextBoxArananElemanOzellikleriIlanDuzenle.Text = ilan.ArananElemanOzellikleri;
                 txtPozisyonIlanDuzenle.Text = ilan.Pozisyon;
@@ -175,17 +175,19 @@ namespace VeriYapilari2
 
         private void btnIlaniDuzenle_Click(object sender, EventArgs e)
         {
-            string isTanimi = richTextBoxIsTanimiIlanDuzenle.Text;
-            string arananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
-            string pozisyon = txtPozisyonIlanDuzenle.Text;
-            ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
-            int ilanID;
-            ilanID = Convert.ToInt32(theClickedtwo.Text);
             Ilan ilan = new Ilan();
-            ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
-            ilan.IsTanimi = isTanimi;
-            ilan.ArananElemanOzellikleri = arananElemanOzellikleri;
-            ilan.Pozisyon = pozisyon;
+            ilan.IsTanimi = richTextBoxIsTanimiIlanDuzenle.Text;
+            ilan.ArananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
+            ilan.Pozisyon= txtPozisyonIlanDuzenle.Text;
+            ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
+            
+            int ilanID = Convert.ToInt32(theClickedtwo.Text);
+
+            sirketFormIci.Ilanlar.IsIlaniGuncelle(ilanID,ilan);
+           
+
+
+
             MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
             ilanListele();
         }

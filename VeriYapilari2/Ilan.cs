@@ -5,7 +5,7 @@ namespace VeriYapilari2
 {
     public class Ilan
     {
-        public int IlanNumarasi { get; private set; }
+        public int IlanNumarasi { get; set; }
         public string IsTanimi { get; set; }
         public string Pozisyon { get; set; }
 

@@ -7,6 +7,7 @@ namespace VeriYapilari2
     {
         private DatabaseIslemleri db = new DatabaseIslemleri();
         SirketAnaForm sirketFormu = new SirketAnaForm();
+        İkiliAramaAgacı _IkılıAramaAgaci = new İkiliAramaAgacı();
         public LoginFormu()
         {
             InitializeComponent();
@@ -50,15 +51,18 @@ namespace VeriYapilari2
 
         private void btnGirisYapKullanici_Click(object sender, EventArgs e)
         {
+            KisiBilgileri kisi = new KisiBilgileri();
+            kisi = db.DatabasedenIlkKisiCekimi();
+            _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
+
             //336621312
             ulong tc = Convert.ToUInt32(txtTcNo.Text);
             string sifre = txtSifre.Text;
-            KisiBilgileri kisi = new KisiBilgileri();
-            kisi = db.DatabasedenIlkKisiCekimi();
-            İkiliAramaAgacDugumu ikiliAramaAgacDugumu = new İkiliAramaAgacDugumu(kisi.tcKimlikNumarasi, kisi);
-            İkiliAramaAgacı dbIkılıAramaAgaci = new İkiliAramaAgacı(ikiliAramaAgacDugumu);
-            kisi = dbIkılıAramaAgaci.BireyselGirisYap(tc, sifre);
 
+            
+
+            kisi = _IkılıAramaAgaci.BireyselGirisYap(tc, sifre);
+            
             if (kisi.ad != null)
             {
                 KullaniciFormu kullaniciFormu = new KullaniciFormu();
@@ -73,6 +77,16 @@ namespace VeriYapilari2
         }
 
         private void btnBireyselKaydet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnYabanciDilKaydet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginFormu_Load(object sender, EventArgs e)
         {
 
         }

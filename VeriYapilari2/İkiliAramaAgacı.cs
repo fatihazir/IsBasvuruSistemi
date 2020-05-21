@@ -143,6 +143,10 @@
         {
             Ara(tc).Kisi = kisi;
         }
+        public void KisiIsDeneyimiEkle(ulong tc,IsDeneyimi isDeneyimi)
+        {
+            Ara(tc).Kisi.IsDeneyimleri.InsertLast(isDeneyimi);
+        }
 
         private bool parentBuyukMu = false;
         private İkiliAramaAgacDugumu araParent = new İkiliAramaAgacDugumu();

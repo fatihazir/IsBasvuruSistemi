@@ -6,6 +6,7 @@ namespace VeriYapilari2
     public partial class KullaniciFormu : Form
     {
         public DatabaseIslemleri db { get; set; }
+        
         public KisiBilgileri formIciKisi { get; set; }
         private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
         private IsDeneyimi _isDeneyimi = new IsDeneyimi();
@@ -195,8 +196,8 @@ namespace VeriYapilari2
             _isDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtBolumBitisYili.Text);
             _isDeneyimi.KisininNotOrtalamasi = txtNotOrtalamasi.Text;
 
-            _kisiBilgileri.IsDeneyimleri.InsertLast(_isDeneyimi);
-            _ikiliAramaAgaci.KisiGuncelle(_kisiBilgileri.tcKimlikNumarasi, _kisiBilgileri);
+            
+            _ikiliAramaAgaci.IsDeneyimiEkle(_kisiBilgileri.tcKimlikNumarasi, _isDeneyimi);
             
             //Halihazırda kayıtlı olan is deneyimlerini görüntüleyebileceği ve güncelleyenileceği bir sayfa.
         }
