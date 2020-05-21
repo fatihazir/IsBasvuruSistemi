@@ -129,9 +129,9 @@ namespace VeriYapilari2
             hash.AddIsIlani(ilkIlan.IlanNumarasi, ilkIlan, Atolye15);
             hash.AddIsIlani(ikincIlan.IlanNumarasi, ikincIlan, Atolye15);
 
-            Heap heap = new Heap(10); // Heap başarili.
-            heap.Insert(ilkIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
-            heap.Insert(ikincIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
+            //Heap heap = new Heap(10); // Heap başarili.
+            //heap.Insert(ilkIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
+            //heap.Insert(ikincIlan.IlanNumarasi, fatih, fatih.iseUygunlukDurumu);
         }
     }
 }

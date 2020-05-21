@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgvIlanlar = new System.Windows.Forms.DataGridView();
-            this.btnIsYeriAdinaSiralama = new System.Windows.Forms.Button();
-            this.cmbIsYeriAdSiralama = new System.Windows.Forms.ComboBox();
-            this.btnPozisyonaGoreSirala = new System.Windows.Forms.Button();
-            this.cmbPozisyonaGoreSirala = new System.Windows.Forms.ComboBox();
+            this.listViewKullaniciIlanlarBolmesi = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnIlanBasvur = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -64,13 +64,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtDogumTarih = new System.Windows.Forms.TextBox();
             this.tabIsBasvuruKayit = new System.Windows.Forms.TabControl();
-            this.listViewKullaniciIlanlarBolmesi = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnIlanGuncelle = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIlanlar)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabIsBasvuruKayit.SuspendLayout();
@@ -78,12 +73,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnIlanGuncelle);
             this.tabPage3.Controls.Add(this.listViewKullaniciIlanlarBolmesi);
-            this.tabPage3.Controls.Add(this.dgvIlanlar);
-            this.tabPage3.Controls.Add(this.btnIsYeriAdinaSiralama);
-            this.tabPage3.Controls.Add(this.cmbIsYeriAdSiralama);
-            this.tabPage3.Controls.Add(this.btnPozisyonaGoreSirala);
-            this.tabPage3.Controls.Add(this.cmbPozisyonaGoreSirala);
             this.tabPage3.Controls.Add(this.btnIlanBasvur);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -93,73 +84,53 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "İlanlar";
             this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // dgvIlanlar
+            // listViewKullaniciIlanlarBolmesi
             // 
-            this.dgvIlanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIlanlar.Location = new System.Drawing.Point(21, 19);
-            this.dgvIlanlar.Name = "dgvIlanlar";
-            this.dgvIlanlar.RowHeadersWidth = 51;
-            this.dgvIlanlar.RowTemplate.Height = 24;
-            this.dgvIlanlar.Size = new System.Drawing.Size(216, 118);
-            this.dgvIlanlar.TabIndex = 19;
+            this.listViewKullaniciIlanlarBolmesi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listViewKullaniciIlanlarBolmesi.HideSelection = false;
+            this.listViewKullaniciIlanlarBolmesi.Location = new System.Drawing.Point(213, 32);
+            this.listViewKullaniciIlanlarBolmesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewKullaniciIlanlarBolmesi.Name = "listViewKullaniciIlanlarBolmesi";
+            this.listViewKullaniciIlanlarBolmesi.Size = new System.Drawing.Size(384, 226);
+            this.listViewKullaniciIlanlarBolmesi.TabIndex = 20;
+            this.listViewKullaniciIlanlarBolmesi.UseCompatibleStateImageBehavior = false;
+            this.listViewKullaniciIlanlarBolmesi.View = System.Windows.Forms.View.Details;
             // 
-            // btnIsYeriAdinaSiralama
+            // columnHeader1
             // 
-            this.btnIsYeriAdinaSiralama.Location = new System.Drawing.Point(328, 377);
-            this.btnIsYeriAdinaSiralama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIsYeriAdinaSiralama.Name = "btnIsYeriAdinaSiralama";
-            this.btnIsYeriAdinaSiralama.Size = new System.Drawing.Size(169, 28);
-            this.btnIsYeriAdinaSiralama.TabIndex = 6;
-            this.btnIsYeriAdinaSiralama.Text = "İşyeri Adına Göre Sırala";
-            this.btnIsYeriAdinaSiralama.UseVisualStyleBackColor = true;
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 30;
             // 
-            // cmbIsYeriAdSiralama
+            // columnHeader2
             // 
-            this.cmbIsYeriAdSiralama.FormattingEnabled = true;
-            this.cmbIsYeriAdSiralama.Items.AddRange(new object[] {
-            "İşyeri A",
-            "İşyeri B",
-            "İşyeri C"});
-            this.cmbIsYeriAdSiralama.Location = new System.Drawing.Point(328, 351);
-            this.cmbIsYeriAdSiralama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbIsYeriAdSiralama.Name = "cmbIsYeriAdSiralama";
-            this.cmbIsYeriAdSiralama.Size = new System.Drawing.Size(169, 24);
-            this.cmbIsYeriAdSiralama.TabIndex = 5;
+            this.columnHeader2.Text = "İlan Tanımı";
+            this.columnHeader2.Width = 90;
             // 
-            // btnPozisyonaGoreSirala
+            // columnHeader3
             // 
-            this.btnPozisyonaGoreSirala.Location = new System.Drawing.Point(5, 377);
-            this.btnPozisyonaGoreSirala.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPozisyonaGoreSirala.Name = "btnPozisyonaGoreSirala";
-            this.btnPozisyonaGoreSirala.Size = new System.Drawing.Size(169, 28);
-            this.btnPozisyonaGoreSirala.TabIndex = 4;
-            this.btnPozisyonaGoreSirala.Text = "Pozisyona Göre Sırala";
-            this.btnPozisyonaGoreSirala.UseVisualStyleBackColor = true;
+            this.columnHeader3.Text = "Aranan Eleman Özellikleri";
+            this.columnHeader3.Width = 174;
             // 
-            // cmbPozisyonaGoreSirala
+            // columnHeader4
             // 
-            this.cmbPozisyonaGoreSirala.FormattingEnabled = true;
-            this.cmbPozisyonaGoreSirala.Items.AddRange(new object[] {
-            "Pozisyon A",
-            "Pozisyon B",
-            "Pozisyon C"});
-            this.cmbPozisyonaGoreSirala.Location = new System.Drawing.Point(5, 351);
-            this.cmbPozisyonaGoreSirala.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbPozisyonaGoreSirala.Name = "cmbPozisyonaGoreSirala";
-            this.cmbPozisyonaGoreSirala.Size = new System.Drawing.Size(169, 24);
-            this.cmbPozisyonaGoreSirala.TabIndex = 3;
+            this.columnHeader4.Text = "Pozisyon";
+            this.columnHeader4.Width = 75;
             // 
             // btnIlanBasvur
             // 
-            this.btnIlanBasvur.Location = new System.Drawing.Point(685, 354);
+            this.btnIlanBasvur.Location = new System.Drawing.Point(298, 310);
             this.btnIlanBasvur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIlanBasvur.Name = "btnIlanBasvur";
-            this.btnIlanBasvur.Size = new System.Drawing.Size(104, 48);
+            this.btnIlanBasvur.Size = new System.Drawing.Size(209, 48);
             this.btnIlanBasvur.TabIndex = 1;
             this.btnIlanBasvur.Text = "Seçiilen İlana Başvur";
             this.btnIlanBasvur.UseVisualStyleBackColor = true;
+            this.btnIlanBasvur.Click += new System.EventHandler(this.btnIlanBasvur_Click);
             // 
             // tabPage2
             // 
@@ -461,41 +432,16 @@
             this.tabIsBasvuruKayit.Size = new System.Drawing.Size(803, 437);
             this.tabIsBasvuruKayit.TabIndex = 0;
             // 
-            // listViewKullaniciIlanlarBolmesi
+            // btnIlanGuncelle
             // 
-            this.listViewKullaniciIlanlarBolmesi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listViewKullaniciIlanlarBolmesi.HideSelection = false;
-            this.listViewKullaniciIlanlarBolmesi.Location = new System.Drawing.Point(356, 42);
-            this.listViewKullaniciIlanlarBolmesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listViewKullaniciIlanlarBolmesi.Name = "listViewKullaniciIlanlarBolmesi";
-            this.listViewKullaniciIlanlarBolmesi.Size = new System.Drawing.Size(384, 226);
-            this.listViewKullaniciIlanlarBolmesi.TabIndex = 20;
-            this.listViewKullaniciIlanlarBolmesi.UseCompatibleStateImageBehavior = false;
-            this.listViewKullaniciIlanlarBolmesi.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 30;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "İlan Tanımı";
-            this.columnHeader2.Width = 90;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Aranan Eleman Özellikleri";
-            this.columnHeader3.Width = 174;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Pozisyon";
-            this.columnHeader4.Width = 75;
+            this.btnIlanGuncelle.Location = new System.Drawing.Point(95, 115);
+            this.btnIlanGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIlanGuncelle.Name = "btnIlanGuncelle";
+            this.btnIlanGuncelle.Size = new System.Drawing.Size(94, 48);
+            this.btnIlanGuncelle.TabIndex = 21;
+            this.btnIlanGuncelle.Text = "İlanları Güncelle!";
+            this.btnIlanGuncelle.UseVisualStyleBackColor = true;
+            this.btnIlanGuncelle.Click += new System.EventHandler(this.btnIlanGuncelle_Click);
             // 
             // KullaniciFormu
             // 
@@ -508,7 +454,6 @@
             this.Text = "Kullanici Formu";
             this.Load += new System.EventHandler(this.İş_Başvuru_Formu_Load);
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIlanlar)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -520,10 +465,6 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button btnIsYeriAdinaSiralama;
-        private System.Windows.Forms.ComboBox cmbIsYeriAdSiralama;
-        private System.Windows.Forms.Button btnPozisyonaGoreSirala;
-        private System.Windows.Forms.ComboBox cmbPozisyonaGoreSirala;
         private System.Windows.Forms.Button btnIlanBasvur;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button brnKisiBilgiSil;
@@ -554,11 +495,11 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox txtYabanciDil;
-        private System.Windows.Forms.DataGridView dgvIlanlar;
         private System.Windows.Forms.ListView listViewKullaniciIlanlarBolmesi;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button btnIlanGuncelle;
     }
 }

@@ -12,5 +12,9 @@
             this.Kisi = kisi;
             this.IseUygunluk = iseUygunluk;
         }
+        public HeapDugumu(int ilanNumarasi)
+        {
+            this.IlanNumarasi = ilanNumarasi;
+        }
     }
 }

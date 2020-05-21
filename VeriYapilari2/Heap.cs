@@ -18,11 +18,11 @@
             return currentSize == 0;
         }
 
-        public bool Insert(int value, KisiBilgileri kisi, int iseUygunluk)
+        public bool Insert(int ilanNumarasi)
         {
             if (currentSize == maxSize)
                 return false;
-            HeapDugumu newHeapDugumu = new HeapDugumu(value, kisi, iseUygunluk);
+            HeapDugumu newHeapDugumu = new HeapDugumu(ilanNumarasi);
             heapArray[currentSize] = newHeapDugumu;
             MoveToUp(currentSize++);
             return true;
