@@ -9,7 +9,7 @@ namespace VeriYapilari2
         private int tiklanilanIlanID { get; set; }
         public DatabaseIslemleri db { get; set; }
         public Sirket sirketFormIci { get; set; }
-
+        public SortOrder Sorting { get; set; }
         public void ilanListele()
         {
             listViewIlanlarDuzenlemeBolmesi.Items.Clear();
@@ -340,6 +340,42 @@ namespace VeriYapilari2
         {
             ilanListele();
             MessageBox.Show("Başarıyla ilanlar güncellendi!");
+        }
+
+        private void listViewIlanlarIsAlmaBolmesi_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (listViewIlanlarIsAlmaBolmesi.Sorting == SortOrder.Descending)
+            {
+                listViewIlanlarIsAlmaBolmesi.Sorting = SortOrder.Ascending;
+            }
+            else
+            {
+                listViewIlanlarIsAlmaBolmesi.Sorting = SortOrder.Descending;
+            }
+        }
+
+        private void listViewIlanlarDuzenlemeBolmesi_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (listViewIlanlarDuzenlemeBolmesi.Sorting == SortOrder.Descending)
+            {
+                listViewIlanlarDuzenlemeBolmesi.Sorting = SortOrder.Ascending;
+            }
+            else
+            {
+                listViewIlanlarDuzenlemeBolmesi.Sorting = SortOrder.Descending;
+            }
+        }
+
+        private void listViewBasvuranlariListeleKismi_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (listViewBasvuranlariListeleKismi.Sorting == SortOrder.Descending)
+            {
+                listViewBasvuranlariListeleKismi.Sorting = SortOrder.Ascending;
+            }
+            else
+            {
+                listViewBasvuranlariListeleKismi.Sorting = SortOrder.Descending;
+            }
         }
     }
 }
