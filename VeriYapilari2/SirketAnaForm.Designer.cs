@@ -34,8 +34,6 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnYabanciDilOlanListele = new System.Windows.Forms.Button();
-            this.btnEnAzIkıYılListele = new System.Windows.Forms.Button();
             this.btnTiklananIlanSil = new System.Windows.Forms.Button();
             this.btnIseAl = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -124,6 +122,8 @@
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnEnAzIkıYılListele = new System.Windows.Forms.Button();
+            this.btnYabanciDilOlanListele = new System.Windows.Forms.Button();
             this.tabIlanlarim.SuspendLayout();
             this.tabYeniIlanVer.SuspendLayout();
             this.tabSirketSil.SuspendLayout();
@@ -138,8 +138,6 @@
             // 
             this.tabIlanlarim.Controls.Add(this.listViewEnUygunKisi);
             this.tabIlanlarim.Controls.Add(this.listViewIlanlarIsAlmaBolmesi);
-            this.tabIlanlarim.Controls.Add(this.btnYabanciDilOlanListele);
-            this.tabIlanlarim.Controls.Add(this.btnEnAzIkıYılListele);
             this.tabIlanlarim.Controls.Add(this.btnTiklananIlanSil);
             this.tabIlanlarim.Controls.Add(this.btnIseAl);
             this.tabIlanlarim.Controls.Add(this.label14);
@@ -192,31 +190,9 @@
             this.columnHeader8.Text = "Pozisyon";
             this.columnHeader8.Width = 75;
             // 
-            // btnYabanciDilOlanListele
-            // 
-            this.btnYabanciDilOlanListele.Location = new System.Drawing.Point(212, 273);
-            this.btnYabanciDilOlanListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnYabanciDilOlanListele.Name = "btnYabanciDilOlanListele";
-            this.btnYabanciDilOlanListele.Size = new System.Drawing.Size(153, 60);
-            this.btnYabanciDilOlanListele.TabIndex = 9;
-            this.btnYabanciDilOlanListele.Text = "Yabancı Dili Olanları Listele!";
-            this.btnYabanciDilOlanListele.UseVisualStyleBackColor = true;
-            this.btnYabanciDilOlanListele.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnEnAzIkıYılListele
-            // 
-            this.btnEnAzIkıYılListele.Location = new System.Drawing.Point(53, 273);
-            this.btnEnAzIkıYılListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEnAzIkıYılListele.Name = "btnEnAzIkıYılListele";
-            this.btnEnAzIkıYılListele.Size = new System.Drawing.Size(153, 62);
-            this.btnEnAzIkıYılListele.TabIndex = 8;
-            this.btnEnAzIkıYılListele.Text = "En Az 2 Yıl İş Deneyimine Sahip Olanları Listele!";
-            this.btnEnAzIkıYılListele.UseVisualStyleBackColor = true;
-            this.btnEnAzIkıYılListele.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnTiklananIlanSil
             // 
-            this.btnTiklananIlanSil.Location = new System.Drawing.Point(493, 302);
+            this.btnTiklananIlanSil.Location = new System.Drawing.Point(114, 288);
             this.btnTiklananIlanSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTiklananIlanSil.Name = "btnTiklananIlanSil";
             this.btnTiklananIlanSil.Size = new System.Drawing.Size(173, 38);
@@ -227,7 +203,7 @@
             // 
             // btnIseAl
             // 
-            this.btnIseAl.Location = new System.Drawing.Point(474, 184);
+            this.btnIseAl.Location = new System.Drawing.Point(480, 197);
             this.btnIseAl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIseAl.Name = "btnIseAl";
             this.btnIseAl.Size = new System.Drawing.Size(173, 46);
@@ -239,7 +215,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(455, 40);
+            this.label14.Location = new System.Drawing.Point(455, 48);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(211, 17);
             this.label14.TabIndex = 3;
@@ -257,7 +233,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(60, 40);
+            this.label12.Location = new System.Drawing.Point(92, 40);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(235, 17);
             this.label12.TabIndex = 1;
@@ -719,6 +695,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnYabanciDilOlanListele);
+            this.tabPage1.Controls.Add(this.btnEnAzIkıYılListele);
             this.tabPage1.Controls.Add(this.btnIlanGuncelleBasvuruKismi);
             this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Controls.Add(this.listViewBasvuranlariListeleBasvuranlarKismi);
@@ -735,7 +713,7 @@
             // 
             // btnIlanBasvuranlariGetir
             // 
-            this.btnIlanBasvuranlariGetir.Location = new System.Drawing.Point(64, 163);
+            this.btnIlanBasvuranlariGetir.Location = new System.Drawing.Point(9, 137);
             this.btnIlanBasvuranlariGetir.Name = "btnIlanBasvuranlariGetir";
             this.btnIlanBasvuranlariGetir.Size = new System.Drawing.Size(253, 26);
             this.btnIlanBasvuranlariGetir.TabIndex = 3;
@@ -751,7 +729,7 @@
             this.columnHeader11,
             this.columnHeader12});
             this.listViewBasvuranlariListeleKismi.HideSelection = false;
-            this.listViewBasvuranlariListeleKismi.Location = new System.Drawing.Point(9, 39);
+            this.listViewBasvuranlariListeleKismi.Location = new System.Drawing.Point(9, 22);
             this.listViewBasvuranlariListeleKismi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewBasvuranlariListeleKismi.Name = "listViewBasvuranlariListeleKismi";
             this.listViewBasvuranlariListeleKismi.Size = new System.Drawing.Size(696, 110);
@@ -782,7 +760,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(314, 13);
+            this.label20.Location = new System.Drawing.Point(6, 3);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(67, 17);
             this.label20.TabIndex = 13;
@@ -836,7 +814,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(294, 199);
+            this.label21.Location = new System.Drawing.Point(6, 204);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(110, 17);
             this.label21.TabIndex = 15;
@@ -883,7 +861,7 @@
             // 
             // btnIlanGuncelleBasvuruKismi
             // 
-            this.btnIlanGuncelleBasvuruKismi.Location = new System.Drawing.Point(449, 163);
+            this.btnIlanGuncelleBasvuruKismi.Location = new System.Drawing.Point(268, 137);
             this.btnIlanGuncelleBasvuruKismi.Name = "btnIlanGuncelleBasvuruKismi";
             this.btnIlanGuncelleBasvuruKismi.Size = new System.Drawing.Size(142, 26);
             this.btnIlanGuncelleBasvuruKismi.TabIndex = 16;
@@ -908,7 +886,7 @@
             this.columnHeader37,
             this.columnHeader38});
             this.listViewEnUygunKisi.HideSelection = false;
-            this.listViewEnUygunKisi.Location = new System.Drawing.Point(431, 67);
+            this.listViewEnUygunKisi.Location = new System.Drawing.Point(431, 75);
             this.listViewEnUygunKisi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewEnUygunKisi.Name = "listViewEnUygunKisi";
             this.listViewEnUygunKisi.Size = new System.Drawing.Size(270, 105);
@@ -975,6 +953,26 @@
             // 
             this.columnHeader38.Text = "İşe Uygunluk Durumu";
             // 
+            // btnEnAzIkıYılListele
+            // 
+            this.btnEnAzIkıYılListele.Location = new System.Drawing.Point(353, 194);
+            this.btnEnAzIkıYılListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEnAzIkıYılListele.Name = "btnEnAzIkıYılListele";
+            this.btnEnAzIkıYılListele.Size = new System.Drawing.Size(352, 27);
+            this.btnEnAzIkıYılListele.TabIndex = 17;
+            this.btnEnAzIkıYılListele.Text = "En Az 2 Yıl İş Deneyimine Sahip Olanları Listele!";
+            this.btnEnAzIkıYılListele.UseVisualStyleBackColor = true;
+            // 
+            // btnYabanciDilOlanListele
+            // 
+            this.btnYabanciDilOlanListele.Location = new System.Drawing.Point(138, 194);
+            this.btnYabanciDilOlanListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnYabanciDilOlanListele.Name = "btnYabanciDilOlanListele";
+            this.btnYabanciDilOlanListele.Size = new System.Drawing.Size(196, 27);
+            this.btnYabanciDilOlanListele.TabIndex = 18;
+            this.btnYabanciDilOlanListele.Text = "Yabancı Dili Olanları Listele!";
+            this.btnYabanciDilOlanListele.UseVisualStyleBackColor = true;
+            // 
             // SirketAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1007,8 +1005,6 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabIlanlarim;
-        private System.Windows.Forms.Button btnYabanciDilOlanListele;
-        private System.Windows.Forms.Button btnEnAzIkıYılListele;
         private System.Windows.Forms.Button btnTiklananIlanSil;
         private System.Windows.Forms.Button btnIseAl;
         private System.Windows.Forms.Label label14;
@@ -1102,5 +1098,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader36;
         private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ColumnHeader columnHeader38;
+        private System.Windows.Forms.Button btnEnAzIkıYılListele;
+        private System.Windows.Forms.Button btnYabanciDilOlanListele;
     }
 }

@@ -6,7 +6,7 @@ namespace VeriYapilari2
     public partial class SirketAnaForm : Form
     {
         // Şirket bilgilerinin çekilmesi. Ve sirket'e eşi.
-
+        private int tiklanilanIlanID { get; set; }
         public DatabaseIslemleri db { get; set; }
         public Sirket sirketFormIci { get; set; }
 
@@ -109,12 +109,44 @@ namespace VeriYapilari2
         private void ilanIseAlButon_Click(object sender, EventArgs e)
         {
             //en uygun kişi masked text boxundan kişi, ilan ve şirket bilgileri çekilir,
-            //ilan güncellenir
-            //kişi güncellenir
+            //ilan şirketten silinir
+            //kişi iş deneyimi güncellenir
             int kisiID;
-            int ilanID;
             int sirketID;
-            //ilan.BilgiGuncelle(ilanID); //burada ilanın bilgisi güncellenebilir "iş verildi" gibi
+            ulong musteriTCNo;
+
+            ListViewItem theClickedItem = listViewEnUygunKisi.FocusedItem;
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                musteriTCNo = Convert.ToUInt32(theClickedItem.Text);
+                Ilan ilan = new Ilan();
+                sirketFormIci.Ilanlar.GetIsIlani(tiklanilanIlanID);
+                İkiliAramaAgacı kisi = new İkiliAramaAgacı();
+                İkiliAramaAgacDugumu kisiDugum = new İkiliAramaAgacDugumu();
+                kisiDugum = kisi.KisiBilgileriniBul(musteriTCNo);
+                // burası güncellenecek kişiyi çekemiyom
+                IsDeneyimi yeniIsDeneyimi = new IsDeneyimi();
+                yeniIsDeneyimi.IsyeriAd = sirketFormIci.SirketAd;
+                yeniIsDeneyimi.IsyeriAdres = sirketFormIci.SirketAdres;
+                yeniIsDeneyimi.IsyeriCalismaYili = 2020;
+                yeniIsDeneyimi.IsyerindekiPozisyonu = ilan.Pozisyon;
+                yeniIsDeneyimi.KisininBolumeBaslangicYili = 2015;
+                yeniIsDeneyimi.KisininBolumuBitirmeYili = 2018;
+                yeniIsDeneyimi.KisininEgitimDurumu = "Öğretmen";
+                yeniIsDeneyimi.KisininNotOrtalamasi = "5.5";
+                yeniIsDeneyimi.KisininOkulAdi = "Bakırçay Üniversitesi";
+                yeniIsDeneyimi.KisininOkulBolumu = "Bilgisayar Mühendisliği";
+
+                ilan = sirketFormIci.Ilanlar.GetIsIlani(tiklanilanIlanID);
+                sirketFormIci.Ilanlar.DeleteIsIlani(ilan.IlanNumarasi);
+                kisiDugum.Kisi.IsDeneyimleri.InsertLast(yeniIsDeneyimi);
+                listViewEnUygunKisi.Items.Clear();
+                MessageBox.Show("Çalışan başarıyla işe alındı!");
+            }
         }
 
         private void ilanSilButon_Click(object sender, EventArgs e)
@@ -212,6 +244,7 @@ namespace VeriYapilari2
                 listViewEnUygunKisi.Items.Clear();
                 int ilanID;
                 ilanID = Convert.ToInt32(theClickedItem.Text);
+                tiklanilanIlanID = ilanID;
                 Ilan ilan = new Ilan();
                 ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
                 int sayacBasvuranlarIcinEgerNullsa = 0;
