@@ -5,14 +5,13 @@ namespace VeriYapilari2
 {
     public partial class KullaniciFormu : Form
     {
+        public KisiBilgileri formIciKisi { get; set; }
         public KullaniciFormu()
         {
             InitializeComponent();
         }
 
         private İkiliAramaAgacı _ikiliAramaAgaci = new İkiliAramaAgacı();
-        private DatabaseIslemleri _databaseIslemleri = new DatabaseIslemleri();
-        private KisiBilgileri _kisiBilgileri = new KisiBilgileri();
        
         Sirket _sirket = new Sirket();
 
@@ -22,11 +21,8 @@ namespace VeriYapilari2
 
         private void İş_Başvuru_Formu_Load(object sender, EventArgs e)
         {
-            //Login kısmında olacak
-            _kisiBilgileri = _databaseIslemleri.DatabasedenIlkKisiCekimi();
-            _ikiliAramaAgaci.Ekle(_kisiBilgileri.tcKimlikNumarasi, _kisiBilgileri);
 
-            string uyluk = _kisiBilgileri.uyruk;
+            string uyluk = formIciKisi.uyruk;
             int cmbUyrukSelectedIndex = 0;
             if (uyluk == "TR")
             {
@@ -53,7 +49,7 @@ namespace VeriYapilari2
                 cmbUyrukSelectedIndex = 5;
             }
 
-            string medeniDurum = _kisiBilgileri.medeniDurum;
+            string medeniDurum = formIciKisi.medeniDurum;
             int cmbMedeniSelectedIndex = 0;
 
             if (medeniDurum == "Bekar")
@@ -65,18 +61,18 @@ namespace VeriYapilari2
                 cmbMedeniSelectedIndex = 1;
             }
 
-            txtAd.Text = _kisiBilgileri.ad;
-            txtSoyad.Text = _kisiBilgileri.soyad;
-            txtAdres.Text = _kisiBilgileri.adres;
-            txtTelefon.Text = _kisiBilgileri.telefon;
-            txtEMail.Text = _kisiBilgileri.email;
+            txtAd.Text = formIciKisi.ad;
+            txtSoyad.Text = formIciKisi.soyad;
+            txtAdres.Text = formIciKisi.adres;
+            txtTelefon.Text = formIciKisi.telefon;
+            txtEMail.Text = formIciKisi.email;
             cmbUyruk.SelectedIndex = cmbUyrukSelectedIndex;
-            txtDogumTarih.Text = _kisiBilgileri.dogumTarihi;
-            txtDogumYeri.Text = _kisiBilgileri.dogumYeri;
+            txtDogumTarih.Text = formIciKisi.dogumTarihi;
+            txtDogumYeri.Text = formIciKisi.dogumYeri;
             cmbMedeniDurum.SelectedIndex = cmbMedeniSelectedIndex;
-            txtTCKimlik.Text = Convert.ToString(_kisiBilgileri.tcKimlikNumarasi);
-            txtIlgiAlan.Text = _kisiBilgileri.ilgiAlanlari;
-            txtYabanciDil.Text = _kisiBilgileri.yabanciDil;
+            txtTCKimlik.Text = Convert.ToString(formIciKisi.tcKimlikNumarasi);
+            txtIlgiAlan.Text = formIciKisi.ilgiAlanlari;
+            txtYabanciDil.Text = formIciKisi.yabanciDil;
 
             dgvIlanlar.DataSource = _sirket.Ilanlar.GetIsIlaniForEditingAndListing();
         }
@@ -124,24 +120,24 @@ namespace VeriYapilari2
                 uyruk = "Diger";
             }
 
-            _kisiBilgileri.ad = txtAd.Text;
-            _kisiBilgileri.soyad = txtSoyad.Text;
-            _kisiBilgileri.adres = txtAdres.Text;
-            _kisiBilgileri.telefon = txtTelefon.Text;
-            _kisiBilgileri.email = txtEMail.Text;
-            _kisiBilgileri.medeniDurum = medeniDurum;
-            _kisiBilgileri.dogumTarihi = txtDogumTarih.Text;
-            _kisiBilgileri.dogumYeri = txtDogumYeri.Text;
-            _kisiBilgileri.ilgiAlanlari = txtIlgiAlan.Text;
-            _kisiBilgileri.yabanciDil = txtYabanciDil.Text;
-            _kisiBilgileri.uyruk = uyruk;
+            formIciKisi.ad = txtAd.Text;
+            formIciKisi.soyad = txtSoyad.Text;
+            formIciKisi.adres = txtAdres.Text;
+            formIciKisi.telefon = txtTelefon.Text;
+            formIciKisi.email = txtEMail.Text;
+            formIciKisi.medeniDurum = medeniDurum;
+            formIciKisi.dogumTarihi = txtDogumTarih.Text;
+            formIciKisi.dogumYeri = txtDogumYeri.Text;
+            formIciKisi.ilgiAlanlari = txtIlgiAlan.Text;
+            formIciKisi.yabanciDil = txtYabanciDil.Text;
+            formIciKisi.uyruk = uyruk;
 
-            _ikiliAramaAgaci.KisiGuncelle(_kisiBilgileri.tcKimlikNumarasi, _kisiBilgileri);
+            _ikiliAramaAgaci.KisiGuncelle(formIciKisi.tcKimlikNumarasi, formIciKisi);
         }
 
         private void brnKisiBilgiSil_Click(object sender, EventArgs e)
         {
-            _ikiliAramaAgaci.Sil(_kisiBilgileri.tcKimlikNumarasi);
+            _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
         }
 
         private void dgvIlanlar_CellContentClick(object sender, DataGridViewCellEventArgs e)

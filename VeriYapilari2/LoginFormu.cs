@@ -25,6 +25,8 @@ namespace VeriYapilari2
             {
                 SirketAnaForm sirketFormunuAc = new SirketAnaForm();
                 sirketFormunuAc.labelSirketIsmi.Text = dbSirket.SirketAd;
+                sirketFormunuAc.db = db;
+                sirketFormunuAc.sirketFormIci = dbSirket;
                 sirketFormunuAc.Show();
             }
             else
@@ -44,7 +46,7 @@ namespace VeriYapilari2
 
         private void LoginFormu_Load(object sender, EventArgs e)
         {
-            Sirket ilkSirket = db.DatabasedenIlkSirketCekimi();
+            
 
         }
 
@@ -62,6 +64,7 @@ namespace VeriYapilari2
             if (kisi.ad != null)
             {
                 KullaniciFormu kullaniciFormu = new KullaniciFormu();
+                kullaniciFormu.formIciKisi = kisi;
                 kullaniciFormu.Show();
             }
             else

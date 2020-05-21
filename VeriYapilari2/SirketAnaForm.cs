@@ -14,8 +14,8 @@ namespace VeriYapilari2
     {
         // Şirket bilgilerinin çekilmesi. Ve sirket'e eşi.
 
-        private DatabaseIslemleri db = new DatabaseIslemleri();
-        private Sirket sirketFormIci = new Sirket();
+        public DatabaseIslemleri db { get; set; }
+        public Sirket sirketFormIci { get; set; }
 
         public void ilanListele()
         {
