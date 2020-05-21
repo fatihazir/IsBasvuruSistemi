@@ -76,14 +76,65 @@ namespace VeriYapilari2
 
         private void btnBireyselKaydet_Click(object sender, EventArgs e)
         {
+            string medeniDurum = "";
+            switch (cmbKayitMedeniDurum.SelectedIndex)
+            {
+                case 0:
+                    medeniDurum = "Bekar";
+                    break;
+
+                case 1:
+                    medeniDurum = "Evli";
+                    break;
+
+                default:
+                    break;
+            }
+
+            string uyruk = "";
+            if (cmbKayitUyruk.SelectedIndex == 0)
+            {
+                uyruk = "TR";
+            }
+            else if (cmbKayitUyruk.SelectedIndex == 1)
+            {
+                uyruk = "KKTC";
+            }
+            else if (cmbKayitUyruk.SelectedIndex == 2)
+            {
+                uyruk = "Avrupa";
+            }
+            else if (cmbKayitUyruk.SelectedIndex == 3)
+            {
+                uyruk = "ABD";
+            }
+            else if (cmbKayitUyruk.SelectedIndex == 4)
+            {
+                uyruk = "İngiltere";
+            }
+            else
+            {
+                uyruk = "Diger";
+            }
+            KisiBilgileri kisi = new KisiBilgileri();
+            kisi.ad = txtKayitAd.Text;
+            kisi.soyad = txtKayitSoyad.Text;
+            kisi.tcKimlikNumarasi = Convert.ToUInt32(txtTcNo.Text);
+            kisi.dogumTarihi = txtKayitDogumTarih.Text;
+            kisi.dogumYeri = txtKayitDogumYer.Text;
+            kisi.telefon = txtKayitTelNo.Text;
+            kisi.email = txtKayitEMail.Text;
+            kisi.uyruk = uyruk;
+            kisi.medeniDurum = medeniDurum;
+            kisi.ilgiAlanlari = txtKayitIlgiAlan.Text;
+            kisi.adres = txtKayitAdres.Text;
+            kisi.yabanciDil = txtYabanciDil.Text;
+
+            _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
         }
 
-        private void btnYabanciDilKaydet_Click(object sender, EventArgs e)
-        {
-        }
+        
 
-        private void LoginFormu_Load(object sender, EventArgs e)
-        {
-        }
+        
     }
 }

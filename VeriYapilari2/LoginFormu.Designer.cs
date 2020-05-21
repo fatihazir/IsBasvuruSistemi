@@ -686,7 +686,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginFormu";
             this.Text = "LoginFormu";
-            this.Load += new System.EventHandler(this.LoginFormu_Load);
+            
             this.tabIsBasvuruKayit.ResumeLayout(false);
             this.tabBireyselKayit.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
