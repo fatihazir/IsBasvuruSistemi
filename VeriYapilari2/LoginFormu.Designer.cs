@@ -640,14 +640,14 @@
             this.txtSirketSifreKayit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketSifreKayit.Name = "txtSirketSifreKayit";
             this.txtSirketSifreKayit.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketSifreKayit.TabIndex = 64;
+            this.txtSirketSifreKayit.TabIndex = 57;
             // 
             // btnSirketBilgiKaydet
             // 
             this.btnSirketBilgiKaydet.Location = new System.Drawing.Point(289, 315);
             this.btnSirketBilgiKaydet.Name = "btnSirketBilgiKaydet";
             this.btnSirketBilgiKaydet.Size = new System.Drawing.Size(199, 28);
-            this.btnSirketBilgiKaydet.TabIndex = 63;
+            this.btnSirketBilgiKaydet.TabIndex = 58;
             this.btnSirketBilgiKaydet.Text = "Bilgileri Kaydet";
             this.btnSirketBilgiKaydet.UseVisualStyleBackColor = true;
             this.btnSirketBilgiKaydet.Click += new System.EventHandler(this.btnSirketBilgiKaydet_Click);
@@ -684,7 +684,7 @@
             this.txtSirketEPosta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketEPosta.Name = "txtSirketEPosta";
             this.txtSirketEPosta.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketEPosta.TabIndex = 60;
+            this.txtSirketEPosta.TabIndex = 56;
             // 
             // label17
             // 
@@ -710,7 +710,7 @@
             this.txtSirketAdres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketAdres.Name = "txtSirketAdres";
             this.txtSirketAdres.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketAdres.TabIndex = 54;
+            this.txtSirketAdres.TabIndex = 53;
             // 
             // txtSirketTelNo
             // 
@@ -718,7 +718,7 @@
             this.txtSirketTelNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketTelNo.Name = "txtSirketTelNo";
             this.txtSirketTelNo.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketTelNo.TabIndex = 58;
+            this.txtSirketTelNo.TabIndex = 55;
             // 
             // label18
             // 
@@ -744,7 +744,7 @@
             this.txtSirketFax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketFax.Name = "txtSirketFax";
             this.txtSirketFax.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketFax.TabIndex = 56;
+            this.txtSirketFax.TabIndex = 54;
             // 
             // label22
             // 
