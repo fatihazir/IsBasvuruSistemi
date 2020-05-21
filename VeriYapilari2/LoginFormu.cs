@@ -37,20 +37,16 @@ namespace VeriYapilari2
 
         private void btnSirketBilgiKaydet_Click(object sender, EventArgs e)
         {
-            Sirket apple = new Sirket();
-            apple.SirketEposta = "deneme";
-            apple.sifre = "123";
-            apple.SirketAd = "ad";
-            db.Sirketler.Add(apple);
-            sirketFormu.db = db;
+            Sirket yeniSirket = new Sirket();
+            yeniSirket.SirketEposta = txtSirketEPosta.Text;
+            yeniSirket.SirketAd = txtSirketAd.Text;
+            yeniSirket.SirketAdres = txtSirketAdres.Text;
+            yeniSirket.SirketFax = txtSirketFax.Text;
+            yeniSirket.SirketTelefon = txtSirketTelNo.Text;
+            yeniSirket.sifre = txtSirketSifreKayit.Text;
+            db.Sirketler.Add(yeniSirket);
+            MessageBox.Show("Başarıyla yeni şirket eklendi!");
         }
-
-        private void LoginFormu_Load(object sender, EventArgs e)
-        {
-            
-
-        }
-
 
         private void btnGirisYapKullanici_Click(object sender, EventArgs e)
         {

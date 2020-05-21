@@ -77,9 +77,8 @@
             this.tabSirketGiris = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tabSirketKayit = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtSirketSifreKayit = new System.Windows.Forms.TextBox();
             this.btnSirketBilgiKaydet = new System.Windows.Forms.Button();
-            this.txtSirketAciklama = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSirketAd = new System.Windows.Forms.TextBox();
@@ -91,6 +90,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtSirketFax = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabIsBasvuruKayit.SuspendLayout();
             this.tabBireyselKayit.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -100,7 +100,6 @@
             this.tabSirketGiris.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabSirketKayit.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTcNo
@@ -153,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 104);
+            this.label3.Location = new System.Drawing.Point(16, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 17);
@@ -163,12 +162,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 55);
+            this.label4.Location = new System.Drawing.Point(16, 51);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.Size = new System.Drawing.Size(92, 17);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Şirket Adı";
+            this.label4.Text = "Şirket Eposta";
             // 
             // btnSirketGirisi
             // 
@@ -612,7 +611,20 @@
             // 
             // tabSirketKayit
             // 
-            this.tabSirketKayit.Controls.Add(this.groupBox3);
+            this.tabSirketKayit.Controls.Add(this.label22);
+            this.tabSirketKayit.Controls.Add(this.txtSirketSifreKayit);
+            this.tabSirketKayit.Controls.Add(this.btnSirketBilgiKaydet);
+            this.tabSirketKayit.Controls.Add(this.label21);
+            this.tabSirketKayit.Controls.Add(this.label16);
+            this.tabSirketKayit.Controls.Add(this.txtSirketAd);
+            this.tabSirketKayit.Controls.Add(this.txtSirketEPosta);
+            this.tabSirketKayit.Controls.Add(this.label17);
+            this.tabSirketKayit.Controls.Add(this.label20);
+            this.tabSirketKayit.Controls.Add(this.txtSirketAdres);
+            this.tabSirketKayit.Controls.Add(this.txtSirketTelNo);
+            this.tabSirketKayit.Controls.Add(this.label18);
+            this.tabSirketKayit.Controls.Add(this.label19);
+            this.tabSirketKayit.Controls.Add(this.txtSirketFax);
             this.tabSirketKayit.Location = new System.Drawing.Point(4, 25);
             this.tabSirketKayit.Margin = new System.Windows.Forms.Padding(4);
             this.tabSirketKayit.Name = "tabSirketKayit";
@@ -622,139 +634,127 @@
             this.tabSirketKayit.Text = "Sirket Kayıt";
             this.tabSirketKayit.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // txtSirketSifreKayit
             // 
-            this.groupBox3.Controls.Add(this.btnSirketBilgiKaydet);
-            this.groupBox3.Controls.Add(this.txtSirketAciklama);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.txtSirketAd);
-            this.groupBox3.Controls.Add(this.txtSirketEPosta);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.txtSirketAdres);
-            this.groupBox3.Controls.Add(this.txtSirketTelNo);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.txtSirketFax);
-            this.groupBox3.Location = new System.Drawing.Point(250, 7);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(278, 366);
-            this.groupBox3.TabIndex = 50;
-            this.groupBox3.TabStop = false;
+            this.txtSirketSifreKayit.Location = new System.Drawing.Point(388, 273);
+            this.txtSirketSifreKayit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSirketSifreKayit.Name = "txtSirketSifreKayit";
+            this.txtSirketSifreKayit.Size = new System.Drawing.Size(100, 22);
+            this.txtSirketSifreKayit.TabIndex = 64;
             // 
             // btnSirketBilgiKaydet
             // 
-            this.btnSirketBilgiKaydet.Location = new System.Drawing.Point(73, 332);
+            this.btnSirketBilgiKaydet.Location = new System.Drawing.Point(289, 315);
             this.btnSirketBilgiKaydet.Name = "btnSirketBilgiKaydet";
-            this.btnSirketBilgiKaydet.Size = new System.Drawing.Size(137, 28);
-            this.btnSirketBilgiKaydet.TabIndex = 50;
+            this.btnSirketBilgiKaydet.Size = new System.Drawing.Size(199, 28);
+            this.btnSirketBilgiKaydet.TabIndex = 63;
             this.btnSirketBilgiKaydet.Text = "Bilgileri Kaydet";
             this.btnSirketBilgiKaydet.UseVisualStyleBackColor = true;
             this.btnSirketBilgiKaydet.Click += new System.EventHandler(this.btnSirketBilgiKaydet_Click);
             // 
-            // txtSirketAciklama
-            // 
-            this.txtSirketAciklama.Location = new System.Drawing.Point(45, 224);
-            this.txtSirketAciklama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSirketAciklama.Multiline = true;
-            this.txtSirketAciklama.Name = "txtSirketAciklama";
-            this.txtSirketAciklama.Size = new System.Drawing.Size(197, 88);
-            this.txtSirketAciklama.TabIndex = 48;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(42, 205);
+            this.label21.Location = new System.Drawing.Point(286, 276);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(114, 17);
-            this.label21.TabIndex = 49;
-            this.label21.Text = "Şirket Açıklaması";
+            this.label21.Size = new System.Drawing.Size(87, 17);
+            this.label21.TabIndex = 62;
+            this.label21.Text = "Şirket Şifresi";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(40, 31);
+            this.label16.Location = new System.Drawing.Point(286, 95);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(68, 17);
-            this.label16.TabIndex = 39;
+            this.label16.TabIndex = 53;
             this.label16.Text = "Şirket Adı";
             // 
             // txtSirketAd
             // 
-            this.txtSirketAd.Location = new System.Drawing.Point(142, 28);
+            this.txtSirketAd.Location = new System.Drawing.Point(388, 92);
             this.txtSirketAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketAd.Name = "txtSirketAd";
             this.txtSirketAd.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketAd.TabIndex = 38;
+            this.txtSirketAd.TabIndex = 52;
             // 
             // txtSirketEPosta
             // 
-            this.txtSirketEPosta.Location = new System.Drawing.Point(142, 171);
+            this.txtSirketEPosta.Location = new System.Drawing.Point(388, 235);
             this.txtSirketEPosta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketEPosta.Name = "txtSirketEPosta";
             this.txtSirketEPosta.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketEPosta.TabIndex = 46;
+            this.txtSirketEPosta.TabIndex = 60;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(40, 66);
+            this.label17.Location = new System.Drawing.Point(286, 130);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(85, 17);
-            this.label17.TabIndex = 41;
+            this.label17.TabIndex = 55;
             this.label17.Text = "Şirket Adres";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(42, 174);
+            this.label20.Location = new System.Drawing.Point(286, 238);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(98, 17);
-            this.label20.TabIndex = 47;
+            this.label20.TabIndex = 61;
             this.label20.Text = "Şirket E-Posta";
             // 
             // txtSirketAdres
             // 
-            this.txtSirketAdres.Location = new System.Drawing.Point(142, 63);
+            this.txtSirketAdres.Location = new System.Drawing.Point(388, 127);
             this.txtSirketAdres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketAdres.Name = "txtSirketAdres";
             this.txtSirketAdres.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketAdres.TabIndex = 40;
+            this.txtSirketAdres.TabIndex = 54;
             // 
             // txtSirketTelNo
             // 
-            this.txtSirketTelNo.Location = new System.Drawing.Point(142, 132);
+            this.txtSirketTelNo.Location = new System.Drawing.Point(388, 196);
             this.txtSirketTelNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketTelNo.Name = "txtSirketTelNo";
             this.txtSirketTelNo.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketTelNo.TabIndex = 44;
+            this.txtSirketTelNo.TabIndex = 58;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(40, 102);
+            this.label18.Location = new System.Drawing.Point(286, 166);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(70, 17);
-            this.label18.TabIndex = 43;
+            this.label18.TabIndex = 57;
             this.label18.Text = "Şirket Fax";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(40, 137);
+            this.label19.Location = new System.Drawing.Point(286, 201);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(96, 17);
-            this.label19.TabIndex = 45;
+            this.label19.TabIndex = 59;
             this.label19.Text = "Şirket Telefon";
             // 
             // txtSirketFax
             // 
-            this.txtSirketFax.Location = new System.Drawing.Point(142, 99);
+            this.txtSirketFax.Location = new System.Drawing.Point(388, 163);
             this.txtSirketFax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSirketFax.Name = "txtSirketFax";
             this.txtSirketFax.Size = new System.Drawing.Size(100, 22);
-            this.txtSirketFax.TabIndex = 42;
+            this.txtSirketFax.TabIndex = 56;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label22.Location = new System.Drawing.Point(83, 29);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(680, 31);
+            this.label22.TabIndex = 65;
+            this.label22.Text = "Şirket kaydınızı buradaki formdan gerçekleştirebilirsiniz.";
             // 
             // LoginFormu
             // 
@@ -765,7 +765,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginFormu";
             this.Text = "LoginFormu";
-            this.Load += new System.EventHandler(this.LoginFormu_Load);
             this.tabIsBasvuruKayit.ResumeLayout(false);
             this.tabBireyselKayit.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -779,8 +778,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tabSirketKayit.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.tabSirketKayit.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -832,23 +830,23 @@
         private System.Windows.Forms.TabPage tabBireyselGiris;
         private System.Windows.Forms.TabPage tabSirketGiris;
         private System.Windows.Forms.TabPage tabSirketKayit;
-        private System.Windows.Forms.TextBox txtSirketAd;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtSirketEPosta;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtSirketTelNo;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtSirketFax;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtSirketAdres;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtSirketAciklama;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnSirketBilgiKaydet;
         private System.Windows.Forms.Button btnYabanciDilKaydet;
         private System.Windows.Forms.Button btnBireyselKaydet;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtSirketSifreKayit;
+        private System.Windows.Forms.Button btnSirketBilgiKaydet;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtSirketAd;
+        private System.Windows.Forms.TextBox txtSirketEPosta;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtSirketAdres;
+        private System.Windows.Forms.TextBox txtSirketTelNo;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtSirketFax;
     }
 }
