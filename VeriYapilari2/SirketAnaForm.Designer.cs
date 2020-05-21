@@ -123,6 +123,16 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnIlanBasvuranlariGetir = new System.Windows.Forms.Button();
+            this.tabFarklıListele = new System.Windows.Forms.TabPage();
+            this.lvFarkliListele = new System.Windows.Forms.ListView();
+            this.btnPreOrderListele = new System.Windows.Forms.Button();
+            this.txtElemanSayisiGir = new System.Windows.Forms.TextBox();
+            this.btnInOrderListele = new System.Windows.Forms.Button();
+            this.btnPostOrderListele = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtDerinlikSayisiGir = new System.Windows.Forms.TextBox();
+            this.btnFarkliListeleGönder = new System.Windows.Forms.Button();
             this.tabIlanlarim.SuspendLayout();
             this.tabYeniIlanVer.SuspendLayout();
             this.tabSirketSil.SuspendLayout();
@@ -131,6 +141,7 @@
             this.tabAnaSayfa.SuspendLayout();
             this.tabIlanDuzenle.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabFarklıListele.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabIlanlarim
@@ -578,6 +589,7 @@
             this.tabControl1.Controls.Add(this.tabYeniIlanVer);
             this.tabControl1.Controls.Add(this.tabIlanDuzenle);
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabFarklıListele);
             this.tabControl1.Location = new System.Drawing.Point(36, 37);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
@@ -966,11 +978,108 @@
             this.btnIlanBasvuranlariGetir.UseVisualStyleBackColor = true;
             this.btnIlanBasvuranlariGetir.Click += new System.EventHandler(this.btnIlanBasvuranlariGetir_Click);
             // 
+            // tabFarklıListele
+            // 
+            this.tabFarklıListele.Controls.Add(this.btnFarkliListeleGönder);
+            this.tabFarklıListele.Controls.Add(this.label23);
+            this.tabFarklıListele.Controls.Add(this.txtDerinlikSayisiGir);
+            this.tabFarklıListele.Controls.Add(this.label22);
+            this.tabFarklıListele.Controls.Add(this.btnPostOrderListele);
+            this.tabFarklıListele.Controls.Add(this.btnInOrderListele);
+            this.tabFarklıListele.Controls.Add(this.txtElemanSayisiGir);
+            this.tabFarklıListele.Controls.Add(this.btnPreOrderListele);
+            this.tabFarklıListele.Controls.Add(this.lvFarkliListele);
+            this.tabFarklıListele.Location = new System.Drawing.Point(4, 25);
+            this.tabFarklıListele.Name = "tabFarklıListele";
+            this.tabFarklıListele.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFarklıListele.Size = new System.Drawing.Size(717, 344);
+            this.tabFarklıListele.TabIndex = 7;
+            this.tabFarklıListele.Text = "Farklı Listele";
+            this.tabFarklıListele.UseVisualStyleBackColor = true;
+            // 
+            // lvFarkliListele
+            // 
+            this.lvFarkliListele.BackColor = System.Drawing.Color.DarkGray;
+            this.lvFarkliListele.HideSelection = false;
+            this.lvFarkliListele.Location = new System.Drawing.Point(3, 6);
+            this.lvFarkliListele.Name = "lvFarkliListele";
+            this.lvFarkliListele.Size = new System.Drawing.Size(541, 289);
+            this.lvFarkliListele.TabIndex = 0;
+            this.lvFarkliListele.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnPreOrderListele
+            // 
+            this.btnPreOrderListele.Location = new System.Drawing.Point(550, 6);
+            this.btnPreOrderListele.Name = "btnPreOrderListele";
+            this.btnPreOrderListele.Size = new System.Drawing.Size(161, 99);
+            this.btnPreOrderListele.TabIndex = 3;
+            this.btnPreOrderListele.Text = "PreOrder Listele";
+            this.btnPreOrderListele.UseVisualStyleBackColor = true;
+            // 
+            // txtElemanSayisiGir
+            // 
+            this.txtElemanSayisiGir.Location = new System.Drawing.Point(6, 316);
+            this.txtElemanSayisiGir.Name = "txtElemanSayisiGir";
+            this.txtElemanSayisiGir.Size = new System.Drawing.Size(161, 22);
+            this.txtElemanSayisiGir.TabIndex = 4;
+            // 
+            // btnInOrderListele
+            // 
+            this.btnInOrderListele.Location = new System.Drawing.Point(550, 111);
+            this.btnInOrderListele.Name = "btnInOrderListele";
+            this.btnInOrderListele.Size = new System.Drawing.Size(161, 88);
+            this.btnInOrderListele.TabIndex = 5;
+            this.btnInOrderListele.Text = "InOrder Listele";
+            this.btnInOrderListele.UseVisualStyleBackColor = true;
+            // 
+            // btnPostOrderListele
+            // 
+            this.btnPostOrderListele.Location = new System.Drawing.Point(550, 205);
+            this.btnPostOrderListele.Name = "btnPostOrderListele";
+            this.btnPostOrderListele.Size = new System.Drawing.Size(161, 90);
+            this.btnPostOrderListele.TabIndex = 6;
+            this.btnPostOrderListele.Text = "PostOrder Listele";
+            this.btnPostOrderListele.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(3, 296);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(151, 17);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Eleman Sayısını Giriniz";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(189, 296);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(151, 17);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Derinlik Sayısını Giriniz";
+            // 
+            // txtDerinlikSayisiGir
+            // 
+            this.txtDerinlikSayisiGir.Location = new System.Drawing.Point(191, 316);
+            this.txtDerinlikSayisiGir.Name = "txtDerinlikSayisiGir";
+            this.txtDerinlikSayisiGir.Size = new System.Drawing.Size(161, 22);
+            this.txtDerinlikSayisiGir.TabIndex = 8;
+            // 
+            // btnFarkliListeleGönder
+            // 
+            this.btnFarkliListeleGönder.Location = new System.Drawing.Point(358, 302);
+            this.btnFarkliListeleGönder.Name = "btnFarkliListeleGönder";
+            this.btnFarkliListeleGönder.Size = new System.Drawing.Size(186, 37);
+            this.btnFarkliListeleGönder.TabIndex = 10;
+            this.btnFarkliListeleGönder.Text = "Gönder";
+            this.btnFarkliListeleGönder.UseVisualStyleBackColor = true;
+            // 
             // SirketAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(886, 502);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SirketAnaForm";
@@ -991,6 +1100,8 @@
             this.tabIlanDuzenle.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabFarklıListele.ResumeLayout(false);
+            this.tabFarklıListele.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1092,5 +1203,15 @@
         private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ColumnHeader columnHeader38;
         private System.Windows.Forms.Button btnEnAzIkıYılListele;
+        private System.Windows.Forms.TabPage tabFarklıListele;
+        private System.Windows.Forms.Button btnFarkliListeleGönder;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtDerinlikSayisiGir;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button btnPostOrderListele;
+        private System.Windows.Forms.Button btnInOrderListele;
+        private System.Windows.Forms.TextBox txtElemanSayisiGir;
+        private System.Windows.Forms.Button btnPreOrderListele;
+        private System.Windows.Forms.ListView lvFarkliListele;
     }
 }
