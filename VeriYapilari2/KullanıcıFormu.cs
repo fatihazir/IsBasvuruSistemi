@@ -253,9 +253,7 @@ namespace VeriYapilari2
 
                 _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, _isDeneyimi);
 
-                //Halihazırda kayıtlı olan is deneyimlerini görüntüleyebileceği ve güncelleyenileceği bir sayfa.
-                //arama ağacı üzerinde isdeneyimi güncelleme var. İs deneyimlerini listview ile görüntüleyip üstüne tıklayınca verilerin
-                // txt boxlara gelmesi lazım. Şirketin ilan düzenlemesi gibi.
+                
 
 
             }

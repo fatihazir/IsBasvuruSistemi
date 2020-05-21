@@ -1,9 +1,16 @@
-﻿namespace VeriYapilari2
+﻿using System.Collections.Generic;
+
+namespace VeriYapilari2
 {
     public class İkiliAramaAgacı
     {
         private İkiliAramaAgacDugumu kok;
-        private string dugumler;
+
+        private int dugumSayaci;
+
+        private List<İkiliAramaAgacDugumu> InOrderDugumlerListesi = new List<İkiliAramaAgacDugumu>();
+        private List<İkiliAramaAgacDugumu> PreOrderDugumlerListesi = new List<İkiliAramaAgacDugumu>();
+        private List<İkiliAramaAgacDugumu> PostOrderDugumlerListesi = new List<İkiliAramaAgacDugumu>();
 
         public İkiliAramaAgacı()
         {
@@ -14,14 +21,14 @@
             this.kok = kok;
         }
 
-        public string DugumleriYazdir()
+        public int DugumlerinSayisiniGetir()
         {
-            return dugumler;
+            InOrder();
+            return dugumSayaci;
         }
 
         public void PreOrder()
         {
-            dugumler = "";
             PreOrderInt(kok);
         }
 
@@ -29,14 +36,26 @@
         {
             if (dugum == null)
                 return;
-            Ziyaret(dugum);
+            ZiyaretPreOrder(dugum);
             PreOrderInt(dugum.sol);
             PreOrderInt(dugum.sag);
         }
 
+        private void ZiyaretPreOrder(İkiliAramaAgacDugumu dugum)
+        {
+            dugumSayaci++;
+            PreOrderDugumlerListesi.Add(dugum);
+        }
+
+        public List<İkiliAramaAgacDugumu> PreOrderListesiniGetir()
+        {
+            PreOrder();
+            return PreOrderDugumlerListesi;
+        }
+
         public void InOrder()
         {
-            dugumler = "";
+            dugumSayaci = 0;
             InOrderInt(kok);
         }
 
@@ -45,18 +64,24 @@
             if (dugum == null)
                 return;
             InOrderInt(dugum.sol);
-            Ziyaret(dugum);
+            ZiyaretInOrder(dugum);
             InOrderInt(dugum.sag);
         }
 
-        private void Ziyaret(İkiliAramaAgacDugumu dugum)
+        private void ZiyaretInOrder(İkiliAramaAgacDugumu dugum)
         {
-            dugumler += dugum.Tc + " ";
+            dugumSayaci++;
+            InOrderDugumlerListesi.Add(dugum);
+        }
+
+        public List<İkiliAramaAgacDugumu> InOrderListesiniGetir()
+        {
+            InOrder();
+            return InOrderDugumlerListesi;
         }
 
         public void PostOrder()
         {
-            dugumler = "";
             PostOrderInt(kok);
         }
 
@@ -66,7 +91,26 @@
                 return;
             PostOrderInt(dugum.sol);
             PostOrderInt(dugum.sag);
-            Ziyaret(dugum);
+            ZiyaretPreOrder(dugum);
+        }
+
+        private void ZiyaretPostOrder(İkiliAramaAgacDugumu dugum)
+        {
+            dugumSayaci++;
+            PostOrderDugumlerListesi.Add(dugum);
+        }
+
+        public List<İkiliAramaAgacDugumu> PostOrderListesiniGetir()
+        {
+            PostOrder();
+            return PostOrderDugumlerListesi;
+        }
+
+        private int derinlik = -1;
+
+        public int DerinligiGetir()
+        {
+            return derinlik;
         }
 
         public void Ekle(ulong deger, KisiBilgileri kisi)
@@ -83,14 +127,29 @@
                 if (deger == (ulong)tempSearch.Tc)
                     return;
                 else if (deger < (ulong)tempSearch.Tc)
+                {
+                    if (tempSearch.sag == null && tempSearch.sol == null)
+                    {
+                        derinlik++;
+                    }
                     tempSearch = tempSearch.sol;
+                }
                 else
+                {
+                    if (tempSearch.sag == null && tempSearch.sol == null)
+                    {
+                        derinlik++;
+                    }
                     tempSearch = tempSearch.sag;
+                }
             }
             İkiliAramaAgacDugumu eklenecek = new İkiliAramaAgacDugumu(deger, kisi);
             //Ağaç boş, köke ekle
             if (kok == null)
+            {
                 kok = eklenecek;
+                derinlik++;
+            }
             else if (deger < (ulong)tempParent.Tc)
                 tempParent.sol = eklenecek;
             else
@@ -272,7 +331,7 @@
             Ara(tc).Kisi.IsDeneyimleri.InsertLast(isDeneyimi);
         }
 
-        public void IsDeneyiminiGuncelle(ulong tc,int isDeneyimiId ,IsDeneyimi isDeneyimi)
+        public void IsDeneyiminiGuncelle(ulong tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.GetElement(isDeneyimiId).Data = isDeneyimi;
         }
