@@ -160,6 +160,12 @@ namespace VeriYapilari2
             _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
         }
 
+        private void btnIlanGuncelle_Click(object sender, EventArgs e)
+        {
+            ilanListele();
+            MessageBox.Show("İlanlar başarıyla güncellendi!");
+        }
+
         private void btnIlanBasvur_Click(object sender, EventArgs e)
         {
             ListViewItem theClickedItem = listViewKullaniciIlanlarBolmesi.FocusedItem;
