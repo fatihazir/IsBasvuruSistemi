@@ -34,7 +34,7 @@ namespace VeriYapilari2
             }
 
             Ilan tempSirketIlani = new Ilan();
-            Heap heapAgaci = new Heap(10);
+            
 
             string[] satirlarIlanIcın = System.IO.File.ReadAllLines("./IlanDb.txt");
 
@@ -47,7 +47,7 @@ namespace VeriYapilari2
                 tempSirketIlani.ArananElemanOzellikleri = TempSirketIlanlari[2];
 
                 tempSirket.Ilanlar.AddIsIlani(tempSirketIlani.IlanNumarasi, tempSirketIlani, tempSirket);
-                heapAgaci.Insert(tempSirketIlani.IlanNumarasi);
+                Heap heapAgaci = new Heap(10);
             };
             return tempSirket;
         }
