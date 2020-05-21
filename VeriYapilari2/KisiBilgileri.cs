@@ -37,7 +37,6 @@ namespace VeriYapilari2
         //    this.medeniDurum = medeniDurum;
         //    this.yabanciDil = yabanciDil;
         //    this.ilgiAlanlari = ilgliAlanlari;
-
         //}
 
         private int RandomIsUygunluk()

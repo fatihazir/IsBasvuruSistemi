@@ -214,12 +214,46 @@ namespace VeriYapilari2
                 ilanID = Convert.ToInt32(theClickedItem.Text);
                 Ilan ilan = new Ilan();
                 ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanID);
-                // başvuranlar heap ağacından çekilecek
-                // buraya eklicem bakam şimdi durun az
-                //sonra aşağıda item olarak eklenecek
-                ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
-                item.SubItems.Add(ilan.IsTanimi);
-                listViewEnUygunKisi.Items.Add(item);
+                int sayacBasvuranlarIcinEgerNullsa = 0;
+                KisiBilgileri kisi = new KisiBilgileri();
+                HeapDugumu heapEnUygunMusteri = new HeapDugumu(ilan.IlanNumarasi, kisi, -1);
+                foreach (HeapDugumu heap in ilan.heap.heapArray)
+                {
+                    if (heap != null)
+                    {
+                        if (heap.IseUygunluk > heapEnUygunMusteri.IseUygunluk)
+                        {
+                            listViewEnUygunKisi.Items.Clear();
+                            heapEnUygunMusteri = heap;
+                            ListViewItem item = new ListViewItem(heap.Kisi.tcKimlikNumarasi.ToString());
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.ad);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.soyad);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.adres);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.telefon);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.email);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.uyruk);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.dogumTarihi);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.dogumYeri);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.medeniDurum);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.yabanciDil);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.ilgiAlanlari);
+                            item.SubItems.Add(heapEnUygunMusteri.Kisi.iseUygunlukDurumu.ToString());
+                            listViewEnUygunKisi.Items.Add(item);
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        sayacBasvuranlarIcinEgerNullsa++;
+                    }
+                }
+                if (sayacBasvuranlarIcinEgerNullsa == ilan.heap.maxSize)
+                {
+                    MessageBox.Show("Hiçkimse bu ilana başvurmamış!");
+                }
             }
         }
 
