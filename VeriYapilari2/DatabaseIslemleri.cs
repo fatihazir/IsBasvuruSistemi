@@ -9,7 +9,7 @@ namespace VeriYapilari2
 
         public DatabaseIslemleri()
         {
-            
+            DatabasedenIlkSirketCekimi();
         }
 
         public Sirket DatabasedenIlkSirketCekimi()
@@ -102,7 +102,7 @@ namespace VeriYapilari2
                 tempKisi.sifre = TempKisiBilgisi[22];
             }
 
-            return tempKisi; // donulen degeri ikili arama ağacına ekleyeceğiz.
+            return tempKisi; // donulen degeri ikili arama ağacına login formda eklendi
         }
 
         public Sirket SirketGirisYap(string sirketEposta, string sifre)
