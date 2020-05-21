@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tabIlanlar = new System.Windows.Forms.TabPage();
+            this.btnIlanGuncelle = new System.Windows.Forms.Button();
             this.listViewKullaniciIlanlarBolmesi = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -88,7 +89,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtIsyeriCalismaYili = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.btnIlanGuncelle = new System.Windows.Forms.Button();
             this.tabIlanlar.SuspendLayout();
             this.tabBilgileriGuncelle.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -111,6 +111,17 @@
             this.tabIlanlar.TabIndex = 2;
             this.tabIlanlar.Text = "İlanlar";
             this.tabIlanlar.UseVisualStyleBackColor = true;
+            // 
+            // btnIlanGuncelle
+            // 
+            this.btnIlanGuncelle.Location = new System.Drawing.Point(55, 82);
+            this.btnIlanGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIlanGuncelle.Name = "btnIlanGuncelle";
+            this.btnIlanGuncelle.Size = new System.Drawing.Size(104, 48);
+            this.btnIlanGuncelle.TabIndex = 21;
+            this.btnIlanGuncelle.Text = "İlanı Güncelle!";
+            this.btnIlanGuncelle.UseVisualStyleBackColor = true;
+            this.btnIlanGuncelle.Click += new System.EventHandler(this.btnIlanGuncelle_Click);
             // 
             // listViewKullaniciIlanlarBolmesi
             // 
@@ -680,17 +691,6 @@
             this.label25.Size = new System.Drawing.Size(122, 17);
             this.label25.TabIndex = 6;
             this.label25.Text = "İş Yeri Çalışma Yılı";
-            // 
-            // btnIlanGuncelle
-            // 
-            this.btnIlanGuncelle.Location = new System.Drawing.Point(55, 82);
-            this.btnIlanGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIlanGuncelle.Name = "btnIlanGuncelle";
-            this.btnIlanGuncelle.Size = new System.Drawing.Size(104, 48);
-            this.btnIlanGuncelle.TabIndex = 21;
-            this.btnIlanGuncelle.Text = "İlanı Güncelle!";
-            this.btnIlanGuncelle.UseVisualStyleBackColor = true;
-            this.btnIlanGuncelle.Click += new System.EventHandler(this.btnIlanGuncelle_Click);
             // 
             // KullaniciFormu
             // 
