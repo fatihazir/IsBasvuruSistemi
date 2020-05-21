@@ -8,7 +8,9 @@ namespace VeriYapilari2
 
         private HashChainEntry[] table;
 
-        private List<Ilan> Ilanlar = new List<Ilan>();
+        //private List<Ilan> Ilanlar = new List<Ilan>(); 
+        //AGA BURASINA GEREK YOK EMRECANI ARASIN BUNA İHTİYACI 
+        //OLAN NEDEN İHTİYACIMIZIN OLMADIĞINI ANLATAYIM
 
         public HashChain()
         {

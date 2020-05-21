@@ -5,6 +5,7 @@ namespace VeriYapilari2
 {
     public partial class KullaniciFormu : Form
     {
+        public DatabaseIslemleri db { get; set; }
         public KisiBilgileri formIciKisi { get; set; }
         public KullaniciFormu()
         {
