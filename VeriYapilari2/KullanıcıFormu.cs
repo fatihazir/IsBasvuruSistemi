@@ -167,7 +167,19 @@ namespace VeriYapilari2
 
         private void btnIlanBasvur_Click(object sender, EventArgs e)
         {
-
+            ListViewItem theClickedItem = listViewKullaniciIlanlarBolmesi.FocusedItem;
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir ilana tıklayınız!");
+            }
+            else
+            {
+                int ilanID;
+                ilanID = Convert.ToInt32(theClickedItem.Text);
+                Ilan ilan = new Ilan();
+                HeapDugumu heapDugumu = new HeapDugumu(ilanID, formIciKisi, formIciKisi.iseUygunlukDurumu);
+                MessageBox.Show("Başarıyla işe başvurdunuz!");
+            }
         }
     }
 }
