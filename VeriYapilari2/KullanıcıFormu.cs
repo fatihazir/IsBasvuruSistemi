@@ -53,23 +53,31 @@ namespace VeriYapilari2
         {
             listViewKullaniciIlanlarBolmesi.Items.Clear();
             Ilan ilan = new Ilan();
+            Ilan ilan3 = new Ilan();
             HashChainEntry ilan2;
             foreach (Sirket sirket in db.Sirketler)
             {
                 for (int i = 0; i < 10; i++)
                 {
                     ilan = sirket.Ilanlar.GetIsIlaniForEditingAndListing(i);
-                    
                     if (ilan == null)
                     {
                         continue;
                     }
-
-                    if (sirket.Ilanlar.GetIsIlaniNext(ilan.IlanNumarasi) != null)
+                    if (sirket.Ilanlar.GetIsIlaniNextDegilAmaKendisi(ilan.IlanNumarasi).next != null)
                     {
-                        //ilan2 = sirket.Ilanlar.GetIsIlaniNext(ilan.IlanNumarasi);
-                        //sirket.Ilanlar.GetIsIlani()
-                    }
+                        foreach (HashChainEntry ilanNextIcınde in sirket.Ilanlar.ilanlariamanextliolanlarigetir())
+                        {
+                            ListViewItem temp2 = new ListViewItem(sirket.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).IlanNumarasi.ToString());
+                            temp2.SubItems.Add(sirket.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).IsTanimi);
+                            temp2.SubItems.Add(sirket.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).ArananElemanOzellikleri);
+                            temp2.SubItems.Add(sirket.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).Pozisyon);
+                            temp2.SubItems.Add(sirket.SirketAd);
+                            listViewKullaniciIlanlarBolmesi.Items.Add(temp2);
+                        }
+
+                        
+                    };
 
                     int sayacNull = 0;
                     int sayacBaskaKisi = 0;
@@ -96,7 +104,7 @@ namespace VeriYapilari2
                         temp.SubItems.Add(ilan.IsTanimi);
                         temp.SubItems.Add(ilan.ArananElemanOzellikleri);
                         temp.SubItems.Add(ilan.Pozisyon);
-                        temp.SubItems.Add(ilan.IlanSirketAd);
+                        temp.SubItems.Add(sirket.SirketAd);
                         listViewKullaniciIlanlarBolmesi.Items.Add(temp);
                     }
                     else
@@ -343,9 +351,7 @@ namespace VeriYapilari2
 
             }
         }
-
         
-
         private void IlanlarListesi(object sender, ColumnClickEventArgs e)
         {
             if (listViewKullaniciIlanlarBolmesi.Sorting == SortOrder.Descending)

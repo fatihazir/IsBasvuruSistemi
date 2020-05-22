@@ -9,6 +9,8 @@ namespace VeriYapilari2
 
         private HashChainEntry[] table;
 
+        private List<HashChainEntry> nextVarsaOnunIcındekiIlanlar = new List<HashChainEntry>();
+
         public HashChain()
         {
             table = new HashChainEntry[TABLE_SIZE];
@@ -65,8 +67,6 @@ namespace VeriYapilari2
             }
         }
 
-       
-
         public Ilan GetIsIlani(int key)
         {
             int hash = (key % TABLE_SIZE);
@@ -83,7 +83,7 @@ namespace VeriYapilari2
                     return (Ilan)entry.Deger;
             }
         }
-
+        
         public void IsIlaniGuncelle(int ilanNumarasi, Ilan ilan)
         {
             GetIsIlani(ilanNumarasi).ArananElemanOzellikleri = ilan.ArananElemanOzellikleri;
@@ -101,33 +101,41 @@ namespace VeriYapilari2
                 return (Ilan)entry.Deger;
             }
         }
-        public HashChainEntry GetIsIlaniNext(int key)
+        
+        public HashChainEntry GetIsIlaniNextDegilAmaKendisi(int ilanNo)
         {
-            
-            int hash = (key % TABLE_SIZE);
+            int hash = (ilanNo % TABLE_SIZE);
             if (table[hash] == null)
                 return null;
             else
             {
                 HashChainEntry entry = table[hash];
-                while (entry != null && entry.Anahtar != key)
+                while (entry != null && entry.Anahtar != ilanNo)
                     entry = entry.Next;
                 if (entry == null)
                     return null;
                 else
-                    return entry.next;
+                {
+                    nextleriListele(entry);
+                    return entry;
+                }
+                    
             }
         }
-        List<HashChainEntry> ilanlar = new List<HashChainEntry>();
-        //public List<Ilan> nextleriListele(HashChainEntry entry)
-        //{
-        //    while (entry != null)
-        //        entry = entry.Next;
-        //    if (entry == null)
-        //        return null;
-        //    else
-        //        ilanlar.Add((Ilan)entry.next.Deger);
-        //}
+
+        public void nextleriListele(HashChainEntry entry)
+        {
+            while (entry.next != null)
+            {
+                entry = entry.Next;
+                nextVarsaOnunIcındekiIlanlar.Add(entry);
+            }
+        }
+
+        public List<HashChainEntry> ilanlariamanextliolanlarigetir()
+        {
+            return nextVarsaOnunIcındekiIlanlar;
+        }
 
         public Ilan DeleteIsIlani(int key)
         {

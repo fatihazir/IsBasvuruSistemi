@@ -25,6 +25,27 @@ namespace VeriYapilari2
                 {
                     continue;
                 }
+                if (sirketFormIci.Ilanlar.GetIsIlaniNextDegilAmaKendisi(ilan.IlanNumarasi).next != null)
+                {
+                    foreach (HashChainEntry ilanNextIcınde in sirketFormIci.Ilanlar.ilanlariamanextliolanlarigetir())
+                    {
+                        ListViewItem temp1 = new ListViewItem(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).IlanNumarasi.ToString());
+                        ListViewItem temp2 = new ListViewItem(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).IlanNumarasi.ToString());
+                        ListViewItem temp3 = new ListViewItem(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).IlanNumarasi.ToString());
+                        temp2.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).IsTanimi);
+                        temp2.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).ArananElemanOzellikleri);
+                        temp2.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).Pozisyon);
+                        temp3.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).IsTanimi);
+                        temp3.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).ArananElemanOzellikleri);
+                        temp3.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).Pozisyon);
+                        temp1.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).IsTanimi);
+                        temp1.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).ArananElemanOzellikleri);
+                        temp1.SubItems.Add(sirketFormIci.Ilanlar.GetIsIlani(ilanNextIcınde.Anahtar).Pozisyon);
+                        listViewIlanlarDuzenlemeBolmesi.Items.Add(temp1);
+                        listViewBasvuranlariListeleKismi.Items.Add(temp2);
+                        listViewIlanlarIsAlmaBolmesi.Items.Add(temp3);
+                    }
+                };
                 ListViewItem item = new ListViewItem(ilan.IlanNumarasi.ToString());
                 ListViewItem item2 = new ListViewItem(ilan.IlanNumarasi.ToString());
                 ListViewItem item3 = new ListViewItem(ilan.IlanNumarasi.ToString());
@@ -526,6 +547,18 @@ namespace VeriYapilari2
             //https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/ bu siteden alındı
             txtDerinlikSayisi.Text = ikiliAramaAgacı.maxDepth(ikiliAramaAgacı.kok).ToString();
 
+        }
+
+        private void btnIlanGuncelleDuzenleKismi_Click(object sender, EventArgs e)
+        {
+            ilanListele();
+            MessageBox.Show("Başarıyla ilanlar güncellendi!");
+        }
+
+        private void btnIlanGuncelleIlanlarimKismi_Click(object sender, EventArgs e)
+        {
+            ilanListele();
+            MessageBox.Show("Başarıyla ilanlar güncellendi!");
         }
     }
 }

@@ -103,12 +103,6 @@ namespace VeriYapilari2
             PostOrder();
         }
 
-        private int derinlik = -1;
-
-        public int DerinligiGetir()
-        {
-            return derinlik;
-        }
         public int maxDepth(İkiliAramaAgacDugumu node)
         {
             if (node == null)
@@ -141,18 +135,10 @@ namespace VeriYapilari2
                     return;
                 else if (deger < (double)tempSearch.Tc)
                 {
-                    if (tempSearch.sag == null && tempSearch.sol == null)
-                    {
-                        derinlik++;
-                    }
                     tempSearch = tempSearch.sol;
                 }
                 else
                 {
-                    if (tempSearch.sag == null && tempSearch.sol == null)
-                    {
-                        derinlik++;
-                    }
                     tempSearch = tempSearch.sag;
                 }
             }
@@ -161,7 +147,6 @@ namespace VeriYapilari2
             if (kok == null)
             {
                 kok = eklenecek;
-                derinlik++;
             }
             else if (deger < (double)tempParent.Tc)
                 tempParent.sol = eklenecek;
@@ -337,16 +322,6 @@ namespace VeriYapilari2
         public void IsDeneyimiEkle(double tc, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.InsertLast(isDeneyimi);
-        }
-
-        public void IsDeneyiminiGuncelle(double tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
-        {
-            Ara(tc).Kisi.IsDeneyimleri.GetElement(isDeneyimiId).Data = isDeneyimi;
-        }
-
-        public void IsDeneyimiGuncelle(double tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
-        {
-            Ara(tc).Kisi.IsDeneyimleri.GetElement(isDeneyimiId).Data = isDeneyimi;
         }
     }
 }

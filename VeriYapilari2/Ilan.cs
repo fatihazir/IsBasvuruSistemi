@@ -8,10 +8,7 @@ namespace VeriYapilari2
         public int IlanNumarasi { get; set; }
         public string IsTanimi { get; set; }
         public string Pozisyon { get; set; }
-
         public string ArananElemanOzellikleri { get; set; }
-
-        public string IlanSirketAd { get; set; }
 
         public Heap heap = new Heap(10);
 
