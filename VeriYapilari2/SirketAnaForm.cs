@@ -433,7 +433,7 @@ namespace VeriYapilari2
         private void btnPreOrderListele_Click(object sender, EventArgs e)
         {
             lvFarkliListele.Items.Clear();
-            ikiliAramaAgacı.PreOrderDugumlerListesi = ikiliAramaAgacı.PreOrderListesiniGetir();
+            ikiliAramaAgacı.PreOrderListesiniGetir();
             foreach (İkiliAramaAgacDugumu ikiliAramaAgacDugumu in ikiliAramaAgacı.PreOrderDugumlerListesi)
             {
                 ListViewItem item = new ListViewItem(ikiliAramaAgacDugumu.Kisi.tcKimlikNumarasi.ToString());
@@ -451,6 +451,60 @@ namespace VeriYapilari2
                 item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.iseUygunlukDurumu.ToString());
                 lvFarkliListele.Items.Add(item);
             }
+        }
+
+        private void btnInOrderListele_Click(object sender, EventArgs e)
+        {
+            lvFarkliListele.Items.Clear();
+            ikiliAramaAgacı.InOrderListesiniGetir();
+            foreach (İkiliAramaAgacDugumu ikiliAramaAgacDugumu in ikiliAramaAgacı.InOrderDugumlerListesi)
+            {
+                ListViewItem item = new ListViewItem(ikiliAramaAgacDugumu.Kisi.tcKimlikNumarasi.ToString());
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.ad);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.soyad);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.adres);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.telefon);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.email);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.uyruk);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.dogumTarihi);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.dogumYeri);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.medeniDurum);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.yabanciDil);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.ilgiAlanlari);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.iseUygunlukDurumu.ToString());
+                lvFarkliListele.Items.Add(item);
+            }
+        }
+
+        private void btnPostOrderListele_Click(object sender, EventArgs e)
+        {
+            lvFarkliListele.Items.Clear();
+            ikiliAramaAgacı.PostOrderListesiniGetir();
+            foreach (İkiliAramaAgacDugumu ikiliAramaAgacDugumu in ikiliAramaAgacı.PostOrderDugumlerListesi)
+            {
+                ListViewItem item = new ListViewItem(ikiliAramaAgacDugumu.Kisi.tcKimlikNumarasi.ToString());
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.ad);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.soyad);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.adres);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.telefon);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.email);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.uyruk);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.dogumTarihi);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.dogumYeri);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.medeniDurum);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.yabanciDil);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.ilgiAlanlari);
+                item.SubItems.Add(ikiliAramaAgacDugumu.Kisi.iseUygunlukDurumu.ToString());
+                lvFarkliListele.Items.Add(item);
+            }
+        }
+
+        private void btnFarkliListeleGoruntule_Click(object sender, EventArgs e)
+        {
+            txtElemanSayisi.Text = ikiliAramaAgacı.DugumlerinSayisiniGetir().ToString();
+            //https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/ bu siteden alındı
+            txtDerinlikSayisi.Text = ikiliAramaAgacı.maxDepth(ikiliAramaAgacı.kok).ToString();
+
         }
     }
 }

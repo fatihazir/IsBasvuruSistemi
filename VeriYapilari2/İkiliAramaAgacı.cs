@@ -4,13 +4,13 @@ namespace VeriYapilari2
 {
     public class İkiliAramaAgacı
     {
-        private İkiliAramaAgacDugumu kok;
+        public İkiliAramaAgacDugumu kok;
 
         private int dugumSayaci;
 
-        private List<İkiliAramaAgacDugumu> InOrderDugumlerListesi = new List<İkiliAramaAgacDugumu>();
+        public List<İkiliAramaAgacDugumu> InOrderDugumlerListesi = new List<İkiliAramaAgacDugumu>();
         public List<İkiliAramaAgacDugumu> PreOrderDugumlerListesi = new List<İkiliAramaAgacDugumu>();
-        private List<İkiliAramaAgacDugumu> PostOrderDugumlerListesi = new List<İkiliAramaAgacDugumu>();
+        public List<İkiliAramaAgacDugumu> PostOrderDugumlerListesi = new List<İkiliAramaAgacDugumu>();
 
         public İkiliAramaAgacı()
         {
@@ -47,10 +47,9 @@ namespace VeriYapilari2
             PreOrderDugumlerListesi.Add(dugum);
         }
 
-        public List<İkiliAramaAgacDugumu> PreOrderListesiniGetir()
+        public void PreOrderListesiniGetir()
         {
             PreOrder();
-            return PreOrderDugumlerListesi;
         }
 
         public void InOrder()
@@ -74,10 +73,9 @@ namespace VeriYapilari2
             InOrderDugumlerListesi.Add(dugum);
         }
 
-        public List<İkiliAramaAgacDugumu> InOrderListesiniGetir()
+        public void InOrderListesiniGetir()
         {
             InOrder();
-            return InOrderDugumlerListesi;
         }
 
         public void PostOrder()
@@ -91,7 +89,7 @@ namespace VeriYapilari2
                 return;
             PostOrderInt(dugum.sol);
             PostOrderInt(dugum.sag);
-            ZiyaretPreOrder(dugum);
+            ZiyaretPostOrder(dugum);
         }
 
         private void ZiyaretPostOrder(İkiliAramaAgacDugumu dugum)
@@ -100,10 +98,9 @@ namespace VeriYapilari2
             PostOrderDugumlerListesi.Add(dugum);
         }
 
-        public List<İkiliAramaAgacDugumu> PostOrderListesiniGetir()
+        public void PostOrderListesiniGetir()
         {
             PostOrder();
-            return PostOrderDugumlerListesi;
         }
 
         private int derinlik = -1;
@@ -112,7 +109,23 @@ namespace VeriYapilari2
         {
             return derinlik;
         }
+        public int maxDepth(İkiliAramaAgacDugumu node)
+        {
+            if (node == null)
+                return 0;
+            else
+            {
+                /* compute the depth of each subtree */
+                int lDepth = maxDepth(node.sag);
+                int rDepth = maxDepth(node.sol);
 
+                /* use the larger one */
+                if (lDepth > rDepth)
+                    return (lDepth + 1);
+                else
+                    return (rDepth + 1);
+            }
+        }
         public void Ekle(double deger, KisiBilgileri kisi)
         {
             //Yeni eklenecek düğümün parent'ı

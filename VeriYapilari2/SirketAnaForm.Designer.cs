@@ -124,13 +124,13 @@
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnIlanBasvuranlariGetir = new System.Windows.Forms.Button();
             this.tabFarklıListele = new System.Windows.Forms.TabPage();
-            this.btnFarkliListeleGönder = new System.Windows.Forms.Button();
+            this.btnFarkliListeleGoruntule = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtDerinlikSayisiGir = new System.Windows.Forms.TextBox();
+            this.txtDerinlikSayisi = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.btnPostOrderListele = new System.Windows.Forms.Button();
             this.btnInOrderListele = new System.Windows.Forms.Button();
-            this.txtElemanSayisiGir = new System.Windows.Forms.TextBox();
+            this.txtElemanSayisi = new System.Windows.Forms.TextBox();
             this.btnPreOrderListele = new System.Windows.Forms.Button();
             this.lvFarkliListele = new System.Windows.Forms.ListView();
             this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -998,13 +998,13 @@
             // 
             // tabFarklıListele
             // 
-            this.tabFarklıListele.Controls.Add(this.btnFarkliListeleGönder);
+            this.tabFarklıListele.Controls.Add(this.btnFarkliListeleGoruntule);
             this.tabFarklıListele.Controls.Add(this.label23);
-            this.tabFarklıListele.Controls.Add(this.txtDerinlikSayisiGir);
+            this.tabFarklıListele.Controls.Add(this.txtDerinlikSayisi);
             this.tabFarklıListele.Controls.Add(this.label22);
             this.tabFarklıListele.Controls.Add(this.btnPostOrderListele);
             this.tabFarklıListele.Controls.Add(this.btnInOrderListele);
-            this.tabFarklıListele.Controls.Add(this.txtElemanSayisiGir);
+            this.tabFarklıListele.Controls.Add(this.txtElemanSayisi);
             this.tabFarklıListele.Controls.Add(this.btnPreOrderListele);
             this.tabFarklıListele.Controls.Add(this.lvFarkliListele);
             this.tabFarklıListele.Location = new System.Drawing.Point(4, 25);
@@ -1016,15 +1016,16 @@
             this.tabFarklıListele.Text = "Farklı Listele";
             this.tabFarklıListele.UseVisualStyleBackColor = true;
             // 
-            // btnFarkliListeleGönder
+            // btnFarkliListeleGoruntule
             // 
-            this.btnFarkliListeleGönder.Location = new System.Drawing.Point(357, 302);
-            this.btnFarkliListeleGönder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFarkliListeleGönder.Name = "btnFarkliListeleGönder";
-            this.btnFarkliListeleGönder.Size = new System.Drawing.Size(187, 37);
-            this.btnFarkliListeleGönder.TabIndex = 10;
-            this.btnFarkliListeleGönder.Text = "Gönder";
-            this.btnFarkliListeleGönder.UseVisualStyleBackColor = true;
+            this.btnFarkliListeleGoruntule.Location = new System.Drawing.Point(357, 302);
+            this.btnFarkliListeleGoruntule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFarkliListeleGoruntule.Name = "btnFarkliListeleGoruntule";
+            this.btnFarkliListeleGoruntule.Size = new System.Drawing.Size(187, 37);
+            this.btnFarkliListeleGoruntule.TabIndex = 10;
+            this.btnFarkliListeleGoruntule.Text = "Görüntüle";
+            this.btnFarkliListeleGoruntule.UseVisualStyleBackColor = true;
+            this.btnFarkliListeleGoruntule.Click += new System.EventHandler(this.btnFarkliListeleGoruntule_Click);
             // 
             // label23
             // 
@@ -1035,13 +1036,13 @@
             this.label23.TabIndex = 9;
             this.label23.Text = "Derinlik Sayısı";
             // 
-            // txtDerinlikSayisiGir
+            // txtDerinlikSayisi
             // 
-            this.txtDerinlikSayisiGir.Location = new System.Drawing.Point(191, 316);
-            this.txtDerinlikSayisiGir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDerinlikSayisiGir.Name = "txtDerinlikSayisiGir";
-            this.txtDerinlikSayisiGir.Size = new System.Drawing.Size(161, 22);
-            this.txtDerinlikSayisiGir.TabIndex = 8;
+            this.txtDerinlikSayisi.Location = new System.Drawing.Point(191, 316);
+            this.txtDerinlikSayisi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDerinlikSayisi.Name = "txtDerinlikSayisi";
+            this.txtDerinlikSayisi.Size = new System.Drawing.Size(161, 22);
+            this.txtDerinlikSayisi.TabIndex = 8;
             // 
             // label22
             // 
@@ -1061,6 +1062,7 @@
             this.btnPostOrderListele.TabIndex = 6;
             this.btnPostOrderListele.Text = "PostOrder Listele";
             this.btnPostOrderListele.UseVisualStyleBackColor = true;
+            this.btnPostOrderListele.Click += new System.EventHandler(this.btnPostOrderListele_Click);
             // 
             // btnInOrderListele
             // 
@@ -1071,14 +1073,15 @@
             this.btnInOrderListele.TabIndex = 5;
             this.btnInOrderListele.Text = "InOrder Listele";
             this.btnInOrderListele.UseVisualStyleBackColor = true;
+            this.btnInOrderListele.Click += new System.EventHandler(this.btnInOrderListele_Click);
             // 
-            // txtElemanSayisiGir
+            // txtElemanSayisi
             // 
-            this.txtElemanSayisiGir.Location = new System.Drawing.Point(5, 316);
-            this.txtElemanSayisiGir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtElemanSayisiGir.Name = "txtElemanSayisiGir";
-            this.txtElemanSayisiGir.Size = new System.Drawing.Size(161, 22);
-            this.txtElemanSayisiGir.TabIndex = 4;
+            this.txtElemanSayisi.Location = new System.Drawing.Point(5, 316);
+            this.txtElemanSayisi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtElemanSayisi.Name = "txtElemanSayisi";
+            this.txtElemanSayisi.Size = new System.Drawing.Size(161, 22);
+            this.txtElemanSayisi.TabIndex = 4;
             // 
             // btnPreOrderListele
             // 
@@ -1119,14 +1122,17 @@
             // columnHeader39
             // 
             this.columnHeader39.Text = "TC";
+            this.columnHeader39.Width = 33;
             // 
             // columnHeader40
             // 
             this.columnHeader40.Text = "Ad";
+            this.columnHeader40.Width = 32;
             // 
             // columnHeader41
             // 
             this.columnHeader41.Text = "Soyad";
+            this.columnHeader41.Width = 57;
             // 
             // columnHeader42
             // 
@@ -1139,18 +1145,22 @@
             // columnHeader44
             // 
             this.columnHeader44.Text = "Email";
+            this.columnHeader44.Width = 47;
             // 
             // columnHeader45
             // 
             this.columnHeader45.Text = "Uyruk";
+            this.columnHeader45.Width = 49;
             // 
             // columnHeader46
             // 
             this.columnHeader46.Text = "Doğum Tarihi";
+            this.columnHeader46.Width = 95;
             // 
             // columnHeader47
             // 
             this.columnHeader47.Text = "Doğum Yeri";
+            this.columnHeader47.Width = 84;
             // 
             // columnHeader48
             // 
@@ -1293,13 +1303,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader38;
         private System.Windows.Forms.Button btnEnAzIkıYılListele;
         private System.Windows.Forms.TabPage tabFarklıListele;
-        private System.Windows.Forms.Button btnFarkliListeleGönder;
+        private System.Windows.Forms.Button btnFarkliListeleGoruntule;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txtDerinlikSayisiGir;
+        private System.Windows.Forms.TextBox txtDerinlikSayisi;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnPostOrderListele;
         private System.Windows.Forms.Button btnInOrderListele;
-        private System.Windows.Forms.TextBox txtElemanSayisiGir;
+        private System.Windows.Forms.TextBox txtElemanSayisi;
         private System.Windows.Forms.Button btnPreOrderListele;
         private System.Windows.Forms.ListView lvFarkliListele;
         private System.Windows.Forms.ColumnHeader columnHeader39;
