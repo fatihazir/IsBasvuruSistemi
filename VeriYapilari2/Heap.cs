@@ -13,11 +13,6 @@
             currentSize = 0;
         }
 
-        public bool IsEmpty()
-        {
-            return currentSize == 0;
-        }
-
         public bool Insert(int ilanNumarasi, KisiBilgileri kisi, int iseUygunluk)
         {
             if (currentSize == maxSize)
