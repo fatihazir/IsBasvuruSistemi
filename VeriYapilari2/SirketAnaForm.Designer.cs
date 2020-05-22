@@ -140,6 +140,11 @@
             this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader45 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader46 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader47 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader48 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader49 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabIlanlarim.SuspendLayout();
             this.tabYeniIlanVer.SuspendLayout();
             this.tabSirketSil.SuspendLayout();
@@ -1096,7 +1101,12 @@
             this.columnHeader42,
             this.columnHeader43,
             this.columnHeader44,
-            this.columnHeader45});
+            this.columnHeader45,
+            this.columnHeader46,
+            this.columnHeader47,
+            this.columnHeader48,
+            this.columnHeader49,
+            this.columnHeader50});
             this.lvFarkliListele.HideSelection = false;
             this.lvFarkliListele.Location = new System.Drawing.Point(3, 3);
             this.lvFarkliListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1105,6 +1115,54 @@
             this.lvFarkliListele.TabIndex = 0;
             this.lvFarkliListele.UseCompatibleStateImageBehavior = false;
             this.lvFarkliListele.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader39
+            // 
+            this.columnHeader39.Text = "TC";
+            // 
+            // columnHeader40
+            // 
+            this.columnHeader40.Text = "Ad";
+            // 
+            // columnHeader41
+            // 
+            this.columnHeader41.Text = "Soyad";
+            // 
+            // columnHeader42
+            // 
+            this.columnHeader42.Text = "Adres";
+            // 
+            // columnHeader43
+            // 
+            this.columnHeader43.Text = "Telefon";
+            // 
+            // columnHeader44
+            // 
+            this.columnHeader44.Text = "Email";
+            // 
+            // columnHeader45
+            // 
+            this.columnHeader45.Text = "Uyruk";
+            // 
+            // columnHeader46
+            // 
+            this.columnHeader46.Text = "Doğum Tarihi";
+            // 
+            // columnHeader47
+            // 
+            this.columnHeader47.Text = "Doğum Yeri";
+            // 
+            // columnHeader48
+            // 
+            this.columnHeader48.Text = "Medeni Durum";
+            // 
+            // columnHeader49
+            // 
+            this.columnHeader49.Text = "Yabancı Dil";
+            // 
+            // columnHeader50
+            // 
+            this.columnHeader50.Text = "İlgi Alanları";
             // 
             // SirketAnaForm
             // 
@@ -1251,5 +1309,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader43;
         private System.Windows.Forms.ColumnHeader columnHeader44;
         private System.Windows.Forms.ColumnHeader columnHeader45;
+        private System.Windows.Forms.ColumnHeader columnHeader46;
+        private System.Windows.Forms.ColumnHeader columnHeader47;
+        private System.Windows.Forms.ColumnHeader columnHeader48;
+        private System.Windows.Forms.ColumnHeader columnHeader49;
+        private System.Windows.Forms.ColumnHeader columnHeader50;
     }
 }
