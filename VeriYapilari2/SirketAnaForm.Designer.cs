@@ -155,9 +155,9 @@
             this.tabIlanlarim.Controls.Add(this.label12);
             this.tabIlanlarim.Controls.Add(this.label11);
             this.tabIlanlarim.Location = new System.Drawing.Point(4, 22);
-            this.tabIlanlarim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIlanlarim.Margin = new System.Windows.Forms.Padding(2);
             this.tabIlanlarim.Name = "tabIlanlarim";
-            this.tabIlanlarim.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIlanlarim.Padding = new System.Windows.Forms.Padding(2);
             this.tabIlanlarim.Size = new System.Drawing.Size(548, 290);
             this.tabIlanlarim.TabIndex = 4;
             this.tabIlanlarim.Text = "İlanlarım";
@@ -181,7 +181,7 @@
             this.columnHeader38});
             this.listViewEnUygunKisi.HideSelection = false;
             this.listViewEnUygunKisi.Location = new System.Drawing.Point(323, 61);
-            this.listViewEnUygunKisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewEnUygunKisi.Margin = new System.Windows.Forms.Padding(2);
             this.listViewEnUygunKisi.Name = "listViewEnUygunKisi";
             this.listViewEnUygunKisi.Size = new System.Drawing.Size(204, 86);
             this.listViewEnUygunKisi.TabIndex = 15;
@@ -256,7 +256,7 @@
             this.columnHeader8});
             this.listViewIlanlarIsAlmaBolmesi.HideSelection = false;
             this.listViewIlanlarIsAlmaBolmesi.Location = new System.Drawing.Point(12, 61);
-            this.listViewIlanlarIsAlmaBolmesi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewIlanlarIsAlmaBolmesi.Margin = new System.Windows.Forms.Padding(2);
             this.listViewIlanlarIsAlmaBolmesi.Name = "listViewIlanlarIsAlmaBolmesi";
             this.listViewIlanlarIsAlmaBolmesi.Size = new System.Drawing.Size(279, 158);
             this.listViewIlanlarIsAlmaBolmesi.TabIndex = 12;
@@ -288,7 +288,7 @@
             // btnTiklananIlanSil
             // 
             this.btnTiklananIlanSil.Location = new System.Drawing.Point(86, 234);
-            this.btnTiklananIlanSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTiklananIlanSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnTiklananIlanSil.Name = "btnTiklananIlanSil";
             this.btnTiklananIlanSil.Size = new System.Drawing.Size(130, 31);
             this.btnTiklananIlanSil.TabIndex = 6;
@@ -299,7 +299,7 @@
             // btnIseAl
             // 
             this.btnIseAl.Location = new System.Drawing.Point(360, 160);
-            this.btnIseAl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIseAl.Margin = new System.Windows.Forms.Padding(2);
             this.btnIseAl.Name = "btnIseAl";
             this.btnIseAl.Size = new System.Drawing.Size(130, 37);
             this.btnIseAl.TabIndex = 5;
@@ -357,9 +357,9 @@
             this.tabYeniIlanVer.Controls.Add(this.label8);
             this.tabYeniIlanVer.Controls.Add(this.btnYeniIlanVer);
             this.tabYeniIlanVer.Location = new System.Drawing.Point(4, 22);
-            this.tabYeniIlanVer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabYeniIlanVer.Margin = new System.Windows.Forms.Padding(2);
             this.tabYeniIlanVer.Name = "tabYeniIlanVer";
-            this.tabYeniIlanVer.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabYeniIlanVer.Padding = new System.Windows.Forms.Padding(2);
             this.tabYeniIlanVer.Size = new System.Drawing.Size(548, 290);
             this.tabYeniIlanVer.TabIndex = 3;
             this.tabYeniIlanVer.Text = "Yeni İlan Ver!";
@@ -368,7 +368,7 @@
             // txtYeniIlanPozisyon
             // 
             this.txtYeniIlanPozisyon.Location = new System.Drawing.Point(398, 128);
-            this.txtYeniIlanPozisyon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYeniIlanPozisyon.Margin = new System.Windows.Forms.Padding(2);
             this.txtYeniIlanPozisyon.Name = "txtYeniIlanPozisyon";
             this.txtYeniIlanPozisyon.Size = new System.Drawing.Size(76, 20);
             this.txtYeniIlanPozisyon.TabIndex = 6;
@@ -376,7 +376,7 @@
             // richTxtYeniArananEleman
             // 
             this.richTxtYeniArananEleman.Location = new System.Drawing.Point(194, 65);
-            this.richTxtYeniArananEleman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTxtYeniArananEleman.Margin = new System.Windows.Forms.Padding(2);
             this.richTxtYeniArananEleman.Name = "richTxtYeniArananEleman";
             this.richTxtYeniArananEleman.Size = new System.Drawing.Size(162, 124);
             this.richTxtYeniArananEleman.TabIndex = 5;
@@ -385,7 +385,7 @@
             // richTxtYeniIsIlani
             // 
             this.richTxtYeniIsIlani.Location = new System.Drawing.Point(12, 65);
-            this.richTxtYeniIsIlani.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTxtYeniIsIlani.Margin = new System.Windows.Forms.Padding(2);
             this.richTxtYeniIsIlani.Name = "richTxtYeniIsIlani";
             this.richTxtYeniIsIlani.Size = new System.Drawing.Size(162, 124);
             this.richTxtYeniIsIlani.TabIndex = 4;
@@ -424,7 +424,7 @@
             // btnYeniIlanVer
             // 
             this.btnYeniIlanVer.Location = new System.Drawing.Point(205, 225);
-            this.btnYeniIlanVer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnYeniIlanVer.Margin = new System.Windows.Forms.Padding(2);
             this.btnYeniIlanVer.Name = "btnYeniIlanVer";
             this.btnYeniIlanVer.Size = new System.Drawing.Size(103, 28);
             this.btnYeniIlanVer.TabIndex = 0;
@@ -437,9 +437,9 @@
             this.tabSirketSil.Controls.Add(this.label7);
             this.tabSirketSil.Controls.Add(this.btnSirketSil);
             this.tabSirketSil.Location = new System.Drawing.Point(4, 22);
-            this.tabSirketSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSirketSil.Margin = new System.Windows.Forms.Padding(2);
             this.tabSirketSil.Name = "tabSirketSil";
-            this.tabSirketSil.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSirketSil.Padding = new System.Windows.Forms.Padding(2);
             this.tabSirketSil.Size = new System.Drawing.Size(548, 290);
             this.tabSirketSil.TabIndex = 2;
             this.tabSirketSil.Text = "Şirketi Sil";
@@ -460,7 +460,7 @@
             // 
             this.btnSirketSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSirketSil.Location = new System.Drawing.Point(149, 148);
-            this.btnSirketSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSirketSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSirketSil.Name = "btnSirketSil";
             this.btnSirketSil.Size = new System.Drawing.Size(218, 63);
             this.btnSirketSil.TabIndex = 0;
@@ -482,9 +482,9 @@
             this.tabSirketBilgileri.Controls.Add(this.labelSirketAdi);
             this.tabSirketBilgileri.Controls.Add(this.btnSirketBilgiGuncelle);
             this.tabSirketBilgileri.Location = new System.Drawing.Point(4, 22);
-            this.tabSirketBilgileri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSirketBilgileri.Margin = new System.Windows.Forms.Padding(2);
             this.tabSirketBilgileri.Name = "tabSirketBilgileri";
-            this.tabSirketBilgileri.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSirketBilgileri.Padding = new System.Windows.Forms.Padding(2);
             this.tabSirketBilgileri.Size = new System.Drawing.Size(548, 290);
             this.tabSirketBilgileri.TabIndex = 1;
             this.tabSirketBilgileri.Text = "Şirket Bilgileri";
@@ -493,7 +493,7 @@
             // richTxtSirketAdres
             // 
             this.richTxtSirketAdres.Location = new System.Drawing.Point(302, 64);
-            this.richTxtSirketAdres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTxtSirketAdres.Margin = new System.Windows.Forms.Padding(2);
             this.richTxtSirketAdres.Name = "richTxtSirketAdres";
             this.richTxtSirketAdres.Size = new System.Drawing.Size(130, 110);
             this.richTxtSirketAdres.TabIndex = 10;
@@ -502,7 +502,7 @@
             // txtSirketEPosta
             // 
             this.txtSirketEPosta.Location = new System.Drawing.Point(106, 156);
-            this.txtSirketEPosta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketEPosta.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketEPosta.Name = "txtSirketEPosta";
             this.txtSirketEPosta.Size = new System.Drawing.Size(76, 20);
             this.txtSirketEPosta.TabIndex = 9;
@@ -510,7 +510,7 @@
             // txtSirketFax
             // 
             this.txtSirketFax.Location = new System.Drawing.Point(106, 127);
-            this.txtSirketFax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketFax.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketFax.Name = "txtSirketFax";
             this.txtSirketFax.Size = new System.Drawing.Size(76, 20);
             this.txtSirketFax.TabIndex = 8;
@@ -518,7 +518,7 @@
             // txtSirketTelefon
             // 
             this.txtSirketTelefon.Location = new System.Drawing.Point(106, 96);
-            this.txtSirketTelefon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketTelefon.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketTelefon.Name = "txtSirketTelefon";
             this.txtSirketTelefon.Size = new System.Drawing.Size(76, 20);
             this.txtSirketTelefon.TabIndex = 7;
@@ -526,7 +526,7 @@
             // txtSirketAdi
             // 
             this.txtSirketAdi.Location = new System.Drawing.Point(106, 64);
-            this.txtSirketAdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketAdi.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketAdi.Name = "txtSirketAdi";
             this.txtSirketAdi.Size = new System.Drawing.Size(76, 20);
             this.txtSirketAdi.TabIndex = 6;
@@ -584,7 +584,7 @@
             // btnSirketBilgiGuncelle
             // 
             this.btnSirketBilgiGuncelle.Location = new System.Drawing.Point(200, 225);
-            this.btnSirketBilgiGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSirketBilgiGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.btnSirketBilgiGuncelle.Name = "btnSirketBilgiGuncelle";
             this.btnSirketBilgiGuncelle.Size = new System.Drawing.Size(114, 34);
             this.btnSirketBilgiGuncelle.TabIndex = 0;
@@ -604,7 +604,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabFarklıListele);
             this.tabControl1.Location = new System.Drawing.Point(27, 30);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(556, 316);
@@ -616,9 +616,9 @@
             this.tabAnaSayfa.Controls.Add(this.label2);
             this.tabAnaSayfa.Controls.Add(this.labelSirketIsmi);
             this.tabAnaSayfa.Location = new System.Drawing.Point(4, 22);
-            this.tabAnaSayfa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAnaSayfa.Margin = new System.Windows.Forms.Padding(2);
             this.tabAnaSayfa.Name = "tabAnaSayfa";
-            this.tabAnaSayfa.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAnaSayfa.Padding = new System.Windows.Forms.Padding(2);
             this.tabAnaSayfa.Size = new System.Drawing.Size(548, 290);
             this.tabAnaSayfa.TabIndex = 0;
             this.tabAnaSayfa.Text = "Ana Sayfa";
@@ -671,9 +671,9 @@
             this.tabIlanDuzenle.Controls.Add(this.listViewIlanlarDuzenlemeBolmesi);
             this.tabIlanDuzenle.Controls.Add(this.label17);
             this.tabIlanDuzenle.Location = new System.Drawing.Point(4, 22);
-            this.tabIlanDuzenle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIlanDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.tabIlanDuzenle.Name = "tabIlanDuzenle";
-            this.tabIlanDuzenle.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIlanDuzenle.Padding = new System.Windows.Forms.Padding(2);
             this.tabIlanDuzenle.Size = new System.Drawing.Size(548, 290);
             this.tabIlanDuzenle.TabIndex = 5;
             this.tabIlanDuzenle.Text = "İlan Düzenle!";
@@ -692,7 +692,7 @@
             // btnIlaniDuzenle
             // 
             this.btnIlaniDuzenle.Location = new System.Drawing.Point(343, 238);
-            this.btnIlaniDuzenle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIlaniDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.btnIlaniDuzenle.Name = "btnIlaniDuzenle";
             this.btnIlaniDuzenle.Size = new System.Drawing.Size(135, 25);
             this.btnIlaniDuzenle.TabIndex = 19;
@@ -703,7 +703,7 @@
             // txtPozisyonIlanDuzenle
             // 
             this.txtPozisyonIlanDuzenle.Location = new System.Drawing.Point(416, 210);
-            this.txtPozisyonIlanDuzenle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPozisyonIlanDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.txtPozisyonIlanDuzenle.Name = "txtPozisyonIlanDuzenle";
             this.txtPozisyonIlanDuzenle.Size = new System.Drawing.Size(76, 20);
             this.txtPozisyonIlanDuzenle.TabIndex = 18;
@@ -711,7 +711,7 @@
             // richTextBoxArananElemanOzellikleriIlanDuzenle
             // 
             this.richTextBoxArananElemanOzellikleriIlanDuzenle.Location = new System.Drawing.Point(332, 148);
-            this.richTextBoxArananElemanOzellikleriIlanDuzenle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxArananElemanOzellikleriIlanDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxArananElemanOzellikleriIlanDuzenle.Name = "richTextBoxArananElemanOzellikleriIlanDuzenle";
             this.richTextBoxArananElemanOzellikleriIlanDuzenle.Size = new System.Drawing.Size(162, 48);
             this.richTextBoxArananElemanOzellikleriIlanDuzenle.TabIndex = 17;
@@ -720,7 +720,7 @@
             // richTextBoxIsTanimiIlanDuzenle
             // 
             this.richTextBoxIsTanimiIlanDuzenle.Location = new System.Drawing.Point(333, 53);
-            this.richTextBoxIsTanimiIlanDuzenle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxIsTanimiIlanDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxIsTanimiIlanDuzenle.Name = "richTextBoxIsTanimiIlanDuzenle";
             this.richTextBoxIsTanimiIlanDuzenle.Size = new System.Drawing.Size(159, 49);
             this.richTextBoxIsTanimiIlanDuzenle.TabIndex = 16;
@@ -759,7 +759,7 @@
             // btnIlanIncele
             // 
             this.btnIlanIncele.Location = new System.Drawing.Point(42, 230);
-            this.btnIlanIncele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIlanIncele.Margin = new System.Windows.Forms.Padding(2);
             this.btnIlanIncele.Name = "btnIlanIncele";
             this.btnIlanIncele.Size = new System.Drawing.Size(135, 25);
             this.btnIlanIncele.TabIndex = 12;
@@ -776,7 +776,7 @@
             this.columnHeader4});
             this.listViewIlanlarDuzenlemeBolmesi.HideSelection = false;
             this.listViewIlanlarDuzenlemeBolmesi.Location = new System.Drawing.Point(15, 53);
-            this.listViewIlanlarDuzenlemeBolmesi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewIlanlarDuzenlemeBolmesi.Margin = new System.Windows.Forms.Padding(2);
             this.listViewIlanlarDuzenlemeBolmesi.Name = "listViewIlanlarDuzenlemeBolmesi";
             this.listViewIlanlarDuzenlemeBolmesi.Size = new System.Drawing.Size(279, 158);
             this.listViewIlanlarDuzenlemeBolmesi.TabIndex = 11;
@@ -824,9 +824,9 @@
             this.tabPage1.Controls.Add(this.listViewBasvuranlariListeleKismi);
             this.tabPage1.Controls.Add(this.btnIlanBasvuranlariGetir);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(548, 290);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "İlana Başvuranları Listele";
@@ -835,7 +835,7 @@
             // btnEnAzIkıYılListele
             // 
             this.btnEnAzIkıYılListele.Location = new System.Drawing.Point(265, 158);
-            this.btnEnAzIkıYılListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnAzIkıYılListele.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnAzIkıYılListele.Name = "btnEnAzIkıYılListele";
             this.btnEnAzIkıYılListele.Size = new System.Drawing.Size(264, 22);
             this.btnEnAzIkıYılListele.TabIndex = 17;
@@ -846,7 +846,7 @@
             // btnIlanGuncelleBasvuruKismi
             // 
             this.btnIlanGuncelleBasvuruKismi.Location = new System.Drawing.Point(201, 111);
-            this.btnIlanGuncelleBasvuruKismi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIlanGuncelleBasvuruKismi.Margin = new System.Windows.Forms.Padding(2);
             this.btnIlanGuncelleBasvuruKismi.Name = "btnIlanGuncelleBasvuruKismi";
             this.btnIlanGuncelleBasvuruKismi.Size = new System.Drawing.Size(106, 21);
             this.btnIlanGuncelleBasvuruKismi.TabIndex = 16;
@@ -882,7 +882,7 @@
             this.columnHeader25});
             this.listViewBasvuranlariListeleBasvuranlarKismi.HideSelection = false;
             this.listViewBasvuranlariListeleBasvuranlarKismi.Location = new System.Drawing.Point(7, 183);
-            this.listViewBasvuranlariListeleBasvuranlarKismi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewBasvuranlariListeleBasvuranlarKismi.Margin = new System.Windows.Forms.Padding(2);
             this.listViewBasvuranlariListeleBasvuranlarKismi.Name = "listViewBasvuranlariListeleBasvuranlarKismi";
             this.listViewBasvuranlariListeleBasvuranlarKismi.Size = new System.Drawing.Size(523, 88);
             this.listViewBasvuranlariListeleBasvuranlarKismi.TabIndex = 14;
@@ -968,7 +968,7 @@
             this.columnHeader12});
             this.listViewBasvuranlariListeleKismi.HideSelection = false;
             this.listViewBasvuranlariListeleKismi.Location = new System.Drawing.Point(7, 18);
-            this.listViewBasvuranlariListeleKismi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewBasvuranlariListeleKismi.Margin = new System.Windows.Forms.Padding(2);
             this.listViewBasvuranlariListeleKismi.Name = "listViewBasvuranlariListeleKismi";
             this.listViewBasvuranlariListeleKismi.Size = new System.Drawing.Size(523, 90);
             this.listViewBasvuranlariListeleKismi.TabIndex = 12;
@@ -999,7 +999,7 @@
             // btnIlanBasvuranlariGetir
             // 
             this.btnIlanBasvuranlariGetir.Location = new System.Drawing.Point(7, 111);
-            this.btnIlanBasvuranlariGetir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIlanBasvuranlariGetir.Margin = new System.Windows.Forms.Padding(2);
             this.btnIlanBasvuranlariGetir.Name = "btnIlanBasvuranlariGetir";
             this.btnIlanBasvuranlariGetir.Size = new System.Drawing.Size(190, 21);
             this.btnIlanBasvuranlariGetir.TabIndex = 3;
@@ -1019,9 +1019,9 @@
             this.tabFarklıListele.Controls.Add(this.btnPreOrderListele);
             this.tabFarklıListele.Controls.Add(this.lvFarkliListele);
             this.tabFarklıListele.Location = new System.Drawing.Point(4, 22);
-            this.tabFarklıListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabFarklıListele.Margin = new System.Windows.Forms.Padding(2);
             this.tabFarklıListele.Name = "tabFarklıListele";
-            this.tabFarklıListele.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabFarklıListele.Padding = new System.Windows.Forms.Padding(2);
             this.tabFarklıListele.Size = new System.Drawing.Size(548, 290);
             this.tabFarklıListele.TabIndex = 7;
             this.tabFarklıListele.Text = "Farklı Listele";
@@ -1030,7 +1030,7 @@
             // btnFarkliListeleGönder
             // 
             this.btnFarkliListeleGönder.Location = new System.Drawing.Point(268, 245);
-            this.btnFarkliListeleGönder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFarkliListeleGönder.Margin = new System.Windows.Forms.Padding(2);
             this.btnFarkliListeleGönder.Name = "btnFarkliListeleGönder";
             this.btnFarkliListeleGönder.Size = new System.Drawing.Size(140, 30);
             this.btnFarkliListeleGönder.TabIndex = 10;
@@ -1043,14 +1043,14 @@
             this.label23.Location = new System.Drawing.Point(142, 240);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(111, 13);
+            this.label23.Size = new System.Drawing.Size(72, 13);
             this.label23.TabIndex = 9;
-            this.label23.Text = "Derinlik Sayısını Giriniz";
+            this.label23.Text = "Derinlik Sayısı";
             // 
             // txtDerinlikSayisiGir
             // 
             this.txtDerinlikSayisiGir.Location = new System.Drawing.Point(143, 257);
-            this.txtDerinlikSayisiGir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDerinlikSayisiGir.Margin = new System.Windows.Forms.Padding(2);
             this.txtDerinlikSayisiGir.Name = "txtDerinlikSayisiGir";
             this.txtDerinlikSayisiGir.Size = new System.Drawing.Size(122, 20);
             this.txtDerinlikSayisiGir.TabIndex = 8;
@@ -1061,14 +1061,14 @@
             this.label22.Location = new System.Drawing.Point(2, 240);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(111, 13);
+            this.label22.Size = new System.Drawing.Size(72, 13);
             this.label22.TabIndex = 7;
-            this.label22.Text = "Eleman Sayısını Giriniz";
+            this.label22.Text = "Eleman Sayısı";
             // 
             // btnPostOrderListele
             // 
             this.btnPostOrderListele.Location = new System.Drawing.Point(412, 167);
-            this.btnPostOrderListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPostOrderListele.Margin = new System.Windows.Forms.Padding(2);
             this.btnPostOrderListele.Name = "btnPostOrderListele";
             this.btnPostOrderListele.Size = new System.Drawing.Size(121, 73);
             this.btnPostOrderListele.TabIndex = 6;
@@ -1078,7 +1078,7 @@
             // btnInOrderListele
             // 
             this.btnInOrderListele.Location = new System.Drawing.Point(412, 90);
-            this.btnInOrderListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInOrderListele.Margin = new System.Windows.Forms.Padding(2);
             this.btnInOrderListele.Name = "btnInOrderListele";
             this.btnInOrderListele.Size = new System.Drawing.Size(121, 72);
             this.btnInOrderListele.TabIndex = 5;
@@ -1088,7 +1088,7 @@
             // txtElemanSayisiGir
             // 
             this.txtElemanSayisiGir.Location = new System.Drawing.Point(4, 257);
-            this.txtElemanSayisiGir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtElemanSayisiGir.Margin = new System.Windows.Forms.Padding(2);
             this.txtElemanSayisiGir.Name = "txtElemanSayisiGir";
             this.txtElemanSayisiGir.Size = new System.Drawing.Size(122, 20);
             this.txtElemanSayisiGir.TabIndex = 4;
@@ -1096,19 +1096,20 @@
             // btnPreOrderListele
             // 
             this.btnPreOrderListele.Location = new System.Drawing.Point(412, 5);
-            this.btnPreOrderListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPreOrderListele.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreOrderListele.Name = "btnPreOrderListele";
             this.btnPreOrderListele.Size = new System.Drawing.Size(121, 80);
             this.btnPreOrderListele.TabIndex = 3;
             this.btnPreOrderListele.Text = "PreOrder Listele";
             this.btnPreOrderListele.UseVisualStyleBackColor = true;
+            this.btnPreOrderListele.Click += new System.EventHandler(this.btnPreOrderListele_Click);
             // 
             // lvFarkliListele
             // 
             this.lvFarkliListele.BackColor = System.Drawing.Color.DarkGray;
             this.lvFarkliListele.HideSelection = false;
             this.lvFarkliListele.Location = new System.Drawing.Point(2, 5);
-            this.lvFarkliListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvFarkliListele.Margin = new System.Windows.Forms.Padding(2);
             this.lvFarkliListele.Name = "lvFarkliListele";
             this.lvFarkliListele.Size = new System.Drawing.Size(407, 236);
             this.lvFarkliListele.TabIndex = 0;
@@ -1120,7 +1121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 372);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SirketAnaForm";
             this.Text = "Şirket Ana Formu";
             this.Load += new System.EventHandler(this.SirketAnaForm_Load);

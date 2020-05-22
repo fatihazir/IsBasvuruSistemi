@@ -429,5 +429,10 @@ namespace VeriYapilari2
                 }
             }
         }
+
+        private void btnPreOrderListele_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

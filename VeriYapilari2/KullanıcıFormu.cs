@@ -288,13 +288,13 @@ namespace VeriYapilari2
             _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, _isDeneyimi);
 
             MessageBox.Show("İs deneyiminiz eklendi.");
+            isDeneyimiListele();
         }
 
         private void btnIsDeneyimGoruntule_Click(object sender, EventArgs e)
         {
             ListViewItem theClickedItem = listViewIsDeneyimleriGoruntule.FocusedItem;
 
-            MessageBox.Show(theClickedItem.Text);
             IsDeneyimi isDeneyimi = new IsDeneyimi();
 
             if (theClickedItem == null)
@@ -367,7 +367,19 @@ namespace VeriYapilari2
 
                 formIciKisi.IsDeneyimleri.GetElement(işDeneyimiNumarasi).Data = isDeneyimi;
 
+                isDeneyimiListele();
+            }
+        }
 
+        private void IsDeneyiminiKategorizeEt(object sender, ColumnClickEventArgs e)
+        {
+            if (listViewIsDeneyimleriGoruntule.Sorting == SortOrder.Descending)
+            {
+                listViewIsDeneyimleriGoruntule.Sorting = SortOrder.Ascending;
+            }
+            else
+            {
+                listViewIsDeneyimleriGoruntule.Sorting = SortOrder.Descending;
             }
         }
     }
