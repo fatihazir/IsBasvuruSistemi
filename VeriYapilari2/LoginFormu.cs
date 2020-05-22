@@ -161,7 +161,7 @@ namespace VeriYapilari2
                 KisiBilgileri kisi = new KisiBilgileri();
                 kisi.ad = txtKayitAd.Text;
                 kisi.soyad = txtKayitSoyad.Text;
-                kisi.tcKimlikNumarasi = Convert.ToUInt32(txtKayitTCKimlik.Text);
+                kisi.tcKimlikNumarasi = Convert.ToDouble(txtKayitTCKimlik.Text);
                 kisi.dogumTarihi = txtKayitDogumTarih.Text;
                 kisi.dogumYeri = txtKayitDogumYer.Text;
                 kisi.telefon = txtKayitTelNo.Text;
