@@ -64,7 +64,7 @@ namespace VeriYapilari2
                 yeniSirket.SirketAdres = txtSirketAdres.Text;
                 yeniSirket.SirketFax = txtSirketFax.Text;
                 yeniSirket.SirketTelefon = txtSirketTelNo.Text;
-                yeniSirket.sifre = txtSirketSifreKayit.Text;
+                yeniSirket.sifre = maskedSirketSifreDogrula.Text;
                 db.Sirketler.Add(yeniSirket);
                 MessageBox.Show("Yeni şirket başarıyla eklendi!");
                 kontrol = false;

@@ -51,36 +51,46 @@ namespace VeriYapilari2
 
         private void sirketBilgiGuncelleButon_Click(object sender, EventArgs e)
         {
-            string yeniSirketAd, yeniSirketAdres, yeniSirketEPosta, yeniSirketFax;
-            string yeniSirketTelefon;
-            yeniSirketAd = txtSirketAdi.Text;
-            yeniSirketAdres = richTxtSirketAdres.Text;
-            yeniSirketEPosta = txtSirketEPosta.Text;
-            yeniSirketFax = txtSirketFax.Text;
-            yeniSirketTelefon = txtSirketTelefon.Text;
+            DialogResult durum = MessageBox.Show("Şirket bilgilerinizi güncellemek istediginize emin misiniz?.",
+                "", MessageBoxButtons.YesNo);
+            if (DialogResult.Yes == durum)
+            {
+                string yeniSirketAd, yeniSirketAdres, yeniSirketEPosta, yeniSirketFax;
+                string yeniSirketTelefon;
+                yeniSirketAd = txtSirketAdi.Text;
+                yeniSirketAdres = richTxtSirketAdres.Text;
+                yeniSirketEPosta = txtSirketEPosta.Text;
+                yeniSirketFax = txtSirketFax.Text;
+                yeniSirketTelefon = txtSirketTelefon.Text;
 
-            if (sirketFormIci.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
-            yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta))
-            {
-                MessageBox.Show("Şirket bilgileri güncellendi!");
-            }
-            else
-            {
-                MessageBox.Show("Şirket bilgisi güncellenirken hata oluştu!");
+                if (sirketFormIci.BilgiGuncelle(yeniSirketAd, yeniSirketAdres,
+                yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta))
+                {
+                    MessageBox.Show("Şirket bilgileri güncellendi!");
+                }
+                else
+                {
+                    MessageBox.Show("Şirket bilgisi güncellenirken hata oluştu!");
+                } 
             }
         }
 
         private void sirketSilButon_Click(object sender, EventArgs e)
         {
-            int sirketID = sirketFormIci.SirketID;
-            if (db.DatabasedenSirketSilme(sirketID))
+            DialogResult durum = MessageBox.Show("Şirket bilgilerini silerseniz sistemi kullanmak için yeni kayıt olusturmak zorunda kalırsınız.",
+                "Kaydı silmek istiyor musunuz?", MessageBoxButtons.YesNo);
+            if (true)
             {
-                MessageBox.Show("Şirket başarıyla silindi, giriş ekranına yönlendiriliyorsunuz.");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Şirket silinirken hata oluştu!");
+                int sirketID = sirketFormIci.SirketID;
+                if (db.DatabasedenSirketSilme(sirketID))
+                {
+                    MessageBox.Show("Şirket başarıyla silindi, giriş ekranına yönlendiriliyorsunuz.");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Şirket silinirken hata oluştu!");
+                } 
             }
         }
 
@@ -145,24 +155,26 @@ namespace VeriYapilari2
 
         private void ilanSilButon_Click(object sender, EventArgs e)
         {
-            //tıklanan ilan bilgisi çekilir
-            //silinecek ilanın bilgileri "Silindi" olarak güncellenir (bu gerekli mi emin değilim)
-            //ilgili ilan silinir
-            ListViewItem theClickedItem = listViewIlanlarIsAlmaBolmesi.FocusedItem;
-            if (theClickedItem == null)
+            DialogResult durum = MessageBox.Show("Kişi bilgilerini silerseniz sistemi kullanmak için yeni kayıt olusturmak zorunda kalırsınız.",
+                "Kaydı silmek istiyor musunuz?", MessageBoxButtons.YesNo);
+            if (DialogResult.Yes == durum)
             {
-                MessageBox.Show("Lütfen bir ilana tıklayınız!");
-            }
-            else
-            {
-                int ilanNumarasi;
-                ilanNumarasi = Convert.ToInt32(theClickedItem.Text);
-                Ilan ilan = new Ilan();
-                ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanNumarasi);
-                sirketFormIci.Ilanlar.DeleteIsIlani(ilan.IlanNumarasi);
-                MessageBox.Show("Başarıyla ilan silindi!");
-                ilanListele();
+                ListViewItem theClickedItem = listViewIlanlarIsAlmaBolmesi.FocusedItem;
+                if (theClickedItem == null)
+                {
+                    MessageBox.Show("Lütfen bir ilana tıklayınız!");
+                }
+                else
+                {
+                    int ilanNumarasi;
+                    ilanNumarasi = Convert.ToInt32(theClickedItem.Text);
+                    Ilan ilan = new Ilan();
+                    ilan = sirketFormIci.Ilanlar.GetIsIlani(ilanNumarasi);
+                    sirketFormIci.Ilanlar.DeleteIsIlani(ilan.IlanNumarasi);
+                    MessageBox.Show("Başarıyla ilan silindi!");
+                    ilanListele();
 
+                } 
             }
         }
 
@@ -206,22 +218,31 @@ namespace VeriYapilari2
         private void btnIlaniDuzenle_Click(object sender, EventArgs e)
         {
             ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
-            if (theClickedtwo != null)
+
+            if (theClickedtwo == null)
             {
-                Ilan ilan = new Ilan();
-                ilan.IsTanimi = richTextBoxIsTanimiIlanDuzenle.Text;
-                ilan.ArananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
-                ilan.Pozisyon = txtPozisyonIlanDuzenle.Text;
-                
-                int ilanID = Convert.ToInt32(theClickedtwo.Text);
-                sirketFormIci.Ilanlar.IsIlaniGuncelle(ilanID, ilan);
-                MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
-                ilanListele(); 
+                MessageBox.Show("Once bir ilan seçiniz.");
             }
             else
             {
-                MessageBox.Show("Once ilan seçin.");
+                if (theClickedtwo != null)
+                {
+                    Ilan ilan = new Ilan();
+                    ilan.IsTanimi = richTextBoxIsTanimiIlanDuzenle.Text;
+                    ilan.ArananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
+                    ilan.Pozisyon = txtPozisyonIlanDuzenle.Text;
+
+                    int ilanID = Convert.ToInt32(theClickedtwo.Text);
+                    sirketFormIci.Ilanlar.IsIlaniGuncelle(ilanID, ilan);
+                    MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
+                    ilanListele();
+                }
+                else
+                {
+                    MessageBox.Show("Once ilan seçin.");
+                }  
             }
+            
         }
 
         private void listViewIlanlarIsAlmaBolmesi_MouseClick(object sender, MouseEventArgs e)

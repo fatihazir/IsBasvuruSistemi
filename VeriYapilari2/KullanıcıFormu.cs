@@ -234,7 +234,14 @@ namespace VeriYapilari2
 
         private void brnKisiBilgiSil_Click(object sender, EventArgs e)
         {
-            _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
+            
+            DialogResult durum = MessageBox.Show("Kişi bilgilerini silerseniz sistemi kullanmak için yeni kayıt olusturmak zorunda kalırsınız.",
+                "Kaydı silmek istiyor musunuz?", MessageBoxButtons.YesNo);
+            if (DialogResult.Yes == durum)
+            {
+                _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi); 
+            }
+            
         }
 
         private void btnIlanGuncelle_Click(object sender, EventArgs e)
@@ -340,35 +347,41 @@ namespace VeriYapilari2
         private void btnIsDeneyimGuncelle_Click(object sender, EventArgs e)
         {
             ListViewItem theClickedItem = listViewIsDeneyimleriGoruntule.FocusedItem;
-
-            MessageBox.Show(theClickedItem.Text);
-            IsDeneyimi isDeneyimi = new IsDeneyimi();
-
             if (theClickedItem == null)
             {
-                MessageBox.Show("Lütfen bir iş deneyimine tıklayınız!");
+                MessageBox.Show("Lütfen güncellemek istediginiz iş deneyimine tıklayınız!");
             }
             else
             {
-                int işDeneyimiNumarasi = 0;
-                işDeneyimiNumarasi = Convert.ToInt32(theClickedItem.Text);
+                DialogResult durum = MessageBox.Show("İs deneyiminiz otomatik olarak listede güncellenecektir.", "İş deneyimini güncellemek istediginize emin misiniz?"
+                          , MessageBoxButtons.YesNo);
+                if (DialogResult.Yes == durum)
+                {
+
+                    int işDeneyimiNumarasi = 0;
+                    işDeneyimiNumarasi = Convert.ToInt32(theClickedItem.Text);
+
+                    IsDeneyimi isDeneyimi = formIciKisi.IsDeneyimleri.GetElement(işDeneyimiNumarasi).Data;
 
 
-                isDeneyimi.IsyeriAd = txtGIsDeneyimAd.Text;
-                isDeneyimi.IsyeriAdres = txtGIsDeneyimAdres.Text ;
-                isDeneyimi.IsyerindekiPozisyonu = txtGIsDeneyimPozisyon.Text  ;
-                isDeneyimi.IsyeriCalismaYili = Convert.ToUInt16(txtGIsDeneyimCalismaYil.Text);
-                isDeneyimi.KisininOkulAdi = txtGIsDeneyimiOkulAd.Text ;
-                isDeneyimi.KisininEgitimDurumu =txtGIsDeneyimEgitimDurumu.Text;
-                isDeneyimi.KisininOkulBolumu = txtGIsDeneyimKisiBolum.Text;
-                isDeneyimi.KisininNotOrtalamasi = txtGIsDeneyimOkulNot.Text ;
-                isDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(txtGIsDeneyimBaslangicYil.Text);
-                isDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtGIsDeneyimBitisYil.Text);
+                    isDeneyimi.IsyeriAd = txtGIsDeneyimAd.Text;
+                    isDeneyimi.IsyeriAdres = txtGIsDeneyimAdres.Text;
+                    isDeneyimi.IsyerindekiPozisyonu = txtGIsDeneyimPozisyon.Text;
+                    isDeneyimi.IsyeriCalismaYili = Convert.ToUInt16(txtGIsDeneyimCalismaYil.Text);
+                    isDeneyimi.KisininOkulAdi = txtGIsDeneyimiOkulAd.Text;
+                    isDeneyimi.KisininEgitimDurumu = txtGIsDeneyimEgitimDurumu.Text;
+                    isDeneyimi.KisininOkulBolumu = txtGIsDeneyimKisiBolum.Text;
+                    isDeneyimi.KisininNotOrtalamasi = txtGIsDeneyimOkulNot.Text;
+                    isDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(txtGIsDeneyimBaslangicYil.Text);
+                    isDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtGIsDeneyimBitisYil.Text);
 
-                formIciKisi.IsDeneyimleri.GetElement(işDeneyimiNumarasi).Data = isDeneyimi;
+                    formIciKisi.IsDeneyimleri.GetElement(işDeneyimiNumarasi).Data = isDeneyimi;
 
-                isDeneyimiListele();
+                    isDeneyimiListele();
+
+                }  
             }
+            
         }
 
         private void IsDeneyiminiKategorizeEt(object sender, ColumnClickEventArgs e)
