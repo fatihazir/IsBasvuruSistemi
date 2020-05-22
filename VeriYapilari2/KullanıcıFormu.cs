@@ -53,11 +53,13 @@ namespace VeriYapilari2
         {
             listViewKullaniciIlanlarBolmesi.Items.Clear();
             Ilan ilan = new Ilan();
+            HashChainEntry ilan2;
             foreach (Sirket sirket in db.Sirketler)
             {
                 for (int i = 0; i < 10; i++)
                 {
                     ilan = sirket.Ilanlar.GetIsIlaniForEditingAndListing(i);
+                    
                     if (ilan == null)
                     {
                         continue;
@@ -65,7 +67,8 @@ namespace VeriYapilari2
 
                     if (sirket.Ilanlar.GetIsIlaniNext(ilan.IlanNumarasi) != null)
                     {
-                       sirket.Ilanlar.GetIsIlani()
+                        //ilan2 = sirket.Ilanlar.GetIsIlaniNext(ilan.IlanNumarasi);
+                        //sirket.Ilanlar.GetIsIlani()
                     }
 
                     int sayacNull = 0;
@@ -95,7 +98,6 @@ namespace VeriYapilari2
                         temp.SubItems.Add(ilan.Pozisyon);
                         temp.SubItems.Add(ilan.IlanSirketAd);
                         listViewKullaniciIlanlarBolmesi.Items.Add(temp);
-                        break;
                     }
                     else
                     {

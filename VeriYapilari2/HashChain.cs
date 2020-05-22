@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Policy;
 
 namespace VeriYapilari2
 {
@@ -117,24 +118,16 @@ namespace VeriYapilari2
                     return entry.next;
             }
         }
-        List<Ilan> ilanlar = new List<Ilan>();
-        public List<Ilan> nextleriListele(int key)
-        {
-
-            int hash = (key % TABLE_SIZE);
-            if (table[hash] == null)
-                return null;
-            else
-            {
-                HashChainEntry entry = table[hash];
-                while (entry != null && entry.Anahtar != key)
-                    entry = entry.Next;
-                if (entry == null)
-                    return null;
-                else
-                    return entry.next;
-            }
-        }
+        List<HashChainEntry> ilanlar = new List<HashChainEntry>();
+        //public List<Ilan> nextleriListele(HashChainEntry entry)
+        //{
+        //    while (entry != null)
+        //        entry = entry.Next;
+        //    if (entry == null)
+        //        return null;
+        //    else
+        //        ilanlar.Add((Ilan)entry.next.Deger);
+        //}
 
         public Ilan DeleteIsIlani(int key)
         {
