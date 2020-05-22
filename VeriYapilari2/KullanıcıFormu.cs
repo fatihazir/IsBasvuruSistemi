@@ -63,6 +63,11 @@ namespace VeriYapilari2
                         continue;
                     }
 
+                    if (sirket.Ilanlar.GetIsIlaniNext(ilan.IlanNumarasi) != null)
+                    {
+                       sirket.Ilanlar.GetIsIlani()
+                    }
+
                     int sayacNull = 0;
                     int sayacBaskaKisi = 0;
                    
@@ -264,13 +269,20 @@ namespace VeriYapilari2
                 ilanID = Convert.ToInt32(theClickedItem.Text);
                 foreach (Sirket sirket in db.Sirketler)
                 {
-                        
                     ilan = sirket.Ilanlar.GetIsIlani(ilanID);
-                    if (ilan.IsTanimi == null)
+                    if (ilan == null)
                     {
-                        break;
+                        continue;
+                        
                     }
-                    ilan.heap.Insert(ilan.IlanNumarasi, formIciKisi, formIciKisi.iseUygunlukDurumu);
+                    else
+                    {
+                        if (ilan.IsTanimi == null)
+                        {
+                            break;
+                        }
+                        ilan.heap.Insert(ilan.IlanNumarasi, formIciKisi, formIciKisi.iseUygunlukDurumu); 
+                    }
                 }
 
                 ilanListele();

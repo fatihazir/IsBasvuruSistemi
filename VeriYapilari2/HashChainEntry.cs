@@ -8,7 +8,7 @@
 
         private object deger;
 
-        private HashChainEntry next;
+        public HashChainEntry next;
 
         private Sirket sirket;
 

@@ -1,4 +1,6 @@
-﻿namespace VeriYapilari2
+﻿using System.Collections.Generic;
+
+namespace VeriYapilari2
 {
     public class HashChain
     {
@@ -62,6 +64,8 @@
             }
         }
 
+       
+
         public Ilan GetIsIlani(int key)
         {
             int hash = (key % TABLE_SIZE);
@@ -94,6 +98,41 @@
             {
                 HashChainEntry entry = table[index];
                 return (Ilan)entry.Deger;
+            }
+        }
+        public HashChainEntry GetIsIlaniNext(int key)
+        {
+            
+            int hash = (key % TABLE_SIZE);
+            if (table[hash] == null)
+                return null;
+            else
+            {
+                HashChainEntry entry = table[hash];
+                while (entry != null && entry.Anahtar != key)
+                    entry = entry.Next;
+                if (entry == null)
+                    return null;
+                else
+                    return entry.next;
+            }
+        }
+        List<Ilan> ilanlar = new List<Ilan>();
+        public List<Ilan> nextleriListele(int key)
+        {
+
+            int hash = (key % TABLE_SIZE);
+            if (table[hash] == null)
+                return null;
+            else
+            {
+                HashChainEntry entry = table[hash];
+                while (entry != null && entry.Anahtar != key)
+                    entry = entry.Next;
+                if (entry == null)
+                    return null;
+                else
+                    return entry.next;
             }
         }
 
