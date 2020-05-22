@@ -113,7 +113,7 @@ namespace VeriYapilari2
             return derinlik;
         }
 
-        public void Ekle(ulong deger, KisiBilgileri kisi)
+        public void Ekle(double deger, KisiBilgileri kisi)
         {
             //Yeni eklenecek düğümün parent'ı
             İkiliAramaAgacDugumu tempParent = new İkiliAramaAgacDugumu();
@@ -124,9 +124,9 @@ namespace VeriYapilari2
             {
                 tempParent = tempSearch;
                 //Deger zaten var, çık.
-                if (deger == (ulong)tempSearch.Tc)
+                if (deger == (double)tempSearch.Tc)
                     return;
-                else if (deger < (ulong)tempSearch.Tc)
+                else if (deger < (double)tempSearch.Tc)
                 {
                     if (tempSearch.sag == null && tempSearch.sol == null)
                     {
@@ -150,19 +150,19 @@ namespace VeriYapilari2
                 kok = eklenecek;
                 derinlik++;
             }
-            else if (deger < (ulong)tempParent.Tc)
+            else if (deger < (double)tempParent.Tc)
                 tempParent.sol = eklenecek;
             else
                 tempParent.sag = eklenecek;
         }
 
-        public İkiliAramaAgacDugumu Ara(ulong tc)
+        public İkiliAramaAgacDugumu Ara(double tc)
         {
             return AraInt(kok, tc);
         }
 
         private İkiliAramaAgacDugumu AraInt(İkiliAramaAgacDugumu dugum,
-                                            ulong tc)
+                                            double tc)
         {
             if (dugum == null)
                 return null;
@@ -174,7 +174,7 @@ namespace VeriYapilari2
                 return (AraInt(dugum.sag, tc));
         }
 
-        public İkiliAramaAgacDugumu KisiBilgileriniBul(ulong tc)
+        public İkiliAramaAgacDugumu KisiBilgileriniBul(double tc)
         {
             İkiliAramaAgacDugumu tempDugum = new İkiliAramaAgacDugumu();
             tempDugum = Ara(tc);
@@ -182,7 +182,7 @@ namespace VeriYapilari2
             return tempDugum;
         }
 
-        public KisiBilgileri BireyselGirisYap(ulong tc, string sifre)
+        public KisiBilgileri BireyselGirisYap(double tc, string sifre)
         {
             İkiliAramaAgacDugumu tempDugum = new İkiliAramaAgacDugumu();
             tempDugum = KisiBilgileriniBul(tc);
@@ -198,7 +198,7 @@ namespace VeriYapilari2
             }
         }
 
-        public void KisiGuncelle(ulong tc, KisiBilgileri kisi)
+        public void KisiGuncelle(double tc, KisiBilgileri kisi)
         {
             Ara(tc).Kisi = kisi;
         }
@@ -206,7 +206,7 @@ namespace VeriYapilari2
         private bool parentBuyukMu = false;
         private İkiliAramaAgacDugumu araParent = new İkiliAramaAgacDugumu();
 
-        public bool Sil(ulong tc)
+        public bool Sil(double tc)
         {
             İkiliAramaAgacDugumu current = kok;
             İkiliAramaAgacDugumu parent = kok;
@@ -321,17 +321,17 @@ namespace VeriYapilari2
             return temp;
         }
 
-        public void IsDeneyimiEkle(ulong tc, IsDeneyimi isDeneyimi)
+        public void IsDeneyimiEkle(double tc, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.InsertLast(isDeneyimi);
         }
 
-        public void IsDeneyiminiGuncelle(ulong tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
+        public void IsDeneyiminiGuncelle(double tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.GetElement(isDeneyimiId).Data = isDeneyimi;
         }
 
-        public void IsDeneyimiGuncelle(ulong tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
+        public void IsDeneyimiGuncelle(double tc, int isDeneyimiId, IsDeneyimi isDeneyimi)
         {
             Ara(tc).Kisi.IsDeneyimleri.GetElement(isDeneyimiId).Data = isDeneyimi;
         }

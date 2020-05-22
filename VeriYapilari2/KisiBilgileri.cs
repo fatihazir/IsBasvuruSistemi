@@ -17,7 +17,7 @@ namespace VeriYapilari2
         public string yabanciDil { get; set; }
         public string ilgiAlanlari { get; set; }
         public int iseUygunlukDurumu { get; set; }
-        public ulong tcKimlikNumarasi { get; set; }
+        public double tcKimlikNumarasi { get; set; }
         public string sifre { get; set; }
 
         public LinkedList IsDeneyimleri = new LinkedList();

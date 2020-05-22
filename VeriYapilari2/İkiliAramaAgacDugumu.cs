@@ -3,7 +3,7 @@
     public class İkiliAramaAgacDugumu
     {
         public KisiBilgileri Kisi;
-        public ulong Tc;
+        public double Tc;
         public İkiliAramaAgacDugumu sol;
         public İkiliAramaAgacDugumu sag;
         private ulong deger;
@@ -12,7 +12,7 @@
         {
         }
 
-        public İkiliAramaAgacDugumu(ulong tc, KisiBilgileri kisi)
+        public İkiliAramaAgacDugumu(double tc, KisiBilgileri kisi)
         {
             this.Kisi = kisi;
             this.Tc = tc;

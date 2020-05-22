@@ -174,12 +174,6 @@
     <Compile Include="SirketAnaForm.Designer.cs">
       <DependentUpon>SirketAnaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestFormu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestFormu.Designer.cs">
-      <DependentUpon>TestFormu.cs</DependentUpon>
-    </Compile>
     <Compile Include="İkiliAramaAgacDugumu.cs" />
     <Compile Include="İkiliAramaAgacı.cs" />
     <Compile Include="KullanıcıFormu.cs">
@@ -214,9 +208,6 @@
     </Compile>
     <EmbeddedResource Include="SirketAnaForm.resx">
       <DependentUpon>SirketAnaForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestFormu.resx">
-      <DependentUpon>TestFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıFormu.resx">
       <DependentUpon>KullanıcıFormu.cs</DependentUpon>
