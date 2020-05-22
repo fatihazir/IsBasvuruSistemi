@@ -166,9 +166,9 @@ namespace VeriYapilari2
         {
             if (dugum == null)
                 return null;
-            else if ((ulong)dugum.Tc == tc)
+            else if ((double)dugum.Tc == tc)
                 return dugum;
-            else if ((ulong)dugum.Tc > tc)
+            else if ((double)dugum.Tc > tc)
                 return (AraInt(dugum.sol, tc));
             else
                 return (AraInt(dugum.sag, tc));
@@ -212,10 +212,10 @@ namespace VeriYapilari2
             İkiliAramaAgacDugumu parent = kok;
             bool issol = true;
             //DÜĞÜMÜ BUL
-            while ((ulong)current.Tc != tc)
+            while ((double)current.Tc != tc)
             {
                 parent = current;
-                if (tc < (ulong)current.Tc)
+                if (tc < (double)current.Tc)
                 {
                     issol = true;
                     current = current.sol;
@@ -247,7 +247,7 @@ namespace VeriYapilari2
             //DURUM 2: TEK ÇOCUKLU DÜĞÜM
             else if (current.sag == null)
             {
-                if ((ulong)parent.Tc > tc)
+                if ((double)parent.Tc > tc)
                 {
                     parent.sol = current.sol;
                     parent.Kisi = null;
@@ -262,7 +262,7 @@ namespace VeriYapilari2
             }
             else if (current.sol == null)
             {
-                if ((ulong)parent.Tc < tc)
+                if ((double)parent.Tc < tc)
                 {
                     parent.sag = current.sag;
                     parent.Kisi = null;
@@ -306,7 +306,7 @@ namespace VeriYapilari2
             while (temp.sol != null)
             {
                 var tempParent = temp.sol;
-                if ((ulong)temp.Tc > (ulong)tempParent.Tc)
+                if ((double)temp.Tc > (double)tempParent.Tc)
                 {
                     parentBuyukMu = true;
                     araParent = temp;
