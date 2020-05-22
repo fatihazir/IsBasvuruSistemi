@@ -83,7 +83,7 @@ namespace VeriYapilari2
             _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
 
             //336621312
-            ulong tc = Convert.ToUInt32(txtTcNo.Text);
+            double tc = Convert.ToDouble(txtTcNo.Text);
             string sifre = txtSifre.Text;
 
             kisi = _IkılıAramaAgaci.BireyselGirisYap(tc, sifre);
