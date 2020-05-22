@@ -11,12 +11,13 @@ namespace VeriYapilari2
         KullaniciFormu kullaniciFormu = new KullaniciFormu();
 
         private İkiliAramaAgacı _IkılıAramaAgaci = new İkiliAramaAgacı();
+        
+        KisiBilgileri kisi = new KisiBilgileri();
 
         public LoginFormu()
         {
             InitializeComponent();
         }
-
 
         private void btnSirketGirisi_Click(object sender, EventArgs e)
         {
@@ -78,10 +79,6 @@ namespace VeriYapilari2
 
         private void btnGirisYapKullanici_Click(object sender, EventArgs e)
         {
-            KisiBilgileri kisi = new KisiBilgileri();
-            kisi = db.DatabasedenIlkKisiCekimi();
-            _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
-
             //336621312
             double tc = Convert.ToDouble(txtTcNo.Text);
             string sifre = txtSifre.Text;
@@ -90,7 +87,6 @@ namespace VeriYapilari2
 
             if (kisi.ad != null)
             {
-               
                 kullaniciFormu.formIciKisi = kisi;
                 kullaniciFormu.db = db;
                 kullaniciFormu._ikiliAramaAgaci = _IkılıAramaAgaci;
@@ -188,6 +184,8 @@ namespace VeriYapilari2
 
         private void LoginFormu_Load(object sender, EventArgs e)
         {
+            kisi = db.DatabasedenIlkKisiCekimi();
+            _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
             txtYabanciDil.Text = "Dil1,Dil2,Dil3";
         }
 

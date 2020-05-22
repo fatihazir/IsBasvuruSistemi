@@ -6,7 +6,6 @@
         public double Tc;
         public İkiliAramaAgacDugumu sol;
         public İkiliAramaAgacDugumu sag;
-        private ulong deger;
 
         public İkiliAramaAgacDugumu()
         {
