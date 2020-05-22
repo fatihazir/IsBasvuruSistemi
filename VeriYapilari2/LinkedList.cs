@@ -77,18 +77,16 @@ namespace VeriYapilari2
             Node retNode = null;
             //Head'den başlanarak Next node'a gidilecek
             Node tempNode = Head;
-            int count = 0;
 
             while (tempNode != null)
             {
-                if (count == isDeneyimId)
+                if (tempNode.Data.IsDeneyimId == isDeneyimId)
                 {
                     retNode = tempNode;
                     break;
                 }
                 //Next node'a git
                 tempNode = tempNode.Next;
-                count++;
             }
             return retNode;
         }

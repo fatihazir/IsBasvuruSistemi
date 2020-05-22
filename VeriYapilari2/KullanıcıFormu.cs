@@ -21,24 +21,31 @@ namespace VeriYapilari2
             for (int i = 0; i < 10; i++)
             {
                 IsDeneyimi isDeneyimi = new IsDeneyimi();
-                isDeneyimi = formIciKisi.IsDeneyimleri.GetElement(i).Data;  // Null dönüyor.
-
-                if (isDeneyimi.IsyeriAd != null)
+                if (formIciKisi.IsDeneyimleri.GetElement(i) == null)
                 {
-                    
-                    ListViewItem temp = new ListViewItem(isDeneyimi.IsDeneyimId.ToString());
-                    temp.SubItems.Add(isDeneyimi.IsyeriAd); // şirket ad
-                    temp.SubItems.Add(isDeneyimi.IsyeriAdres); // şirket in sonraki sütundaki değeri
-                    temp.SubItems.Add(isDeneyimi.IsyerindekiPozisyonu);// şirket in sonraki sütundaki değeri
-                    temp.SubItems.Add(Convert.ToString(isDeneyimi.IsyeriCalismaYili));
-                    //temp.SubItems.Add(isDeneyimi.KisininEgitimDurumu);
-                    //temp.SubItems.Add(isDeneyimi.KisininOkulAdi);
-                    //temp.SubItems.Add(isDeneyimi.KisininOkulBolumu);
-                    //temp.SubItems.Add(Convert.ToString(isDeneyimi.KisininBolumeBaslangicYili));
-                    //temp.SubItems.Add(Convert.ToString(isDeneyimi.KisininBolumuBitirmeYili));
-                    //temp.SubItems.Add(isDeneyimi.KisininNotOrtalamasi);
-                    
-                    listViewIsDeneyimleriGoruntule.Items.Add(temp);  
+                    continue;
+                }
+                else
+                {
+                    isDeneyimi = formIciKisi.IsDeneyimleri.GetElement(i).Data;  // Null dönüyor.
+
+                    if (isDeneyimi.IsyeriAd != null)
+                    {
+
+                        ListViewItem temp = new ListViewItem(isDeneyimi.IsDeneyimId.ToString());
+                        temp.SubItems.Add(isDeneyimi.IsyeriAd); // şirket ad
+                        temp.SubItems.Add(isDeneyimi.IsyeriAdres); // şirket in sonraki sütundaki değeri
+                        temp.SubItems.Add(isDeneyimi.IsyerindekiPozisyonu);// şirket in sonraki sütundaki değeri
+                        temp.SubItems.Add(Convert.ToString(isDeneyimi.IsyeriCalismaYili));
+                        temp.SubItems.Add(isDeneyimi.KisininEgitimDurumu);
+                        temp.SubItems.Add(isDeneyimi.KisininOkulAdi);
+                        temp.SubItems.Add(isDeneyimi.KisininOkulBolumu);
+                        temp.SubItems.Add(Convert.ToString(isDeneyimi.KisininBolumeBaslangicYili));
+                        temp.SubItems.Add(Convert.ToString(isDeneyimi.KisininBolumuBitirmeYili));
+                        temp.SubItems.Add(isDeneyimi.KisininNotOrtalamasi);
+
+                        listViewIsDeneyimleriGoruntule.Items.Add(temp);
+                    }
                 }
             }
         }
