@@ -6,24 +6,41 @@ namespace VeriYapilari2
     public partial class KullaniciFormu : Form
     {
         public DatabaseIslemleri db { get; set; }
-
+        
         public KisiBilgileri formIciKisi { get; set; }
 
         public İkiliAramaAgacı _ikiliAramaAgaci { get; set; }
+
+        public Sirket formIcıSirket { get; set; }
         private IsDeneyimi _isDeneyimi = new IsDeneyimi();
 
         public void isDeneyimiListele()
         {
             listViewIsDeneyimleriGoruntule.Items.Clear();
 
-            //İş deneyimine eriş
+            for (int i = 0; i < 10; i++)
+            {
+                IsDeneyimi isDeneyimi = new IsDeneyimi();
+                isDeneyimi = formIciKisi.IsDeneyimleri.GetElement(i).Data;  // Null dönüyor.
 
-            //listviewa ekle
-            //ListViewItem temp = new ListViewItem(ilan.IlanNumarasi.ToString());
-            //temp.SubItems.Add(ilan.IsTanimi); // şirket ad
-            //temp.SubItems.Add(ilan.ArananElemanOzellikleri); // şirket in sonraki sütundaki değeri
-            //temp.SubItems.Add(ilan.Pozisyon);// şirket in sonraki sütundaki değeri
-            //listViewIsDeneyimleriGoruntule.Items.Add(temp);
+                if (isDeneyimi.IsyeriAd != null)
+                {
+                    
+                    ListViewItem temp = new ListViewItem(isDeneyimi.IsDeneyimId.ToString());
+                    temp.SubItems.Add(isDeneyimi.IsyeriAd); // şirket ad
+                    temp.SubItems.Add(isDeneyimi.IsyeriAdres); // şirket in sonraki sütundaki değeri
+                    temp.SubItems.Add(isDeneyimi.IsyerindekiPozisyonu);// şirket in sonraki sütundaki değeri
+                    temp.SubItems.Add(Convert.ToString(isDeneyimi.IsyeriCalismaYili));
+                    //temp.SubItems.Add(isDeneyimi.KisininEgitimDurumu);
+                    //temp.SubItems.Add(isDeneyimi.KisininOkulAdi);
+                    //temp.SubItems.Add(isDeneyimi.KisininOkulBolumu);
+                    //temp.SubItems.Add(Convert.ToString(isDeneyimi.KisininBolumeBaslangicYili));
+                    //temp.SubItems.Add(Convert.ToString(isDeneyimi.KisininBolumuBitirmeYili));
+                    //temp.SubItems.Add(isDeneyimi.KisininNotOrtalamasi);
+                    
+                    listViewIsDeneyimleriGoruntule.Items.Add(temp);  
+                }
+            }
         }
         public void ilanListele()
         {
@@ -64,6 +81,7 @@ namespace VeriYapilari2
                         temp.SubItems.Add(ilan.IsTanimi);
                         temp.SubItems.Add(ilan.ArananElemanOzellikleri);
                         temp.SubItems.Add(ilan.Pozisyon);
+                        temp.SubItems.Add(ilan.IlanSirketAd);
                         listViewKullaniciIlanlarBolmesi.Items.Add(temp);
                         break;
                     }
@@ -134,6 +152,7 @@ namespace VeriYapilari2
             txtIlgiAlan.Text = formIciKisi.ilgiAlanlari;
             txtYabanciDil.Text = formIciKisi.yabanciDil;
             ilanListele();
+            isDeneyimiListele();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -260,14 +279,89 @@ namespace VeriYapilari2
             _isDeneyimi.KisininNotOrtalamasi = txtNotOrtalamasi.Text;
 
             _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, _isDeneyimi);
+
+            MessageBox.Show("İs deneyiminiz eklendi.");
         }
 
         private void btnIsDeneyimGoruntule_Click(object sender, EventArgs e)
         {
             ListViewItem theClickedItem = listViewIsDeneyimleriGoruntule.FocusedItem;
-            //iş deneyimleri içinde gez ve idsi eşit olanı bir nesneye at.
-            //nesne.calismaYili
+
             MessageBox.Show(theClickedItem.Text);
+            IsDeneyimi isDeneyimi = new IsDeneyimi();
+
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir iş deneyimine tıklayınız!");
+            }
+            else
+            {
+                int işDeneyimiNumarasi = 0;
+                işDeneyimiNumarasi = Convert.ToInt32(theClickedItem.Text);
+                isDeneyimi = formIciKisi.IsDeneyimleri.GetElement(işDeneyimiNumarasi).Data;
+
+                txtGIsDeneyimAd.Text = isDeneyimi.IsyeriAd;
+                txtGIsDeneyimAdres.Text = isDeneyimi.IsyeriAdres;
+                txtGIsDeneyimPozisyon.Text = isDeneyimi.IsyerindekiPozisyonu;
+                txtGIsDeneyimCalismaYil.Text = Convert.ToString(isDeneyimi.IsyeriCalismaYili);
+                txtGIsDeneyimiOkulAd.Text = isDeneyimi.KisininOkulAdi;
+                txtGIsDeneyimEgitimDurumu.Text = isDeneyimi.KisininEgitimDurumu;
+                txtGIsDeneyimKisiBolum.Text = isDeneyimi.KisininEgitimDurumu;
+                txtGIsDeneyimKisiBolum.Text = isDeneyimi.KisininOkulBolumu;
+                txtGIsDeneyimOkulNot.Text = isDeneyimi.KisininNotOrtalamasi;
+                txtGIsDeneyimBaslangicYil.Text = isDeneyimi.KisininBolumeBaslangicYili.ToString();
+                txtGIsDeneyimBitisYil.Text = isDeneyimi.KisininBolumuBitirmeYili.ToString();
+
+
+            }
+        }
+
+        
+
+        private void IlanlarListesi(object sender, ColumnClickEventArgs e)
+        {
+            if (listViewKullaniciIlanlarBolmesi.Sorting == SortOrder.Descending)
+            {
+                listViewKullaniciIlanlarBolmesi.Sorting = SortOrder.Ascending;
+            }
+            else
+            {
+                listViewKullaniciIlanlarBolmesi.Sorting = SortOrder.Descending;
+            }
+        }
+
+        private void btnIsDeneyimGuncelle_Click(object sender, EventArgs e)
+        {
+            ListViewItem theClickedItem = listViewIsDeneyimleriGoruntule.FocusedItem;
+
+            MessageBox.Show(theClickedItem.Text);
+            IsDeneyimi isDeneyimi = new IsDeneyimi();
+
+            if (theClickedItem == null)
+            {
+                MessageBox.Show("Lütfen bir iş deneyimine tıklayınız!");
+            }
+            else
+            {
+                int işDeneyimiNumarasi = 0;
+                işDeneyimiNumarasi = Convert.ToInt32(theClickedItem.Text);
+
+
+                isDeneyimi.IsyeriAd = txtGIsDeneyimAd.Text;
+                isDeneyimi.IsyeriAdres = txtGIsDeneyimAdres.Text ;
+                isDeneyimi.IsyerindekiPozisyonu = txtGIsDeneyimPozisyon.Text  ;
+                isDeneyimi.IsyeriCalismaYili = Convert.ToUInt16(txtGIsDeneyimCalismaYil.Text);
+                isDeneyimi.KisininOkulAdi = txtGIsDeneyimiOkulAd.Text ;
+                isDeneyimi.KisininEgitimDurumu =txtGIsDeneyimEgitimDurumu.Text;
+                isDeneyimi.KisininOkulBolumu = txtGIsDeneyimKisiBolum.Text;
+                isDeneyimi.KisininNotOrtalamasi = txtGIsDeneyimOkulNot.Text ;
+                isDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(txtGIsDeneyimBaslangicYil.Text);
+                isDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtGIsDeneyimBitisYil.Text);
+
+                formIciKisi.IsDeneyimleri.GetElement(işDeneyimiNumarasi).Data = isDeneyimi;
+
+
+            }
         }
     }
 }

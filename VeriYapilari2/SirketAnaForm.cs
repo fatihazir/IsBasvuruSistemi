@@ -205,15 +205,23 @@ namespace VeriYapilari2
 
         private void btnIlaniDuzenle_Click(object sender, EventArgs e)
         {
-            Ilan ilan = new Ilan();
-            ilan.IsTanimi = richTextBoxIsTanimiIlanDuzenle.Text;
-            ilan.ArananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
-            ilan.Pozisyon = txtPozisyonIlanDuzenle.Text;
             ListViewItem theClickedtwo = listViewIlanlarDuzenlemeBolmesi.FocusedItem;
-            int ilanID = Convert.ToInt32(theClickedtwo.Text);
-            sirketFormIci.Ilanlar.IsIlaniGuncelle(ilanID, ilan);
-            MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
-            ilanListele();
+            if (theClickedtwo != null)
+            {
+                Ilan ilan = new Ilan();
+                ilan.IsTanimi = richTextBoxIsTanimiIlanDuzenle.Text;
+                ilan.ArananElemanOzellikleri = richTextBoxArananElemanOzellikleriIlanDuzenle.Text;
+                ilan.Pozisyon = txtPozisyonIlanDuzenle.Text;
+                
+                int ilanID = Convert.ToInt32(theClickedtwo.Text);
+                sirketFormIci.Ilanlar.IsIlaniGuncelle(ilanID, ilan);
+                MessageBox.Show("Başarıyla ilanınızı güncellediniz!");
+                ilanListele(); 
+            }
+            else
+            {
+                MessageBox.Show("Once ilan seçin.");
+            }
         }
 
         private void listViewIlanlarIsAlmaBolmesi_MouseClick(object sender, MouseEventArgs e)
@@ -364,14 +372,7 @@ namespace VeriYapilari2
 
         private void listViewBasvuranlariListeleBasvuranlarKismi_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-            if (listViewBasvuranlariListeleBasvuranlarKismi.Sorting == SortOrder.Descending)
-            {
-                listViewBasvuranlariListeleBasvuranlarKismi.Sorting = SortOrder.Ascending;
-            }
-            else
-            {
-                listViewBasvuranlariListeleBasvuranlarKismi.Sorting = SortOrder.Descending;
-            }
+
         }
 
         private void btnEnAzIkıYılListele_Click(object sender, EventArgs e)

@@ -11,6 +11,8 @@ namespace VeriYapilari2
 
         public string ArananElemanOzellikleri { get; set; }
 
+        public string IlanSirketAd { get; set; }
+
         public Heap heap = new Heap(10);
 
         public Ilan()

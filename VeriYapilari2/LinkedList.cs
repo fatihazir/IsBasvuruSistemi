@@ -46,9 +46,16 @@ namespace VeriYapilari2
             }
         }
 
-        public override void DeletePos(int position)
+        public override void DeletePos(int isDeneyimId)
         {
-            throw new NotImplementedException(); // Gerekirse yazarim.
+            Node lastNode = Head;
+            Node lastPrevNode = null;
+
+            while (lastNode.Next.Data.IsDeneyimId != isDeneyimId)
+            {
+                lastPrevNode = lastNode;
+                lastNode = lastPrevNode.Next;
+            }
         }
 
         public override string DisplayElements()

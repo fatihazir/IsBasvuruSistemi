@@ -94,6 +94,7 @@ namespace VeriYapilari2
                 kullaniciFormu.formIciKisi = kisi;
                 kullaniciFormu.db = db;
                 kullaniciFormu._ikiliAramaAgaci = _IkılıAramaAgaci;
+                
                 kullaniciFormu.Show();
             }
             else
