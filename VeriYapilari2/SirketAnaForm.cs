@@ -136,7 +136,7 @@ namespace VeriYapilari2
                 IsDeneyimi yeniIsDeneyimi = new IsDeneyimi();
                 yeniIsDeneyimi.IsyeriAd = sirketFormIci.SirketAd;
                 yeniIsDeneyimi.IsyeriAdres = sirketFormIci.SirketAdres;
-                yeniIsDeneyimi.IsyeriCalismaYili = 2020;
+                yeniIsDeneyimi.IsyeriCalismaYili = 0;
                 yeniIsDeneyimi.IsyerindekiPozisyonu = ilan.Pozisyon;
                 yeniIsDeneyimi.KisininBolumeBaslangicYili = 2015;
                 yeniIsDeneyimi.KisininBolumuBitirmeYili = 2018;
