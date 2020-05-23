@@ -67,6 +67,7 @@ namespace VeriYapilari2
                 yeniSirket.sifre = maskedSirketSifreDogrula.Text;
                 db.Sirketler.Add(yeniSirket);
                 MessageBox.Show("Yeni şirket başarıyla eklendi!");
+                MessageBox.Show("Bilgileriniz : " +yeniSirket.SirketBilgileriYazdir());
                 kontrol = false;
                 MessageBox.Show("Lütfen giriş yap sekmesinden giriş yapınız.");
             }
@@ -186,9 +187,7 @@ namespace VeriYapilari2
         {
             kisi = db.DatabasedenIlkKisiCekimi();
             _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
-            txtYabanciDil.Text = "Dil1,Dil2,Dil3";
         }
 
-        
     }
 }

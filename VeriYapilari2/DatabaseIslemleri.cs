@@ -118,14 +118,6 @@ namespace VeriYapilari2
             return bosSirket;
         }
 
-        //public List<Ilan> IlanlarıGetir()
-        //{
-        //    List<Ilan> ilanlar = new List<Ilan>();
-
-        //    foreach (Sirket sirket in Sirketler)
-        //    {
-        //        ilanlar.Add(sirket.Ilanlar.);
-        //    }
-        //}
+        
     }
 }

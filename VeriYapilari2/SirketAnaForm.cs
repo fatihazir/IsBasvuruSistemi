@@ -88,6 +88,7 @@ namespace VeriYapilari2
                 yeniSirketFax, yeniSirketTelefon, yeniSirketEPosta))
                 {
                     MessageBox.Show("Şirket bilgileri güncellendi!");
+                    MessageBox.Show("Yeni bilgileriniz : " + sirketFormIci.SirketBilgileriYazdir());
                 }
                 else
                 {
