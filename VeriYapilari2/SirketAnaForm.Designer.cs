@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tabIlanlarim = new System.Windows.Forms.TabPage();
+            this.btnIlanGuncelleIlanlarimKismi = new System.Windows.Forms.Button();
             this.listViewEnUygunKisi = new System.Windows.Forms.ListView();
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -82,6 +83,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelSirketIsmi = new System.Windows.Forms.Label();
             this.tabIlanDuzenle = new System.Windows.Forms.TabPage();
+            this.btnIlanGuncelleDuzenleKismi = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.btnIlaniDuzenle = new System.Windows.Forms.Button();
             this.txtPozisyonIlanDuzenle = new System.Windows.Forms.TextBox();
@@ -123,7 +125,7 @@
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnIlanBasvuranlariGetir = new System.Windows.Forms.Button();
             this.tabFarklıListele = new System.Windows.Forms.TabPage();
-            this.btnFarkliListeleGoruntule = new System.Windows.Forms.Button();
+            this.btnGoruntule = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.txtDerinlikSayisi = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -144,8 +146,6 @@
             this.columnHeader48 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader49 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnIlanGuncelleDuzenleKismi = new System.Windows.Forms.Button();
-            this.btnIlanGuncelleIlanlarimKismi = new System.Windows.Forms.Button();
             this.tabIlanlarim.SuspendLayout();
             this.tabYeniIlanVer.SuspendLayout();
             this.tabSirketSil.SuspendLayout();
@@ -175,6 +175,17 @@
             this.tabIlanlarim.TabIndex = 4;
             this.tabIlanlarim.Text = "İlanlarım";
             this.tabIlanlarim.UseVisualStyleBackColor = true;
+            // 
+            // btnIlanGuncelleIlanlarimKismi
+            // 
+            this.btnIlanGuncelleIlanlarimKismi.Location = new System.Drawing.Point(246, 288);
+            this.btnIlanGuncelleIlanlarimKismi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIlanGuncelleIlanlarimKismi.Name = "btnIlanGuncelleIlanlarimKismi";
+            this.btnIlanGuncelleIlanlarimKismi.Size = new System.Drawing.Size(141, 38);
+            this.btnIlanGuncelleIlanlarimKismi.TabIndex = 22;
+            this.btnIlanGuncelleIlanlarimKismi.Text = "İlanları Güncelle!";
+            this.btnIlanGuncelleIlanlarimKismi.UseVisualStyleBackColor = true;
+            this.btnIlanGuncelleIlanlarimKismi.Click += new System.EventHandler(this.btnIlanGuncelleIlanlarimKismi_Click);
             // 
             // listViewEnUygunKisi
             // 
@@ -668,6 +679,17 @@
             this.tabIlanDuzenle.Text = "İlan Düzenle!";
             this.tabIlanDuzenle.UseVisualStyleBackColor = true;
             // 
+            // btnIlanGuncelleDuzenleKismi
+            // 
+            this.btnIlanGuncelleDuzenleKismi.Location = new System.Drawing.Point(250, 286);
+            this.btnIlanGuncelleDuzenleKismi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIlanGuncelleDuzenleKismi.Name = "btnIlanGuncelleDuzenleKismi";
+            this.btnIlanGuncelleDuzenleKismi.Size = new System.Drawing.Size(141, 31);
+            this.btnIlanGuncelleDuzenleKismi.TabIndex = 21;
+            this.btnIlanGuncelleDuzenleKismi.Text = "İlanları Güncelle!";
+            this.btnIlanGuncelleDuzenleKismi.UseVisualStyleBackColor = true;
+            this.btnIlanGuncelleDuzenleKismi.Click += new System.EventHandler(this.btnIlanGuncelleDuzenleKismi_Click);
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -991,7 +1013,7 @@
             // 
             // tabFarklıListele
             // 
-            this.tabFarklıListele.Controls.Add(this.btnFarkliListeleGoruntule);
+            this.tabFarklıListele.Controls.Add(this.btnGoruntule);
             this.tabFarklıListele.Controls.Add(this.label23);
             this.tabFarklıListele.Controls.Add(this.txtDerinlikSayisi);
             this.tabFarklıListele.Controls.Add(this.label22);
@@ -1009,16 +1031,16 @@
             this.tabFarklıListele.Text = "Farklı Listele";
             this.tabFarklıListele.UseVisualStyleBackColor = true;
             // 
-            // btnFarkliListeleGoruntule
+            // btnGoruntule
             // 
-            this.btnFarkliListeleGoruntule.Location = new System.Drawing.Point(357, 302);
-            this.btnFarkliListeleGoruntule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFarkliListeleGoruntule.Name = "btnFarkliListeleGoruntule";
-            this.btnFarkliListeleGoruntule.Size = new System.Drawing.Size(187, 37);
-            this.btnFarkliListeleGoruntule.TabIndex = 10;
-            this.btnFarkliListeleGoruntule.Text = "Görüntüle";
-            this.btnFarkliListeleGoruntule.UseVisualStyleBackColor = true;
-            this.btnFarkliListeleGoruntule.Click += new System.EventHandler(this.btnFarkliListeleGoruntule_Click);
+            this.btnGoruntule.Location = new System.Drawing.Point(357, 302);
+            this.btnGoruntule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGoruntule.Name = "btnGoruntule";
+            this.btnGoruntule.Size = new System.Drawing.Size(187, 37);
+            this.btnGoruntule.TabIndex = 10;
+            this.btnGoruntule.Text = "Görüntüle";
+            this.btnGoruntule.UseVisualStyleBackColor = true;
+            this.btnGoruntule.Click += new System.EventHandler(this.btnGoruntule_Click);
             // 
             // label23
             // 
@@ -1167,28 +1189,6 @@
             // 
             this.columnHeader50.Text = "İlgi Alanları";
             // 
-            // btnIlanGuncelleDuzenleKismi
-            // 
-            this.btnIlanGuncelleDuzenleKismi.Location = new System.Drawing.Point(250, 286);
-            this.btnIlanGuncelleDuzenleKismi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIlanGuncelleDuzenleKismi.Name = "btnIlanGuncelleDuzenleKismi";
-            this.btnIlanGuncelleDuzenleKismi.Size = new System.Drawing.Size(141, 31);
-            this.btnIlanGuncelleDuzenleKismi.TabIndex = 21;
-            this.btnIlanGuncelleDuzenleKismi.Text = "İlanları Güncelle!";
-            this.btnIlanGuncelleDuzenleKismi.UseVisualStyleBackColor = true;
-            this.btnIlanGuncelleDuzenleKismi.Click += new System.EventHandler(this.btnIlanGuncelleDuzenleKismi_Click);
-            // 
-            // btnIlanGuncelleIlanlarimKismi
-            // 
-            this.btnIlanGuncelleIlanlarimKismi.Location = new System.Drawing.Point(246, 288);
-            this.btnIlanGuncelleIlanlarimKismi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIlanGuncelleIlanlarimKismi.Name = "btnIlanGuncelleIlanlarimKismi";
-            this.btnIlanGuncelleIlanlarimKismi.Size = new System.Drawing.Size(141, 38);
-            this.btnIlanGuncelleIlanlarimKismi.TabIndex = 22;
-            this.btnIlanGuncelleIlanlarimKismi.Text = "İlanları Güncelle!";
-            this.btnIlanGuncelleIlanlarimKismi.UseVisualStyleBackColor = true;
-            this.btnIlanGuncelleIlanlarimKismi.Click += new System.EventHandler(this.btnIlanGuncelleIlanlarimKismi_Click);
-            // 
             // SirketAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1317,7 +1317,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader38;
         private System.Windows.Forms.Button btnEnAzIkıYılListele;
         private System.Windows.Forms.TabPage tabFarklıListele;
-        private System.Windows.Forms.Button btnFarkliListeleGoruntule;
+        private System.Windows.Forms.Button btnGoruntule;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtDerinlikSayisi;
         private System.Windows.Forms.Label label22;
