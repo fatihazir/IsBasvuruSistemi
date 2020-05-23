@@ -5,14 +5,13 @@ namespace VeriYapilari2
 {
     public partial class SirketAnaForm : Form
     {
-        // Şirket bilgilerinin çekilmesi. Ve sirket'e eşi.
         private int tiklanilanIlanID { get; set; }
         public DatabaseIslemleri db { get; set; }
         public Sirket sirketFormIci { get; set; }
         public SortOrder Sorting { get; set; }
         public İkiliAramaAgacı ikiliAramaAgacı { get; set; }
         public void ilanListele()
-        {
+         {
             listViewIlanlarDuzenlemeBolmesi.Items.Clear();
             listViewBasvuranlariListeleBasvuranlarKismi.Items.Clear();
             listViewBasvuranlariListeleKismi.Items.Clear();
@@ -99,7 +98,8 @@ namespace VeriYapilari2
 
         private void sirketSilButon_Click(object sender, EventArgs e)
         {
-            DialogResult durum = MessageBox.Show("Şirket bilgilerini silerseniz sistemi kullanmak için yeni kayıt olusturmak zorunda kalırsınız.",
+            DialogResult durum = MessageBox.Show("Şirket bilgilerini silerseniz sistemi kullanmak için yeni kayıt " +
+                "olusturmak zorunda kalırsınız.",
                 "Kaydı silmek istiyor musunuz?", MessageBoxButtons.YesNo);
             if (true)
             {
@@ -118,12 +118,10 @@ namespace VeriYapilari2
 
         private void sirketYeniIlanVerButon_Click(object sender, EventArgs e)
         {
-            //veriler çekilip yeni bir ilan oluşturlacak. veriler Hash table a atılacak
             string ilanTanimi, arananElamanOzellikleri, pozisyon;
             ilanTanimi = richTxtYeniIsIlani.Text;
             arananElamanOzellikleri = richTxtYeniArananEleman.Text;
             pozisyon = txtYeniIlanPozisyon.Text;
-            //aga burayı kontrol et yanlış olabilir
             Ilan yeniIlan = new Ilan();
             yeniIlan.IsTanimi = ilanTanimi;
             yeniIlan.Pozisyon = pozisyon;
@@ -143,7 +141,7 @@ namespace VeriYapilari2
         {
             int kisiID;
             int sirketID;
-            ulong musteriTCNo;
+            double musteriTCNo;
 
             ListViewItem theClickedItem = listViewEnUygunKisi.FocusedItem;
             if (theClickedItem == null)
@@ -152,7 +150,7 @@ namespace VeriYapilari2
             }
             else
             {
-                musteriTCNo = Convert.ToUInt32(theClickedItem.Text);
+                musteriTCNo = Convert.ToDouble(theClickedItem.Text);
                 Ilan ilan = new Ilan();
                 ilan = sirketFormIci.Ilanlar.GetIsIlani(tiklanilanIlanID);
                 IsDeneyimi yeniIsDeneyimi = new IsDeneyimi();
@@ -413,16 +411,8 @@ namespace VeriYapilari2
             }
         }
 
-        private void listViewBasvuranlariListeleBasvuranlarKismi_ColumnClick(object sender, ColumnClickEventArgs e)
-        {
-
-        }
-
         private void btnEnAzIkıYılListele_Click(object sender, EventArgs e)
         {
-            //EN AZ 2 YIL İŞ DENEYİMİNE SAHİP OLAN İLANLAR LİSTELENECEK VE LİSTVİEW İÇİNE YAZILACAK
-
-            //listViewBasvuranlariListeleBasvuranlarKismi <<<->>>> ilgili liste
             ListViewItem theClickedItem = listViewBasvuranlariListeleKismi.FocusedItem;
             if (theClickedItem == null)
             {
@@ -542,14 +532,6 @@ namespace VeriYapilari2
             }
         }
 
-        private void btnFarkliListeleGoruntule_Click(object sender, EventArgs e)
-        {
-            txtElemanSayisi.Text = ikiliAramaAgacı.DugumlerinSayisiniGetir().ToString();
-            //https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/ bu siteden alındı
-            txtDerinlikSayisi.Text = ikiliAramaAgacı.maxDepth(ikiliAramaAgacı.kok).ToString();
-
-        }
-
         private void btnIlanGuncelleDuzenleKismi_Click(object sender, EventArgs e)
         {
             ilanListele();
@@ -560,6 +542,12 @@ namespace VeriYapilari2
         {
             ilanListele();
             MessageBox.Show("Başarıyla ilanlar güncellendi!");
+        }
+
+        private void btnGoruntule_Click(object sender, EventArgs e)
+        {
+            txtElemanSayisi.Text = ikiliAramaAgacı.DugumlerinSayisiniGetir().ToString();
+            txtDerinlikSayisi.Text = ikiliAramaAgacı.maxDepth(ikiliAramaAgacı.kok).ToString();
         }
     }
 }
