@@ -23,7 +23,7 @@ namespace VeriYapilari2
 
         public int DugumlerinSayisiniGetir()
         {
-            dugumSayaci = 0
+            dugumSayaci = 0;
             InOrder();
             return dugumSayaci;
         }
