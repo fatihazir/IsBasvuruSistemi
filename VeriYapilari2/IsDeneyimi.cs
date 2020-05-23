@@ -26,7 +26,7 @@ namespace VeriYapilari2
         {
             Thread.Sleep(20);
             Random queueNumber = new Random();
-            int number = queueNumber.Next(0, 10);
+            int number = queueNumber.Next(0, 10000);
             return number;
         }
     }

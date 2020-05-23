@@ -4,7 +4,7 @@ namespace VeriYapilari2
 {
     public class LinkedList : LinkedListIcerikleri
     {
-        public List<IsDeneyimi> isDeneyimleriNextiListesi = new List<IsDeneyimi>();
+        public List<IsDeneyimi> doluDeneyimler= new List<IsDeneyimi>();
         public override Node GetElement(int isDeneyimId)
         {
             //Geri dönülecek eleman
@@ -25,24 +25,27 @@ namespace VeriYapilari2
             return retNode;
         }
 
-        public void NextliIsdeneyiminiAl(Node gelenNode)
+        public List<IsDeneyimi> doluIsDeneyimleriniGetir(int isDeneyimi)
         {
-            
-            while (gelenNode != null)
+            Node temp;
+            doluDeneyimler.Clear();
+            if (GetElement(isDeneyimi).Data != null)
             {
-                if (gelenNode.Next != null)
+                temp = GetElement(isDeneyimi);
+                while (temp.Data != null)
                 {
-                    gelenNode = gelenNode.Next;
-                    isDeneyimleriNextiListesi.Add(gelenNode.Data);
+                    doluDeneyimler.Add(temp.Data);
+                    if (temp.Next == null)
+                    {
+                        break;
+                    }
+                    temp = temp.Next;
                 }
-                else
-                {
-                    break;
-                }
-                
 
             }
+            
 
+            return doluDeneyimler;
         }
 
         public override void InsertFirst(IsDeneyimi isDeneyimi)

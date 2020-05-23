@@ -7,6 +7,7 @@ namespace VeriYapilari2
     public partial class KullaniciFormu : Form
     {
         public DatabaseIslemleri db { get; set; }
+        
 
         public KisiBilgileri formIciKisi { get; set; }
 
@@ -16,6 +17,7 @@ namespace VeriYapilari2
         private IsDeneyimi _isDeneyimi = new IsDeneyimi();
 
         List<int> ugrananIndisler = new List<int>();
+        List<IsDeneyimi> listelenecekDeneyimler = new List<IsDeneyimi>();
 
         public void isDeneyimiListele()
         {
@@ -25,22 +27,31 @@ namespace VeriYapilari2
             //Eğer boş değilse direkt listeye atılacak.
             //Ardından nextine bakılacak eğer nexti varsa nexti boş olana kadar aynı arraya ekleyeceğiz.
             //En sonunda hepsi bitince liste içindekileri listeye ekle ve bitir amk
+            if (formIciKisi.IsDeneyimleri.Head.Data != null)
+            {
+                    listelenecekDeneyimler =
+                    formIciKisi.IsDeneyimleri.doluIsDeneyimleriniGetir(formIciKisi.IsDeneyimleri.Head.Data.IsDeneyimId);
+
+                    foreach (IsDeneyimi item in listelenecekDeneyimler)
+                    {
+                        
+                        ListViewItem temp = new ListViewItem(item.IsDeneyimId.ToString());
+                        temp.SubItems.Add(item.IsyeriAd); // şirket ad
+                        temp.SubItems.Add(item.IsyeriAdres); // şirket in sonraki sütundaki değeri
+                        temp.SubItems.Add(item.IsyerindekiPozisyonu);// şirket in sonraki sütundaki değeri
+                        temp.SubItems.Add(Convert.ToString(item.IsyeriCalismaYili));
+                        temp.SubItems.Add(item.KisininEgitimDurumu);
+                        temp.SubItems.Add(item.KisininOkulAdi);
+                        temp.SubItems.Add(item.KisininOkulBolumu);
+                        temp.SubItems.Add(Convert.ToString(item.KisininBolumeBaslangicYili));
+                        temp.SubItems.Add(Convert.ToString(item.KisininBolumuBitirmeYili));
+                        temp.SubItems.Add(item.KisininNotOrtalamasi);
+
+                        listViewIsDeneyimleriGoruntule.Items.Add(temp);
+                    }
+            }
 
 
-            IsDeneyimi isDeneyimi = new IsDeneyimi();
-            ListViewItem temp = new ListViewItem(isDeneyimi.IsDeneyimId.ToString());
-            temp.SubItems.Add(isDeneyimi.IsyeriAd); // şirket ad
-            temp.SubItems.Add(isDeneyimi.IsyeriAdres); // şirket in sonraki sütundaki değeri
-            temp.SubItems.Add(isDeneyimi.IsyerindekiPozisyonu);// şirket in sonraki sütundaki değeri
-            temp.SubItems.Add(Convert.ToString(isDeneyimi.IsyeriCalismaYili));
-            temp.SubItems.Add(isDeneyimi.KisininEgitimDurumu);
-            temp.SubItems.Add(isDeneyimi.KisininOkulAdi);
-            temp.SubItems.Add(isDeneyimi.KisininOkulBolumu);
-            temp.SubItems.Add(Convert.ToString(isDeneyimi.KisininBolumeBaslangicYili));
-            temp.SubItems.Add(Convert.ToString(isDeneyimi.KisininBolumuBitirmeYili));
-            temp.SubItems.Add(isDeneyimi.KisininNotOrtalamasi);
-
-            listViewIsDeneyimleriGoruntule.Items.Add(temp);
         }
 
         public void ilanListele()
