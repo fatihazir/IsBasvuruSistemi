@@ -1,7 +1,10 @@
-﻿namespace VeriYapilari2
+﻿using System.Collections.Generic;
+
+namespace VeriYapilari2
 {
     public class LinkedList : LinkedListIcerikleri
     {
+        public List<IsDeneyimi> isDeneyimleriNextiListesi = new List<IsDeneyimi>();
         public override Node GetElement(int isDeneyimId)
         {
             //Geri dönülecek eleman
@@ -20,6 +23,26 @@
                 tempNode = tempNode.Next;
             }
             return retNode;
+        }
+
+        public void NextliIsdeneyiminiAl(Node gelenNode)
+        {
+            
+            while (gelenNode != null)
+            {
+                if (gelenNode.Next != null)
+                {
+                    gelenNode = gelenNode.Next;
+                    isDeneyimleriNextiListesi.Add(gelenNode.Data);
+                }
+                else
+                {
+                    break;
+                }
+                
+
+            }
+
         }
 
         public override void InsertFirst(IsDeneyimi isDeneyimi)
