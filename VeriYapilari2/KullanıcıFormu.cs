@@ -14,9 +14,6 @@ namespace VeriYapilari2
         public İkiliAramaAgacı _ikiliAramaAgaci { get; set; }
 
         public Sirket formIcıSirket { get; set; }
-        private IsDeneyimi _isDeneyimi = new IsDeneyimi();
-
-        List<int> ugrananIndisler = new List<int>();
         List<IsDeneyimi> listelenecekDeneyimler = new List<IsDeneyimi>();
 
         public void isDeneyimiListele()
@@ -163,7 +160,6 @@ namespace VeriYapilari2
             {
                 cmbMedeniSelectedIndex = 1;
             }
-
             txtAd.Text = formIciKisi.ad;
             txtSoyad.Text = formIciKisi.soyad;
             txtAdres.Text = formIciKisi.adres;
@@ -301,18 +297,19 @@ namespace VeriYapilari2
 
         private void btnIsDeneyimiKaydet_Click(object sender, EventArgs e)
         {
-            _isDeneyimi.IsyeriAd = txtIsyeriAd.Text;
-            _isDeneyimi.IsyeriAdres = txtIsyeriAdres.Text;
-            _isDeneyimi.IsyerindekiPozisyonu = txtIsyeriPozisyon.Text;
-            _isDeneyimi.IsyeriCalismaYili = Convert.ToInt32(txtIsyeriCalismaYili.Text);
-            _isDeneyimi.KisininEgitimDurumu = txtEgitimDurumu.Text;
-            _isDeneyimi.KisininOkulAdi = txtOkulAdi.Text;
-            _isDeneyimi.KisininOkulBolumu = txtKisininBolumu.Text;
-            _isDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(txtBolumBaslangicYili.Text);
-            _isDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtBolumBitisYili.Text);
-            _isDeneyimi.KisininNotOrtalamasi = txtNotOrtalamasi.Text;
+            IsDeneyimi yeniIsDeneyimi = new IsDeneyimi();
+            yeniIsDeneyimi.IsyeriAd = txtIsyeriAd.Text;
+            yeniIsDeneyimi.IsyeriAdres = txtIsyeriAdres.Text;
+            yeniIsDeneyimi.IsyerindekiPozisyonu = txtIsyeriPozisyon.Text;
+            yeniIsDeneyimi.IsyeriCalismaYili = Convert.ToInt32(txtIsyeriCalismaYili.Text);
+            yeniIsDeneyimi.KisininEgitimDurumu = txtEgitimDurumu.Text;
+            yeniIsDeneyimi.KisininOkulAdi = txtOkulAdi.Text;
+            yeniIsDeneyimi.KisininOkulBolumu = txtKisininBolumu.Text;
+            yeniIsDeneyimi.KisininBolumeBaslangicYili = Convert.ToInt32(txtBolumBaslangicYili.Text);
+            yeniIsDeneyimi.KisininBolumuBitirmeYili = Convert.ToInt32(txtBolumBitisYili.Text);
+            yeniIsDeneyimi.KisininNotOrtalamasi = txtNotOrtalamasi.Text;
 
-            _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, _isDeneyimi);
+            _ikiliAramaAgaci.IsDeneyimiEkle(formIciKisi.tcKimlikNumarasi, yeniIsDeneyimi);
 
             
             isDeneyimiListele();
