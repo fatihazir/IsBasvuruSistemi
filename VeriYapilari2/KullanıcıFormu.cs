@@ -254,7 +254,8 @@ namespace VeriYapilari2
                 "Kaydı silmek istiyor musunuz?", MessageBoxButtons.YesNo);
             if (DialogResult.Yes == durum)
             {
-                _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi); 
+                _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
+                this.Close();
             }
             
         }
