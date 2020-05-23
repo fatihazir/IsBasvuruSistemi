@@ -184,15 +184,27 @@ namespace VeriYapilari2
         public KisiBilgileri BireyselGirisYap(double tc, string sifre)
         {
             İkiliAramaAgacDugumu tempDugum = new İkiliAramaAgacDugumu();
+            KisiBilgileri bos = new KisiBilgileri();
             tempDugum = KisiBilgileriniBul(tc);
-
-            if (tempDugum.Kisi.sifre == sifre)
+            if (tempDugum == null)
             {
-                return tempDugum.Kisi;
+                return bos;
+            }
+
+            if (tempDugum.Kisi != null)
+            {
+                if (tempDugum.Kisi.sifre == sifre)
+                {
+                    return tempDugum.Kisi;
+                }
+                else
+                {
+                   
+                    return bos;
+                } 
             }
             else
             {
-                KisiBilgileri bos = new KisiBilgileri();
                 return bos;
             }
         }

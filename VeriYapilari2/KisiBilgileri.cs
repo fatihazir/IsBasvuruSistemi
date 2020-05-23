@@ -44,8 +44,7 @@ namespace VeriYapilari2
                    "Kişinin Doğum Yeri: " + dogumYeri + Environment.NewLine +
                    "Kişinin Medeni Durumu: " + medeniDurum + Environment.NewLine +
                    "Kişinin Yabancı Dil veya Dilleri: " + yabanciDil + Environment.NewLine +
-                   "Kişinin İlgi Alanları: " + ilgiAlanlari + Environment.NewLine +
-                   "Kişinin İşe Uygunluk Durumu: " + iseUygunlukDurumu;
+                   "Kişinin İlgi Alanları: " + ilgiAlanlari;
             return temp;
         }
 
