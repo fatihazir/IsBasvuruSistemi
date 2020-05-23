@@ -6,7 +6,7 @@ namespace VeriYapilari2
     public partial class KullaniciFormu : Form
     {
         public DatabaseIslemleri db { get; set; }
-        
+
         public KisiBilgileri formIciKisi { get; set; }
 
         public İkiliAramaAgacı _ikiliAramaAgaci { get; set; }
@@ -31,7 +31,6 @@ namespace VeriYapilari2
 
                     if (isDeneyimi.IsyeriAd != null)
                     {
-
                         ListViewItem temp = new ListViewItem(isDeneyimi.IsDeneyimId.ToString());
                         temp.SubItems.Add(isDeneyimi.IsyeriAd); // şirket ad
                         temp.SubItems.Add(isDeneyimi.IsyeriAdres); // şirket in sonraki sütundaki değeri
@@ -49,6 +48,7 @@ namespace VeriYapilari2
                 }
             }
         }
+
         public void ilanListele()
         {
             listViewKullaniciIlanlarBolmesi.Items.Clear();
@@ -75,29 +75,27 @@ namespace VeriYapilari2
                             temp2.SubItems.Add(sirket.SirketAd);
                             listViewKullaniciIlanlarBolmesi.Items.Add(temp2);
                         }
-
-                        
                     };
 
                     int sayacNull = 0;
                     int sayacBaskaKisi = 0;
-                   
-                        foreach (var item in ilan.heap.heapArray)
+
+                    foreach (var item in ilan.heap.heapArray)
+                    {
+                        if (item == null)
                         {
-                            if (item == null)
-                            {
-                                sayacNull++;
-                                continue;
-                            }
-                            else if (item.Kisi.tcKimlikNumarasi == formIciKisi.tcKimlikNumarasi)
-                            {
-                                break;
-                            }
-                            else if (item.Kisi.tcKimlikNumarasi != formIciKisi.tcKimlikNumarasi)
-                            {
-                                sayacBaskaKisi++;
-                            }
+                            sayacNull++;
+                            continue;
                         }
+                        else if (item.Kisi.tcKimlikNumarasi == formIciKisi.tcKimlikNumarasi)
+                        {
+                            break;
+                        }
+                        else if (item.Kisi.tcKimlikNumarasi != formIciKisi.tcKimlikNumarasi)
+                        {
+                            sayacBaskaKisi++;
+                        }
+                    }
                     if (sayacBaskaKisi + sayacNull == ilan.heap.maxSize)
                     {
                         ListViewItem temp = new ListViewItem(ilan.IlanNumarasi.ToString());
@@ -222,34 +220,30 @@ namespace VeriYapilari2
 
             try
             {
-            formIciKisi.ad = txtAd.Text;
-            formIciKisi.soyad = txtSoyad.Text;
-            formIciKisi.adres = txtAdres.Text;
-            formIciKisi.telefon = txtTelefon.Text;
-            formIciKisi.email = txtEMail.Text;
-            formIciKisi.medeniDurum = medeniDurum;
-            formIciKisi.dogumTarihi = txtDogumTarih.Text;
-            formIciKisi.dogumYeri = txtDogumYeri.Text;
-            formIciKisi.ilgiAlanlari = txtIlgiAlan.Text;
-            formIciKisi.yabanciDil = txtYabanciDil.Text.ToUpper();
-            formIciKisi.uyruk = uyruk;
+                formIciKisi.ad = txtAd.Text;
+                formIciKisi.soyad = txtSoyad.Text;
+                formIciKisi.adres = txtAdres.Text;
+                formIciKisi.telefon = txtTelefon.Text;
+                formIciKisi.email = txtEMail.Text;
+                formIciKisi.medeniDurum = medeniDurum;
+                formIciKisi.dogumTarihi = txtDogumTarih.Text;
+                formIciKisi.dogumYeri = txtDogumYeri.Text;
+                formIciKisi.ilgiAlanlari = txtIlgiAlan.Text;
+                formIciKisi.yabanciDil = txtYabanciDil.Text.ToUpper();
+                formIciKisi.uyruk = uyruk;
 
-            _ikiliAramaAgaci.KisiGuncelle(formIciKisi.tcKimlikNumarasi, formIciKisi);
+                _ikiliAramaAgaci.KisiGuncelle(formIciKisi.tcKimlikNumarasi, formIciKisi);
 
-            MessageBox.Show("Verileriniz güncellendi.");
+                MessageBox.Show("Verileriniz güncellendi.");
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Hata olustu : "+ "exception");
-
+                MessageBox.Show("Hata olustu : " + "exception");
             }
-
-                
         }
 
         private void brnKisiBilgiSil_Click(object sender, EventArgs e)
         {
-            
             DialogResult durum = MessageBox.Show("Kişi bilgilerini silerseniz sistemi kullanmak için yeni kayıt olusturmak zorunda kalırsınız.",
                 "Kaydı silmek istiyor musunuz?", MessageBoxButtons.YesNo);
             if (DialogResult.Yes == durum)
@@ -257,7 +251,6 @@ namespace VeriYapilari2
                 _ikiliAramaAgaci.Sil(formIciKisi.tcKimlikNumarasi);
                 this.Close();
             }
-            
         }
 
         private void btnIlanGuncelle_Click(object sender, EventArgs e)
@@ -276,7 +269,7 @@ namespace VeriYapilari2
             else
             {
                 Ilan ilan = new Ilan();
-            int ilanID;
+                int ilanID;
                 ilanID = Convert.ToInt32(theClickedItem.Text);
                 foreach (Sirket sirket in db.Sirketler)
                 {
@@ -284,7 +277,6 @@ namespace VeriYapilari2
                     if (ilan == null)
                     {
                         continue;
-                        
                     }
                     else
                     {
@@ -292,7 +284,7 @@ namespace VeriYapilari2
                         {
                             break;
                         }
-                        ilan.heap.Insert(ilan.IlanNumarasi, formIciKisi, formIciKisi.iseUygunlukDurumu); 
+                        ilan.heap.Insert(ilan.IlanNumarasi, formIciKisi, formIciKisi.iseUygunlukDurumu);
                     }
                 }
 
@@ -348,11 +340,9 @@ namespace VeriYapilari2
                 txtGIsDeneyimOkulNot.Text = isDeneyimi.KisininNotOrtalamasi;
                 txtGIsDeneyimBaslangicYil.Text = isDeneyimi.KisininBolumeBaslangicYili.ToString();
                 txtGIsDeneyimBitisYil.Text = isDeneyimi.KisininBolumuBitirmeYili.ToString();
-
-
             }
         }
-        
+
         private void IlanlarListesi(object sender, ColumnClickEventArgs e)
         {
             if (listViewKullaniciIlanlarBolmesi.Sorting == SortOrder.Descending)
@@ -378,12 +368,10 @@ namespace VeriYapilari2
                           , MessageBoxButtons.YesNo);
                 if (DialogResult.Yes == durum)
                 {
-
                     int işDeneyimiNumarasi = 0;
                     işDeneyimiNumarasi = Convert.ToInt32(theClickedItem.Text);
 
                     IsDeneyimi isDeneyimi = formIciKisi.IsDeneyimleri.GetElement(işDeneyimiNumarasi).Data;
-
 
                     isDeneyimi.IsyeriAd = txtGIsDeneyimAd.Text;
                     isDeneyimi.IsyeriAdres = txtGIsDeneyimAdres.Text;
@@ -399,10 +387,8 @@ namespace VeriYapilari2
                     formIciKisi.IsDeneyimleri.GetElement(işDeneyimiNumarasi).Data = isDeneyimi;
 
                     isDeneyimiListele();
-
-                }  
+                }
             }
-            
         }
 
         private void IsDeneyiminiKategorizeEt(object sender, ColumnClickEventArgs e)

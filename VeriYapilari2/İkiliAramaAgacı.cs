@@ -121,6 +121,7 @@ namespace VeriYapilari2
                     return (rDepth + 1);
             }
         }
+
         public void Ekle(double deger, KisiBilgileri kisi)
         {
             //Yeni eklenecek düğümün parent'ı
@@ -199,9 +200,8 @@ namespace VeriYapilari2
                 }
                 else
                 {
-                   
                     return bos;
-                } 
+                }
             }
             else
             {

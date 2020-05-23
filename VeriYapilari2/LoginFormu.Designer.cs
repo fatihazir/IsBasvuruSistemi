@@ -89,6 +89,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtSirketFax = new System.Windows.Forms.TextBox();
+            this.txtYabanciDil = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabIsBasvuruKayit.SuspendLayout();
             this.tabBireyselKayit.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -193,7 +195,7 @@
             this.tabIsBasvuruKayit.Controls.Add(this.tabSirketGiris);
             this.tabIsBasvuruKayit.Controls.Add(this.tabSirketKayit);
             this.tabIsBasvuruKayit.Location = new System.Drawing.Point(11, 11);
-            this.tabIsBasvuruKayit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIsBasvuruKayit.Margin = new System.Windows.Forms.Padding(2);
             this.tabIsBasvuruKayit.Name = "tabIsBasvuruKayit";
             this.tabIsBasvuruKayit.SelectedIndex = 0;
             this.tabIsBasvuruKayit.Size = new System.Drawing.Size(624, 342);
@@ -203,9 +205,9 @@
             // 
             this.tabBireyselKayit.Controls.Add(this.groupBox1);
             this.tabBireyselKayit.Location = new System.Drawing.Point(4, 22);
-            this.tabBireyselKayit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabBireyselKayit.Margin = new System.Windows.Forms.Padding(2);
             this.tabBireyselKayit.Name = "tabBireyselKayit";
-            this.tabBireyselKayit.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabBireyselKayit.Padding = new System.Windows.Forms.Padding(2);
             this.tabBireyselKayit.Size = new System.Drawing.Size(616, 316);
             this.tabBireyselKayit.TabIndex = 0;
             this.tabBireyselKayit.Text = "Bireysel Kayıt";
@@ -213,6 +215,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.txtYabanciDil);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.maskedBireyselSifreDogrula);
             this.groupBox1.Controls.Add(this.label24);
@@ -241,9 +245,9 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.txtKayitDogumTarih);
             this.groupBox1.Location = new System.Drawing.Point(4, 29);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(587, 256);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
@@ -261,7 +265,7 @@
             // maskedBireyselSifreDogrula
             // 
             this.maskedBireyselSifreDogrula.Location = new System.Drawing.Point(508, 197);
-            this.maskedBireyselSifreDogrula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedBireyselSifreDogrula.Margin = new System.Windows.Forms.Padding(2);
             this.maskedBireyselSifreDogrula.Name = "maskedBireyselSifreDogrula";
             this.maskedBireyselSifreDogrula.PasswordChar = '*';
             this.maskedBireyselSifreDogrula.Size = new System.Drawing.Size(76, 20);
@@ -280,7 +284,7 @@
             // maskedBireyselSifre
             // 
             this.maskedBireyselSifre.Location = new System.Drawing.Point(508, 165);
-            this.maskedBireyselSifre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedBireyselSifre.Margin = new System.Windows.Forms.Padding(2);
             this.maskedBireyselSifre.Name = "maskedBireyselSifre";
             this.maskedBireyselSifre.PasswordChar = '*';
             this.maskedBireyselSifre.Size = new System.Drawing.Size(76, 20);
@@ -289,7 +293,7 @@
             // btnBireyselKaydet
             // 
             this.btnBireyselKaydet.Location = new System.Drawing.Point(484, 220);
-            this.btnBireyselKaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBireyselKaydet.Margin = new System.Windows.Forms.Padding(2);
             this.btnBireyselKaydet.Name = "btnBireyselKaydet";
             this.btnBireyselKaydet.Size = new System.Drawing.Size(99, 27);
             this.btnBireyselKaydet.TabIndex = 15;
@@ -300,7 +304,7 @@
             // txtKayitSoyad
             // 
             this.txtKayitSoyad.Location = new System.Drawing.Point(75, 38);
-            this.txtKayitSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitSoyad.Name = "txtKayitSoyad";
             this.txtKayitSoyad.Size = new System.Drawing.Size(76, 20);
             this.txtKayitSoyad.TabIndex = 2;
@@ -326,7 +330,7 @@
             "İngiltere",
             "Diğer"});
             this.cmbKayitUyruk.Location = new System.Drawing.Point(258, 79);
-            this.cmbKayitUyruk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbKayitUyruk.Margin = new System.Windows.Forms.Padding(2);
             this.cmbKayitUyruk.Name = "cmbKayitUyruk";
             this.cmbKayitUyruk.Size = new System.Drawing.Size(76, 21);
             this.cmbKayitUyruk.TabIndex = 8;
@@ -334,7 +338,7 @@
             // txtKayitAd
             // 
             this.txtKayitAd.Location = new System.Drawing.Point(75, 12);
-            this.txtKayitAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitAd.Name = "txtKayitAd";
             this.txtKayitAd.Size = new System.Drawing.Size(76, 20);
             this.txtKayitAd.TabIndex = 1;
@@ -342,7 +346,7 @@
             // txtKayitIlgiAlan
             // 
             this.txtKayitIlgiAlan.Location = new System.Drawing.Point(436, 12);
-            this.txtKayitIlgiAlan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitIlgiAlan.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitIlgiAlan.Multiline = true;
             this.txtKayitIlgiAlan.Name = "txtKayitIlgiAlan";
             this.txtKayitIlgiAlan.Size = new System.Drawing.Size(148, 68);
@@ -356,7 +360,7 @@
             "Evli",
             "Boşanmış"});
             this.cmbKayitMedeniDurum.Location = new System.Drawing.Point(258, 109);
-            this.cmbKayitMedeniDurum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbKayitMedeniDurum.Margin = new System.Windows.Forms.Padding(2);
             this.cmbKayitMedeniDurum.Name = "cmbKayitMedeniDurum";
             this.cmbKayitMedeniDurum.Size = new System.Drawing.Size(76, 21);
             this.cmbKayitMedeniDurum.TabIndex = 9;
@@ -374,7 +378,7 @@
             // txtKayitTCKimlik
             // 
             this.txtKayitTCKimlik.Location = new System.Drawing.Point(75, 65);
-            this.txtKayitTCKimlik.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitTCKimlik.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitTCKimlik.Name = "txtKayitTCKimlik";
             this.txtKayitTCKimlik.Size = new System.Drawing.Size(76, 20);
             this.txtKayitTCKimlik.TabIndex = 3;
@@ -432,7 +436,7 @@
             // txtKayitTelNo
             // 
             this.txtKayitTelNo.Location = new System.Drawing.Point(258, 12);
-            this.txtKayitTelNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitTelNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitTelNo.Name = "txtKayitTelNo";
             this.txtKayitTelNo.Size = new System.Drawing.Size(76, 20);
             this.txtKayitTelNo.TabIndex = 6;
@@ -450,7 +454,7 @@
             // txtKayitAdres
             // 
             this.txtKayitAdres.Location = new System.Drawing.Point(436, 84);
-            this.txtKayitAdres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitAdres.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitAdres.Multiline = true;
             this.txtKayitAdres.Name = "txtKayitAdres";
             this.txtKayitAdres.Size = new System.Drawing.Size(151, 56);
@@ -459,7 +463,7 @@
             // txtKayitEMail
             // 
             this.txtKayitEMail.Location = new System.Drawing.Point(258, 44);
-            this.txtKayitEMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitEMail.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitEMail.Name = "txtKayitEMail";
             this.txtKayitEMail.Size = new System.Drawing.Size(76, 20);
             this.txtKayitEMail.TabIndex = 7;
@@ -467,7 +471,7 @@
             // txtKayitDogumYer
             // 
             this.txtKayitDogumYer.Location = new System.Drawing.Point(75, 112);
-            this.txtKayitDogumYer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitDogumYer.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitDogumYer.Name = "txtKayitDogumYer";
             this.txtKayitDogumYer.Size = new System.Drawing.Size(76, 20);
             this.txtKayitDogumYer.TabIndex = 5;
@@ -505,7 +509,7 @@
             // txtKayitDogumTarih
             // 
             this.txtKayitDogumTarih.Location = new System.Drawing.Point(75, 89);
-            this.txtKayitDogumTarih.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKayitDogumTarih.Margin = new System.Windows.Forms.Padding(2);
             this.txtKayitDogumTarih.Name = "txtKayitDogumTarih";
             this.txtKayitDogumTarih.Size = new System.Drawing.Size(76, 20);
             this.txtKayitDogumTarih.TabIndex = 4;
@@ -515,7 +519,7 @@
             this.tabBireyselGiris.Controls.Add(this.groupBox5);
             this.tabBireyselGiris.Location = new System.Drawing.Point(4, 22);
             this.tabBireyselGiris.Name = "tabBireyselGiris";
-            this.tabBireyselGiris.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabBireyselGiris.Padding = new System.Windows.Forms.Padding(3);
             this.tabBireyselGiris.Size = new System.Drawing.Size(616, 316);
             this.tabBireyselGiris.TabIndex = 2;
             this.tabBireyselGiris.Text = "Bireysel Giriş";
@@ -529,9 +533,9 @@
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.txtTcNo);
             this.groupBox5.Location = new System.Drawing.Point(206, 41);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(222, 226);
             this.groupBox5.TabIndex = 123;
             this.groupBox5.TabStop = false;
@@ -541,7 +545,7 @@
             this.tabSirketGiris.Controls.Add(this.groupBox4);
             this.tabSirketGiris.Location = new System.Drawing.Point(4, 22);
             this.tabSirketGiris.Name = "tabSirketGiris";
-            this.tabSirketGiris.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSirketGiris.Padding = new System.Windows.Forms.Padding(3);
             this.tabSirketGiris.Size = new System.Drawing.Size(616, 316);
             this.tabSirketGiris.TabIndex = 3;
             this.tabSirketGiris.Text = "Sirket Giriş";
@@ -555,9 +559,9 @@
             this.groupBox4.Controls.Add(this.txtSirketPosta);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Location = new System.Drawing.Point(182, 52);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(238, 207);
             this.groupBox4.TabIndex = 125;
             this.groupBox4.TabStop = false;
@@ -582,7 +586,7 @@
             this.tabSirketKayit.Controls.Add(this.txtSirketFax);
             this.tabSirketKayit.Location = new System.Drawing.Point(4, 22);
             this.tabSirketKayit.Name = "tabSirketKayit";
-            this.tabSirketKayit.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSirketKayit.Padding = new System.Windows.Forms.Padding(3);
             this.tabSirketKayit.Size = new System.Drawing.Size(616, 316);
             this.tabSirketKayit.TabIndex = 1;
             this.tabSirketKayit.Text = "Sirket Kayıt";
@@ -601,7 +605,7 @@
             // maskedSirketSifreDogrula
             // 
             this.maskedSirketSifreDogrula.Location = new System.Drawing.Point(291, 233);
-            this.maskedSirketSifreDogrula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedSirketSifreDogrula.Margin = new System.Windows.Forms.Padding(2);
             this.maskedSirketSifreDogrula.Name = "maskedSirketSifreDogrula";
             this.maskedSirketSifreDogrula.PasswordChar = '*';
             this.maskedSirketSifreDogrula.Size = new System.Drawing.Size(76, 20);
@@ -620,7 +624,7 @@
             // maskedSirketSifre
             // 
             this.maskedSirketSifre.Location = new System.Drawing.Point(291, 201);
-            this.maskedSirketSifre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedSirketSifre.Margin = new System.Windows.Forms.Padding(2);
             this.maskedSirketSifre.Name = "maskedSirketSifre";
             this.maskedSirketSifre.PasswordChar = '*';
             this.maskedSirketSifre.Size = new System.Drawing.Size(76, 20);
@@ -640,7 +644,7 @@
             // btnSirketBilgiKaydet
             // 
             this.btnSirketBilgiKaydet.Location = new System.Drawing.Point(217, 256);
-            this.btnSirketBilgiKaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSirketBilgiKaydet.Margin = new System.Windows.Forms.Padding(2);
             this.btnSirketBilgiKaydet.Name = "btnSirketBilgiKaydet";
             this.btnSirketBilgiKaydet.Size = new System.Drawing.Size(149, 23);
             this.btnSirketBilgiKaydet.TabIndex = 33;
@@ -661,7 +665,7 @@
             // txtSirketAd
             // 
             this.txtSirketAd.Location = new System.Drawing.Point(291, 54);
-            this.txtSirketAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketAd.Name = "txtSirketAd";
             this.txtSirketAd.Size = new System.Drawing.Size(76, 20);
             this.txtSirketAd.TabIndex = 25;
@@ -669,7 +673,7 @@
             // txtSirketEPosta
             // 
             this.txtSirketEPosta.Location = new System.Drawing.Point(291, 171);
-            this.txtSirketEPosta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketEPosta.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketEPosta.Name = "txtSirketEPosta";
             this.txtSirketEPosta.Size = new System.Drawing.Size(76, 20);
             this.txtSirketEPosta.TabIndex = 29;
@@ -697,7 +701,7 @@
             // txtSirketAdres
             // 
             this.txtSirketAdres.Location = new System.Drawing.Point(291, 83);
-            this.txtSirketAdres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketAdres.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketAdres.Name = "txtSirketAdres";
             this.txtSirketAdres.Size = new System.Drawing.Size(76, 20);
             this.txtSirketAdres.TabIndex = 26;
@@ -705,7 +709,7 @@
             // txtSirketTelNo
             // 
             this.txtSirketTelNo.Location = new System.Drawing.Point(291, 139);
-            this.txtSirketTelNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketTelNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketTelNo.Name = "txtSirketTelNo";
             this.txtSirketTelNo.Size = new System.Drawing.Size(76, 20);
             this.txtSirketTelNo.TabIndex = 28;
@@ -733,10 +737,28 @@
             // txtSirketFax
             // 
             this.txtSirketFax.Location = new System.Drawing.Point(291, 112);
-            this.txtSirketFax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSirketFax.Margin = new System.Windows.Forms.Padding(2);
             this.txtSirketFax.Name = "txtSirketFax";
             this.txtSirketFax.Size = new System.Drawing.Size(76, 20);
             this.txtSirketFax.TabIndex = 27;
+            // 
+            // txtYabanciDil
+            // 
+            this.txtYabanciDil.Location = new System.Drawing.Point(5, 167);
+            this.txtYabanciDil.Margin = new System.Windows.Forms.Padding(2);
+            this.txtYabanciDil.Name = "txtYabanciDil";
+            this.txtYabanciDil.Size = new System.Drawing.Size(147, 20);
+            this.txtYabanciDil.TabIndex = 41;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(2, 152);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 13);
+            this.label21.TabIndex = 42;
+            this.label21.Text = "Yabanci Diller";
             // 
             // LoginFormu
             // 
@@ -826,5 +848,7 @@
         private System.Windows.Forms.MaskedTextBox maskedSirketSifreDogrula;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.MaskedTextBox maskedSirketSifre;
+        private System.Windows.Forms.TextBox txtYabanciDil;
+        private System.Windows.Forms.Label label21;
     }
 }

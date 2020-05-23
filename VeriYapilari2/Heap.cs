@@ -35,6 +35,5 @@
             }
             heapArray[index] = bottom;
         }
-
     }
 }

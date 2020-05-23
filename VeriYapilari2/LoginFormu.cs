@@ -8,11 +8,11 @@ namespace VeriYapilari2
         private DatabaseIslemleri db = new DatabaseIslemleri();
 
         private SirketAnaForm sirketFormu = new SirketAnaForm();
-        KullaniciFormu kullaniciFormu = new KullaniciFormu();
+        private KullaniciFormu kullaniciFormu = new KullaniciFormu();
 
         private İkiliAramaAgacı _IkılıAramaAgaci = new İkiliAramaAgacı();
-        
-        KisiBilgileri kisi = new KisiBilgileri();
+
+        private KisiBilgileri kisi = new KisiBilgileri();
 
         public LoginFormu()
         {
@@ -21,8 +21,6 @@ namespace VeriYapilari2
 
         private void btnSirketGirisi_Click(object sender, EventArgs e)
         {
-            //"hayatsu@gmail.com" = txtSirketPosta.Text;
-            //"hayat123" = txtSirketSifre.Text;
             string sirketEposta = txtSirketPosta.Text;
             string sifre = txtSirketSifre.Text;
             Sirket dbSirket = new Sirket();
@@ -48,7 +46,6 @@ namespace VeriYapilari2
             if (maskedSirketSifre.Text == maskedSirketSifreDogrula.Text)
             {
                 kontrol = true;
-                
             }
 
             if (maskedSirketSifre.Text != maskedSirketSifreDogrula.Text)
@@ -67,7 +64,7 @@ namespace VeriYapilari2
                 yeniSirket.sifre = maskedSirketSifreDogrula.Text;
                 db.Sirketler.Add(yeniSirket);
                 MessageBox.Show("Yeni şirket başarıyla eklendi!");
-                MessageBox.Show("Bilgileriniz : " +yeniSirket.SirketBilgileriYazdir());
+                MessageBox.Show("Bilgileriniz : " + yeniSirket.SirketBilgileriYazdir());
                 kontrol = false;
                 MessageBox.Show("Lütfen giriş yap sekmesinden giriş yapınız.");
             }
@@ -75,12 +72,10 @@ namespace VeriYapilari2
             {
                 MessageBox.Show("Sirket eklenirken hata oldu. Lütfen verilerinizi gözden geçirip tekrar deneyin.");
             }
-           
         }
 
         private void btnGirisYapKullanici_Click(object sender, EventArgs e)
         {
-            //336621312
             double tc = Convert.ToDouble(txtTcNo.Text);
             string sifre = txtSifre.Text;
 
@@ -91,7 +86,7 @@ namespace VeriYapilari2
                 kullaniciFormu.formIciKisi = kisi;
                 kullaniciFormu.db = db;
                 kullaniciFormu._ikiliAramaAgaci = _IkılıAramaAgaci;
-                
+
                 kullaniciFormu.Show();
             }
             else
@@ -148,7 +143,7 @@ namespace VeriYapilari2
             {
                 kontrol = true;
             }
-            if(maskedBireyselSifre.Text != maskedBireyselSifreDogrula.Text)
+            if (maskedBireyselSifre.Text != maskedBireyselSifreDogrula.Text)
             {
                 MessageBox.Show("Sifreler aynı değil. Lütfen dogru yazdıgınızdan emin olun.");
             }
@@ -172,10 +167,9 @@ namespace VeriYapilari2
 
                 _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
 
-                MessageBox.Show("Kayıt başarılı. Bilgileriniz: " +Environment.NewLine+ kisi.KisiBilgileriYazdir());
+                MessageBox.Show("Kayıt başarılı. Bilgileriniz: " + Environment.NewLine + kisi.KisiBilgileriYazdir());
                 kontrol = false;
                 MessageBox.Show("Lütfen giriş yap sekmesinden giriş yapınız.");
-                
             }
             else
             {
@@ -188,6 +182,5 @@ namespace VeriYapilari2
             kisi = db.DatabasedenIlkKisiCekimi();
             _IkılıAramaAgaci.Ekle(kisi.tcKimlikNumarasi, kisi);
         }
-
     }
 }

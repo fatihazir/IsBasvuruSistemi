@@ -10,6 +10,7 @@ namespace VeriYapilari2
         public Sirket sirketFormIci { get; set; }
         public SortOrder Sorting { get; set; }
         public İkiliAramaAgacı ikiliAramaAgacı { get; set; }
+
         public void ilanListele()
          {
             listViewIlanlarDuzenlemeBolmesi.Items.Clear();
@@ -60,7 +61,6 @@ namespace VeriYapilari2
                 listViewIlanlarDuzenlemeBolmesi.Items.Add(item);
                 listViewIlanlarIsAlmaBolmesi.Items.Add(item2);
                 listViewBasvuranlariListeleKismi.Items.Add(item3);
-                
             }
         }
 
@@ -92,7 +92,7 @@ namespace VeriYapilari2
                 else
                 {
                     MessageBox.Show("Şirket bilgisi güncellenirken hata oluştu!");
-                } 
+                }
             }
         }
 
@@ -112,7 +112,7 @@ namespace VeriYapilari2
                 else
                 {
                     MessageBox.Show("Şirket silinirken hata oluştu!");
-                } 
+                }
             }
         }
 
@@ -193,8 +193,7 @@ namespace VeriYapilari2
                     sirketFormIci.Ilanlar.DeleteIsIlani(ilan.IlanNumarasi);
                     MessageBox.Show("Başarıyla ilan silindi!");
                     ilanListele();
-
-                } 
+                }
             }
         }
 
@@ -260,9 +259,8 @@ namespace VeriYapilari2
                 else
                 {
                     MessageBox.Show("Once ilan seçin.");
-                }  
+                }
             }
-            
         }
 
         private void listViewIlanlarIsAlmaBolmesi_MouseClick(object sender, MouseEventArgs e)

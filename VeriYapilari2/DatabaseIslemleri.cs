@@ -117,7 +117,5 @@ namespace VeriYapilari2
             Sirket bosSirket = new Sirket();
             return bosSirket;
         }
-
-        
     }
 }

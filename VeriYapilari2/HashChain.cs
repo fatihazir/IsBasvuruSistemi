@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Security.Policy;
 
 namespace VeriYapilari2
 {
@@ -83,7 +82,7 @@ namespace VeriYapilari2
                     return (Ilan)entry.Deger;
             }
         }
-        
+
         public void IsIlaniGuncelle(int ilanNumarasi, Ilan ilan)
         {
             GetIsIlani(ilanNumarasi).ArananElemanOzellikleri = ilan.ArananElemanOzellikleri;
@@ -101,7 +100,7 @@ namespace VeriYapilari2
                 return (Ilan)entry.Deger;
             }
         }
-        
+
         public HashChainEntry GetIsIlaniNextDegilAmaKendisi(int ilanNo)
         {
             int hash = (ilanNo % TABLE_SIZE);
@@ -119,7 +118,6 @@ namespace VeriYapilari2
                     nextleriListele(entry);
                     return entry;
                 }
-                    
             }
         }
 
