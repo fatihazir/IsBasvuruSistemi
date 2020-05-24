@@ -64,7 +64,7 @@ namespace VeriYapilari2
                 yeniSirket.sifre = maskedSirketSifreDogrula.Text;
                 db.Sirketler.Add(yeniSirket);
                 MessageBox.Show("Yeni şirket başarıyla eklendi!");
-                MessageBox.Show("Bilgileriniz : " + yeniSirket.SirketBilgileriYazdir());
+                MessageBox.Show("Bilgileriniz : "+ Environment.NewLine+ yeniSirket.SirketBilgileriYazdir());
                 kontrol = false;
                 MessageBox.Show("Lütfen giriş yap sekmesinden giriş yapınız.");
             }

@@ -41,6 +41,8 @@
             this.tabIsBasvuruKayit = new System.Windows.Forms.TabControl();
             this.tabBireyselKayit = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtYabanciDil = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.maskedBireyselSifreDogrula = new System.Windows.Forms.MaskedTextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -77,7 +79,6 @@
             this.maskedSirketSifreDogrula = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.maskedSirketSifre = new System.Windows.Forms.MaskedTextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.btnSirketBilgiKaydet = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSirketAd = new System.Windows.Forms.TextBox();
@@ -89,8 +90,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtSirketFax = new System.Windows.Forms.TextBox();
-            this.txtYabanciDil = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabIsBasvuruKayit.SuspendLayout();
             this.tabBireyselKayit.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -244,13 +244,31 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.txtKayitDogumTarih);
-            this.groupBox1.Location = new System.Drawing.Point(4, 29);
+            this.groupBox1.Location = new System.Drawing.Point(15, 31);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(587, 256);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(2, 152);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 13);
+            this.label21.TabIndex = 42;
+            this.label21.Text = "Yabanci Diller";
+            // 
+            // txtYabanciDil
+            // 
+            this.txtYabanciDil.Location = new System.Drawing.Point(5, 167);
+            this.txtYabanciDil.Margin = new System.Windows.Forms.Padding(2);
+            this.txtYabanciDil.Name = "txtYabanciDil";
+            this.txtYabanciDil.Size = new System.Drawing.Size(147, 20);
+            this.txtYabanciDil.TabIndex = 41;
             // 
             // label25
             // 
@@ -630,17 +648,6 @@
             this.maskedSirketSifre.Size = new System.Drawing.Size(76, 20);
             this.maskedSirketSifre.TabIndex = 31;
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(104, 21);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(546, 26);
-            this.label22.TabIndex = 65;
-            this.label22.Text = "Şirket kaydınızı buradaki formdan gerçekleştirebilirsiniz.";
-            // 
             // btnSirketBilgiKaydet
             // 
             this.btnSirketBilgiKaydet.Location = new System.Drawing.Point(217, 256);
@@ -742,23 +749,16 @@
             this.txtSirketFax.Size = new System.Drawing.Size(76, 20);
             this.txtSirketFax.TabIndex = 27;
             // 
-            // txtYabanciDil
+            // label22
             // 
-            this.txtYabanciDil.Location = new System.Drawing.Point(5, 167);
-            this.txtYabanciDil.Margin = new System.Windows.Forms.Padding(2);
-            this.txtYabanciDil.Name = "txtYabanciDil";
-            this.txtYabanciDil.Size = new System.Drawing.Size(147, 20);
-            this.txtYabanciDil.TabIndex = 41;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(2, 152);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(72, 13);
-            this.label21.TabIndex = 42;
-            this.label21.Text = "Yabanci Diller";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label22.Location = new System.Drawing.Point(41, 26);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(546, 26);
+            this.label22.TabIndex = 65;
+            this.label22.Text = "Şirket kaydınızı buradaki formdan gerçekleştirebilirsiniz.";
             // 
             // LoginFormu
             // 
@@ -828,7 +828,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnBireyselKaydet;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnSirketBilgiKaydet;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtSirketAd;
@@ -850,5 +849,6 @@
         private System.Windows.Forms.MaskedTextBox maskedSirketSifre;
         private System.Windows.Forms.TextBox txtYabanciDil;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
     }
 }
