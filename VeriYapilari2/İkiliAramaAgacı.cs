@@ -50,6 +50,7 @@ namespace VeriYapilari2
 
         public void PreOrderListesiniGetir()
         {
+            PreOrderDugumlerListesi.Clear();
             PreOrder();
         }
 
@@ -76,6 +77,7 @@ namespace VeriYapilari2
 
         public void InOrderListesiniGetir()
         {
+            InOrderDugumlerListesi.Clear();
             InOrder();
         }
 
@@ -101,6 +103,7 @@ namespace VeriYapilari2
 
         public void PostOrderListesiniGetir()
         {
+            PostOrderDugumlerListesi.Clear();
             PostOrder();
         }
 
