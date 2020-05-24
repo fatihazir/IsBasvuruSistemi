@@ -24,14 +24,18 @@ namespace VeriYapilari2
             //Eğer boş değilse direkt listeye atılacak.
             //Ardından nextine bakılacak eğer nexti varsa nexti boş olana kadar aynı arraya ekleyeceğiz.
             //En sonunda hepsi bitince liste içindekileri listeye ekle ve bitir amk
-            if (formIciKisi.IsDeneyimleri.Head.Data != null)
+            if (formIciKisi.IsDeneyimleri.Head == null)
             {
+            }
+            else
+            {
+
                     listelenecekDeneyimler =
-                    formIciKisi.IsDeneyimleri.doluIsDeneyimleriniGetir(formIciKisi.IsDeneyimleri.Head.Data.IsDeneyimId);
+                        formIciKisi.IsDeneyimleri.doluIsDeneyimleriniGetir(formIciKisi.IsDeneyimleri.Head.Data.IsDeneyimId);
 
                     foreach (IsDeneyimi item in listelenecekDeneyimler)
                     {
-                        
+
                         ListViewItem temp = new ListViewItem(item.IsDeneyimId.ToString());
                         temp.SubItems.Add(item.IsyeriAd); // şirket ad
                         temp.SubItems.Add(item.IsyeriAdres); // şirket in sonraki sütundaki değeri
@@ -46,6 +50,7 @@ namespace VeriYapilari2
 
                         listViewIsDeneyimleriGoruntule.Items.Add(temp);
                     }
+
             }
 
 
@@ -404,6 +409,12 @@ namespace VeriYapilari2
             {
                 listViewIsDeneyimleriGoruntule.Sorting = SortOrder.Descending;
             }
+        }
+
+        private void isDeneyimListesiGüncelle_Click(object sender, EventArgs e)
+        {
+            isDeneyimiListele();
+            MessageBox.Show("Deneyimleriniz güncellendi.");
         }
     }
 }

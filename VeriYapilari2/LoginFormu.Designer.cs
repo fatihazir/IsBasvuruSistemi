@@ -79,6 +79,7 @@
             this.maskedSirketSifreDogrula = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.maskedSirketSifre = new System.Windows.Forms.MaskedTextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.btnSirketBilgiKaydet = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSirketAd = new System.Windows.Forms.TextBox();
@@ -90,7 +91,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtSirketFax = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.tabIsBasvuruKayit.SuspendLayout();
             this.tabBireyselKayit.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -122,7 +122,7 @@
             this.btnGirisYapKullanici.Name = "btnGirisYapKullanici";
             this.btnGirisYapKullanici.Size = new System.Drawing.Size(110, 33);
             this.btnGirisYapKullanici.TabIndex = 19;
-            this.btnGirisYapKullanici.Text = "Kullanıcıya Giriş Yap";
+            this.btnGirisYapKullanici.Text = "Giriş Yap";
             this.btnGirisYapKullanici.UseVisualStyleBackColor = true;
             this.btnGirisYapKullanici.Click += new System.EventHandler(this.btnGirisYapKullanici_Click);
             // 
@@ -648,6 +648,17 @@
             this.maskedSirketSifre.Size = new System.Drawing.Size(76, 20);
             this.maskedSirketSifre.TabIndex = 31;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label22.Location = new System.Drawing.Point(41, 26);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(546, 26);
+            this.label22.TabIndex = 65;
+            this.label22.Text = "Şirket kaydınızı buradaki formdan gerçekleştirebilirsiniz.";
+            // 
             // btnSirketBilgiKaydet
             // 
             this.btnSirketBilgiKaydet.Location = new System.Drawing.Point(217, 256);
@@ -748,17 +759,6 @@
             this.txtSirketFax.Name = "txtSirketFax";
             this.txtSirketFax.Size = new System.Drawing.Size(76, 20);
             this.txtSirketFax.TabIndex = 27;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(41, 26);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(546, 26);
-            this.label22.TabIndex = 65;
-            this.label22.Text = "Şirket kaydınızı buradaki formdan gerçekleştirebilirsiniz.";
             // 
             // LoginFormu
             // 

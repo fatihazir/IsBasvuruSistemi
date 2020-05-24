@@ -91,6 +91,7 @@
             this.txtIsyeriCalismaYili = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.tabIsDeneyimiGuncelle = new System.Windows.Forms.TabPage();
+            this.isDeneyimListesiGüncelle = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listViewIsDeneyimleriGoruntule = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -140,9 +141,9 @@
             this.tabIlanlar.Controls.Add(this.listViewKullaniciIlanlarBolmesi);
             this.tabIlanlar.Controls.Add(this.btnIlanBasvur);
             this.tabIlanlar.Location = new System.Drawing.Point(4, 22);
-            this.tabIlanlar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIlanlar.Margin = new System.Windows.Forms.Padding(2);
             this.tabIlanlar.Name = "tabIlanlar";
-            this.tabIlanlar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIlanlar.Padding = new System.Windows.Forms.Padding(2);
             this.tabIlanlar.Size = new System.Drawing.Size(594, 329);
             this.tabIlanlar.TabIndex = 2;
             this.tabIlanlar.Text = "İlanlar";
@@ -150,8 +151,8 @@
             // 
             // btnIlanGuncelle
             // 
-            this.btnIlanGuncelle.Location = new System.Drawing.Point(70, 219);
-            this.btnIlanGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIlanGuncelle.Location = new System.Drawing.Point(55, 219);
+            this.btnIlanGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.btnIlanGuncelle.Name = "btnIlanGuncelle";
             this.btnIlanGuncelle.Size = new System.Drawing.Size(98, 40);
             this.btnIlanGuncelle.TabIndex = 17;
@@ -168,8 +169,8 @@
             this.columnHeader4,
             this.columnHeader9});
             this.listViewKullaniciIlanlarBolmesi.HideSelection = false;
-            this.listViewKullaniciIlanlarBolmesi.Location = new System.Drawing.Point(70, 13);
-            this.listViewKullaniciIlanlarBolmesi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewKullaniciIlanlarBolmesi.Location = new System.Drawing.Point(55, 20);
+            this.listViewKullaniciIlanlarBolmesi.Margin = new System.Windows.Forms.Padding(2);
             this.listViewKullaniciIlanlarBolmesi.Name = "listViewKullaniciIlanlarBolmesi";
             this.listViewKullaniciIlanlarBolmesi.Size = new System.Drawing.Size(471, 184);
             this.listViewKullaniciIlanlarBolmesi.TabIndex = 16;
@@ -204,8 +205,8 @@
             // 
             // btnIlanBasvur
             // 
-            this.btnIlanBasvur.Location = new System.Drawing.Point(366, 208);
-            this.btnIlanBasvur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIlanBasvur.Location = new System.Drawing.Point(351, 219);
+            this.btnIlanBasvur.Margin = new System.Windows.Forms.Padding(2);
             this.btnIlanBasvur.Name = "btnIlanBasvur";
             this.btnIlanBasvur.Size = new System.Drawing.Size(175, 51);
             this.btnIlanBasvur.TabIndex = 18;
@@ -217,9 +218,9 @@
             // 
             this.tabBilgileriGuncelle.Controls.Add(this.groupBox3);
             this.tabBilgileriGuncelle.Location = new System.Drawing.Point(4, 22);
-            this.tabBilgileriGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabBilgileriGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.tabBilgileriGuncelle.Name = "tabBilgileriGuncelle";
-            this.tabBilgileriGuncelle.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabBilgileriGuncelle.Padding = new System.Windows.Forms.Padding(2);
             this.tabBilgileriGuncelle.Size = new System.Drawing.Size(594, 329);
             this.tabBilgileriGuncelle.TabIndex = 1;
             this.tabBilgileriGuncelle.Text = "Bilgileri Güncelle ve Sil";
@@ -254,9 +255,9 @@
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.txtDogumTarih);
             this.groupBox3.Location = new System.Drawing.Point(4, 5);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(587, 205);
             this.groupBox3.TabIndex = 150;
             this.groupBox3.TabStop = false;
@@ -264,7 +265,7 @@
             // brnKisiBilgiSil
             // 
             this.brnKisiBilgiSil.Location = new System.Drawing.Point(482, 175);
-            this.brnKisiBilgiSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.brnKisiBilgiSil.Margin = new System.Windows.Forms.Padding(2);
             this.brnKisiBilgiSil.Name = "brnKisiBilgiSil";
             this.brnKisiBilgiSil.Size = new System.Drawing.Size(101, 26);
             this.brnKisiBilgiSil.TabIndex = 14;
@@ -285,7 +286,7 @@
             // txtYabanciDil
             // 
             this.txtYabanciDil.Location = new System.Drawing.Point(76, 149);
-            this.txtYabanciDil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYabanciDil.Margin = new System.Windows.Forms.Padding(2);
             this.txtYabanciDil.Name = "txtYabanciDil";
             this.txtYabanciDil.Size = new System.Drawing.Size(76, 20);
             this.txtYabanciDil.TabIndex = 6;
@@ -293,7 +294,7 @@
             // btnGuncelle
             // 
             this.btnGuncelle.Location = new System.Drawing.Point(482, 146);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(101, 25);
             this.btnGuncelle.TabIndex = 13;
@@ -304,7 +305,7 @@
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(76, 40);
-            this.txtSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(76, 20);
             this.txtSoyad.TabIndex = 2;
@@ -330,7 +331,7 @@
             "İngiltere",
             "Diğer"});
             this.cmbUyruk.Location = new System.Drawing.Point(259, 105);
-            this.cmbUyruk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbUyruk.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUyruk.Name = "cmbUyruk";
             this.cmbUyruk.Size = new System.Drawing.Size(76, 21);
             this.cmbUyruk.TabIndex = 10;
@@ -338,7 +339,7 @@
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(76, 14);
-            this.txtAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(76, 20);
             this.txtAd.TabIndex = 1;
@@ -346,7 +347,7 @@
             // txtIlgiAlan
             // 
             this.txtIlgiAlan.Location = new System.Drawing.Point(436, 14);
-            this.txtIlgiAlan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIlgiAlan.Margin = new System.Windows.Forms.Padding(2);
             this.txtIlgiAlan.Multiline = true;
             this.txtIlgiAlan.Name = "txtIlgiAlan";
             this.txtIlgiAlan.Size = new System.Drawing.Size(148, 128);
@@ -359,7 +360,7 @@
             "Bekar",
             "Evli"});
             this.cmbMedeniDurum.Location = new System.Drawing.Point(259, 144);
-            this.cmbMedeniDurum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMedeniDurum.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMedeniDurum.Name = "cmbMedeniDurum";
             this.cmbMedeniDurum.Size = new System.Drawing.Size(76, 21);
             this.cmbMedeniDurum.TabIndex = 11;
@@ -377,7 +378,7 @@
             // txtTCKimlik
             // 
             this.txtTCKimlik.Location = new System.Drawing.Point(76, 67);
-            this.txtTCKimlik.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTCKimlik.Margin = new System.Windows.Forms.Padding(2);
             this.txtTCKimlik.Name = "txtTCKimlik";
             this.txtTCKimlik.ReadOnly = true;
             this.txtTCKimlik.Size = new System.Drawing.Size(76, 20);
@@ -436,7 +437,7 @@
             // txtTelefon
             // 
             this.txtTelefon.Location = new System.Drawing.Point(259, 44);
-            this.txtTelefon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefon.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(76, 20);
             this.txtTelefon.TabIndex = 8;
@@ -454,7 +455,7 @@
             // txtAdres
             // 
             this.txtAdres.Location = new System.Drawing.Point(259, 16);
-            this.txtAdres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAdres.Margin = new System.Windows.Forms.Padding(2);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(76, 20);
             this.txtAdres.TabIndex = 7;
@@ -462,7 +463,7 @@
             // txtEMail
             // 
             this.txtEMail.Location = new System.Drawing.Point(259, 72);
-            this.txtEMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEMail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEMail.Name = "txtEMail";
             this.txtEMail.Size = new System.Drawing.Size(76, 20);
             this.txtEMail.TabIndex = 9;
@@ -470,7 +471,7 @@
             // txtDogumYeri
             // 
             this.txtDogumYeri.Location = new System.Drawing.Point(76, 122);
-            this.txtDogumYeri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDogumYeri.Margin = new System.Windows.Forms.Padding(2);
             this.txtDogumYeri.Name = "txtDogumYeri";
             this.txtDogumYeri.Size = new System.Drawing.Size(76, 20);
             this.txtDogumYeri.TabIndex = 5;
@@ -508,7 +509,7 @@
             // txtDogumTarih
             // 
             this.txtDogumTarih.Location = new System.Drawing.Point(76, 91);
-            this.txtDogumTarih.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDogumTarih.Margin = new System.Windows.Forms.Padding(2);
             this.txtDogumTarih.Name = "txtDogumTarih";
             this.txtDogumTarih.Size = new System.Drawing.Size(76, 20);
             this.txtDogumTarih.TabIndex = 4;
@@ -521,7 +522,7 @@
             this.tabIsBasvuruKayit.Controls.Add(this.tabIsDeneyimi);
             this.tabIsBasvuruKayit.Controls.Add(this.tabIsDeneyimiGuncelle);
             this.tabIsBasvuruKayit.Location = new System.Drawing.Point(37, 32);
-            this.tabIsBasvuruKayit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIsBasvuruKayit.Margin = new System.Windows.Forms.Padding(2);
             this.tabIsBasvuruKayit.Name = "tabIsBasvuruKayit";
             this.tabIsBasvuruKayit.SelectedIndex = 0;
             this.tabIsBasvuruKayit.Size = new System.Drawing.Size(602, 355);
@@ -533,9 +534,9 @@
             this.tabIsDeneyimi.Controls.Add(this.groupBox7);
             this.tabIsDeneyimi.Controls.Add(this.groupBox6);
             this.tabIsDeneyimi.Location = new System.Drawing.Point(4, 22);
-            this.tabIsDeneyimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIsDeneyimi.Margin = new System.Windows.Forms.Padding(2);
             this.tabIsDeneyimi.Name = "tabIsDeneyimi";
-            this.tabIsDeneyimi.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIsDeneyimi.Padding = new System.Windows.Forms.Padding(2);
             this.tabIsDeneyimi.Size = new System.Drawing.Size(594, 329);
             this.tabIsDeneyimi.TabIndex = 3;
             this.tabIsDeneyimi.Text = "İş Deneyimi Ekle";
@@ -544,7 +545,7 @@
             // btnIsDeneyimiKaydet
             // 
             this.btnIsDeneyimiKaydet.Location = new System.Drawing.Point(457, 254);
-            this.btnIsDeneyimiKaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIsDeneyimiKaydet.Margin = new System.Windows.Forms.Padding(2);
             this.btnIsDeneyimiKaydet.Name = "btnIsDeneyimiKaydet";
             this.btnIsDeneyimiKaydet.Size = new System.Drawing.Size(135, 32);
             this.btnIsDeneyimiKaydet.TabIndex = 30;
@@ -567,9 +568,9 @@
             this.groupBox7.Controls.Add(this.txtEgitimDurumu);
             this.groupBox7.Controls.Add(this.label26);
             this.groupBox7.Location = new System.Drawing.Point(220, 46);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(372, 179);
             this.groupBox7.TabIndex = 151;
             this.groupBox7.TabStop = false;
@@ -578,7 +579,7 @@
             // txtKisininBolumu
             // 
             this.txtKisininBolumu.Location = new System.Drawing.Point(98, 96);
-            this.txtKisininBolumu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKisininBolumu.Margin = new System.Windows.Forms.Padding(2);
             this.txtKisininBolumu.Name = "txtKisininBolumu";
             this.txtKisininBolumu.Size = new System.Drawing.Size(76, 20);
             this.txtKisininBolumu.TabIndex = 26;
@@ -606,7 +607,7 @@
             // txtOkulAdi
             // 
             this.txtOkulAdi.Location = new System.Drawing.Point(98, 20);
-            this.txtOkulAdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOkulAdi.Margin = new System.Windows.Forms.Padding(2);
             this.txtOkulAdi.Name = "txtOkulAdi";
             this.txtOkulAdi.Size = new System.Drawing.Size(76, 20);
             this.txtOkulAdi.TabIndex = 24;
@@ -614,7 +615,7 @@
             // txtBolumBitisYili
             // 
             this.txtBolumBitisYili.Location = new System.Drawing.Point(292, 96);
-            this.txtBolumBitisYili.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBolumBitisYili.Margin = new System.Windows.Forms.Padding(2);
             this.txtBolumBitisYili.Name = "txtBolumBitisYili";
             this.txtBolumBitisYili.Size = new System.Drawing.Size(76, 20);
             this.txtBolumBitisYili.TabIndex = 29;
@@ -622,7 +623,7 @@
             // txtNotOrtalamasi
             // 
             this.txtNotOrtalamasi.Location = new System.Drawing.Point(199, 39);
-            this.txtNotOrtalamasi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNotOrtalamasi.Margin = new System.Windows.Forms.Padding(2);
             this.txtNotOrtalamasi.Name = "txtNotOrtalamasi";
             this.txtNotOrtalamasi.Size = new System.Drawing.Size(76, 20);
             this.txtNotOrtalamasi.TabIndex = 27;
@@ -630,7 +631,7 @@
             // txtBolumBaslangicYili
             // 
             this.txtBolumBaslangicYili.Location = new System.Drawing.Point(199, 96);
-            this.txtBolumBaslangicYili.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBolumBaslangicYili.Margin = new System.Windows.Forms.Padding(2);
             this.txtBolumBaslangicYili.Name = "txtBolumBaslangicYili";
             this.txtBolumBaslangicYili.Size = new System.Drawing.Size(76, 20);
             this.txtBolumBaslangicYili.TabIndex = 28;
@@ -668,7 +669,7 @@
             // txtEgitimDurumu
             // 
             this.txtEgitimDurumu.Location = new System.Drawing.Point(98, 59);
-            this.txtEgitimDurumu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEgitimDurumu.Margin = new System.Windows.Forms.Padding(2);
             this.txtEgitimDurumu.Name = "txtEgitimDurumu";
             this.txtEgitimDurumu.Size = new System.Drawing.Size(76, 20);
             this.txtEgitimDurumu.TabIndex = 25;
@@ -694,9 +695,9 @@
             this.groupBox6.Controls.Add(this.txtIsyeriCalismaYili);
             this.groupBox6.Controls.Add(this.label25);
             this.groupBox6.Location = new System.Drawing.Point(4, 46);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(205, 179);
             this.groupBox6.TabIndex = 150;
             this.groupBox6.TabStop = false;
@@ -705,7 +706,7 @@
             // txtIsyeriAdres
             // 
             this.txtIsyeriAdres.Location = new System.Drawing.Point(116, 58);
-            this.txtIsyeriAdres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIsyeriAdres.Margin = new System.Windows.Forms.Padding(2);
             this.txtIsyeriAdres.Name = "txtIsyeriAdres";
             this.txtIsyeriAdres.Size = new System.Drawing.Size(76, 20);
             this.txtIsyeriAdres.TabIndex = 21;
@@ -723,7 +724,7 @@
             // txtIsyeriAd
             // 
             this.txtIsyeriAd.Location = new System.Drawing.Point(116, 22);
-            this.txtIsyeriAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIsyeriAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtIsyeriAd.Name = "txtIsyeriAd";
             this.txtIsyeriAd.Size = new System.Drawing.Size(76, 20);
             this.txtIsyeriAd.TabIndex = 20;
@@ -741,7 +742,7 @@
             // txtIsyeriPozisyon
             // 
             this.txtIsyeriPozisyon.Location = new System.Drawing.Point(116, 98);
-            this.txtIsyeriPozisyon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIsyeriPozisyon.Margin = new System.Windows.Forms.Padding(2);
             this.txtIsyeriPozisyon.Name = "txtIsyeriPozisyon";
             this.txtIsyeriPozisyon.Size = new System.Drawing.Size(76, 20);
             this.txtIsyeriPozisyon.TabIndex = 22;
@@ -759,7 +760,7 @@
             // txtIsyeriCalismaYili
             // 
             this.txtIsyeriCalismaYili.Location = new System.Drawing.Point(116, 143);
-            this.txtIsyeriCalismaYili.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIsyeriCalismaYili.Margin = new System.Windows.Forms.Padding(2);
             this.txtIsyeriCalismaYili.Name = "txtIsyeriCalismaYili";
             this.txtIsyeriCalismaYili.Size = new System.Drawing.Size(76, 20);
             this.txtIsyeriCalismaYili.TabIndex = 23;
@@ -776,27 +777,39 @@
             // 
             // tabIsDeneyimiGuncelle
             // 
+            this.tabIsDeneyimiGuncelle.Controls.Add(this.isDeneyimListesiGüncelle);
             this.tabIsDeneyimiGuncelle.Controls.Add(this.groupBox4);
             this.tabIsDeneyimiGuncelle.Controls.Add(this.btnIsDeneyimGoruntule);
             this.tabIsDeneyimiGuncelle.Controls.Add(this.btnIsDeneyimGuncelle);
             this.tabIsDeneyimiGuncelle.Controls.Add(this.groupBox1);
             this.tabIsDeneyimiGuncelle.Controls.Add(this.groupBox2);
             this.tabIsDeneyimiGuncelle.Location = new System.Drawing.Point(4, 22);
-            this.tabIsDeneyimiGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIsDeneyimiGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.tabIsDeneyimiGuncelle.Name = "tabIsDeneyimiGuncelle";
-            this.tabIsDeneyimiGuncelle.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIsDeneyimiGuncelle.Padding = new System.Windows.Forms.Padding(2);
             this.tabIsDeneyimiGuncelle.Size = new System.Drawing.Size(594, 329);
             this.tabIsDeneyimiGuncelle.TabIndex = 4;
             this.tabIsDeneyimiGuncelle.Text = "İş Deneyimi Güncelle";
             this.tabIsDeneyimiGuncelle.UseVisualStyleBackColor = true;
             // 
+            // isDeneyimListesiGüncelle
+            // 
+            this.isDeneyimListesiGüncelle.Location = new System.Drawing.Point(381, 296);
+            this.isDeneyimListesiGüncelle.Margin = new System.Windows.Forms.Padding(2);
+            this.isDeneyimListesiGüncelle.Name = "isDeneyimListesiGüncelle";
+            this.isDeneyimListesiGüncelle.Size = new System.Drawing.Size(207, 29);
+            this.isDeneyimListesiGüncelle.TabIndex = 45;
+            this.isDeneyimListesiGüncelle.Text = "İş deneyimi listesini güncelle";
+            this.isDeneyimListesiGüncelle.UseVisualStyleBackColor = true;
+            this.isDeneyimListesiGüncelle.Click += new System.EventHandler(this.isDeneyimListesiGüncelle_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.listViewIsDeneyimleriGoruntule);
             this.groupBox4.Location = new System.Drawing.Point(220, 11);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(372, 184);
             this.groupBox4.TabIndex = 40;
             this.groupBox4.TabStop = false;
@@ -811,7 +824,7 @@
             this.columnHeader8});
             this.listViewIsDeneyimleriGoruntule.HideSelection = false;
             this.listViewIsDeneyimleriGoruntule.Location = new System.Drawing.Point(4, 17);
-            this.listViewIsDeneyimleriGoruntule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewIsDeneyimleriGoruntule.Margin = new System.Windows.Forms.Padding(2);
             this.listViewIsDeneyimleriGoruntule.Name = "listViewIsDeneyimleriGoruntule";
             this.listViewIsDeneyimleriGoruntule.Size = new System.Drawing.Size(364, 163);
             this.listViewIsDeneyimleriGoruntule.TabIndex = 43;
@@ -838,9 +851,9 @@
             // btnIsDeneyimGoruntule
             // 
             this.btnIsDeneyimGoruntule.Location = new System.Drawing.Point(381, 200);
-            this.btnIsDeneyimGoruntule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIsDeneyimGoruntule.Margin = new System.Windows.Forms.Padding(2);
             this.btnIsDeneyimGoruntule.Name = "btnIsDeneyimGoruntule";
-            this.btnIsDeneyimGoruntule.Size = new System.Drawing.Size(207, 50);
+            this.btnIsDeneyimGoruntule.Size = new System.Drawing.Size(207, 51);
             this.btnIsDeneyimGoruntule.TabIndex = 44;
             this.btnIsDeneyimGoruntule.Text = "Seçilen iş deneyimi ile daha fazla bilgiye ulaşmak için tıklayın.";
             this.btnIsDeneyimGoruntule.UseVisualStyleBackColor = true;
@@ -848,12 +861,12 @@
             // 
             // btnIsDeneyimGuncelle
             // 
-            this.btnIsDeneyimGuncelle.Location = new System.Drawing.Point(381, 279);
-            this.btnIsDeneyimGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIsDeneyimGuncelle.Location = new System.Drawing.Point(381, 255);
+            this.btnIsDeneyimGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.btnIsDeneyimGuncelle.Name = "btnIsDeneyimGuncelle";
-            this.btnIsDeneyimGuncelle.Size = new System.Drawing.Size(70, 41);
+            this.btnIsDeneyimGuncelle.Size = new System.Drawing.Size(207, 39);
             this.btnIsDeneyimGuncelle.TabIndex = 42;
-            this.btnIsDeneyimGuncelle.Text = "Güncelle";
+            this.btnIsDeneyimGuncelle.Text = "İş deneyimi bilgilerini güncelle";
             this.btnIsDeneyimGuncelle.UseVisualStyleBackColor = true;
             this.btnIsDeneyimGuncelle.Click += new System.EventHandler(this.btnIsDeneyimGuncelle_Click);
             // 
@@ -872,9 +885,9 @@
             this.groupBox1.Controls.Add(this.txtGIsDeneyimEgitimDurumu);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(4, 193);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(372, 127);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -883,7 +896,7 @@
             // txtGIsDeneyimKisiBolum
             // 
             this.txtGIsDeneyimKisiBolum.Location = new System.Drawing.Point(98, 96);
-            this.txtGIsDeneyimKisiBolum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimKisiBolum.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimKisiBolum.Name = "txtGIsDeneyimKisiBolum";
             this.txtGIsDeneyimKisiBolum.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimKisiBolum.TabIndex = 38;
@@ -911,7 +924,7 @@
             // txtGIsDeneyimiOkulAd
             // 
             this.txtGIsDeneyimiOkulAd.Location = new System.Drawing.Point(98, 20);
-            this.txtGIsDeneyimiOkulAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimiOkulAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimiOkulAd.Name = "txtGIsDeneyimiOkulAd";
             this.txtGIsDeneyimiOkulAd.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimiOkulAd.TabIndex = 36;
@@ -919,7 +932,7 @@
             // txtGIsDeneyimBitisYil
             // 
             this.txtGIsDeneyimBitisYil.Location = new System.Drawing.Point(292, 96);
-            this.txtGIsDeneyimBitisYil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimBitisYil.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimBitisYil.Name = "txtGIsDeneyimBitisYil";
             this.txtGIsDeneyimBitisYil.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimBitisYil.TabIndex = 41;
@@ -927,7 +940,7 @@
             // txtGIsDeneyimOkulNot
             // 
             this.txtGIsDeneyimOkulNot.Location = new System.Drawing.Point(199, 39);
-            this.txtGIsDeneyimOkulNot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimOkulNot.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimOkulNot.Name = "txtGIsDeneyimOkulNot";
             this.txtGIsDeneyimOkulNot.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimOkulNot.TabIndex = 39;
@@ -935,7 +948,7 @@
             // txtGIsDeneyimBaslangicYil
             // 
             this.txtGIsDeneyimBaslangicYil.Location = new System.Drawing.Point(199, 96);
-            this.txtGIsDeneyimBaslangicYil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimBaslangicYil.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimBaslangicYil.Name = "txtGIsDeneyimBaslangicYil";
             this.txtGIsDeneyimBaslangicYil.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimBaslangicYil.TabIndex = 40;
@@ -973,7 +986,7 @@
             // txtGIsDeneyimEgitimDurumu
             // 
             this.txtGIsDeneyimEgitimDurumu.Location = new System.Drawing.Point(98, 59);
-            this.txtGIsDeneyimEgitimDurumu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimEgitimDurumu.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimEgitimDurumu.Name = "txtGIsDeneyimEgitimDurumu";
             this.txtGIsDeneyimEgitimDurumu.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimEgitimDurumu.TabIndex = 37;
@@ -999,9 +1012,9 @@
             this.groupBox2.Controls.Add(this.txtGIsDeneyimCalismaYil);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Location = new System.Drawing.Point(4, 11);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(205, 179);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -1010,7 +1023,7 @@
             // txtGIsDeneyimAdres
             // 
             this.txtGIsDeneyimAdres.Location = new System.Drawing.Point(116, 58);
-            this.txtGIsDeneyimAdres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimAdres.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimAdres.Name = "txtGIsDeneyimAdres";
             this.txtGIsDeneyimAdres.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimAdres.TabIndex = 33;
@@ -1028,7 +1041,7 @@
             // txtGIsDeneyimAd
             // 
             this.txtGIsDeneyimAd.Location = new System.Drawing.Point(116, 22);
-            this.txtGIsDeneyimAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimAd.Name = "txtGIsDeneyimAd";
             this.txtGIsDeneyimAd.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimAd.TabIndex = 32;
@@ -1046,7 +1059,7 @@
             // txtGIsDeneyimPozisyon
             // 
             this.txtGIsDeneyimPozisyon.Location = new System.Drawing.Point(116, 98);
-            this.txtGIsDeneyimPozisyon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimPozisyon.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimPozisyon.Name = "txtGIsDeneyimPozisyon";
             this.txtGIsDeneyimPozisyon.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimPozisyon.TabIndex = 34;
@@ -1064,7 +1077,7 @@
             // txtGIsDeneyimCalismaYil
             // 
             this.txtGIsDeneyimCalismaYil.Location = new System.Drawing.Point(116, 143);
-            this.txtGIsDeneyimCalismaYil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGIsDeneyimCalismaYil.Margin = new System.Windows.Forms.Padding(2);
             this.txtGIsDeneyimCalismaYil.Name = "txtGIsDeneyimCalismaYil";
             this.txtGIsDeneyimCalismaYil.Size = new System.Drawing.Size(76, 20);
             this.txtGIsDeneyimCalismaYil.TabIndex = 35;
@@ -1085,7 +1098,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 412);
             this.Controls.Add(this.tabIsBasvuruKayit);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "KullaniciFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanici Formu";
@@ -1205,5 +1218,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.Button isDeneyimListesiGüncelle;
     }
 }
