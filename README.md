@@ -3,9 +3,9 @@ It's a job application platform which gathers employer and employee based on dat
 
 This project made by:
 
-Fatih Hazır
-Emrecan Özkan
-Burakhan Katdar
+#Fatih Hazır
+#Emrecan Özkan
+#Burakhan Katdar
 
 
 Computer Engineering / İzmir Bakircay University
